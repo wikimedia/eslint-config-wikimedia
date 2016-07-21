@@ -89,10 +89,11 @@
     "no-mixed-spaces-and-tabs": "error",
     "operator-linebreak": [
       "error",
-      "after",
-      {
-        "overrides": { ".": "after" }
-      }
+      "after"
+    ],
+    "dot-location": [
+      "error",
+      "property"
     ],
     "no-trailing-spaces": "error",
     "comma-dangle": [

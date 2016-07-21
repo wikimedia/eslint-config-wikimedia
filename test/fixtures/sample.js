@@ -67,7 +67,7 @@
 	};
 
 	APP.loop = function ( items ) {
-		// requireMultipleVarDecl
+		// one-var rule
 		var i, len, item, key,
 			j = 1,
 			ret = {};
@@ -84,7 +84,6 @@
 		}
 
 		for ( key in item ) {
-			// requireSpaceBetweenArguments
 			if ( hasOwn.call( item, key ) ) {
 				ret[ key ] = new APP.Example( item[ key ] );
 			}
