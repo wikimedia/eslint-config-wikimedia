@@ -4,7 +4,6 @@
   "rules": {
     "no-bitwise": "error",
     "eqeqeq": "error",
-    "no-extend-native": "error",
     "no-use-before-define": "error",
     "no-caller": "error",
     "no-new": "error",
@@ -50,7 +49,6 @@
       "error",
       "always"
     ],
-    "vars-on-top": "error",
     "no-empty": [
       "error",
       { "allowEmptyCatch": true }
@@ -123,13 +121,11 @@
       "1tbs",
       { "allowSingleLine": true }
     ],
-    "newline-after-var": [
-      "error",
-      "always"
-    ],
     "eol-last": "error",
-    "new-cap": "error",
-    "dot-notation": "error",
+    "dot-notation": [
+      "error",
+      { "allowKeywords": false }
+    ],
     "yoda": [
       "error",
       "never"
@@ -157,7 +153,8 @@
       "error",
       {
         "requireParamDescription": false,
-        "requireReturnDescription": false
+        "requireReturnDescription": false,
+        "requireReturn": false
       }
     ]
   }
