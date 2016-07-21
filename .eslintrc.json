@@ -1,0 +1,145 @@
+{
+  "env": {},
+  "globals": {},
+  "rules": {
+    "no-bitwise": "error",
+    "eqeqeq": "error",
+    "no-extend-native": "error",
+    "no-use-before-define": "error",
+    "no-caller": "error",
+    "no-new": "error",
+    "no-undef": "error",
+    "no-unused-vars": "error",
+    "curly": [
+      "error",
+      "all"
+    ],
+    "keyword-spacing": "error",
+    "space-before-blocks": [
+      "error",
+      "always"
+    ],
+    "wrap-iife": "error",
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "ignore",
+        "named": "never"
+      }
+    ],
+    "no-spaced-func": "error",
+    "one-var": [
+      "error",
+      "always"
+    ],
+    "vars-on-top": "error",
+    "no-empty": [
+      "error",
+      { "allowEmptyCatch": true }
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "always"
+    ],
+    "space-in-parens": [
+      "error",
+      "always"
+    ],
+    "quote-props": [
+      "error",
+      "as-needed",
+      { "keywords": true }
+    ],
+    "no-underscore-dangle": "error",
+    "key-spacing": [
+      "error",
+      {
+        "beforeColon": false,
+        "afterColon": true
+      }
+    ],
+    "comma-style": [
+      "error",
+      "last"
+    ],
+    "space-unary-ops": [
+      "error",
+      {
+        "words": false,
+        "nonwords": false
+      }
+    ],
+    "space-infix-ops": "error",
+    "no-implicit-coercion": [
+      "error",
+      {
+        "string": true,
+        "boolean": false,
+        "number": false
+      }
+    ],
+    "camelcase": [
+      "error",
+      {
+        "properties": "never"
+      }
+    ],
+    "no-with": "error",
+    "no-multiple-empty-lines": "error",
+    "no-mixed-spaces-and-tabs": "error",
+    "operator-linebreak": [
+      "error",
+      "after",
+      {
+        "overrides": { ".": "after" }
+      }
+    ],
+    "no-trailing-spaces": "error",
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "brace-style": [
+      "error",
+      "1tbs",
+      { "allowSingleLine": true }
+    ],
+    "newline-after-var": [
+      "error",
+      "always"
+    ],
+    "eol-last": "error",
+    "new-cap": "error",
+    "dot-notation": "error",
+    "yoda": [
+      "error",
+      "never"
+    ],
+    "spaced-comment": [
+      "error",
+      "always"
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "indent": [
+      "error",
+      "tab",
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "valid-jsdoc": [
+      "error",
+      {
+        "requireParamDescription": false,
+        "requireReturnDescription": false
+      }
+    ]
+  }
+}
