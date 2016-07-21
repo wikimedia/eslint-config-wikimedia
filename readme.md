@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/markelog/eslint-config-wikimedia.svg)](https://travis-ci.org/markelog/eslint-config-wikimedia)
 
-# Wikimedia eslint config
+# Wikimedia ESLint config
 
 ## Usage
 
