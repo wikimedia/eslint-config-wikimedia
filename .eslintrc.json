@@ -39,6 +39,17 @@
         "after": true
       }
     ],
+    "semi-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
     "vars-on-top": "error",
     "no-empty": [
       "error",
