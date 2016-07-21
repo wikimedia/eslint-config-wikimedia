@@ -32,6 +32,13 @@
       "error",
       "always"
     ],
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
     "vars-on-top": "error",
     "no-empty": [
       "error",
