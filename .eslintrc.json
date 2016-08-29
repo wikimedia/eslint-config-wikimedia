@@ -101,6 +101,9 @@
       }
     ],
     "no-with": "error",
+    "no-eval": "error",
+    "no-implied-eval": "error",
+    "no-new-func": "error",
     "no-multiple-empty-lines": "error",
     "no-mixed-spaces-and-tabs": "error",
     "operator-linebreak": [
