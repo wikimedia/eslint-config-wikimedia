@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/markelog/eslint-config-wikimedia.svg)](https://travis-ci.org/markelog/eslint-config-wikimedia)
+[![Build Status](https://travis-ci.org/wikimedia/eslint-config-wikimedia.svg?branch=master)](https://travis-ci.org/wikimedia/eslint-config-wikimedia)
 
 # Wikimedia ESLint config
 
