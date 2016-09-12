@@ -1,22 +1,21 @@
 {
   "name": "eslint-config-wikimedia",
   "version": "0.1.0",
-  "description": "Wikimedia eslint config",
+  "description": "ESLint config following Wikimedia code conventions.",
   "main": ".eslintrc.json",
   "scripts": {
     "test": "eslint test/fixtures/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "markelog/eslint-config-wikimedia"
+    "url": "https://github.com/wikimedia/eslint-config-wikimedia.git"
   },
   "homepage": "https://www.mediawiki.org/wiki/Manual_talk:Coding_conventions/JavaScript",
-  "issues": "https://github.com/markelog/eslint-config-wikimedia/issues",
+  "issues": "https://github.com/wikimedia/eslint-config-wikimedia/issues",
   "keywords": [
     "style guide",
     "eslint",
-    "config",
-    "lint",
+    "eslintconfig",
     "wikimedia"
   ],
   "files": [
