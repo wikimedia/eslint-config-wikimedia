@@ -148,6 +148,12 @@
 		return options.title.indexOf( '.' ) !== -1;
 	};
 
+	APP.fetch = function () {
+		// Rule: new-cap
+		var eg = new APP.Example();
+		return eg.Deferred();
+	};
+
 	APP.example = new APP.Example( 'banana', {
 		// Rule: key-spacing
 		// Rule: quote-props
