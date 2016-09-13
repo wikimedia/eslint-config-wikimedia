@@ -53,6 +53,7 @@
 			return;
 		}
 
+		// Rule: block-spacing
 		// Rule: space-before-function-paren
 		// Rule: space-in-parens
 		inline = function ( items ) { return items.slice(); };

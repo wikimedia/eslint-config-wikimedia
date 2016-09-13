@@ -3,6 +3,7 @@
   "globals": {},
   "rules": {
     "array-bracket-spacing": [ "error", "always" ],
+    "block-spacing": "error",
     "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ],
     "camelcase": [ "error", { "properties": "never" } ],
     "comma-dangle": [ "error", "never" ],
