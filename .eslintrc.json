@@ -21,6 +21,7 @@
     "no-caller": "error",
     "no-empty": [ "error", { "allowEmptyCatch": true } ],
     "no-eval": "error",
+    "no-extra-semi": "error",
     "no-implicit-coercion": [ "error", { "string": true, "boolean": false, "number": false } ],
     "no-implied-eval": "error",
     "no-mixed-spaces-and-tabs": "error",
