@@ -1,6 +1,10 @@
+// Rule: wrap-iife
 ( function ( global ) {
 	var APP,
 		hasOwn = Object.prototype.hasOwnProperty;
+
+	// Rule: spaced-comment
+	// Example
 
 	// Empty function declaration
 	function upHere() {}
@@ -22,18 +26,25 @@
 	APP.Example = function ( id, options ) {
 		var name, inline, bar;
 
+		// Rule: space-infix-ops
 		this.total = upHere() + id;
 
 		name = options.bar ? upHereAlso( id ) : id;
 
+		// Rule: brace-style
+		// Rule: dot-notation
+		// Rule: keyword-spacing
+		// Rule: space-before-blocks
 		if ( options.quux ) {
 			name += options.quux;
 		} else if ( options.quux ) {
 			name += options.quux;
-		} else {
+		} else if ( options['default'] ) {
 			name += 'default';
 		}
 
+		// Rule: operator-linebreak
+		// Rule: space-infix-ops
 		if ( bar &&
 			bar.hasData() &&
 			bar.getName() !== name &&
@@ -42,10 +53,10 @@
 			return;
 		}
 
-		// One line function
+		// Rule: space-before-function-paren
+		// Rule: space-in-parens
 		inline = function ( items ) { return items.slice(); };
 
-		// Multi-line function
 		inline = function ( items ) {
 			items = items.slice();
 			items.pop();
@@ -60,14 +71,21 @@
 			return null;
 		};
 
+		// Rule: comma-style
 		this.data = [
 			typeof bar,
 			inline()
 		];
+
+		// Rule: array-bracket-spacing
+		// Rule: comma-spacing
+		this.items = [ 'foo', 'bar' ];
 	};
 
 	APP.loop = function ( items ) {
-		// one-var rule
+		// Rule: comma-spacing
+		// Rule: comma-style
+		// Rule: one-var
 		var i, len, item, key,
 			j = 1,
 			ret = {};
@@ -102,6 +120,7 @@
 	 * @return {null|undefined}
 	 */
 	APP.fall = function ( code ) {
+		// Rule: indent (SwitchCase)
 		switch ( code ) {
 			case 200:
 				break;
@@ -123,6 +142,9 @@
 	};
 
 	APP.example = new APP.Example( 'banana', {
+		// Rule: key-spacing
+		// Rule: quote-props
+		// Rule: quotes
 		first: 'Who',
 		second: 'What',
 		third: 'I don\'t know',
@@ -132,6 +154,7 @@
 	APP.example( 'banana' )
 		.done( function () { } );
 
+	// Rule: dot-location
 	APP.example( 'banana' )
 		.done( function () {} )
 		.fail( function () {} );
