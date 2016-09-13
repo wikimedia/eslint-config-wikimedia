@@ -2,6 +2,7 @@
   "env": {},
   "globals": {},
   "rules": {
+    "no-multi-spaces": "error",
     "no-bitwise": "error",
     "eqeqeq": "error",
     "no-use-before-define": "error",
