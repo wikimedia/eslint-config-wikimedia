@@ -73,13 +73,19 @@
 
 		// Rule: comma-style
 		this.data = [
-			typeof bar,
+			bar,
 			inline()
 		];
 
 		// Rule: array-bracket-spacing
 		// Rule: comma-spacing
 		this.items = [ 'foo', 'bar' ];
+	};
+
+	APP.unaryWords = function ( obj ) {
+		// Rule: space-unary-ops
+		obj.type = typeof obj;
+		delete obj.type;
 	};
 
 	APP.loop = function ( items ) {

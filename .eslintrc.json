@@ -45,7 +45,7 @@
     "space-before-function-paren": [ "error", { "anonymous": "ignore", "named": "never" } ],
     "space-in-parens": [ "error", "always" ],
     "space-infix-ops": "error",
-    "space-unary-ops": [ "error", { "words": false, "nonwords": false } ],
+    "space-unary-ops": [ "error", { "words": true, "nonwords": false } ],
     "spaced-comment": [ "error", "always" ],
     "valid-jsdoc": [ "error", { "requireParamDescription": false, "requireReturnDescription": false, "requireReturn": false } ],
     "wrap-iife": "error",
