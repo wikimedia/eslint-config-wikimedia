@@ -21,6 +21,8 @@
     "new-cap": [ "error", { "newIsCap": true, "capIsNew": false, "properties": true } ],
     "no-bitwise": "error",
     "no-caller": "error",
+    "no-console": "error",
+    "no-debugger": "error",
     "no-empty": [ "error", { "allowEmptyCatch": true } ],
     "no-eval": "error",
     "no-extra-semi": "error",
