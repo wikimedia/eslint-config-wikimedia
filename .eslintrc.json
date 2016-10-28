@@ -49,7 +49,7 @@
     "semi-spacing": [ "error", { "before": false, "after": true } ],
     "space-before-blocks": [ "error", "always" ],
     "space-before-function-paren": [ "error", { "anonymous": "ignore", "named": "never" } ],
-    "space-in-parens": [ "error", "always" ],
+    "space-in-parens": [ "error", "always", { "exceptions": [ "empty" ] } ],
     "space-infix-ops": "error",
     "space-unary-ops": [ "error", { "words": true, "nonwords": false } ],
     "spaced-comment": [ "error", "always" ],
