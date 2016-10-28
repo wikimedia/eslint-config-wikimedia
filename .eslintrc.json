@@ -53,6 +53,7 @@
     "space-unary-ops": [ "error", { "words": true, "nonwords": false } ],
     "spaced-comment": [ "error", "always" ],
     "valid-jsdoc": [ "error", { "requireParamDescription": false, "requireReturnDescription": false, "requireReturn": false } ],
+    "vars-on-top": "error",
     "wrap-iife": "error",
     "yoda": [ "error", "never" ]
   }
