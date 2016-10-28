@@ -19,6 +19,7 @@
     "keyword-spacing": "error",
     "linebreak-style": [ "error", "unix" ],
     "new-cap": [ "error", { "newIsCap": true, "capIsNew": false, "properties": true } ],
+    "new-parens": "error",
     "no-bitwise": "error",
     "no-caller": "error",
     "no-console": "error",
