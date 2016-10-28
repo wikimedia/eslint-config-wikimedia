@@ -36,6 +36,7 @@
     "no-new": "error",
     "no-new-func": "error",
     "no-spaced-func": "error",
+    "no-sparse-arrays": "error",
     "no-trailing-spaces": "error",
     "no-undef": "error",
     "no-underscore-dangle": "error",
