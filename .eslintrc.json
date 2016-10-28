@@ -54,7 +54,7 @@
     "space-in-parens": [ "error", "always", { "exceptions": [ "empty" ] } ],
     "space-infix-ops": "error",
     "space-unary-ops": [ "error", { "words": true, "nonwords": false } ],
-    "spaced-comment": [ "error", "always", { "exceptions": ["*", "!"] } ],
+    "spaced-comment": [ "error", "always", { "exceptions": [ "*", "!" ] } ],
     "valid-jsdoc": [ "error", { "requireParamDescription": false, "requireReturnDescription": false, "requireReturn": false } ],
     "vars-on-top": "error",
     "wrap-iife": "error",
