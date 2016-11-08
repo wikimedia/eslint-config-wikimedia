@@ -1,4 +1,5 @@
 {
+  "extends": "eslint:recommended",
   "env": {},
   "globals": {},
   "rules": {
@@ -23,6 +24,7 @@
     "no-bitwise": "error",
     "no-caller": "error",
     "no-console": "error",
+    "no-constant-condition": [ "error", { "checkLoops": false } ],
     "no-debugger": "error",
     "no-empty": [ "error", { "allowEmptyCatch": true } ],
     "no-eval": "error",
