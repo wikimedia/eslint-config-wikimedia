@@ -42,6 +42,7 @@
     "no-underscore-dangle": "error",
     "no-unused-vars": "error",
     "no-use-before-define": "error",
+    "no-whitespace-before-property": "error",
     "no-with": "error",
     "one-var": [ "error", "always" ],
     "operator-linebreak": [ "error", "after" ],
