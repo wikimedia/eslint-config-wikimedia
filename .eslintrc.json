@@ -10,6 +10,7 @@
     "comma-dangle": [ "error", "never" ],
     "comma-spacing": [ "error", { "before": false, "after": true } ],
     "comma-style": [ "error", "last" ],
+    "computed-property-spacing": [ "error", "always" ],
     "curly": [ "error", "all" ],
     "dot-location": [ "error", "property" ],
     "dot-notation": [ "error", { "allowKeywords": false } ],
