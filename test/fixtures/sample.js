@@ -1,4 +1,7 @@
+// Rule: linebreak-style
 // Rule: wrap-iife
+// Rule: semi
+// Rule: semi-spacing
 ( function ( global ) {
 	var APP,
 		hasOwn = Object.prototype.hasOwnProperty;
@@ -9,9 +12,10 @@
 	// Empty function declaration
 	function upHere() {}
 
-	// Non-empty function declaration
-	function upHereAlso( y ) {
-		return y;
+	// Rule: camelcase (function, param, var, propery, method)
+	function upHereAlso( yArg ) {
+		var rArg = yArg.fooBar;
+		return rArg + yArg.getQuux();
 	}
 
 	/**
@@ -28,7 +32,6 @@
 
 		// Rule: space-infix-ops
 		this.total = upHere() + id;
-
 		name = options.bar ? upHereAlso( id ) : id;
 
 		// Rule: brace-style
@@ -39,6 +42,7 @@
 			name += options.quux;
 		} else if ( options.quux ) {
 			name += options.quux;
+		// Rule: computed-property-spacing
 		} else if ( options[ 'default' ] ) {
 			name += 'default';
 		}
@@ -50,6 +54,12 @@
 			bar.getName() !== name &&
 			!bar.isQuux()
 		) {
+			return;
+		}
+
+		// Rule: eqeqeq
+		// Rule: yoda (never)
+		if ( bar === undefined ) {
 			return;
 		}
 
@@ -90,9 +100,12 @@
 	};
 
 	APP.loop = function ( items ) {
+		// Rule: comma-dangle
 		// Rule: comma-spacing
 		// Rule: comma-style
+		// Rule: curly
 		// Rule: one-var
+		// Rule: vars-on-top
 		var i, len, item, key,
 			j = 1,
 			ret = {};
@@ -110,6 +123,7 @@
 
 		for ( key in item ) {
 			if ( hasOwn.call( item, key ) ) {
+				// Rule: computed-property-spacing
 				ret[ key ] = new APP.Example( item[ key ] );
 			}
 		}
@@ -121,6 +135,8 @@
 
 		return ret;
 	};
+
+	// Rule: valid-jsdoc
 
 	/**
 	 * @param {boolean|number} code
@@ -150,6 +166,7 @@
 
 	APP.fetch = function () {
 		// Rule: new-cap
+		// Rule: new-parens
 		var eg = new APP.Example();
 		return eg.Deferred();
 	};
@@ -159,9 +176,14 @@
 		// Rule: quote-props
 		// Rule: quotes
 		first: 'Who',
-		second: 'What',
-		third: 'I don\'t know',
-		'default': 'Legacy'
+		'default': 'Legacy',
+		// Rule: object-curly-spacing
+		second: { value: { of: 'What' } },
+		third: {
+			value: {
+				of: 'I don\'t know'
+			}
+		}
 	} );
 
 	APP.example( 'banana' )
@@ -178,3 +200,5 @@
 	global.APP = APP;
 
 }( this ) );
+
+// Rule: eol-last

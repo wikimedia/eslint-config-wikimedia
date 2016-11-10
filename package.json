@@ -4,7 +4,7 @@
   "description": "ESLint config following Wikimedia code conventions.",
   "main": ".eslintrc.json",
   "scripts": {
-    "test": "eslint test/fixtures/*.js"
+    "test": "eslint test/fixtures/*.js && node test/index.js"
   },
   "repository": {
     "type": "git",
