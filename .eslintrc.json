@@ -40,6 +40,7 @@
     "no-trailing-spaces": "error",
     "no-undef": "error",
     "no-underscore-dangle": "error",
+    "no-unneeded-ternary": [ "error", { "defaultAssignment": false } ],
     "no-unused-vars": "error",
     "no-use-before-define": "error",
     "no-whitespace-before-property": "error",
