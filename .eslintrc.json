@@ -50,6 +50,7 @@
     "no-use-before-define": "error",
     "no-whitespace-before-property": "error",
     "no-with": "error",
+    "object-curly-spacing": [ "error", "always" ],
     "one-var": [ "error", "always" ],
     "operator-linebreak": [ "error", "after" ],
     "quote-props": [ "error", "as-needed", { "keywords": true } ],
