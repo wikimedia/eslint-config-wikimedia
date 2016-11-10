@@ -1,4 +1,5 @@
 {
+  "extends": "eslint:recommended",
   "env": {},
   "globals": {},
   "rules": {
@@ -23,6 +24,7 @@
     "no-bitwise": "error",
     "no-caller": "error",
     "no-console": "error",
+    "no-constant-condition": [ "error", { "checkLoops": false } ],
     "no-debugger": "error",
     "no-empty": [ "error", { "allowEmptyCatch": true } ],
     "no-eval": "error",
@@ -32,7 +34,7 @@
     "no-loop-func": "error",
     "no-mixed-spaces-and-tabs": "error",
     "no-multi-spaces": "error",
-    "no-multiple-empty-lines": "error",
+    "no-multiple-empty-lines": [ "error", { "max": 1, "maxBOF": 0, "maxEOF": 0 } ],
     "no-new": "error",
     "no-new-func": "error",
     "no-spaced-func": "error",
@@ -40,6 +42,7 @@
     "no-trailing-spaces": "error",
     "no-undef": "error",
     "no-underscore-dangle": "error",
+    "no-unneeded-ternary": [ "error", { "defaultAssignment": false } ],
     "no-unused-vars": "error",
     "no-use-before-define": "error",
     "no-whitespace-before-property": "error",
