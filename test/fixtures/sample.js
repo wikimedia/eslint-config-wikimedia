@@ -39,7 +39,7 @@
 			name += options.quux;
 		} else if ( options.quux ) {
 			name += options.quux;
-		} else if ( options['default'] ) {
+		} else if ( options[ 'default' ] ) {
 			name += 'default';
 		}
 
