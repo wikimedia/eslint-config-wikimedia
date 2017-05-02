@@ -2,6 +2,8 @@
 // Rule: wrap-iife
 // Rule: semi
 // Rule: semi-spacing
+// Rule: prefer-numeric-literals
+// Rule: unicode-bom
 ( function ( global ) {
 	var APP,
 		hasOwn = Object.prototype.hasOwnProperty;
