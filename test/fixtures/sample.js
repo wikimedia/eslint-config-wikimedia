@@ -2,6 +2,8 @@
 // Rule: wrap-iife
 // Rule: semi
 // Rule: semi-spacing
+// Rule: prefer-numeric-literals
+// Rule: unicode-bom
 ( function ( global ) {
 	var APP,
 		hasOwn = Object.prototype.hasOwnProperty;
@@ -13,6 +15,7 @@
 	function upHere() {}
 
 	// Rule: camelcase (function, param, var, propery, method)
+	// Rule: func-call-spacing
 	function upHereAlso( yArg ) {
 		var rArg = yArg.fooBar;
 		return rArg + yArg.getQuux();
