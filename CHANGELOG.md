@@ -1,5 +1,44 @@
 # Changelog
 
+## 0.4.0 / 2017-05-03
+* We now explicitly define the `ecmaVersion` as 5 (James Forrester)
+* We removed a number of rules duplicated from `eslint:recommended` (Ed Sanders)
+
+* New rule: `no-alert` (Ed Sanders)
+* New rule: `no-catch-shadow` (Ed Sanders)
+* New rule: `no-extend-native` (Ed Sanders)
+* New rule: `no-extra-bind` (Ed Sanders)
+* New rule: `no-extra-label` (Ed Sanders)
+* New rule: `no-floating-decimal` (Ed Sanders)
+* New rule: `no-implicit-globals` (Ed Sanders)
+* New rule: `no-label-var` (Ed Sanders)
+* New rule: `no-multi-str` (Ed Sanders)
+* New rule: `no-native-reassign` (Ed Sanders)
+* New rule: `no-negated-in-lhs` (Ed Sanders)
+* New rule: `no-new-require` (Ed Sanders)
+* New rule: `no-new-wrappers` (Ed Sanders)
+* New rule: `no-octal-escape` (Ed Sanders)
+* New rule: `no-proto` (Ed Sanders)
+* New rule: `no-return-assign` (Ed Sanders)
+* New rule: `no-self-compare` (Ed Sanders)
+* New rule: `no-sequences` (Ed Sanders)
+* New rule: `no-shadow-restricted-names` (Ed Sanders)
+* New rule: `no-throw-literal` (Ed Sanders)
+* New rule: `no-undef-init` (Ed Sanders)
+* New rule: `no-unmodified-loop-condition` (Ed Sanders)
+* New rule: `no-unused-expressions` (Ed Sanders)
+* New rule: `no-useless-call` (Ed Sanders)
+* New rule: `no-useless-computed-key` (Ed Sanders)
+* New rule: `no-useless-concat` (Ed Sanders)
+* New rule: `no-void` (Ed Sanders)
+* New rule: `prefer-numeric-literals` (Ed Sanders)
+* New rule: `unicode-bom` (Ed Sanders)
+
+* Changed rule: `space-before-function-paren` — Also require spaces before parentheses in anonymous functions (Ed Sanders)
+
+* Replaced rule: `no-spaced-func` with `func-call-spacing`, the new value upstream (Ed Sanders)
+
+
 ## 0.3.0 / 2016-11-15
 * We now extend `eslint:recommended` except for `no-constant-condition` (Ed Sanders)
 
