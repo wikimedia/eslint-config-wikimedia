@@ -13,6 +13,7 @@
 	function upHere() {}
 
 	// Rule: camelcase (function, param, var, propery, method)
+	// Rule: func-call-spacing
 	function upHereAlso( yArg ) {
 		var rArg = yArg.fooBar;
 		return rArg + yArg.getQuux();
