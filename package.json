@@ -4,7 +4,8 @@
   "description": "ESLint config following Wikimedia code conventions.",
   "main": ".eslintrc.json",
   "scripts": {
-    "test": "eslint test/fixtures/*.js && node test/index.js"
+    "test": "eslint . && node test/valid.js && node test/invalid.js",
+    "build-invalid": "node test/invalid.js dump > test/fixtures/invalid-results.json"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   "author": "Gaidarenko Oleg <markelog@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "assert-diff": "^1.2.0",
     "eslint": "^3.1.1"
   }
 }
