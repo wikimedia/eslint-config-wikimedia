@@ -1,0 +1,287 @@
+[
+	{
+		"line": 3,
+		"column": 5,
+		"ruleId": "no-unused-vars"
+	},
+	{
+		"line": 7,
+		"column": 2,
+		"ruleId": "one-var"
+	},
+	{
+		"line": 13,
+		"column": 2,
+		"ruleId": "spaced-comment"
+	},
+	{
+		"line": 21,
+		"column": 3,
+		"ruleId": "no-alert"
+	},
+	{
+		"line": 24,
+		"column": 3,
+		"ruleId": "no-constant-condition"
+	},
+	{
+		"line": 29,
+		"column": 15,
+		"ruleId": "no-negated-in-lhs"
+	},
+	{
+		"line": 29,
+		"column": 15,
+		"ruleId": "no-unsafe-negation"
+	},
+	{
+		"line": 31,
+		"column": 12,
+		"ruleId": "no-use-before-define"
+	},
+	{
+		"line": 35,
+		"column": 10,
+		"ruleId": "no-bitwise"
+	},
+	{
+		"line": 37,
+		"column": 4,
+		"ruleId": "no-eval"
+	},
+	{
+		"line": 39,
+		"column": 4,
+		"ruleId": "no-implied-eval"
+	},
+	{
+		"line": 48,
+		"column": 6,
+		"ruleId": "no-catch-shadow"
+	},
+	{
+		"line": 55,
+		"column": 4,
+		"ruleId": "no-inner-declarations"
+	},
+	{
+		"line": 55,
+		"column": 4,
+		"ruleId": "no-loop-func"
+	},
+	{
+		"line": 63,
+		"column": 3,
+		"ruleId": "no-unused-labels"
+	},
+	{
+		"line": 65,
+		"column": 4,
+		"ruleId": "no-unused-expressions"
+	},
+	{
+		"line": 65,
+		"column": 7,
+		"ruleId": "no-sequences"
+	},
+	{
+		"line": 68,
+		"column": 9,
+		"ruleId": "no-array-constructor"
+	},
+	{
+		"line": 70,
+		"column": 9,
+		"ruleId": "no-new-func"
+	},
+	{
+		"line": 72,
+		"column": 9,
+		"ruleId": "no-new-object"
+	},
+	{
+		"line": 74,
+		"column": 9,
+		"ruleId": "no-new-require"
+	},
+	{
+		"line": 74,
+		"column": 13,
+		"ruleId": "new-cap"
+	},
+	{
+		"line": 76,
+		"column": 9,
+		"ruleId": "no-new-wrappers"
+	},
+	{
+		"line": 79,
+		"column": 3,
+		"ruleId": "no-new"
+	},
+	{
+		"line": 82,
+		"column": 3,
+		"ruleId": "no-with"
+	},
+	{
+		"line": 84,
+		"column": 10,
+		"ruleId": "no-void"
+	},
+	{
+		"line": 86,
+		"column": 10,
+		"ruleId": "no-proto"
+	},
+	{
+		"line": 88,
+		"column": 10,
+		"ruleId": "no-self-compare"
+	},
+	{
+		"line": 92,
+		"column": 26,
+		"ruleId": "no-trailing-spaces"
+	},
+	{
+		"line": 95,
+		"column": 3,
+		"ruleId": "no-underscore-dangle"
+	},
+	{
+		"line": 98,
+		"column": 3,
+		"ruleId": "no-whitespace-before-property"
+	},
+	{
+		"line": 102,
+		"column": 8,
+		"ruleId": "no-undef-init"
+	},
+	{
+		"line": 108,
+		"column": 8,
+		"ruleId": "no-shadow-restricted-names"
+	},
+	{
+		"line": 113,
+		"column": 9,
+		"ruleId": "no-useless-call"
+	},
+	{
+		"line": 116,
+		"column": 11,
+		"ruleId": "no-unmodified-loop-condition"
+	},
+	{
+		"line": 124,
+		"column": 4,
+		"ruleId": "no-extra-bind"
+	},
+	{
+		"line": 130,
+		"column": 11,
+		"ruleId": "no-caller"
+	},
+	{
+		"line": 133,
+		"column": 3,
+		"ruleId": "no-label-var"
+	},
+	{
+		"line": 137,
+		"column": 11,
+		"ruleId": "no-extra-label"
+	},
+	{
+		"line": 140,
+		"column": 5,
+		"ruleId": "no-throw-literal"
+	},
+	{
+		"line": 150,
+		"column": 3,
+		"ruleId": "indent"
+	},
+	{
+		"line": 152,
+		"column": 4,
+		"ruleId": "indent"
+	},
+	{
+		"line": 158,
+		"column": 20,
+		"ruleId": "new-cap"
+	},
+	{
+		"line": 160,
+		"column": 3,
+		"ruleId": "no-return-assign"
+	},
+	{
+		"line": 164,
+		"column": 2,
+		"ruleId": "no-extend-native"
+	},
+	{
+		"line": 169,
+		"column": 2,
+		"ruleId": "no-global-assign"
+	},
+	{
+		"line": 169,
+		"column": 2,
+		"ruleId": "no-implicit-globals"
+	},
+	{
+		"line": 169,
+		"column": 2,
+		"ruleId": "no-native-reassign"
+	},
+	{
+		"line": 172,
+		"column": 18,
+		"ruleId": "no-multi-spaces"
+	},
+	{
+		"line": 174,
+		"column": 12,
+		"ruleId": "no-floating-decimal"
+	},
+	{
+		"line": 176,
+		"column": 13,
+		"ruleId": "no-multi-str"
+	},
+	{
+		"line": 179,
+		"column": 1,
+		"ruleId": "no-multiple-empty-lines"
+	},
+	{
+		"line": 183,
+		"column": 15,
+		"ruleId": "no-useless-concat"
+	},
+	{
+		"line": 185,
+		"column": 10,
+		"ruleId": "no-octal-escape"
+	},
+	{
+		"line": 187,
+		"column": 11,
+		"ruleId": "no-script-url"
+	},
+	{
+		"line": 189,
+		"column": 23,
+		"ruleId": "no-unneeded-ternary"
+	},
+	{
+		"line": 200,
+		"column": 19,
+		"ruleId": "no-implicit-coercion"
+	}
+]
