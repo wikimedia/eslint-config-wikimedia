@@ -2,9 +2,6 @@
   "extends": "eslint:recommended",
   "env": {},
   "globals": {},
-  "parserOptions": {
-    "ecmaVersion": 5
-  },
   "rules": {
     "array-bracket-spacing": [ "error", "always" ],
     "block-spacing": "error",
