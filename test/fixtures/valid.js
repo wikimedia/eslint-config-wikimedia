@@ -43,11 +43,11 @@
 		// Rule: space-before-blocks
 		if ( options.quux ) {
 			name += options.quux;
-		} else if ( options.quux ) {
-			name += options.quux;
+		} else if ( options.default ) {
+			name += options.default;
 		// Rule: computed-property-spacing
-		} else if ( options[ 'default' ] ) {
-			name += 'default';
+		} else if ( options[ 'property-name' ] ) {
+			name += 'property-name';
 		}
 
 		// Rule: operator-linebreak
