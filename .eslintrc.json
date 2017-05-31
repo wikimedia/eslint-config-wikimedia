@@ -13,7 +13,7 @@
     "computed-property-spacing": [ "error", "always" ],
     "curly": [ "error", "all" ],
     "dot-location": [ "error", "property" ],
-    "dot-notation": [ "error", { "allowKeywords": false } ],
+    "dot-notation": [ "error" ],
     "eol-last": "error",
     "eqeqeq": "error",
     "func-call-spacing": "error",

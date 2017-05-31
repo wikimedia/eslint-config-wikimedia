@@ -25,6 +25,11 @@
 		"ruleId": "no-constant-condition"
 	},
 	{
+		"line": 27,
+		"column": 24,
+		"ruleId": "dot-notation"
+	},
+	{
 		"line": 29,
 		"column": 15,
 		"ruleId": "no-negated-in-lhs"

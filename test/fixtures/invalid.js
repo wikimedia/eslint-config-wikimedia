@@ -23,8 +23,8 @@ var APP;
 		// eslint-disable-next-line no-constant-condition
 		if ( true || options.quux ) {
 			name += options.quux;
-		// eslint-disable-next-line no-empty
-		} else if ( options.quux ) {
+		// eslint-disable-next-line no-empty, dot-notation
+		} else if ( options[ 'default' ] ) {
 		// eslint-disable-next-line no-negated-in-lhs, no-unsafe-negation
 		} else if ( !'default' in options ) {
 			// eslint-disable-next-line no-use-before-define
