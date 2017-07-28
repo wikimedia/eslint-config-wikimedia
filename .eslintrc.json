@@ -86,7 +86,7 @@
     "space-unary-ops": [ "error", { "words": true, "nonwords": false } ],
     "spaced-comment": [ "error", "always", { "exceptions": [ "*", "!" ] } ],
     "unicode-bom": [ "error" ],
-    "valid-jsdoc": [ "error", { "requireParamDescription": false, "requireReturnDescription": false, "requireReturn": false } ],
+    "valid-jsdoc": [ "error", { "requireParamDescription": false, "requireReturnDescription": false, "requireReturn": false, "prefer": { "returns": "return" } } ],
     "vars-on-top": "error",
     "wrap-iife": "error",
     "yoda": [ "error", "never" ]

@@ -203,4 +203,23 @@ var APP;
 
 	global.APP = APP;
 
+	// eslint-disable-next-line valid-jsdoc
+	/**
+	 * @param {number} a
+	 * @param {number} b
+	 * @returns {undefined}
+	 */
+	APP.sum = function ( a, b ) {
+		return a + b;
+	};
+
+	// eslint-disable-next-line valid-jsdoc
+	/**
+	 * @param {number} a
+	 * @return {undefined}
+	 */
+	APP.multiply = function ( a, b ) {
+		return a * b;
+	};
+
 }( this ) );
