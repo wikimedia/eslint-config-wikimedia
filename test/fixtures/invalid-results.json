@@ -288,5 +288,15 @@
 		"line": 200,
 		"column": 19,
 		"ruleId": "no-implicit-coercion"
+	},
+	{
+		"line": 207,
+		"column": 2,
+		"ruleId": "valid-jsdoc"
+	},
+	{
+		"line": 217,
+		"column": 2,
+		"ruleId": "valid-jsdoc"
 	}
 ]

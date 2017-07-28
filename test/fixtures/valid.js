@@ -155,6 +155,15 @@
 		}
 	};
 
+	/**
+	 * @param {number} a
+	 * @param {number} b
+	 * @return {number}
+	 */
+	APP.sum = function ( a, b ) {
+		return a + b;
+	};
+
 	APP.cast = function ( options, val ) {
 		options.enable = !!val;
 		options.disable = Boolean( val );
