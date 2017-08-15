@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.0 / 2017-08-15
+* Remove explicitly defined `ecmaVersion` (Ed Sanders)
+
+* Changed rule: `dot-notation` - Remove redundant allowKeywords override (Ed Sanders)
+* Changed rule: `valid-jsdoc` - Validate use of `@return` (Timo Tijhof)
+
+* test: Add tests for negative rules (Timo Tijhof)
+
+
 ## 0.4.0 / 2017-05-03
 * We now explicitly define the `ecmaVersion` as 5 (James Forrester)
 * We removed a number of rules duplicated from `eslint:recommended` (Ed Sanders)
