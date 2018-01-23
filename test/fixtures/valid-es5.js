@@ -1,6 +1,7 @@
 /* eslint-env es5 */
 
 // Rule: linebreak-style
+// Rule: max-len
 // Rule: wrap-iife
 // Rule: semi
 // Rule: semi-spacing
@@ -36,6 +37,9 @@
 	 */
 	APP.Example = function ( id, options ) {
 		var name, inline, bar;
+
+		// Rule: max-len
+		bar = 'This is a long string that is indeed so long that it breaches the line length rules and thus would trigger a warning were it not for the over-ride.';
 
 		// Rule: space-infix-ops
 		this.total = upHere() + id;

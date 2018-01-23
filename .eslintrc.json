@@ -22,6 +22,16 @@
     "key-spacing": [ "error", { "beforeColon": false, "afterColon": true } ],
     "keyword-spacing": "error",
     "linebreak-style": [ "error", "unix" ],
+    "max-len": [ "warn", {
+      "code": 100,
+      "tabWidth": 4,
+      "ignorePattern": "^// eslint-.+",
+      "ignoreUrls": true,
+      "ignoreComments": false,
+      "ignoreRegExpLiterals": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true
+    } ],
     "new-cap": [ "error", { "newIsCap": true, "capIsNew": false, "properties": true } ],
     "new-parens": "error",
     "no-alert": "error",
