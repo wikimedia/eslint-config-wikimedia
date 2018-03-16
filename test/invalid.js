@@ -42,7 +42,7 @@ for ( rule in config.rules ) {
 		count++;
 		assert(
 			fixture.match( new RegExp(
-				'(//|/\*) eslint-disable(-next-line)? ([a-z-]+, )??' + rule
+				'(//|/*) eslint-disable(-next-line)? ([a-z-]+, )??' + rule
 			) ),
 			'Rule ' + rule + ' is covered'
 		);

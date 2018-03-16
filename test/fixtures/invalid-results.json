@@ -21,7 +21,7 @@
 	},
 	{
 		"line": 24,
-		"column": 3,
+		"column": 8,
 		"ruleId": "no-constant-condition"
 	},
 	{
@@ -81,12 +81,12 @@
 	},
 	{
 		"line": 65,
-		"column": 4,
+		"column": 3,
 		"ruleId": "no-unused-expressions"
 	},
 	{
 		"line": 65,
-		"column": 7,
+		"column": 6,
 		"ruleId": "no-sequences"
 	},
 	{
@@ -206,12 +206,12 @@
 	},
 	{
 		"line": 150,
-		"column": 3,
+		"column": 1,
 		"ruleId": "indent"
 	},
 	{
 		"line": 152,
-		"column": 4,
+		"column": 1,
 		"ruleId": "indent"
 	},
 	{
@@ -291,11 +291,11 @@
 	},
 	{
 		"line": 207,
-		"column": 2,
+		"column": 6,
 		"ruleId": "valid-jsdoc"
 	},
 	{
-		"line": 217,
+		"line": 213,
 		"column": 2,
 		"ruleId": "valid-jsdoc"
 	}
