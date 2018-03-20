@@ -61,8 +61,8 @@ var APP;
 
 		// eslint-disable-next-line no-unused-labels
 		data:
-			// eslint-disable-next-line no-unused-expressions, no-sequences
-			bar, named();
+		// eslint-disable-next-line no-unused-expressions, no-sequences
+		bar, named();
 
 		// eslint-disable-next-line no-array-constructor
 		bar = new Array();
@@ -148,7 +148,7 @@ var APP;
 		switch ( code ) {
 		// eslint-disable-next-line indent
 		case 200:
-		// eslint-disable-next-line indent
+			// eslint-disable-next-line indent
 			break;
 		}
 	};
@@ -204,13 +204,9 @@ var APP;
 	global.APP = APP;
 
 	// eslint-disable-next-line valid-jsdoc
-	/**
-	 * @param {number} a
-	 * @param {number} b
-	 * @returns {undefined}
-	 */
-	APP.sum = function ( a, b ) {
-		return a + b;
+	/** @returns {undefined} */
+	APP.stop = function () {
+		return '@returns instead of @return';
 	};
 
 	// eslint-disable-next-line valid-jsdoc
@@ -219,7 +215,7 @@ var APP;
 	 * @return {undefined}
 	 */
 	APP.multiply = function ( a, b ) {
-		return a * b;
+		return a * b.undocumented;
 	};
 
 }( this ) );
