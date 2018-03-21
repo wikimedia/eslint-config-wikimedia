@@ -145,12 +145,15 @@ var APP;
 	};
 
 	APP.fall = function ( code ) {
+	/* eslint-disable switch-colon-spacing */
 		switch ( code ) {
-		// eslint-disable-next-line indent
+			case 100 :break;
+			// eslint-disable-next-line indent
 		case 200:
 			// eslint-disable-next-line indent
 			break;
 		}
+	/* eslint-enable switch-colon-spacing */
 	};
 
 	APP.fetch = function () {

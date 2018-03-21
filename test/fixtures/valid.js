@@ -146,6 +146,7 @@
 	 * @return {null|undefined}
 	 */
 	APP.fall = function ( code ) {
+		// Rule: switch-colon-spacing
 		// Rule: indent (SwitchCase)
 		switch ( code ) {
 			case 200:
