@@ -195,6 +195,11 @@
 		"ruleId": "no-label-var"
 	},
 	{
+		"line": 133,
+		"column": 8,
+		"ruleId": "for-direction"
+	},
+	{
 		"line": 137,
 		"column": 11,
 		"ruleId": "no-extra-label"

@@ -129,8 +129,8 @@ var APP;
 			// eslint-disable-next-line no-caller
 			self = arguments.callee;
 
-		// eslint-disable-next-line no-label-var
-		ret: for ( i = 0; i < items.length; i++ ) {
+		// eslint-disable-next-line no-label-var, for-direction
+		ret: for ( i = 0; i < items.length; i-- ) {
 			if ( items[ i ] !== null ) {
 				ret.push( self( items[ i ] ) );
 				// eslint-disable-next-line no-extra-label

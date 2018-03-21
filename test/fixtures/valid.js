@@ -113,6 +113,7 @@
 			j = 1,
 			ret = {};
 
+		// Rule: for-direction
 		for ( i = 0, len = items.length; i < len; i++ ) {
 			if ( items[ i ] !== null ) {
 				item = items[ i ];
