@@ -67,12 +67,12 @@
 	{
 		"line": 55,
 		"column": 4,
-		"ruleId": "no-inner-declarations"
+		"ruleId": "no-loop-func"
 	},
 	{
 		"line": 55,
 		"column": 4,
-		"ruleId": "no-loop-func"
+		"ruleId": "no-inner-declarations"
 	},
 	{
 		"line": 63,
@@ -195,6 +195,11 @@
 		"ruleId": "no-label-var"
 	},
 	{
+		"line": 133,
+		"column": 8,
+		"ruleId": "for-direction"
+	},
+	{
 		"line": 137,
 		"column": 11,
 		"ruleId": "no-extra-label"
@@ -206,8 +211,13 @@
 	},
 	{
 		"line": 150,
-		"column": 1,
-		"ruleId": "indent"
+		"column": 13,
+		"ruleId": "switch-colon-spacing"
+	},
+	{
+		"line": 150,
+		"column": 13,
+		"ruleId": "switch-colon-spacing"
 	},
 	{
 		"line": 152,
@@ -215,87 +225,92 @@
 		"ruleId": "indent"
 	},
 	{
-		"line": 158,
+		"line": 154,
+		"column": 1,
+		"ruleId": "indent"
+	},
+	{
+		"line": 161,
 		"column": 20,
 		"ruleId": "new-cap"
 	},
 	{
-		"line": 160,
+		"line": 163,
 		"column": 3,
 		"ruleId": "no-return-assign"
 	},
 	{
-		"line": 164,
+		"line": 167,
 		"column": 2,
 		"ruleId": "no-extend-native"
 	},
 	{
-		"line": 169,
-		"column": 2,
-		"ruleId": "no-global-assign"
-	},
-	{
-		"line": 169,
+		"line": 172,
 		"column": 2,
 		"ruleId": "no-implicit-globals"
 	},
 	{
-		"line": 169,
+		"line": 172,
+		"column": 2,
+		"ruleId": "no-global-assign"
+	},
+	{
+		"line": 172,
 		"column": 2,
 		"ruleId": "no-native-reassign"
 	},
 	{
-		"line": 172,
+		"line": 175,
 		"column": 18,
 		"ruleId": "no-multi-spaces"
 	},
 	{
-		"line": 174,
+		"line": 177,
 		"column": 12,
 		"ruleId": "no-floating-decimal"
 	},
 	{
-		"line": 176,
+		"line": 179,
 		"column": 13,
 		"ruleId": "no-multi-str"
 	},
 	{
-		"line": 179,
+		"line": 182,
 		"column": 1,
 		"ruleId": "no-multiple-empty-lines"
 	},
 	{
-		"line": 183,
+		"line": 186,
 		"column": 15,
 		"ruleId": "no-useless-concat"
 	},
 	{
-		"line": 185,
+		"line": 188,
 		"column": 10,
 		"ruleId": "no-octal-escape"
 	},
 	{
-		"line": 187,
+		"line": 190,
 		"column": 11,
 		"ruleId": "no-script-url"
 	},
 	{
-		"line": 189,
+		"line": 192,
 		"column": 23,
 		"ruleId": "no-unneeded-ternary"
 	},
 	{
-		"line": 200,
+		"line": 203,
 		"column": 19,
 		"ruleId": "no-implicit-coercion"
 	},
 	{
-		"line": 207,
+		"line": 210,
 		"column": 6,
 		"ruleId": "valid-jsdoc"
 	},
 	{
-		"line": 213,
+		"line": 216,
 		"column": 2,
 		"ruleId": "valid-jsdoc"
 	}

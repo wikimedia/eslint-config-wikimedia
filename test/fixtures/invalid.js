@@ -129,8 +129,8 @@ var APP;
 			// eslint-disable-next-line no-caller
 			self = arguments.callee;
 
-		// eslint-disable-next-line no-label-var
-		ret: for ( i = 0; i < items.length; i++ ) {
+		// eslint-disable-next-line no-label-var, for-direction
+		ret: for ( i = 0; i < items.length; i-- ) {
 			if ( items[ i ] !== null ) {
 				ret.push( self( items[ i ] ) );
 				// eslint-disable-next-line no-extra-label
@@ -145,12 +145,15 @@ var APP;
 	};
 
 	APP.fall = function ( code ) {
+	/* eslint-disable switch-colon-spacing */
 		switch ( code ) {
-		// eslint-disable-next-line indent
+			case 100 :break;
+			// eslint-disable-next-line indent
 		case 200:
 			// eslint-disable-next-line indent
 			break;
 		}
+	/* eslint-enable switch-colon-spacing */
 	};
 
 	APP.fetch = function () {
