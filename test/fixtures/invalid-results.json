@@ -67,250 +67,265 @@
 	{
 		"line": 55,
 		"column": 4,
-		"ruleId": "no-loop-func"
+		"ruleId": "semi-style"
 	},
 	{
-		"line": 55,
+		"line": 58,
 		"column": 4,
 		"ruleId": "no-inner-declarations"
 	},
 	{
-		"line": 63,
+		"line": 58,
+		"column": 4,
+		"ruleId": "no-loop-func"
+	},
+	{
+		"line": 66,
 		"column": 3,
 		"ruleId": "no-unused-labels"
 	},
 	{
-		"line": 65,
+		"line": 68,
 		"column": 3,
 		"ruleId": "no-unused-expressions"
 	},
 	{
-		"line": 65,
+		"line": 68,
 		"column": 6,
 		"ruleId": "no-sequences"
 	},
 	{
-		"line": 68,
+		"line": 71,
 		"column": 9,
 		"ruleId": "no-array-constructor"
 	},
 	{
-		"line": 70,
+		"line": 73,
 		"column": 9,
 		"ruleId": "no-new-func"
 	},
 	{
-		"line": 72,
+		"line": 75,
 		"column": 9,
 		"ruleId": "no-new-object"
 	},
 	{
-		"line": 74,
+		"line": 77,
 		"column": 9,
 		"ruleId": "no-new-require"
 	},
 	{
-		"line": 74,
+		"line": 77,
 		"column": 13,
 		"ruleId": "new-cap"
 	},
 	{
-		"line": 76,
+		"line": 79,
 		"column": 9,
 		"ruleId": "no-new-wrappers"
 	},
 	{
-		"line": 79,
+		"line": 82,
 		"column": 3,
 		"ruleId": "no-new"
 	},
 	{
-		"line": 82,
+		"line": 85,
 		"column": 3,
 		"ruleId": "no-with"
 	},
 	{
-		"line": 84,
+		"line": 87,
 		"column": 10,
 		"ruleId": "no-void"
 	},
 	{
-		"line": 86,
+		"line": 89,
 		"column": 10,
 		"ruleId": "no-proto"
 	},
 	{
-		"line": 88,
+		"line": 91,
 		"column": 10,
 		"ruleId": "no-self-compare"
 	},
 	{
-		"line": 92,
+		"line": 95,
 		"column": 26,
 		"ruleId": "no-trailing-spaces"
 	},
 	{
-		"line": 95,
+		"line": 98,
 		"column": 3,
 		"ruleId": "no-underscore-dangle"
 	},
 	{
-		"line": 98,
+		"line": 101,
 		"column": 3,
 		"ruleId": "no-whitespace-before-property"
 	},
 	{
-		"line": 102,
+		"line": 105,
 		"column": 8,
 		"ruleId": "no-undef-init"
 	},
 	{
-		"line": 108,
+		"line": 111,
 		"column": 8,
 		"ruleId": "no-shadow-restricted-names"
 	},
 	{
-		"line": 113,
+		"line": 116,
 		"column": 9,
 		"ruleId": "no-useless-call"
 	},
 	{
-		"line": 116,
+		"line": 119,
 		"column": 11,
 		"ruleId": "no-unmodified-loop-condition"
 	},
 	{
-		"line": 124,
+		"line": 127,
 		"column": 4,
 		"ruleId": "no-extra-bind"
 	},
 	{
-		"line": 130,
+		"line": 133,
 		"column": 11,
 		"ruleId": "no-caller"
 	},
 	{
-		"line": 133,
+		"line": 136,
 		"column": 3,
 		"ruleId": "no-label-var"
 	},
 	{
-		"line": 133,
+		"line": 136,
 		"column": 8,
 		"ruleId": "for-direction"
 	},
 	{
-		"line": 137,
+		"line": 140,
 		"column": 11,
 		"ruleId": "no-extra-label"
 	},
 	{
-		"line": 140,
+		"line": 143,
 		"column": 5,
 		"ruleId": "no-throw-literal"
 	},
 	{
-		"line": 150,
+		"line": 153,
 		"column": 13,
 		"ruleId": "switch-colon-spacing"
 	},
 	{
-		"line": 150,
+		"line": 153,
 		"column": 13,
 		"ruleId": "switch-colon-spacing"
 	},
 	{
-		"line": 152,
+		"line": 153,
+		"column": 20,
+		"ruleId": "semi-spacing"
+	},
+	{
+		"line": 155,
 		"column": 1,
 		"ruleId": "indent"
 	},
 	{
-		"line": 154,
+		"line": 157,
 		"column": 1,
 		"ruleId": "indent"
 	},
 	{
-		"line": 161,
+		"line": 158,
+		"column": 5,
+		"ruleId": "semi-style"
+	},
+	{
+		"line": 165,
 		"column": 20,
 		"ruleId": "new-cap"
 	},
 	{
-		"line": 163,
+		"line": 167,
 		"column": 3,
 		"ruleId": "no-return-assign"
 	},
 	{
-		"line": 167,
+		"line": 171,
 		"column": 2,
 		"ruleId": "no-extend-native"
 	},
 	{
-		"line": 172,
-		"column": 2,
-		"ruleId": "no-implicit-globals"
-	},
-	{
-		"line": 172,
-		"column": 2,
-		"ruleId": "no-global-assign"
-	},
-	{
-		"line": 172,
+		"line": 176,
 		"column": 2,
 		"ruleId": "no-native-reassign"
 	},
 	{
-		"line": 175,
+		"line": 176,
+		"column": 2,
+		"ruleId": "no-implicit-globals"
+	},
+	{
+		"line": 176,
+		"column": 2,
+		"ruleId": "no-global-assign"
+	},
+	{
+		"line": 179,
 		"column": 18,
 		"ruleId": "no-multi-spaces"
 	},
 	{
-		"line": 177,
+		"line": 181,
 		"column": 12,
 		"ruleId": "no-floating-decimal"
 	},
 	{
-		"line": 179,
+		"line": 183,
 		"column": 13,
 		"ruleId": "no-multi-str"
 	},
 	{
-		"line": 182,
+		"line": 186,
 		"column": 1,
 		"ruleId": "no-multiple-empty-lines"
 	},
 	{
-		"line": 186,
+		"line": 190,
 		"column": 15,
 		"ruleId": "no-useless-concat"
 	},
 	{
-		"line": 188,
+		"line": 192,
 		"column": 10,
 		"ruleId": "no-octal-escape"
 	},
 	{
-		"line": 190,
+		"line": 194,
 		"column": 11,
 		"ruleId": "no-script-url"
 	},
 	{
-		"line": 192,
+		"line": 196,
 		"column": 23,
 		"ruleId": "no-unneeded-ternary"
 	},
 	{
-		"line": 203,
+		"line": 207,
 		"column": 19,
 		"ruleId": "no-implicit-coercion"
 	},
 	{
-		"line": 210,
+		"line": 214,
 		"column": 6,
 		"ruleId": "valid-jsdoc"
 	},
 	{
-		"line": 216,
+		"line": 220,
 		"column": 2,
 		"ruleId": "valid-jsdoc"
 	}
