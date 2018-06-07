@@ -50,7 +50,10 @@ var APP;
 			return e;
 		}
 
-		for ( i = 0; i < 5; i++ ) {
+		for ( i = 0
+			// eslint-disable-next-line semi-style
+			; i < 5;
+			i++ ) {
 			// eslint-disable-next-line no-loop-func, no-inner-declarations
 			function inline( a ) {
 				return a + i;
@@ -145,15 +148,16 @@ var APP;
 	};
 
 	APP.fall = function ( code ) {
-	/* eslint-disable switch-colon-spacing */
+	/* eslint-disable switch-colon-spacing, semi-spacing, semi-style */
 		switch ( code ) {
-			case 100 :break;
+			case 100 :break ;
 			// eslint-disable-next-line indent
 		case 200:
 			// eslint-disable-next-line indent
-			break;
+			break
+				;
 		}
-	/* eslint-enable switch-colon-spacing */
+	/* eslint-enable switch-colon-spacing, semi-spacing, semi-style */
 	};
 
 	APP.fetch = function () {
