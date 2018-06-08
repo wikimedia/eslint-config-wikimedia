@@ -2,6 +2,7 @@
 // Rule: wrap-iife
 // Rule: semi
 // Rule: semi-spacing
+// Rule: semi-style
 // Rule: prefer-numeric-literals
 // Rule: unicode-bom
 ( function ( global ) {
