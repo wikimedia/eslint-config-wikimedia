@@ -1,3 +1,5 @@
+/* eslint-env es5 */
+
 // Rule: linebreak-style
 // Rule: wrap-iife
 // Rule: semi

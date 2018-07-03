@@ -1,4 +1,4 @@
-/* eslint-env browser, node */
+/* eslint-env es5, browser, node */
 // eslint-disable-next-line no-implicit-globals, no-unused-vars
 var APP;
 ( function ( global ) {
@@ -92,7 +92,7 @@ var APP;
 		}
 
 		// eslint-disable-next-line no-trailing-spaces
-		options.spaces = 'foo'; 
+		options.spaces = 'foo';
 
 		// eslint-disable-next-line no-underscore-dangle
 		options.lo_ = 'dash';
