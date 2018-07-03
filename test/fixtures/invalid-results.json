@@ -88,13 +88,13 @@
 			"filename": "fixtures/invalid-es5.js",
 			"line": 58,
 			"column": 4,
-			"ruleId": "no-loop-func"
+			"ruleId": "no-inner-declarations"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
 			"line": 58,
 			"column": 4,
-			"ruleId": "no-inner-declarations"
+			"ruleId": "no-loop-func"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
@@ -179,6 +179,12 @@
 			"line": 91,
 			"column": 10,
 			"ruleId": "no-self-compare"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 95,
+			"column": 26,
+			"ruleId": "no-trailing-spaces"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
