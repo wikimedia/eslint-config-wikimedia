@@ -328,5 +328,10 @@
 		"line": 220,
 		"column": 2,
 		"ruleId": "valid-jsdoc"
+	},
+	{
+		"line": 229,
+		"column": 27,
+		"ruleId": "no-prototype-builtins"
 	}
 ]

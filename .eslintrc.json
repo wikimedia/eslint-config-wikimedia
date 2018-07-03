@@ -52,6 +52,7 @@
     "no-new-wrappers": "error",
     "no-octal-escape": "error",
     "no-proto": "error",
+    "no-prototype-builtins": "error",
     "no-return-assign": "error",
     "no-script-url": "error",
     "no-self-compare": "error",
