@@ -225,4 +225,7 @@ var APP;
 		return a * b.undocumented;
 	};
 
+	// eslint-disable-next-line no-prototype-builtins
+	APP.hasBarProperty = APP.hasOwnProperty( 'bar' );
+
 }( this ) );

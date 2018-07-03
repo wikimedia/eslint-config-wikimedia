@@ -7,7 +7,8 @@
 // Rule: unicode-bom
 ( function ( global ) {
 	var APP,
-		hasOwn = Object.prototype.hasOwnProperty;
+		hasOwn = Object.prototype.hasOwnProperty,
+		APPHasOwnProperty = Object.prototype.hasOwnProperty.call( APP, 'hasOwn' );
 
 	// Rule: spaced-comment
 	// Example
@@ -127,7 +128,7 @@
 		}
 
 		for ( key in item ) {
-			if ( hasOwn.call( item, key ) ) {
+			if ( APPHasOwnProperty || hasOwn.call( item, key ) ) {
 				// Rule: computed-property-spacing
 				ret[ key ] = new APP.Example( item[ key ] );
 			}
