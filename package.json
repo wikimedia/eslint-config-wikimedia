@@ -4,8 +4,8 @@
   "description": "ESLint config following Wikimedia code conventions.",
   "main": ".eslintrc.json",
   "scripts": {
-    "test": "eslint . && node test/valid.js && node test/invalid.js",
-    "build-invalid": "node test/invalid.js dump > test/fixtures/invalid-results.json"
+    "test": "eslint . && node test/testValid.js && node test/testInvalid.js",
+    "build-invalid": "node test/testInvalid.js dump > test/fixtures/invalid-results.json"
   },
   "repository": {
     "type": "git",

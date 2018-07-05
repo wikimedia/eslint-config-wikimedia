@@ -1,4 +1,4 @@
-/* eslint-env browser, node */
+/* eslint-env es5, browser, node */
 // eslint-disable-next-line no-implicit-globals, no-unused-vars
 var APP;
 ( function ( global ) {
