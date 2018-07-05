@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.6.0 / 2018-07-05
+* Update ESLint to version 4 (Timo Tijhof)
+* Update ESLint to version 5 (James D. Forrester)
+
+* New rule: `arrow-steps` (James D. Forrester)
+* New rule: `max-len` (Joaquin Hernandez)
+* New rule: `no-prototype-builtins` (James D. Forrester)
+* New rule: `semi-style` (James D. Forrester)
+* New rule: `switch-colon-spacing` (James D. Forrester)
+
+* build: Add package-lock.json, expand testing to node 8, 10 (James D. Forrester)
+
+
 ## 0.5.0 / 2017-08-15
 * Remove explicitly defined `ecmaVersion` (Ed Sanders)
 
@@ -10,7 +23,7 @@
 
 
 ## 0.4.0 / 2017-05-03
-* We now explicitly define the `ecmaVersion` as 5 (James Forrester)
+* We now explicitly define the `ecmaVersion` as 5 (James D. Forrester)
 * We removed a number of rules duplicated from `eslint:recommended` (Ed Sanders)
 
 * New rule: `no-alert` (Ed Sanders)
