@@ -78,6 +78,9 @@ var APP;
 		// eslint-disable-next-line no-new-wrappers
 		bar = new String( 'events' );
 
+		// eslint-disable-next-line max-len
+		// This is a ludicrously long comment that is so long that one can't help but wonder as to whether the writer is a fool or merely testing other developers.
+
 		// eslint-disable-next-line no-new
 		new APP.Example();
 
