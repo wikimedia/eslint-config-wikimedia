@@ -7,7 +7,8 @@ var assert = require( 'assert-diff' ),
 	fixture5 = fs.readFileSync( __dirname + '/fixtures/invalid-es5.js' ).toString(),
 	fixture6 = fs.readFileSync( __dirname + '/fixtures/invalid-es6.js' ).toString(),
 	config = require( '../.eslintrc.json' ),
-	rule, count, engine, report, results, expected, testPositives;
+	rule, count, engine, report, results, expected, testPositives,
+	prevFilename, prevLine;
 
 // Verify we got the expected warnings
 engine = new eslint.CLIEngine( {
@@ -19,9 +20,20 @@ engine = new eslint.CLIEngine( {
 report = engine.executeOnFiles( [ __dirname + '/fixtures/invalid-es5.js', __dirname + '/fixtures/invalid-es6.js' ] );
 results = report.results.map( function ( fileResult ) {
 	return fileResult.messages.map( function ( result ) {
+		var filename, relativeLine;
+
+		filename = fileResult.filePath.slice( __dirname.length + 1 );
+		if ( prevFilename !== filename ) {
+			prevFilename = filename;
+			prevLine = 0;
+		}
+
+		relativeLine = result.line - prevLine;
+		prevLine = result.line;
+
 		return {
-			filename: fileResult.filePath.slice( __dirname.length + 1 ),
-			line: result.line,
+			filename: filename,
+			line: relativeLine,
 			column: result.column,
 			ruleId: result.ruleId
 		};
