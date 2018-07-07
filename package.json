@@ -24,8 +24,12 @@
   ],
   "author": "Gaidarenko Oleg <markelog@gmail.com>",
   "license": "MIT",
+  "peerDependencies": {
+    "eslint-plugin-qunit": "^3.2.1"
+  },
   "devDependencies": {
     "assert-diff": "^1.2.0",
-    "eslint": "^5.0.0"
+    "eslint": "^5.0.0",
+    "eslint-plugin-qunit": "^3.2.1"
   }
 }

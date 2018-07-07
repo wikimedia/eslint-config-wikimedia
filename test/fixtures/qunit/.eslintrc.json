@@ -1,0 +1,6 @@
+{
+	"extends": "../../../qunit.json",
+	"env": {
+		"qunit": true
+	}
+}
