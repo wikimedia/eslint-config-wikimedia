@@ -8,403 +8,403 @@
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 7,
+			"line": 4,
 			"column": 2,
 			"ruleId": "one-var"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 13,
+			"line": 6,
 			"column": 2,
 			"ruleId": "spaced-comment"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 21,
+			"line": 8,
 			"column": 3,
 			"ruleId": "no-alert"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 24,
+			"line": 3,
 			"column": 8,
 			"ruleId": "no-constant-condition"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 27,
+			"line": 3,
 			"column": 24,
 			"ruleId": "dot-notation"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 29,
+			"line": 2,
 			"column": 15,
 			"ruleId": "no-negated-in-lhs"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 29,
+			"line": 0,
 			"column": 15,
 			"ruleId": "no-unsafe-negation"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 31,
+			"line": 2,
 			"column": 12,
 			"ruleId": "no-use-before-define"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 35,
+			"line": 4,
 			"column": 10,
 			"ruleId": "no-bitwise"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 37,
+			"line": 2,
 			"column": 4,
 			"ruleId": "no-eval"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 39,
+			"line": 2,
 			"column": 4,
 			"ruleId": "no-implied-eval"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 48,
+			"line": 9,
 			"column": 6,
 			"ruleId": "no-catch-shadow"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 55,
+			"line": 7,
 			"column": 4,
 			"ruleId": "semi-style"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 58,
+			"line": 3,
 			"column": 4,
 			"ruleId": "no-loop-func"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 58,
+			"line": 0,
 			"column": 4,
 			"ruleId": "no-inner-declarations"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 66,
+			"line": 8,
 			"column": 3,
 			"ruleId": "no-unused-labels"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 68,
+			"line": 2,
 			"column": 3,
 			"ruleId": "no-unused-expressions"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 68,
+			"line": 0,
 			"column": 6,
 			"ruleId": "no-sequences"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 71,
+			"line": 3,
 			"column": 9,
 			"ruleId": "no-array-constructor"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 73,
+			"line": 2,
 			"column": 9,
 			"ruleId": "no-new-func"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 75,
+			"line": 2,
 			"column": 9,
 			"ruleId": "no-new-object"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 77,
+			"line": 2,
 			"column": 9,
 			"ruleId": "no-new-require"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 77,
+			"line": 0,
 			"column": 13,
 			"ruleId": "new-cap"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 79,
+			"line": 2,
 			"column": 9,
 			"ruleId": "no-new-wrappers"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 82,
+			"line": 3,
 			"column": 1,
 			"ruleId": "max-len"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 85,
+			"line": 3,
 			"column": 3,
 			"ruleId": "no-new"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 88,
+			"line": 3,
 			"column": 3,
 			"ruleId": "no-with"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 90,
+			"line": 2,
 			"column": 10,
 			"ruleId": "no-void"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 92,
+			"line": 2,
 			"column": 10,
 			"ruleId": "no-proto"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 94,
+			"line": 2,
 			"column": 10,
 			"ruleId": "no-self-compare"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 98,
+			"line": 4,
 			"column": 26,
 			"ruleId": "no-trailing-spaces"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 101,
+			"line": 3,
 			"column": 3,
 			"ruleId": "no-underscore-dangle"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 104,
+			"line": 3,
 			"column": 3,
 			"ruleId": "no-whitespace-before-property"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 108,
+			"line": 4,
 			"column": 8,
 			"ruleId": "no-undef-init"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 114,
+			"line": 6,
 			"column": 8,
 			"ruleId": "no-shadow-restricted-names"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 119,
+			"line": 5,
 			"column": 9,
 			"ruleId": "no-useless-call"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 122,
+			"line": 3,
 			"column": 11,
 			"ruleId": "no-unmodified-loop-condition"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 130,
+			"line": 8,
 			"column": 4,
 			"ruleId": "no-extra-bind"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 136,
+			"line": 6,
 			"column": 11,
 			"ruleId": "no-caller"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 139,
+			"line": 3,
 			"column": 3,
 			"ruleId": "no-label-var"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 139,
+			"line": 0,
 			"column": 8,
 			"ruleId": "for-direction"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 143,
+			"line": 4,
 			"column": 11,
 			"ruleId": "no-extra-label"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 146,
+			"line": 3,
 			"column": 5,
 			"ruleId": "no-throw-literal"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 156,
+			"line": 10,
 			"column": 13,
 			"ruleId": "switch-colon-spacing"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 156,
+			"line": 0,
 			"column": 13,
 			"ruleId": "switch-colon-spacing"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 156,
+			"line": 0,
 			"column": 20,
 			"ruleId": "semi-spacing"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 158,
+			"line": 2,
 			"column": 1,
 			"ruleId": "indent"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 160,
+			"line": 2,
 			"column": 1,
 			"ruleId": "indent"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 161,
+			"line": 1,
 			"column": 5,
 			"ruleId": "semi-style"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 168,
+			"line": 7,
 			"column": 20,
 			"ruleId": "new-cap"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 170,
+			"line": 2,
 			"column": 3,
 			"ruleId": "no-return-assign"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 174,
+			"line": 4,
 			"column": 2,
 			"ruleId": "no-extend-native"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 179,
+			"line": 5,
 			"column": 2,
 			"ruleId": "no-global-assign"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 179,
+			"line": 0,
 			"column": 2,
 			"ruleId": "no-implicit-globals"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 179,
+			"line": 0,
 			"column": 2,
 			"ruleId": "no-native-reassign"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 182,
+			"line": 3,
 			"column": 18,
 			"ruleId": "no-multi-spaces"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 184,
+			"line": 2,
 			"column": 12,
 			"ruleId": "no-floating-decimal"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 186,
+			"line": 2,
 			"column": 13,
 			"ruleId": "no-multi-str"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 189,
+			"line": 3,
 			"column": 1,
 			"ruleId": "no-multiple-empty-lines"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 193,
+			"line": 4,
 			"column": 15,
 			"ruleId": "no-useless-concat"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 195,
+			"line": 2,
 			"column": 10,
 			"ruleId": "no-octal-escape"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 197,
+			"line": 2,
 			"column": 11,
 			"ruleId": "no-script-url"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 199,
+			"line": 2,
 			"column": 23,
 			"ruleId": "no-unneeded-ternary"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 210,
+			"line": 11,
 			"column": 19,
 			"ruleId": "no-implicit-coercion"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 217,
+			"line": 7,
 			"column": 6,
 			"ruleId": "valid-jsdoc"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 223,
+			"line": 6,
 			"column": 2,
 			"ruleId": "valid-jsdoc"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 232,
+			"line": 9,
 			"column": 27,
 			"ruleId": "no-prototype-builtins"
 		}
@@ -418,19 +418,19 @@
 		},
 		{
 			"filename": "fixtures/invalid-es6.js",
-			"line": 8,
+			"line": 3,
 			"column": 7,
 			"ruleId": "no-constant-condition"
 		},
 		{
 			"filename": "fixtures/invalid-es6.js",
-			"line": 8,
+			"line": 0,
 			"column": 7,
 			"ruleId": "arrow-parens"
 		},
 		{
 			"filename": "fixtures/invalid-es6.js",
-			"line": 8,
+			"line": 0,
 			"column": 7,
 			"ruleId": "no-unused-vars"
 		}
