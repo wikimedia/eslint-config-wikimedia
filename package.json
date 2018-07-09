@@ -12,7 +12,7 @@
     "url": "https://github.com/wikimedia/eslint-config-wikimedia.git"
   },
   "homepage": "https://www.mediawiki.org/wiki/Manual_talk:Coding_conventions/JavaScript",
-  "issues": "https://github.com/wikimedia/eslint-config-wikimedia/issues",
+  "bugs": "https://github.com/wikimedia/eslint-config-wikimedia/issues",
   "keywords": [
     "style guide",
     "eslint",
