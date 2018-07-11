@@ -6,8 +6,10 @@ var assert = require( 'assert-diff' ),
 
 	fixture5 = fs.readFileSync( __dirname + '/fixtures/invalid-es5.js' ).toString(),
 	fixture6 = fs.readFileSync( __dirname + '/fixtures/invalid-es6.js' ).toString(),
+	fixtureQUnit = fs.readFileSync( __dirname + '/fixtures/qunit/invalid-qunit.js' ).toString(),
 	config = require( '../.eslintrc.json' ),
-	rule, count, engine, report, results, expected, testPositives,
+	configQUnit = require( '../qunit.json' ),
+	count, engine, report, results, expected, testPositives,
 	prevFilename, prevLine;
 
 // Verify we got the expected warnings
@@ -17,7 +19,11 @@ engine = new eslint.CLIEngine( {
 	// Disable eslint-disable comments, which we use for coverage
 	allowInlineConfig: false
 } );
-report = engine.executeOnFiles( [ __dirname + '/fixtures/invalid-es5.js', __dirname + '/fixtures/invalid-es6.js' ] );
+report = engine.executeOnFiles( [
+	__dirname + '/fixtures/invalid-es5.js',
+	__dirname + '/fixtures/invalid-es6.js',
+	__dirname + '/fixtures/qunit/invalid-qunit.js'
+] );
 results = report.results.map( function ( fileResult ) {
 	return fileResult.messages.map( function ( result ) {
 		var filename, relativeLine;
@@ -52,22 +58,19 @@ count = 0;
 testPositives = [
 	'arrow-parens' // Has an invalid test case
 ];
-for ( rule in config.rules ) {
+Object.keys( config.rules ).concat( Object.keys( configQUnit.rules ) ).forEach( function ( rule ) {
+	var rDisableRule = new RegExp( '(//|/*) eslint-disable(-next-line)? ([a-z-]+, )??' + rule );
 	// Positive rules are covered by test/testValid.js
-	if ( rule.match( /^no-/ ) || testPositives.indexOf( rule ) !== -1 ) {
+	if ( rule.match( /^no-|\/no-/ ) || testPositives.indexOf( rule ) !== -1 ) {
 		count++;
 		assert(
 			(
-				fixture5.match( new RegExp(
-					'(//|/*) eslint-disable(-next-line)? ([a-z-]+, )??' + rule
-				) ) ||
-				fixture6.match( new RegExp(
-					'(//|/*) eslint-disable(-next-line)? ([a-z-]+, )??' + rule
-				) )
-			)
-			,
+				rDisableRule.test( fixture5 ) ||
+				rDisableRule.test( fixture6 ) ||
+				rDisableRule.test( fixtureQUnit )
+			),
 			'Rule ' + rule + ' is covered'
 		);
 	}
-}
+} );
 console.log( 'Negative rules (' + count + ') covered.' );

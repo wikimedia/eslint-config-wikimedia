@@ -434,5 +434,25 @@
 			"column": 7,
 			"ruleId": "no-unused-vars"
 		}
+	],
+	[
+		{
+			"filename": "fixtures/qunit/invalid-qunit.js",
+			"line": 6,
+			"column": 2,
+			"ruleId": "qunit/no-assert-equal"
+		},
+		{
+			"filename": "fixtures/qunit/invalid-qunit.js",
+			"line": 4,
+			"column": 3,
+			"ruleId": "qunit/no-early-return"
+		},
+		{
+			"filename": "fixtures/qunit/invalid-qunit.js",
+			"line": 4,
+			"column": 2,
+			"ruleId": "qunit/no-negated-ok"
+		}
 	]
 ]
