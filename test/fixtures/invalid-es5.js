@@ -25,7 +25,7 @@ var APP;
 			name += options.quux;
 		// eslint-disable-next-line no-empty, dot-notation
 		} else if ( options[ 'default' ] ) {
-		// eslint-disable-next-line no-negated-in-lhs, no-unsafe-negation
+		// eslint-disable-next-line no-unsafe-negation
 		} else if ( !'default' in options ) {
 			// eslint-disable-next-line no-use-before-define
 			name += named();
@@ -44,7 +44,6 @@ var APP;
 			var e = items.event;
 			try {
 				return APP.loop( items );
-			// eslint-disable-next-line no-catch-shadow
 			} catch ( e ) {
 			}
 			return e;
@@ -175,7 +174,7 @@ var APP;
 		return new APP.Example( this );
 	};
 
-	// eslint-disable-next-line no-native-reassign, no-implicit-globals, no-global-assign
+	// eslint-disable-next-line no-implicit-globals, no-global-assign
 	Date = APP.Date;
 
 	// eslint-disable-next-line no-multi-spaces
