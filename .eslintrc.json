@@ -100,7 +100,25 @@
     "spaced-comment": [ "error", "always", { "exceptions": [ "*", "!" ] } ],
     "switch-colon-spacing": [ "error", { "after": true, "before": false } ],
     "unicode-bom": [ "error" ],
-    "valid-jsdoc": [ "error", { "requireParamDescription": false, "requireReturnDescription": false, "requireReturn": false, "prefer": { "returns": "return" } } ],
+    "valid-jsdoc": [ "error", {
+      "requireParamDescription": false,
+      "requireReturnDescription": false,
+      "requireReturn": false,
+      "prefer": { "returns": "return" },
+      "preferType": {
+        "Boolean": "boolean",
+        "Number": "number",
+        "String": "string",
+        "Undefined": "undefined",
+        "Null": "null",
+        "object": "Object",
+        "array": "Array",
+        "function": "Function",
+        "date": "Date",
+        "regexp": "RegExp",
+        "error": "Error"
+      }
+    } ],
     "vars-on-top": "error",
     "wrap-iife": "error",
     "yoda": [ "error", "never" ]
