@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+exec eslint \
+  --cache \
+  --max-warnings 0 \
+  --report-unused-disable-directives \
+  --ext .js \
+  "$@"

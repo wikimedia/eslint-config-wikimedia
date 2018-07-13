@@ -4,7 +4,9 @@
   "description": "ESLint config following Wikimedia code conventions.",
   "main": ".eslintrc.json",
   "scripts": {
-    "test": "eslint . && node test/testValid.js && node test/testInvalid.js",
+    "lint": "bin/eslint-wikimedia --ignore-pattern test/fixtures/invalid\\* .",
+    "lint:fix": "npm run -s lint -- --fix",
+    "test": "npm run -s lint && node test/testValid.js && node test/testInvalid.js",
     "build-invalid": "node test/testInvalid.js dump > test/fixtures/invalid-results.json"
   },
   "repository": {
@@ -19,6 +21,9 @@
     "eslintconfig",
     "wikimedia"
   ],
+  "bin": {
+    "eslint-wikimedia": "bin/eslint-wikimedia"
+  },
   "files": [
     ".eslintrc.json"
   ],

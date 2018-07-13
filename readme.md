@@ -4,15 +4,65 @@
 
 ## Usage
 
+### Install
+
 ```sh
 npm install --save-dev eslint-config-wikimedia
 ```
+
+### Extend the configuration
 
 Configure ESLint with a `.eslintrc` file using the following contents:
 ```json
 {
 	"extends": "wikimedia"
 }
+```
+
+### Try it out
+
+```sh
+node_modules/.bin/eslint-wikimedia .
+```
+
+### Auto-fix offenders where possible
+
+```sh
+node_modules/.bin/eslint-wikimedia . --fix
+```
+
+### Use the recommended defaults
+
+#### Execute the linter in package.json OR Gruntfile
+
+```json
+{
+  ...,
+  "scripts": {
+    "lint": "eslint-wikimedia .",
+    "lint:fix": "npm run -s lint -- --fix",
+    "test": "npm run -s lint && your-other-tests",
+  ...
+}
+```
+
+```js
+...
+  eslint: {
+    options: {
+      cache: true,
+      maxWarnings: 0,
+      reportUnusedDisableDirectives: true
+    }
+...
+```
+
+#### Exclude the cached lint results from Git
+
+```gitignore
+...
+/.eslintcache
+...
 ```
 
 ## Proposing changes
