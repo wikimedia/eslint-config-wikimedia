@@ -40,12 +40,6 @@
 			"filename": "fixtures/invalid-es5.js",
 			"line": 2,
 			"column": 15,
-			"ruleId": "no-negated-in-lhs"
-		},
-		{
-			"filename": "fixtures/invalid-es5.js",
-			"line": 0,
-			"column": 15,
 			"ruleId": "no-unsafe-negation"
 		},
 		{
@@ -74,13 +68,7 @@
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 9,
-			"column": 6,
-			"ruleId": "no-catch-shadow"
-		},
-		{
-			"filename": "fixtures/invalid-es5.js",
-			"line": 7,
+			"line": 15,
 			"column": 4,
 			"ruleId": "semi-style"
 		},
@@ -322,19 +310,13 @@
 			"filename": "fixtures/invalid-es5.js",
 			"line": 5,
 			"column": 2,
-			"ruleId": "no-global-assign"
-		},
-		{
-			"filename": "fixtures/invalid-es5.js",
-			"line": 0,
-			"column": 2,
 			"ruleId": "no-implicit-globals"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
 			"line": 0,
 			"column": 2,
-			"ruleId": "no-native-reassign"
+			"ruleId": "no-global-assign"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
