@@ -219,6 +219,23 @@
 	APP.$head
 		.appendTo( APP.$element );
 
+	/**
+	 * @param {boolean} a
+	 * @param {number} b
+	 * @param {string} c
+	 * @param {undefined} d
+	 * @param {null} e
+	 * @param {Object} f
+	 * @param {Array} g
+	 * @param {Function} h
+	 * @param {Date} i
+	 * @param {RegExp} j
+	 * @return {Error}
+	*/
+	APP.typing = function ( a, b, c, d, e, f, g, h, i, j ) {
+		return a || b || c || d || e || f || g || h || i || j;
+	};
+
 	global.APP = APP;
 
 }( this ) );

@@ -230,4 +230,23 @@ var APP;
 	// eslint-disable-next-line no-prototype-builtins
 	APP.hasBarProperty = APP.hasOwnProperty( 'bar' );
 
+	/* eslint-disable valid-jsdoc */
+	/**
+	 * @param {Boolean} a
+	 * @param {Number} b
+	 * @param {String} c
+	 * @param {Undefined} d
+	 * @param {Null} e
+	 * @param {object} f
+	 * @param {array} g
+	 * @param {function} h
+	 * @param {date} i
+	 * @param {regexp} j
+	 * @return {error}
+	*/
+	APP.typing = function ( a, b, c, d, e, f, g, h, i, j ) {
+		return a || b || c || d || e || f || g || h || i || j;
+	};
+	/* eslint-enable valid-jsdoc */
+
 }( this ) );

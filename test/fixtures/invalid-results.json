@@ -389,6 +389,72 @@
 			"line": 9,
 			"column": 27,
 			"ruleId": "no-prototype-builtins"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 4,
+			"column": 13,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 13,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 13,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 13,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 13,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 13,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 13,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 13,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 13,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 13,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 14,
+			"ruleId": "valid-jsdoc"
 		}
 	],
 	[
