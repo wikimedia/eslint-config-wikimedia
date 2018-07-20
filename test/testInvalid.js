@@ -60,7 +60,7 @@ testPositives = [
 	'quotes' // Has an invalid test case
 ];
 Object.keys( config.rules ).concat( Object.keys( configQUnit.rules ) ).forEach( function ( rule ) {
-	var rDisableRule = new RegExp( '(//|/*) eslint-disable(-next-line)? ([a-z-]+, )??' + rule );
+	var rDisableRule = new RegExp( '(/[/*]) eslint-disable(-next-line)? ([a-z-]+, )??' + rule );
 	// Positive rules are covered by test/testValid.js
 	if ( rule.match( /^no-|\/no-/ ) || testPositives.indexOf( rule ) !== -1 ) {
 		count++;
