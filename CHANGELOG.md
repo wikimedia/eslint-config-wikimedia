@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.7.0 / 2018-08-13
+* Implement `wikimedia/qunit` coding style (Timo Tijhof)
+
+* New rule: `qunit/require-expect` (James D. Forrester)
+
+* Changed rule: `valid-jsdoc` — Set preferred cases for types (Stephen Niedzielski)
+
+* Removed rule: `no-catch-shadow` – Deprecated in eslint v5.1.0 (Stephen Niedzielski)
+* Removed rule: `no-native-reassign` – Already inherited as `no-global-assign` (Stephen Niedzielski)
+* Removed rule: `no-negated-in-lhs` – Already inherited as `no-unsafe-negation` (Stephen Niedzielski)
+
+* package.json: Correct 'bugs' key (James D. Forrester)
+* build: Use relative offsets in expected "invalid-results" file (Timo Tijhof)
+
+
 ## 0.6.0 / 2018-07-05
 * Update ESLint to version 4 (Timo Tijhof)
 * Update ESLint to version 5 (James D. Forrester)
