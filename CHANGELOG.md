@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.7.1 / 2018-08-13
+* No-op release bump for npmjs.com. (James D. Forrester)
+
 ## 0.7.0 / 2018-08-13
 * Implement `wikimedia/qunit` coding style (Timo Tijhof)
 
