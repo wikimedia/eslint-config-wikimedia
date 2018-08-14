@@ -20,7 +20,8 @@
     "wikimedia"
   ],
   "files": [
-    ".eslintrc.json"
+    ".eslintrc.json",
+    "qunit.json"
   ],
   "author": "Gaidarenko Oleg <markelog@gmail.com>",
   "license": "MIT",
