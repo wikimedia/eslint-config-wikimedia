@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.7.2 / 2018-08-14
+* Add qunit.json to "files" (Ed Sanders)
+
 ## 0.7.1 / 2018-08-13
 * No-op release bump for npmjs.com. (James D. Forrester)
 
