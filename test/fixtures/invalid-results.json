@@ -116,6 +116,18 @@
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
+			"line": 0,
+			"column": 28,
+			"ruleId": "quotes"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 0,
+			"column": 47,
+			"ruleId": "quotes"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
 			"line": 2,
 			"column": 9,
 			"ruleId": "no-new-object"

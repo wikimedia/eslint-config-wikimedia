@@ -205,7 +205,9 @@
 			value: {
 				of: 'I don\'t know'
 			}
-		}
+		},
+		// Rule: quotes
+		fourth: "Who's coming to tea?"
 	} );
 
 	APP.example( 'banana' )
