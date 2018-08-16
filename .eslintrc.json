@@ -85,7 +85,7 @@
     "operator-linebreak": [ "error", "after" ],
     "prefer-numeric-literals": "error",
     "quote-props": [ "error", "as-needed", { "keywords": true } ],
-    "quotes": [ "error", "single" ],
+    "quotes": [ "error", "single", { "avoidEscape": true } ],
     "semi": [ "error", "always" ],
     "semi-spacing": [ "error", { "before": false, "after": true } ],
     "semi-style": [ "error", "last" ],
