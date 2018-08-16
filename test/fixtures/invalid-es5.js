@@ -68,8 +68,8 @@ var APP;
 
 		// eslint-disable-next-line no-array-constructor
 		bar = new Array();
-		// eslint-disable-next-line no-new-func
-		bar = new Function( 'a', 'return ' + name + ';' );
+		// eslint-disable-next-line no-new-func, quotes
+		bar = new Function( 'a', "return " + name + ";" );
 		// eslint-disable-next-line no-new-object
 		bar = new Object();
 		// eslint-disable-next-line no-new-require, new-cap

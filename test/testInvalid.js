@@ -56,7 +56,8 @@ console.log( 'Verified ' + ( results[ 0 ].length + results[ 1 ].length ) + ' exp
 // Verify coverage
 count = 0;
 testPositives = [
-	'arrow-parens' // Has an invalid test case
+	'arrow-parens', // Has an invalid test case
+	'quotes' // Has an invalid test case
 ];
 Object.keys( config.rules ).concat( Object.keys( configQUnit.rules ) ).forEach( function ( rule ) {
 	var rDisableRule = new RegExp( '(//|/*) eslint-disable(-next-line)? ([a-z-]+, )??' + rule );
