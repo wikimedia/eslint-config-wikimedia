@@ -7,7 +7,7 @@ var assert = require( 'assert-diff' ),
 	fixture5 = fs.readFileSync( __dirname + '/fixtures/invalid-es5.js' ).toString(),
 	fixture6 = fs.readFileSync( __dirname + '/fixtures/invalid-es6.js' ).toString(),
 	fixtureQUnit = fs.readFileSync( __dirname + '/fixtures/qunit/invalid-qunit.js' ).toString(),
-	config = require( '../.eslintrc.json' ),
+	config = require( '../wikimedia.json' ),
 	configQUnit = require( '../qunit.json' ),
 	count, engine, report, results, expected, testPositives,
 	prevFilename, prevLine;
