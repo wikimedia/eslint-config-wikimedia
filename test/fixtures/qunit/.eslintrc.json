@@ -1,6 +1,3 @@
 {
-	"extends": "../../../qunit.json",
-	"env": {
-		"qunit": true
-	}
+	"extends": "../../../qunit.json"
 }
