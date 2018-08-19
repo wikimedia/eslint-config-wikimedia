@@ -4,7 +4,7 @@ var assert = require( 'assert' ),
 	fixture5 = fs.readFileSync( __dirname + '/fixtures/valid-es5.js' ),
 	fixture6 = fs.readFileSync( __dirname + '/fixtures/valid-es6.js' ),
 	fixtureQUnit = fs.readFileSync( __dirname + '/fixtures/qunit/valid-qunit.js' ),
-	config = require( '../.eslintrc.json' ),
+	config = require( '../wikimedia.json' ),
 	configQUnit = require( '../qunit.json' ),
 	count = 0;
 
