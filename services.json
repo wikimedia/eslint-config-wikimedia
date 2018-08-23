@@ -1,7 +1,5 @@
 {
-    "extends": [
-        "./.eslintrc.json"
-    ],
+    "extends": "./wikimedia.json",
     "env": {
         "es6": true,
         "node": true
