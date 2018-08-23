@@ -514,5 +514,6 @@
 			"column": 2,
 			"ruleId": "qunit/no-negated-ok"
 		}
-	]
+	],
+	[]
 ]

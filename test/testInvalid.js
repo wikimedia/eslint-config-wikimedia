@@ -6,12 +6,15 @@ var assert = require( 'assert-diff' ),
 
 	config = require( '../wikimedia.json' ),
 	configQUnit = require( '../qunit.json' ),
+	configServices = require( '../qunit.json' ),
 	fixture5Path = __dirname + '/fixtures/invalid-es5.js',
 	fixture5 = fs.readFileSync( fixture5Path ).toString(),
 	fixture6Path = __dirname + '/fixtures/invalid-es6.js',
 	fixture6 = fs.readFileSync( fixture6Path ).toString(),
 	fixtureQUnitPath = __dirname + '/fixtures/qunit/invalid-qunit.js',
 	fixtureQUnit = fs.readFileSync( fixtureQUnitPath ).toString(),
+	fixtureServicesPath = __dirname + '/fixtures/services/invalid-services.js',
+	fixtureServices = fs.readFileSync( fixtureServicesPath ).toString(),
 	count, engine, report, results, expected, testPositives,
 	prevFilename, prevLine;
 
@@ -25,7 +28,8 @@ engine = new eslint.CLIEngine( {
 report = engine.executeOnFiles( [
 	fixture5Path,
 	fixture6Path,
-	fixtureQUnitPath
+	fixtureQUnitPath,
+	fixtureServicesPath
 ] );
 results = report.results.map( function ( fileResult ) {
 	return fileResult.messages.map( function ( result ) {
@@ -64,6 +68,7 @@ testPositives = [
 ];
 Object.keys( config.rules )
 	.concat( Object.keys( configQUnit.rules ) )
+	.concat( Object.keys( configServices.rules ) )
 	.forEach( function ( rule ) {
 		var rDisableRule = new RegExp( '(//|/*) eslint-disable(-next-line)? ([a-z-]+, )??' + rule );
 		// Positive rules are covered by test/testValid.js
@@ -73,7 +78,8 @@ Object.keys( config.rules )
 				(
 					rDisableRule.test( fixture5 ) ||
 					rDisableRule.test( fixture6 ) ||
-					rDisableRule.test( fixtureQUnit )
+					rDisableRule.test( fixtureQUnit ) ||
+					rDisableRule.test( fixtureServices )
 				),
 				'Rule ' + rule + ' is covered'
 			);
