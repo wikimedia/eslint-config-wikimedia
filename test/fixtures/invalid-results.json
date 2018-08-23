@@ -549,26 +549,8 @@
 		{
 			"filename": "fixtures/services/invalid-services.js",
 			"line": 0,
-			"column": 16,
-			"ruleId": "space-in-parens"
-		},
-		{
-			"filename": "fixtures/services/invalid-services.js",
-			"line": 0,
-			"column": 18,
-			"ruleId": "no-tabs"
-		},
-		{
-			"filename": "fixtures/services/invalid-services.js",
-			"line": 0,
-			"column": 18,
+			"column": 17,
 			"ruleId": "block-scoped-var"
-		},
-		{
-			"filename": "fixtures/services/invalid-services.js",
-			"line": 0,
-			"column": 24,
-			"ruleId": "space-in-parens"
 		}
 	]
 ]

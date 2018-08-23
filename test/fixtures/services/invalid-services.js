@@ -4,12 +4,12 @@
 function runMe() {
     // eslint-disable-next-line no-constant-condition
     if (true) {
-        // eslint-disable-next-line vars-on-top, no-unused-vars, no-var
+        // eslint-disable-next-line no-var, no-unused-vars, vars-on-top
         var flag = true;
     }
 
-    // eslint-disable-next-line block-scoped-var, no-undef, no-console, no-tabs, space-in-parens
-    console.log(	flag		);
+    // eslint-disable-next-line block-scoped-var, no-undef, no-console
+    console.log(flag);
 }
 
 // eslint-disable-next-line no-catch-shadow
@@ -26,6 +26,7 @@ function runMe() {
 // eslint-disable-next-line no-nested-ternary
 // eslint-disable-next-line no-path-concat
 // eslint-disable-next-line no-spaced-func
+// eslint-disable-next-line no-tabs
 // eslint-disable-next-line no-template-curly-in-string
 // eslint-disable-next-line no-useless-constructor
 // eslint-disable-next-line no-useless-rename
