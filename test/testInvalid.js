@@ -6,7 +6,7 @@ var assert = require( 'assert-diff' ),
 
 	config = require( '../wikimedia.json' ),
 	configQUnit = require( '../qunit.json' ),
-	configServices = require( '../qunit.json' ),
+	configServices = require( '../services.json' ),
 	fixture5Path = __dirname + '/fixtures/invalid-es5.js',
 	fixture5 = fs.readFileSync( fixture5Path ).toString(),
 	fixture6Path = __dirname + '/fixtures/invalid-es6.js',
@@ -62,9 +62,11 @@ console.log( 'Verified ' + ( results[ 0 ].length + results[ 1 ].length ) + ' exp
 
 // Verify coverage
 count = 0;
+// Rules with an invalid test case
 testPositives = [
-	'arrow-parens', // Has an invalid test case
-	'quotes' // Has an invalid test case
+	'arrow-parens',
+	'quotes',
+	'block-scoped-var'
 ];
 Object.keys( config.rules )
 	.concat( Object.keys( configQUnit.rules ) )
