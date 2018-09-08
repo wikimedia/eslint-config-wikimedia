@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.0 / 2018-09-08
+* Changed rule: `quotes` – Add the 'avoidEscape' option. (James D. Forrester)
+* qunit: Add the appropriate `env` setting. (James D. Forrester)
+
 ## 0.7.2 / 2018-08-14
 * Add qunit.json to "files" (Ed Sanders)
 
