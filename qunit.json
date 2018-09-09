@@ -1,6 +1,6 @@
 {
   "extends": [
-    "./.eslintrc.json",
+    "./wikimedia.json",
     "plugin:qunit/recommended",
     "plugin:qunit/two"
   ],
