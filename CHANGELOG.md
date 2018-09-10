@@ -1,14 +1,21 @@
 # Changelog
 
+## 0.8.1 / 2018-09-10
+* qunit: extend wikimedia.json (not .eslintrc.json) (Timo Tijhof)
+
+
 ## 0.8.0 / 2018-09-08
 * Changed rule: `quotes` – Add the 'avoidEscape' option. (James D. Forrester)
 * qunit: Add the appropriate `env` setting. (James D. Forrester)
 
+
 ## 0.7.2 / 2018-08-14
 * Add qunit.json to "files" (Ed Sanders)
 
+
 ## 0.7.1 / 2018-08-13
 * No-op release bump for npmjs.com. (James D. Forrester)
+
 
 ## 0.7.0 / 2018-08-13
 * Implement `wikimedia/qunit` coding style (Timo Tijhof)
