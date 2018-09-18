@@ -29,7 +29,7 @@
     "eslint-plugin-qunit": "^3.3.0"
   },
   "devDependencies": {
-    "assert-diff": "^1.2.0",
+    "assert-diff": "^2.0.3",
     "eslint": "^5.0.0",
     "eslint-plugin-qunit": "^3.3.0"
   }
