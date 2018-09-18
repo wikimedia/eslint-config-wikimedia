@@ -14,4 +14,7 @@
 		b--;
 	}
 
+	// Rule: no-misleading-character-class
+	/^[👍]$/u.test( '👍' );
+
 }( this ) );
