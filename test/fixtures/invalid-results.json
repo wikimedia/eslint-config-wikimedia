@@ -493,6 +493,12 @@
 			"line": 0,
 			"column": 7,
 			"ruleId": "no-unused-vars"
+		},
+		{
+			"filename": "fixtures/invalid-es6.js",
+			"line": 5,
+			"column": 2,
+			"ruleId": "no-misleading-character-class"
 		}
 	],
 	[

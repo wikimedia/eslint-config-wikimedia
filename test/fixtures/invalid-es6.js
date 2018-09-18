@@ -8,4 +8,8 @@
 	if ( a => 2 ) {
 		global.foo( foo );
 	}
+
+	// eslint-disable-next-line no-misleading-character-class
+	/^[👍]$/.test( '👍' );
+
 }( this ) );
