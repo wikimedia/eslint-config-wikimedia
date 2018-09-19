@@ -21,16 +21,21 @@
   ],
   "files": [
     "wikimedia.json",
-    "qunit.json"
+    "qunit.json",
+    "services.json"
   ],
   "author": "Gaidarenko Oleg <markelog@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "eslint-plugin-qunit": "^4.0.0"
+    "eslint-plugin-qunit": "^4.0.0",
+    "eslint-plugin-jsdoc": "^3.2.0",
+    "eslint-plugin-json": "^1.2.0"
   },
   "devDependencies": {
     "assert-diff": "^2.0.3",
     "eslint": "^5.6.0",
-    "eslint-plugin-qunit": "^4.0.0"
+    "eslint-plugin-qunit": "^4.0.0",
+    "eslint-plugin-jsdoc": "^3.2.0",
+    "eslint-plugin-json": "^1.2.0"
   }
 }

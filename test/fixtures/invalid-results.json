@@ -520,5 +520,43 @@
 			"column": 2,
 			"ruleId": "qunit/no-negated-ok"
 		}
+	],
+	[
+		{
+			"filename": "fixtures/services/invalid-services.js",
+			"line": 4,
+			"column": 10,
+			"ruleId": "no-unused-vars"
+		},
+		{
+			"filename": "fixtures/services/invalid-services.js",
+			"line": 2,
+			"column": 9,
+			"ruleId": "no-constant-condition"
+		},
+		{
+			"filename": "fixtures/services/invalid-services.js",
+			"line": 2,
+			"column": 9,
+			"ruleId": "vars-on-top"
+		},
+		{
+			"filename": "fixtures/services/invalid-services.js",
+			"line": 0,
+			"column": 9,
+			"ruleId": "no-var"
+		},
+		{
+			"filename": "fixtures/services/invalid-services.js",
+			"line": 4,
+			"column": 5,
+			"ruleId": "no-console"
+		},
+		{
+			"filename": "fixtures/services/invalid-services.js",
+			"line": 0,
+			"column": 17,
+			"ruleId": "block-scoped-var"
+		}
 	]
 ]
