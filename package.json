@@ -22,6 +22,7 @@
   "files": [
     "common.json",
     "client.json",
+    "jquery.json",
     "qunit.json",
     "server.json"
   ],
@@ -35,6 +36,7 @@
   "devDependencies": {
     "assert-diff": "^2.0.3",
     "eslint": "^5.9.0",
+    "eslint-plugin-jquery": "edg2s/eslint-plugin-jquery#9ad4cec2c",
     "eslint-plugin-qunit": "^4.0.0"
   }
 }

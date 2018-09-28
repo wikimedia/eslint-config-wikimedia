@@ -23,11 +23,24 @@ This profile allows ES5 code and browser native functions. It will complain abou
 }
 ```
 
+#### jQuery
+This profile adds the jQuery `$` global, and additional rules preventing the use of jQuery features that have ES5 alternatives.
+`.eslintrc.json`:
+```json
+{
+	"extends": [
+		"wikimedia/client",
+		"wikimedia/jquery"
+	]
+}
+```
+
 ### Adding a QUnit test suite
 You can extend the above profile by also adding a second `.eslintrc.json` file in your tests directory:
 
 `tests/qunit/.eslintrc.json`:
 ```json
+{
 	"extends": [
 		"wikimedia/qunit",
 		"../../.eslintrc.json"

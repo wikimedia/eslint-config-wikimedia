@@ -1,0 +1,15 @@
+{
+  "globals": {
+    "$": false
+  },
+  "plugins": [ "jquery" ],
+  "rules": {
+    "jquery/no-each": "error",
+    "jquery/no-grep": "error",
+    "jquery/no-in-array": "error",
+    "jquery/no-is-function": "error",
+    "jquery/no-map": "error",
+    "jquery/no-proxy": "error",
+    "jquery/no-trim": "error"
+  }
+}

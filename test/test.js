@@ -11,7 +11,7 @@ var fs = require( 'fs' ),
 	engine, report, results, prevFilename, prevLine,
 
 	// TODO: Load this from package.json's manifest
-	profiles = [ 'common', 'client', 'qunit', 'server' ];
+	profiles = [ 'common', 'client', 'jquery', 'qunit', 'server' ];
 
 profiles.forEach( function ( profile ) {
 	var count, config;
