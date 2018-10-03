@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "./common.json"
+  ],
+  "env": {
+    "es6": true,
+	"node": true
+  },
+  "rules": {
+    "arrow-parens": "error",
+    "no-misleading-character-class": "error",
+    "no-useless-computed-key": "error"
+  }
+}

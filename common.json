@@ -4,7 +4,6 @@
   "globals": {},
   "rules": {
     "array-bracket-spacing": [ "error", "always" ],
-    "arrow-parens": "error",
     "block-spacing": "error",
     "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ],
     "camelcase": [ "error", { "properties": "always" } ],
@@ -50,7 +49,6 @@
     "no-implied-eval": "error",
     "no-label-var": "error",
     "no-loop-func": "error",
-    "no-misleading-character-class": "error",
     "no-multi-spaces": "error",
     "no-multi-str": "error",
     "no-multiple-empty-lines": [ "error", { "max": 1, "maxBOF": 0, "maxEOF": 0 } ],
@@ -76,7 +74,6 @@
     "no-unused-expressions": "error",
     "no-use-before-define": "error",
     "no-useless-call": "error",
-    "no-useless-computed-key": "error",
     "no-useless-concat": "error",
     "no-void": "error",
     "no-whitespace-before-property": "error",
