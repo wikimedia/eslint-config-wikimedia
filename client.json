@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "./common.json"
+  ],
+  "env": {
+    "es5": true,
+	"browser": true
+  },
+  "rules": {
+  }
+}

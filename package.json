@@ -2,7 +2,7 @@
   "name": "eslint-config-wikimedia",
   "version": "0.8.1",
   "description": "ESLint config following Wikimedia code conventions.",
-  "main": "wikimedia.json",
+  "main": "common.json",
   "scripts": {
     "test": "eslint . && node test/testValid.js && node test/testInvalid.js",
     "build-invalid": "node test/testInvalid.js dump > test/fixtures/invalid-results.json"
