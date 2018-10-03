@@ -22,7 +22,8 @@
   "files": [
     "common.json",
     "client.json",
-    "qunit.json"
+    "qunit.json",
+    "server.json"
   ],
   "contributors": [
     "James D. Forrester <jforrester@wikimedia.org>",
