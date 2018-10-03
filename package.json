@@ -20,10 +20,17 @@
     "wikimedia"
   ],
   "files": [
-    "wikimedia.json",
+    "common.json",
+    "client.json",
+    "server.json",
     "qunit.json"
   ],
-  "author": "Gaidarenko Oleg <markelog@gmail.com>",
+  "contributors": [
+    "James D. Forrester <jforrester@wikimedia.org>",
+    "Ed Sanders <ejsanders@gmail.com>",
+    "Timo Tijhof <krinklemail@gmail.com>",
+    "Oleg Gaidarenko <markelog@gmail.com>"
+  ],
   "license": "MIT",
   "peerDependencies": {
     "eslint-plugin-qunit": "^4.0.0"
