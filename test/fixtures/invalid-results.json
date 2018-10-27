@@ -467,6 +467,108 @@
 			"line": 1,
 			"column": 14,
 			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 10,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
 		}
 	],
 	[

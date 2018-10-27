@@ -234,9 +234,36 @@
 	 * @param {RegExp} j
 	 * @return {Error}
 	*/
-	APP.typing = function ( a, b, c, d, e, f, g, h, i, j ) {
+	APP.JSDocTypes = function ( a, b, c, d, e, f, g, h, i, j ) {
 		return a || b || c || d || e || f || g || h || i || j;
 	};
+
+	/**
+	 * {@link APP}
+	 * {@link APP}
+	 *
+	 * @abstract
+	 * @extends String
+	 * @class
+	 * @constructor
+	 * @constructs
+	 * @const
+	 * @default
+	 * @desc Description.
+	 * @external String
+	 * @file Description.
+	 * @fires Event
+	 * @func
+	 * @method
+	 * @member
+	 * @param {number} a
+	 * @param {number} b
+	 * @property {number} c
+	 * @return {number}
+	 * @throws {Error}
+	 * @yield
+	 */
+	APP.JSDocTags = function ( a, b ) { return a || b; };
 
 	global.APP = APP;
 
