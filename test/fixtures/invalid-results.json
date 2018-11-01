@@ -322,13 +322,13 @@
 			"filename": "fixtures/invalid-es5.js",
 			"line": 5,
 			"column": 2,
-			"ruleId": "no-implicit-globals"
+			"ruleId": "no-global-assign"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
 			"line": 0,
 			"column": 2,
-			"ruleId": "no-global-assign"
+			"ruleId": "no-implicit-globals"
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
@@ -470,7 +470,7 @@
 		},
 		{
 			"filename": "fixtures/invalid-es5.js",
-			"line": 10,
+			"line": 11,
 			"column": 5,
 			"ruleId": "valid-jsdoc"
 		},
@@ -569,6 +569,12 @@
 			"line": 1,
 			"column": 5,
 			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/invalid-es5.js",
+			"line": 2,
+			"column": 38,
+			"ruleId": "max-statements-per-line"
 		}
 	],
 	[
