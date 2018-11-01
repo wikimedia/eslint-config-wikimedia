@@ -2,6 +2,7 @@
 
 // Rule: linebreak-style
 // Rule: max-len
+// Rule: max-statements-per-line
 // Rule: wrap-iife
 // Rule: semi
 // Rule: semi-spacing
@@ -77,7 +78,9 @@
 		// Rule: block-spacing
 		// Rule: space-before-function-paren
 		// Rule: space-in-parens
-		inline = function ( items ) { return items.slice(); };
+		inline = function ( items ) {
+			return items.slice();
+		};
 
 		inline = function ( items ) {
 			items = items.slice();
@@ -263,7 +266,9 @@
 	 * @throws {Error}
 	 * @yield
 	 */
-	APP.JSDocTags = function ( a, b ) { return a || b; };
+	APP.JSDocTags = function ( a, b ) {
+		return a || b;
+	};
 
 	global.APP = APP;
 

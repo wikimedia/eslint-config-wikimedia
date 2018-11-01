@@ -32,6 +32,7 @@
       "ignoreStrings": true,
       "ignoreTemplateLiterals": true
     } ],
+    "max-statements-per-line": [ "error", { "max": 1 } ],
     "new-cap": [ "error", { "newIsCap": true, "capIsNew": false, "properties": true } ],
     "new-parens": "error",
     "no-alert": "error",

@@ -248,6 +248,7 @@ var APP;
 		return a || b || c || d || e || f || g || h || i || j;
 	};
 
+	/* eslint-disable max-statements-per-line */
 	/**
 	 * {@linkcode APP}
 	 * {@linkplain APP}
@@ -271,6 +272,6 @@ var APP;
 	 * @yields
 	 */
 	APP.JSDocTags = function ( a, b ) { return a || b; };
-	/* eslint-enable valid-jsdoc */
+	/* eslint-enable max-statements-per-line valid-jsdoc */
 
 }( this ) );
