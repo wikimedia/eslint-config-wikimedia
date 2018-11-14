@@ -244,9 +244,34 @@ var APP;
 	 * @param {regexp} j
 	 * @return {error}
 	*/
-	APP.typing = function ( a, b, c, d, e, f, g, h, i, j ) {
+	APP.JSDocTypes = function ( a, b, c, d, e, f, g, h, i, j ) {
 		return a || b || c || d || e || f || g || h || i || j;
 	};
-	/* eslint-enable valid-jsdoc */
+
+	/* eslint-disable max-statements-per-line */
+	/**
+	 * {@linkcode APP}
+	 * {@linkplain APP}
+	 *
+	 * @virtual
+	 * @augments String
+	 * @constant
+	 * @defaultvalue
+	 * @description Description.
+	 * @host String
+	 * @fileoverview Description.
+	 * @overview Description.
+	 * @emits Event
+	 * @function
+	 * @var
+	 * @arg {number} a
+	 * @argument {number} b
+	 * @prop {number} c
+	 * @returns {number}
+	 * @exception {Error}
+	 * @yields
+	 */
+	APP.JSDocTags = function ( a, b ) { return a || b; };
+	/* eslint-enable max-statements-per-line valid-jsdoc */
 
 }( this ) );

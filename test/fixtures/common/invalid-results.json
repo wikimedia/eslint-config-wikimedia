@@ -322,13 +322,13 @@
 			"filename": "fixtures/common/invalid.js",
 			"line": 5,
 			"column": 2,
-			"ruleId": "no-implicit-globals"
+			"ruleId": "no-global-assign"
 		},
 		{
 			"filename": "fixtures/common/invalid.js",
 			"line": 0,
 			"column": 2,
-			"ruleId": "no-global-assign"
+			"ruleId": "no-implicit-globals"
 		},
 		{
 			"filename": "fixtures/common/invalid.js",
@@ -467,6 +467,114 @@
 			"line": 1,
 			"column": 14,
 			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 11,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 1,
+			"column": 5,
+			"ruleId": "valid-jsdoc"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 2,
+			"column": 38,
+			"ruleId": "max-statements-per-line"
 		}
 	]
 ]

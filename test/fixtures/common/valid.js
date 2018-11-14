@@ -2,6 +2,7 @@
 
 // Rule: linebreak-style
 // Rule: max-len
+// Rule: max-statements-per-line
 // Rule: wrap-iife
 // Rule: semi
 // Rule: semi-spacing
@@ -77,7 +78,9 @@
 		// Rule: block-spacing
 		// Rule: space-before-function-paren
 		// Rule: space-in-parens
-		inline = function ( items ) { return items.slice(); };
+		inline = function ( items ) {
+			return items.slice();
+		};
 
 		inline = function ( items ) {
 			items = items.slice();
@@ -234,8 +237,37 @@
 	 * @param {RegExp} j
 	 * @return {Error}
 	*/
-	APP.typing = function ( a, b, c, d, e, f, g, h, i, j ) {
+	APP.JSDocTypes = function ( a, b, c, d, e, f, g, h, i, j ) {
 		return a || b || c || d || e || f || g || h || i || j;
+	};
+
+	/**
+	 * {@link APP}
+	 * {@link APP}
+	 *
+	 * @abstract
+	 * @extends String
+	 * @class
+	 * @constructor
+	 * @constructs
+	 * @const
+	 * @default
+	 * @desc Description.
+	 * @external String
+	 * @file Description.
+	 * @fires Event
+	 * @func
+	 * @method
+	 * @member
+	 * @param {number} a
+	 * @param {number} b
+	 * @property {number} c
+	 * @return {number}
+	 * @throws {Error}
+	 * @yield
+	 */
+	APP.JSDocTags = function ( a, b ) {
+		return a || b;
 	};
 
 	global.APP = APP;

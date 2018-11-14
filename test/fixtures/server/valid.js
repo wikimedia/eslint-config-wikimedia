@@ -5,7 +5,9 @@
 	let b = 2;
 
 	// Rule: arrow-parens
-	global.then( ( data ) => { return Math.pow( data, 2 ); } );
+	global.then( ( data ) => {
+		return Math.pow( data, 2 );
+	} );
 
 	// Rule: arrow-parens
 	if ( a >= b ) {

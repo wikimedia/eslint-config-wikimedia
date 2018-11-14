@@ -79,7 +79,7 @@ profiles.forEach( function ( profile ) {
 	count = 0;
 	testPositivesFailures = fs.readFileSync( __dirname + '/fixtures/' + profile + '/positiveFailures.json' );
 	Object.keys( config.rules ).forEach( function ( rule ) {
-		var rDisableRule = new RegExp( '(//|/*) eslint-disable(-next-line)? ([a-z-]+, )??' + rule );
+		var rDisableRule = new RegExp( '(/[/*]) eslint-disable(-next-line)? ([a-z-]+, )??' + rule );
 		// Positive rules are covered above
 		if ( rule.match( /^no-|\/no-/ ) || testPositivesFailures.indexOf( rule ) !== -1 ) {
 			count++;
