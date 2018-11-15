@@ -1,16 +1,16 @@
 /* eslint-env node */
 /* eslint-disable no-console */
-var count, config,
-	fs = require( 'fs' ),
+var fs = require( 'fs' ),
+	assert = require( 'assert' ),
+	assertDiff = require( 'assert-diff' ),
+	eslint = require( 'eslint' ),
+
+	count, config,
 
 	validFixturesFile, validFixtures,
-	assert = require( 'assert' ),
-
 	invalidFixturesFile, invalidFixtures, testPositivesFailures,
 	expectedFailuresFile, expectedFailures,
 	engine, report, results, prevFilename, prevLine,
-	assertDiff = require( 'assert-diff' ),
-	eslint = require( 'eslint' ),
 
 	// TODO: Load this from package.json's manifest
 	profiles = [ 'common', 'client', 'qunit', 'server' ];
