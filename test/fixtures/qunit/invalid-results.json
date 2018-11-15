@@ -2,7 +2,7 @@
 	[
 		{
 			"filename": "fixtures/qunit/invalid.js",
-			"line": 6,
+			"line": 7,
 			"column": 2,
 			"ruleId": "qunit/no-assert-equal"
 		},

@@ -9,6 +9,9 @@
   "rules": {
     "arrow-parens": "error",
     "no-misleading-character-class": "error",
-    "no-useless-computed-key": "error"
+    "no-new-require": "error",
+    "no-useless-computed-key": "error",
+    "one-var": 0,
+    "vars-on-top": 0
   }
 }

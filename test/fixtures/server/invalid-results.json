@@ -3,7 +3,7 @@
 		{
 			"filename": "fixtures/server/invalid.js",
 			"line": 5,
-			"column": 14,
+			"column": 16,
 			"ruleId": "no-useless-computed-key"
 		},
 		{
@@ -27,6 +27,18 @@
 		{
 			"filename": "fixtures/server/invalid.js",
 			"line": 5,
+			"column": 15,
+			"ruleId": "no-new-require"
+		},
+		{
+			"filename": "fixtures/server/invalid.js",
+			"line": 0,
+			"column": 19,
+			"ruleId": "new-cap"
+		},
+		{
+			"filename": "fixtures/server/invalid.js",
+			"line": 3,
 			"column": 2,
 			"ruleId": "no-misleading-character-class"
 		}

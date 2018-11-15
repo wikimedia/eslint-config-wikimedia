@@ -1,4 +1,3 @@
-/* eslint-env es5, browser, node */
 // eslint-disable-next-line no-implicit-globals, no-unused-vars
 var APP;
 ( function ( global ) {
@@ -17,9 +16,6 @@ var APP;
 
 		name = options.bar ? upHere( id ) : id;
 
-		// eslint-disable-next-line no-alert
-		alert( name );
-
 		// eslint-disable-next-line no-constant-condition
 		if ( true || options.quux ) {
 			name += options.quux;
@@ -36,7 +32,7 @@ var APP;
 			// eslint-disable-next-line no-eval
 			eval( '(' + name + ')' );
 			// eslint-disable-next-line no-implied-eval
-			setTimeout( name + '();' );
+			this.setTimeout( name + '();' );
 			return;
 		}
 
@@ -72,8 +68,6 @@ var APP;
 		bar = new Function( 'a', "return " + name + ";" );
 		// eslint-disable-next-line no-new-object
 		bar = new Object();
-		// eslint-disable-next-line no-new-require, new-cap
-		bar = new require( 'events' );
 		// eslint-disable-next-line no-new-wrappers
 		bar = new String( 'events' );
 

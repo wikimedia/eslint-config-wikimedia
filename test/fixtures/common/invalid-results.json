@@ -2,9 +2,15 @@
 	[
 		{
 			"filename": "fixtures/common/invalid.js",
-			"line": 3,
+			"line": 2,
 			"column": 5,
 			"ruleId": "no-unused-vars"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 0,
+			"column": 5,
+			"ruleId": "no-implicit-globals"
 		},
 		{
 			"filename": "fixtures/common/invalid.js",
@@ -21,12 +27,6 @@
 		{
 			"filename": "fixtures/common/invalid.js",
 			"line": 8,
-			"column": 3,
-			"ruleId": "no-alert"
-		},
-		{
-			"filename": "fixtures/common/invalid.js",
-			"line": 3,
 			"column": 8,
 			"ruleId": "no-constant-condition"
 		},
@@ -62,13 +62,7 @@
 		},
 		{
 			"filename": "fixtures/common/invalid.js",
-			"line": 2,
-			"column": 4,
-			"ruleId": "no-implied-eval"
-		},
-		{
-			"filename": "fixtures/common/invalid.js",
-			"line": 15,
+			"line": 17,
 			"column": 4,
 			"ruleId": "semi-style"
 		},
@@ -131,18 +125,6 @@
 			"line": 2,
 			"column": 9,
 			"ruleId": "no-new-object"
-		},
-		{
-			"filename": "fixtures/common/invalid.js",
-			"line": 2,
-			"column": 9,
-			"ruleId": "no-new-require"
-		},
-		{
-			"filename": "fixtures/common/invalid.js",
-			"line": 0,
-			"column": 13,
-			"ruleId": "new-cap"
 		},
 		{
 			"filename": "fixtures/common/invalid.js",

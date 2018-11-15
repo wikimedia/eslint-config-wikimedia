@@ -7,5 +7,7 @@
     "browser": true
   },
   "rules": {
+    "no-alert": "error",
+    "no-console": "error"
   }
 }
