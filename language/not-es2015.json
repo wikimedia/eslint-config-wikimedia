@@ -1,0 +1,12 @@
+{
+  "extends": "./not-es2016.json",
+  "rules": {
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "CallExpression[callee.type='MemberExpression'][callee.property.type='Identifier'][callee.property.name='includes']",
+        "message": "Unsupported method Array.prototype.includes requires ES2016."
+      }
+    ]
+  }
+}

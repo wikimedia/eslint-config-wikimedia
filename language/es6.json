@@ -1,0 +1,9 @@
+{
+  "extends": "./not-es2015.json",
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "env": {
+    "es6": true
+  }
+}

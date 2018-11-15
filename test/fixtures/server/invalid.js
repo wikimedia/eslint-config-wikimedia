@@ -1,4 +1,4 @@
-/* eslint-env node, es6 */
+/* eslint-env node */
 
 ( function ( global ) {
 	// eslint-disable-next-line no-useless-computed-key

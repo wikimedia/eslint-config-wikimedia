@@ -1,4 +1,4 @@
-/* eslint-env node, es6 */
+/* eslint-env node */
 
 ( function ( global ) {
 	const a = 4;

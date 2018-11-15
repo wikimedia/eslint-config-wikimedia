@@ -1,1 +1,1 @@
-/* eslint-env browser, es5 */
+/* eslint-env browser */
