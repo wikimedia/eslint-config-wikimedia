@@ -4,7 +4,7 @@
   ],
   "env": {
     "es5": true,
-	"browser": true
+    "browser": true
   },
   "rules": {
   }
