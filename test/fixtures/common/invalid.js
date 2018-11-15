@@ -14,7 +14,8 @@ var APP;
 	APP.Example = function ( id, options ) {
 		var i, name, bar;
 
-		name = options.bar ? upHere( id ) : id;
+		// eslint-disable-next-line no-tabs
+		name = options.bar ? upHere( id ) : id; //	Wow!
 
 		// eslint-disable-next-line no-constant-condition
 		if ( true || options.quux ) {
