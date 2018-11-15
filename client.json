@@ -2,8 +2,10 @@
   "extends": [
     "./common.json"
   ],
+  "parserOptions": {
+    "ecmaVersion": 5
+  },
   "env": {
-    "es5": true,
     "browser": true
   },
   "rules": {
