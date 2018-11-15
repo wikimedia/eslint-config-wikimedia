@@ -5,8 +5,6 @@ var fs = require( 'fs' ),
 	assertDiff = require( 'assert-diff' ),
 	eslint = require( 'eslint' ),
 
-	count, config,
-
 	validFixturesFile, validFixtures,
 	invalidFixturesFile, invalidFixtures, testPositivesFailures,
 	expectedFailuresFile, expectedFailures,
@@ -16,6 +14,8 @@ var fs = require( 'fs' ),
 	profiles = [ 'common', 'client', 'qunit', 'server' ];
 
 profiles.forEach( function ( profile ) {
+	var count, config;
+
 	console.log( 'Testing the "' + profile + '" profile suite.' );
 
 	config = require( '../' + profile + '.json' );
