@@ -32,7 +32,7 @@ profiles.forEach( function ( profile ) {
 			assert( validFixtures.indexOf( 'Rule: ' + rule ) !== -1, 'Rule ' + rule + ' is covered' );
 		}
 	} );
-	console.log( 'Positive rules (' + count + ') are covered.' );
+	console.log( '\tPositive rules (' + count + ') are covered.' );
 
 	// Test for failures including negative rules
 	count = 0;
@@ -73,7 +73,7 @@ profiles.forEach( function ( profile ) {
 		return;
 	}
 	assertDiff.deepEqual( results, expectedFailures, 'Expected warnings' );
-	console.log( 'Verified ' + results[ 0 ].length + ' expected warnings.' );
+	console.log( '\tVerified ' + results[ 0 ].length + ' expected warnings.' );
 
 	// Verify coverage
 	count = 0;
@@ -86,7 +86,7 @@ profiles.forEach( function ( profile ) {
 			assertDiff( rDisableRule.test( invalidFixtures.toString() ), 'Rule ' + rule + ' is covered' );
 		}
 	} );
-	console.log( 'Negative rules (' + count + ') covered.' );
+	console.log( '\tNegative rules (' + count + ') covered.' );
 
-	console.log( '\n' );
+	console.log( '\t✅ The "' + profile + '" profile suite is fully covered.\n' );
 } );
