@@ -32,12 +32,11 @@
     "Oleg Gaidarenko <markelog@gmail.com>"
   ],
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
+    "eslint": "^5.9.0",
     "eslint-plugin-qunit": "^4.0.0"
   },
   "devDependencies": {
-    "assert-diff": "^2.0.3",
-    "eslint": "^5.9.0",
-    "eslint-plugin-qunit": "^4.0.0"
+    "assert-diff": "^2.0.3"
   }
 }
