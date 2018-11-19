@@ -22,6 +22,7 @@
   "files": [
     "common.json",
     "client.json",
+    "jquery.json",
     "qunit.json",
     "server.json"
   ],
@@ -35,6 +36,7 @@
   "devDependencies": {
     "assert-diff": "^2.0.3",
     "eslint": "^5.9.0",
+    "@wikimedia/eslint-plugin-jquery": "1.3.2-wmf.1",
     "eslint-plugin-qunit": "^4.0.0"
   }
 }
