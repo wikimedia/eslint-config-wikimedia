@@ -36,7 +36,7 @@
   "devDependencies": {
     "assert-diff": "^2.0.3",
     "eslint": "^5.9.0",
-    "eslint-plugin-jquery": "edg2s/eslint-plugin-jquery#9ad4cec2c",
+    "@wikimedia/eslint-plugin-jquery": "1.3.2-wmf.1",
     "eslint-plugin-qunit": "^4.0.0"
   }
 }
