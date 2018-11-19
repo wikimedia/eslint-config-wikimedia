@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.9.0 / 2018-11-19
+* Implement `wikimedia/client` coding style (James D. Forrester)
+* Implement `wikimedia/server` coding style (James D. Forrester)
+* Implement `wikimedia/jquery` coding style (Ed Sanders)
+
+* New rule: `max-statements-per-line` (Ed Sanders)
+* New rule: `no-misleading-character-class` (Ed Sanders)
+
+* Changed rule: `valid-jsdoc` – Add various preferred tags (Timo Tijhof)
+
+* Update eslint: 5.6.0 ->  5.9.0
+* Update elint-plugin-qunit: 3.3.0 -> 4.0.0
+* Update assert-diff 1.2.0 -> 2.0.3
+* Library sub-profile dependencies are now full devDependencies instead of peerDependencies. (James D. Forrester)
+* Refactor code to split into multiple profiles (James D. Forrester)
+* test: Fix ESLint directive regex (Stephen Niedzielski)
+
+
 ## 0.8.1 / 2018-09-10
 * qunit: extend wikimedia.json (not .eslintrc.json) (Timo Tijhof)
 
