@@ -1,5 +1,3 @@
-/* eslint-env es5 */
-
 // Rule: linebreak-style
 // Rule: max-len
 // Rule: max-statements-per-line

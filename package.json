@@ -2,10 +2,10 @@
   "name": "eslint-config-wikimedia",
   "version": "0.8.1",
   "description": "ESLint config following Wikimedia code conventions.",
-  "main": "wikimedia.json",
+  "main": "common.json",
   "scripts": {
-    "test": "eslint . && node test/testValid.js && node test/testInvalid.js",
-    "build-invalid": "node test/testInvalid.js dump > test/fixtures/invalid-results.json"
+    "test": "eslint . && node test/test.js",
+    "build-invalid": "node test/test.js dump"
   },
   "repository": {
     "type": "git",
@@ -20,17 +20,21 @@
     "wikimedia"
   ],
   "files": [
-    "wikimedia.json",
-    "qunit.json"
+    "common.json",
+    "client.json",
+    "qunit.json",
+    "server.json"
   ],
-  "author": "Gaidarenko Oleg <markelog@gmail.com>",
+  "contributors": [
+    "James D. Forrester <jforrester@wikimedia.org>",
+    "Ed Sanders <ejsanders@gmail.com>",
+    "Timo Tijhof <krinklemail@gmail.com>",
+    "Oleg Gaidarenko <markelog@gmail.com>"
+  ],
   "license": "MIT",
-  "peerDependencies": {
-    "eslint-plugin-qunit": "^4.0.0"
-  },
   "devDependencies": {
     "assert-diff": "^2.0.3",
-    "eslint": "^5.6.0",
+    "eslint": "^5.9.0",
     "eslint-plugin-qunit": "^4.0.0"
   }
 }

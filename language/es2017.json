@@ -1,0 +1,6 @@
+{
+  "extends": "./not-esnext.json",
+  "parserOptions": {
+    "ecmaVersion": 2017
+  }
+}

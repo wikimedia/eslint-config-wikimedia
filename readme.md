@@ -2,13 +2,53 @@
 
 # Wikimedia ESLint config
 
-## Usage
+## Installation
 
 ```sh
 npm install --save-dev eslint-config-wikimedia
 ```
 
-Configure ESLint with a `.eslintrc` file using the following contents:
+Then, [configure ESLint](https://eslint.org/docs/user-guide/configuring) with one or more `.eslintrc.json` files as appropriate.
+
+## Example configurations
+Bellow are some potential recommended uses:
+
+### A typical front-end project
+This profile allows ES5 code and browser native functions. It will complain about ES6+ code and language features.
+
+`.eslintrc.json`:
+```json
+{
+	"extends": "wikimedia/client"
+}
+```
+
+### Adding a QUnit test suite
+You can extend the above profile by also adding a second `.eslintrc.json` file in your tests directory:
+
+`tests/qunit/.eslintrc.json`:
+```json
+	"extends": [
+		"wikimedia/qunit",
+		"../../.eslintrc.json"
+	]
+}
+```
+
+### A typical Node project
+This profile allows ES6 code and node native functions (_i.e._, Node 6.x). It will complain about ES2015+ code and language features.
+
+`.eslintrc.json`:
+```json
+{
+	"extends": "wikimedia/server"
+}
+```
+
+### A basic project
+Please note that the basic project configuration does not specify any language or environmental defaults, and is unlikely to be suitable. However, if you wish to target clients with ES3 language support, or earlier versions of Node, this is a good place from which to start.
+
+`.eslintrc.json`:
 ```json
 {
 	"extends": "wikimedia"

@@ -1,0 +1,10 @@
+[
+	[
+		{
+			"filename": "fixtures/client/invalid.js",
+			"line": 9,
+			"column": 2,
+			"ruleId": "no-console"
+		}
+	]
+]

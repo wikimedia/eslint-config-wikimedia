@@ -1,3 +1,4 @@
+/* eslint-env qunit */
 QUnit.module( 'Example' );
 
 QUnit.test( '.foo()', function ( assert ) {

@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "./common.json",
+    "./language/es5.json"
+  ],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "no-alert": "error",
+    "no-console": "error"
+  }
+}
