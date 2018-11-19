@@ -11,7 +11,7 @@
     "no-misleading-character-class": "error",
     "no-new-require": "error",
     "no-useless-computed-key": "error",
-    "one-var": 0,
-    "vars-on-top": 0
+    "one-var": "off",
+    "vars-on-top": "off"
   }
 }
