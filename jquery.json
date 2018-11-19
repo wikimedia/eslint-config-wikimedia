@@ -2,14 +2,14 @@
   "globals": {
     "$": false
   },
-  "plugins": [ "jquery" ],
+  "plugins": [ "@wikimedia/jquery" ],
   "rules": {
-    "jquery/no-each-util": "error",
-    "jquery/no-grep": "error",
-    "jquery/no-in-array": "error",
-    "jquery/no-is-function": "error",
-    "jquery/no-map-util": "error",
-    "jquery/no-proxy": "error",
-    "jquery/no-trim": "error"
+    "@wikimedia/jquery/no-each-util": "error",
+    "@wikimedia/jquery/no-grep": "error",
+    "@wikimedia/jquery/no-in-array": "error",
+    "@wikimedia/jquery/no-is-function": "error",
+    "@wikimedia/jquery/no-map-util": "error",
+    "@wikimedia/jquery/no-proxy": "error",
+    "@wikimedia/jquery/no-trim": "error"
   }
 }
