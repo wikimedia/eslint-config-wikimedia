@@ -10,10 +10,10 @@
 
 * Changed rule: `valid-jsdoc` – Add various preferred tags (Timo Tijhof)
 
-* Update eslint: 5.6.0 ->  5.9.0
+* Update eslint: 5.6.0 -> 5.9.0
 * Update elint-plugin-qunit: 3.3.0 -> 4.0.0
 * Update assert-diff 1.2.0 -> 2.0.3
-* Library sub-profile dependencies are now full devDependencies instead of peerDependencies. (James D. Forrester)
+* Library sub-profile dependencies are now full dependencies instead of peerDependencies. (James D. Forrester)
 * Refactor code to split into multiple profiles (James D. Forrester)
 * test: Fix ESLint directive regex (Stephen Niedzielski)
 
