@@ -4,43 +4,43 @@
 			"filename": "fixtures/jquery/invalid.js",
 			"line": 6,
 			"column": 2,
-			"ruleId": "@wikimedia/jquery/no-each-util"
+			"ruleId": "jquery/no-each-util"
 		},
 		{
 			"filename": "fixtures/jquery/invalid.js",
 			"line": 3,
 			"column": 2,
-			"ruleId": "@wikimedia/jquery/no-grep"
+			"ruleId": "jquery/no-grep"
 		},
 		{
 			"filename": "fixtures/jquery/invalid.js",
 			"line": 3,
 			"column": 2,
-			"ruleId": "@wikimedia/jquery/no-in-array"
+			"ruleId": "jquery/no-in-array"
 		},
 		{
 			"filename": "fixtures/jquery/invalid.js",
 			"line": 3,
 			"column": 2,
-			"ruleId": "@wikimedia/jquery/no-is-function"
+			"ruleId": "jquery/no-is-function"
 		},
 		{
 			"filename": "fixtures/jquery/invalid.js",
 			"line": 3,
 			"column": 2,
-			"ruleId": "@wikimedia/jquery/no-map-util"
+			"ruleId": "jquery/no-map-util"
 		},
 		{
 			"filename": "fixtures/jquery/invalid.js",
 			"line": 3,
 			"column": 2,
-			"ruleId": "@wikimedia/jquery/no-proxy"
+			"ruleId": "jquery/no-proxy"
 		},
 		{
 			"filename": "fixtures/jquery/invalid.js",
 			"line": 3,
 			"column": 2,
-			"ruleId": "@wikimedia/jquery/no-trim"
+			"ruleId": "jquery/no-trim"
 		}
 	]
 ]
