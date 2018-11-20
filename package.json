@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-wikimedia",
-  "version": "0.8.1",
+  "version": "0.9.0",
   "description": "ESLint config following Wikimedia code conventions.",
   "main": "common.json",
   "scripts": {
@@ -24,7 +24,16 @@
     "client.json",
     "jquery.json",
     "qunit.json",
-    "server.json"
+    "server.json",
+    "language/es5.json",
+    "language/es6.json",
+    "language/es2015.json",
+    "language/es2016.json",
+    "language/es2017.json",
+    "language/not-es6.json",
+    "language/not-es2015.json",
+    "language/not-es2016.json",
+    "language/not-es2017.json"
   ],
   "contributors": [
     "James D. Forrester <jforrester@wikimedia.org>",
@@ -33,10 +42,12 @@
     "Oleg Gaidarenko <markelog@gmail.com>"
   ],
   "license": "MIT",
-  "devDependencies": {
-    "assert-diff": "^2.0.3",
+  "dependencies": {
     "eslint": "^5.9.0",
-    "@wikimedia/eslint-plugin-jquery": "1.3.2-wmf.1",
+    "eslint-plugin-jquery": "wikimedia/eslint-plugin-jquery#v1.3.2-wmf.1",
     "eslint-plugin-qunit": "^4.0.0"
+  },
+  "devDependencies": {
+    "assert-diff": "^2.0.3"
   }
 }

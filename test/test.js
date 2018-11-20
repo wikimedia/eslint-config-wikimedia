@@ -1,4 +1,4 @@
-/* eslint-env node */
+/* eslint-env node, es6 */
 /* eslint-disable no-console */
 var fs = require( 'fs' ),
 	assert = require( 'assert' ),
@@ -10,8 +10,11 @@ var fs = require( 'fs' ),
 	expectedFailuresFile, expectedFailures,
 	engine, report, results, prevFilename, prevLine,
 
-	// TODO: Load this from package.json's manifest
-	profiles = [ 'common', 'client', 'jquery', 'qunit', 'server' ];
+	profiles = require( '../package.json' ).files
+		// Trim ".json" from fileName end
+		.map( fileName => fileName.slice( 0, -5 ) )
+		// TODO: Test language profiles too
+		.filter( fileName => ( fileName.indexOf( 'language/' ) === -1 ) );
 
 profiles.forEach( function ( profile ) {
 	var count, config;
