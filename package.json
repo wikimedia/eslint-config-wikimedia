@@ -24,7 +24,16 @@
     "client.json",
     "jquery.json",
     "qunit.json",
-    "server.json"
+    "server.json",
+    "language/es5.json",
+    "language/es6.json",
+    "language/es2015.json",
+    "language/es2016.json",
+    "language/es2017.json",
+    "language/not-es6.json",
+    "language/not-es2015.json",
+    "language/not-es2016.json",
+    "language/not-es2017.json"
   ],
   "contributors": [
     "James D. Forrester <jforrester@wikimedia.org>",
