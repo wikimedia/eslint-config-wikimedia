@@ -11,6 +11,9 @@
 	// eslint-disable-next-line jquery/no-in-array
 	$.inArray( 1, [ 1 ] );
 
+	// eslint-disable-next-line jquery/no-is-array
+	$.isArray( [ 1 ] );
+
 	// eslint-disable-next-line jquery/no-is-function
 	$.isFunction( function () {} );
 
