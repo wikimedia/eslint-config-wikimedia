@@ -4,6 +4,7 @@
   },
   "plugins": [ "jquery" ],
   "rules": {
+    "jquery/no-bind": "error",
     "jquery/no-each-util": "error",
     "jquery/no-grep": "error",
     "jquery/no-in-array": "error",
