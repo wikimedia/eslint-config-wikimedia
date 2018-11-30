@@ -2,6 +2,9 @@
 
 ( function () {
 
+	// eslint-disable-next-line jquery/no-bind
+	$( [] ).bind( 'click', function () {} );
+
 	// eslint-disable-next-line jquery/no-each-util
 	$.each( [], function () {} );
 
