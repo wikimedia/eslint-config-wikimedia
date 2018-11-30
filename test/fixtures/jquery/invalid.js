@@ -23,6 +23,9 @@
 	// eslint-disable-next-line jquery/no-proxy
 	$.proxy( function () {}, this );
 
+	// eslint-disable-next-line jquery/no-size
+	$( [] ).size();
+
 	// eslint-disable-next-line jquery/no-trim
 	$.trim( ' foo ' );
 
