@@ -1,6 +1,7 @@
 /* eslint-env browser */
 
 ( function () {
+	function f() {}
 
 	// eslint-disable-next-line jquery/no-and-self
 	$( [] ).andSelf();
@@ -16,6 +17,18 @@
 
 	// eslint-disable-next-line jquery/no-each-util
 	$.each( [], function () {} );
+
+	// eslint-disable-next-line jquery/no-event-shorthand
+	$( [] ).click( function () {} );
+
+	// eslint-disable-next-line jquery/no-event-shorthand
+	$( [] ).keypress( function () {} );
+
+	// eslint-disable-next-line jquery/no-event-shorthand
+	$( [] ).focus( function () {} );
+
+	// eslint-disable-next-line jquery/no-event-shorthand
+	$( [] ).scroll( function () {} );
 
 	// eslint-disable-next-line jquery/no-grep
 	$.grep( [ 1, 2, 3 ], function () {} );
@@ -38,6 +51,9 @@
 	// eslint-disable-next-line jquery/no-map-util
 	$.map( [ 1 ], function () {} );
 
+	// eslint-disable-next-line jquery/no-noop
+	f( $.noop );
+
 	// eslint-disable-next-line jquery/no-parse-json
 	$.parseJSON( '{}' );
 
@@ -49,6 +65,9 @@
 
 	// eslint-disable-next-line jquery/no-trim
 	$.trim( ' foo ' );
+
+	// eslint-disable-next-line jquery/no-type
+	$.type( true );
 
 	// eslint-disable-next-line jquery/no-unbind
 	$( [] ).unbind( 'click', function () {} );

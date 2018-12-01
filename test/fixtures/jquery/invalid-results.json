@@ -2,7 +2,7 @@
 	[
 		{
 			"filename": "fixtures/jquery/invalid.js",
-			"line": 6,
+			"line": 7,
 			"column": 2,
 			"ruleId": "jquery/no-and-self"
 		},
@@ -29,6 +29,30 @@
 			"line": 3,
 			"column": 2,
 			"ruleId": "jquery/no-each-util"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "jquery/no-event-shorthand"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "jquery/no-event-shorthand"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "jquery/no-event-shorthand"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "jquery/no-event-shorthand"
 		},
 		{
 			"filename": "fixtures/jquery/invalid.js",
@@ -75,6 +99,12 @@
 		{
 			"filename": "fixtures/jquery/invalid.js",
 			"line": 3,
+			"column": 5,
+			"ruleId": "jquery/no-noop"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
 			"column": 2,
 			"ruleId": "jquery/no-parse-json"
 		},
@@ -95,6 +125,12 @@
 			"line": 3,
 			"column": 2,
 			"ruleId": "jquery/no-trim"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "jquery/no-type"
 		},
 		{
 			"filename": "fixtures/jquery/invalid.js",
