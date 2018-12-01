@@ -1,7 +1,4 @@
 {
-  "extends": [
-    "plugin:jquery/deprecated-3.3"
-  ],
   "globals": {
     "$": false
   },
