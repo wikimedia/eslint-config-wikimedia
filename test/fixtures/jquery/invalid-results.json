@@ -4,6 +4,30 @@
 			"filename": "fixtures/jquery/invalid.js",
 			"line": 6,
 			"column": 2,
+			"ruleId": "jquery/no-and-self"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "jquery/no-bind"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "jquery/no-delegate"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "jquery/no-die"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
 			"ruleId": "jquery/no-each-util"
 		},
 		{
@@ -34,7 +58,25 @@
 			"filename": "fixtures/jquery/invalid.js",
 			"line": 3,
 			"column": 2,
+			"ruleId": "jquery/no-is-window"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "jquery/no-live"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
 			"ruleId": "jquery/no-map-util"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "jquery/no-parse-json"
 		},
 		{
 			"filename": "fixtures/jquery/invalid.js",
@@ -53,6 +95,24 @@
 			"line": 3,
 			"column": 2,
 			"ruleId": "jquery/no-trim"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "jquery/no-unbind"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "jquery/no-undelegate"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "jquery/no-unique"
 		}
 	]
 ]
