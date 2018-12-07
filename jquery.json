@@ -1,9 +1,7 @@
 {
-  "globals": {
-    "$": false
-  },
   "plugins": [ "jquery" ],
   "extends": "plugin:jquery/deprecated-3.3",
+  "env": { "jquery": true },
   "rules": {
     "jquery/no-each-util": "error",
     "jquery/no-event-shorthand": "error",
