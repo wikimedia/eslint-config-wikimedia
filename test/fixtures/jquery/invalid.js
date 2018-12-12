@@ -30,6 +30,9 @@
 	// eslint-disable-next-line jquery/no-event-shorthand
 	$( [] ).scroll( function () {} );
 
+	// eslint-disable-next-line jquery/no-fade
+	$( [] ).fadeIn();
+
 	// eslint-disable-next-line jquery/no-grep
 	$.grep( [ 1, 2, 3 ], function () {} );
 
