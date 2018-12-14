@@ -1,17 +1,7 @@
 {
   "extends": [
     "./common.json",
+    "./node.json",
     "./language/es6.json"
-  ],
-  "env": {
-    "node": true
-  },
-  "rules": {
-    "arrow-parens": "error",
-    "no-misleading-character-class": "error",
-    "no-new-require": "error",
-    "no-useless-computed-key": "error",
-    "one-var": "off",
-    "vars-on-top": "off"
-  }
+  ]
 }

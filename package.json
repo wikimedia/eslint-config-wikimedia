@@ -22,6 +22,7 @@
   "files": [
     "common.json",
     "client.json",
+    "node.json",
     "jquery.json",
     "qunit.json",
     "server.json",
