@@ -112,6 +112,12 @@
 			"filename": "fixtures/jquery/invalid.js",
 			"line": 3,
 			"column": 2,
+			"ruleId": "jquery/no-parse-html-literal"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
 			"ruleId": "jquery/no-parse-json"
 		},
 		{
