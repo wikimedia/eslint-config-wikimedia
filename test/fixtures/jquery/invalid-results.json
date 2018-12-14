@@ -64,6 +64,12 @@
 			"filename": "fixtures/jquery/invalid.js",
 			"line": 3,
 			"column": 2,
+			"ruleId": "jquery/no-global-selector"
+		},
+		{
+			"filename": "fixtures/jquery/invalid.js",
+			"line": 3,
+			"column": 2,
 			"ruleId": "jquery/no-grep"
 		},
 		{
