@@ -8,6 +8,7 @@
     "jquery/no-each-util": "error",
     "jquery/no-event-shorthand": "error",
     "jquery/no-fade": "error",
+    "jquery/no-global-selector": "error",
     "jquery/no-grep": "error",
     "jquery/no-in-array": "error",
     "jquery/no-is-array": "error",
