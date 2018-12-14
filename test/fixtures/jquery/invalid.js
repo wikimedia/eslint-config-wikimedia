@@ -60,6 +60,9 @@
 	// eslint-disable-next-line jquery/no-noop
 	f( $.noop );
 
+	// eslint-disable-next-line jquery/no-parse-html-literal
+	$( '<tag attr="val">' );
+
 	// eslint-disable-next-line jquery/no-parse-json
 	$.parseJSON( '{}' );
 
