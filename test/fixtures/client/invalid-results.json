@@ -11,6 +11,12 @@
 			"line": 3,
 			"column": 2,
 			"ruleId": "no-console"
+		},
+		{
+			"filename": "fixtures/client/invalid.js",
+			"line": 3,
+			"column": 2,
+			"ruleId": "no-implied-eval"
 		}
 	]
 ]
