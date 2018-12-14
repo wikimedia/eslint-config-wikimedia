@@ -57,6 +57,12 @@
 		{
 			"filename": "fixtures/common/invalid.js",
 			"line": 4,
+			"column": 15,
+			"ruleId": "no-empty"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 4,
 			"column": 10,
 			"ruleId": "no-bitwise"
 		},
@@ -68,7 +74,7 @@
 		},
 		{
 			"filename": "fixtures/common/invalid.js",
-			"line": 17,
+			"line": 15,
 			"column": 4,
 			"ruleId": "semi-style"
 		},
@@ -76,13 +82,13 @@
 			"filename": "fixtures/common/invalid.js",
 			"line": 3,
 			"column": 4,
-			"ruleId": "no-inner-declarations"
+			"ruleId": "no-loop-func"
 		},
 		{
 			"filename": "fixtures/common/invalid.js",
 			"line": 0,
 			"column": 4,
-			"ruleId": "no-loop-func"
+			"ruleId": "no-inner-declarations"
 		},
 		{
 			"filename": "fixtures/common/invalid.js",
@@ -176,7 +182,13 @@
 		},
 		{
 			"filename": "fixtures/common/invalid.js",
-			"line": 7,
+			"line": 4,
+			"column": 26,
+			"ruleId": "no-trailing-spaces"
+		},
+		{
+			"filename": "fixtures/common/invalid.js",
+			"line": 3,
 			"column": 3,
 			"ruleId": "no-underscore-dangle"
 		},

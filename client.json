@@ -8,6 +8,7 @@
   },
   "rules": {
     "no-alert": "error",
-    "no-console": "error"
+    "no-console": "error",
+    "no-implied-eval": "error"
   }
 }

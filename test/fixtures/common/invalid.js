@@ -20,7 +20,7 @@ var APP;
 		// eslint-disable-next-line no-constant-condition
 		if ( true || options.quux ) {
 			name += options.quux;
-		// eslint-disable-next-line no-empty, dot-notation
+		// eslint-disable-next-line dot-notation
 		} else if ( options[ 'default' ] ) {
 		// eslint-disable-next-line no-unsafe-negation
 		} else if ( !'default' in options ) {
@@ -28,12 +28,14 @@ var APP;
 			name += named();
 		}
 
+		// eslint-disable-next-line no-empty
+		if ( name ) {
+		}
+
 		// eslint-disable-next-line no-bitwise
 		if ( ( bar | options.quux ) ) {
 			// eslint-disable-next-line no-eval
 			eval( '(' + name + ')' );
-			// eslint-disable-next-line no-implied-eval
-			this.setTimeout( name + '();' );
 			return;
 		}
 
@@ -89,7 +91,7 @@ var APP;
 		}
 
 		// eslint-disable-next-line no-trailing-spaces
-		options.spaces = 'foo';
+		options.spaces = 'foo';  
 
 		// eslint-disable-next-line no-underscore-dangle
 		options.lo_ = 'dash';

@@ -8,4 +8,7 @@
 	// eslint-disable-next-line no-console
 	console.log( name );
 
+	// eslint-disable-next-line no-implied-eval
+	setTimeout( name + '();' );
+
 }() );
