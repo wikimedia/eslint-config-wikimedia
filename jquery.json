@@ -16,6 +16,7 @@
     "jquery/no-noop": "error",
     "jquery/no-parse-html-literal": "error",
     "jquery/no-proxy": "error",
+    "jquery/no-slide": "error",
     "jquery/no-trim": "error",
     "jquery/no-type": "error"
   }
