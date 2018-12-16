@@ -174,6 +174,11 @@ var APP;
 	// eslint-disable-next-line no-implicit-globals, no-global-assign
 	Date = APP.Date;
 
+	APP.example = {
+		// eslint-disable-next-line quote-props
+		'default': 'Legacy'
+	};
+
 	// eslint-disable-next-line no-multi-spaces
 	APP.defaults =  {
 		// eslint-disable-next-line no-floating-decimal
