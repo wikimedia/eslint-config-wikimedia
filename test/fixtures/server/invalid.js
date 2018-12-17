@@ -1,5 +1,3 @@
-/* eslint-env node */
-
 ( function ( global ) {
 	// eslint-disable-next-line no-useless-computed-key
 	const foo = { [ 'a' ]: 'b' };
