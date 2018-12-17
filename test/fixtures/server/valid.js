@@ -1,5 +1,3 @@
-/* eslint-env node */
-
 ( function ( global ) {
 	const a = 4;
 

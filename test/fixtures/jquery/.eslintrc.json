@@ -1,3 +1,6 @@
 {
-	"extends": "../../../jquery.json"
+	"extends": [
+		"../../../client.json",
+		"../../../jquery.json"
+	]
 }
