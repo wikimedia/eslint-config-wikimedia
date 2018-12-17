@@ -1,5 +1,3 @@
-/* eslint-env node, es6 */
-/* eslint-disable no-console */
 var fs = require( 'fs' ),
 	assert = require( 'assert' ),
 	assertDiff = require( 'assert-diff' ),
@@ -9,9 +7,9 @@ var fs = require( 'fs' ),
 
 	profiles = require( '../package.json' ).files
 		// Trim ".json" from fileName end
-		.map( fileName => fileName.slice( 0, -5 ) )
+		.map( ( fileName ) => fileName.slice( 0, -5 ) )
 		// TODO: Test language profiles too
-		.filter( fileName => ( fileName.indexOf( 'language/' ) === -1 ) );
+		.filter( ( fileName ) => ( fileName.indexOf( 'language/' ) === -1 ) );
 
 profiles.forEach( function ( profile ) {
 	var count, config;
