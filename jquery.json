@@ -5,6 +5,7 @@
   "plugins": [ "jquery" ],
   "extends": "plugin:jquery/deprecated-3.3",
   "rules": {
+    "jquery/no-animate": "error",
     "jquery/no-each-util": "error",
     "jquery/no-event-shorthand": "error",
     "jquery/no-fade": "error",
