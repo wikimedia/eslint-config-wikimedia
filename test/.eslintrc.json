@@ -1,0 +1,6 @@
+{
+	"extends": "../server.json",
+	"rules": {
+		"no-console": "off"
+	}
+}
