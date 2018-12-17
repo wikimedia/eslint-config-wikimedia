@@ -4,7 +4,7 @@
   "description": "ESLint config following Wikimedia code conventions.",
   "main": "common.json",
   "scripts": {
-    "test": "eslint . && node test/test.js",
+    "test": "eslint --report-unused-disable-directives . && node test/test.js",
     "build-invalid": "node test/test.js dump"
   },
   "repository": {

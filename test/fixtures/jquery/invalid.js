@@ -69,6 +69,9 @@
 	// eslint-disable-next-line jquery/no-proxy
 	$.proxy( function () {}, this );
 
+	// eslint-disable-next-line jquery/no-slide
+	$( [] ).slideDown();
+
 	// eslint-disable-next-line jquery/no-size
 	$( [] ).size();
 
