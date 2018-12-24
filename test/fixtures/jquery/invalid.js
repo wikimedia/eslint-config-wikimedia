@@ -7,6 +7,9 @@
 	// eslint-disable-next-line jquery/no-animate
 	$( [] ).animate( { opacity: 0.5 } );
 
+	// eslint-disable-next-line jquery/no-animate-toggle
+	$( [] ).show( true );
+
 	// eslint-disable-next-line jquery/no-bind
 	$( [] ).bind( 'click', function () {} );
 
