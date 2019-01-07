@@ -199,7 +199,8 @@
 		// Rule: quote-props
 		// Rule: quotes
 		first: 'Who',
-		'default': 'Legacy',
+		default: 'is',
+		null: 'there?',
 		// Rule: object-curly-spacing
 		second: { value: { of: 'What' } },
 		third: {

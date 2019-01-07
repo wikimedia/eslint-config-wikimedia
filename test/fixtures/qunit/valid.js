@@ -1,4 +1,3 @@
-/* eslint-env qunit */
 QUnit.module( 'Example' );
 
 // Rule: qunit/require-expect
