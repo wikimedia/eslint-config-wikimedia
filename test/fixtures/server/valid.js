@@ -1,5 +1,3 @@
-/* eslint-env node */
-
 ( function ( global ) {
 	const a = 4;
 
@@ -18,8 +16,5 @@
 	} else {
 		b--;
 	}
-
-	// Rule: no-misleading-character-class
-	/^[👍]$/u.test( '👍' );
 
 }( this ) );
