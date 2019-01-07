@@ -8,22 +8,36 @@ var fs = require( 'fs' ),
 	profiles = require( '../package.json' ).files
 		// Trim ".json" from fileName end
 		.map( ( fileName ) => fileName.slice( 0, -5 ) )
-		// TODO: Test language profiles too
-		.filter( ( fileName ) => ( fileName.indexOf( 'language/' ) === -1 ) );
+		.filter( ( fileName ) => (
+			// TODO: Test language profiles too
+			fileName.indexOf( 'language/' ) === -1 &&
+			// Node rules are tested through server profile
+			fileName.indexOf( 'node' ) === -1
+		) );
 
 profiles.forEach( function ( profile ) {
-	var count, config;
+	var count, config, rules;
 
 	console.log( 'Testing the "' + profile + '" profile suite.' );
 
 	config = require( '../' + profile + '.json' );
 	validFixturesFile = __dirname + '/fixtures/' + profile + '/valid.js';
 	invalidFixturesFile = __dirname + '/fixtures/' + profile + '/invalid.js';
+	rules = config.rules || {};
+
+	if ( profile === 'server' ) {
+		// Load the rules for node & es6 when testing server
+		Object.assign(
+			rules,
+			require( '../node.json' ).rules,
+			require( '../language/es6.json' ).rules
+		);
+	}
 
 	// Test for positive rules
 	count = 0;
 	validFixtures = fs.readFileSync( validFixturesFile );
-	Object.keys( config.rules ).forEach( function ( rule ) {
+	Object.keys( rules ).forEach( function ( rule ) {
 		// Negative rules are covered below
 		if ( !rule.match( /^no-|\/no-/ ) ) {
 			count++;
@@ -36,7 +50,7 @@ profiles.forEach( function ( profile ) {
 	count = 0;
 	invalidFixtures = fs.readFileSync( invalidFixturesFile );
 	testPositivesFailures = fs.readFileSync( __dirname + '/fixtures/' + profile + '/positiveFailures.json' );
-	Object.keys( config.rules ).forEach( function ( rule ) {
+	Object.keys( rules ).forEach( function ( rule ) {
 		var rDisableRule = new RegExp( '(/[/*]) eslint-disable(-next-line)? ([a-z-]+, )??' + rule );
 		// Positive rules are covered above
 		if ( rule.match( /^no-|\/no-/ ) || testPositivesFailures.indexOf( rule ) !== -1 ) {
