@@ -1,6 +1,7 @@
-# Changelog
 
-## 0.9.0 / 2018-11-19
+0.9.0 / 2018-11-19
+==================
+
 * Implement `wikimedia/client` coding style (James D. Forrester)
 * Implement `wikimedia/server` coding style (James D. Forrester)
 * Implement `wikimedia/jquery` coding style (Ed Sanders)
@@ -17,25 +18,30 @@
 * Refactor code to split into multiple profiles (James D. Forrester)
 * test: Fix ESLint directive regex (Stephen Niedzielski)
 
+0.8.1 / 2018-09-10
+==================
 
-## 0.8.1 / 2018-09-10
 * qunit: extend wikimedia.json (not .eslintrc.json) (Timo Tijhof)
 
+0.8.0 / 2018-09-08
+==================
 
-## 0.8.0 / 2018-09-08
 * Changed rule: `quotes` – Add the 'avoidEscape' option. (James D. Forrester)
 * qunit: Add the appropriate `env` setting. (James D. Forrester)
 
+0.7.2 / 2018-08-14
+==================
 
-## 0.7.2 / 2018-08-14
 * Add qunit.json to "files" (Ed Sanders)
 
+0.7.1 / 2018-08-13
+==================
 
-## 0.7.1 / 2018-08-13
 * No-op release bump for npmjs.com. (James D. Forrester)
 
+0.7.0 / 2018-08-13
+==================
 
-## 0.7.0 / 2018-08-13
 * Implement `wikimedia/qunit` coding style (Timo Tijhof)
 
 * New rule: `qunit/require-expect` (James D. Forrester)
@@ -49,8 +55,9 @@
 * package.json: Correct 'bugs' key (James D. Forrester)
 * build: Use relative offsets in expected "invalid-results" file (Timo Tijhof)
 
+0.6.0 / 2018-07-05
+==================
 
-## 0.6.0 / 2018-07-05
 * Update ESLint to version 4 (Timo Tijhof)
 * Update ESLint to version 5 (James D. Forrester)
 
@@ -62,8 +69,9 @@
 
 * build: Add package-lock.json, expand testing to node 8, 10 (James D. Forrester)
 
+0.5.0 / 2017-08-15
+==================
 
-## 0.5.0 / 2017-08-15
 * Remove explicitly defined `ecmaVersion` (Ed Sanders)
 
 * Changed rule: `dot-notation` - Remove redundant allowKeywords override (Ed Sanders)
@@ -71,8 +79,9 @@
 
 * test: Add tests for negative rules (Timo Tijhof)
 
+0.4.0 / 2017-05-03
+==================
 
-## 0.4.0 / 2017-05-03
 * We now explicitly define the `ecmaVersion` as 5 (James D. Forrester)
 * We removed a number of rules duplicated from `eslint:recommended` (Ed Sanders)
 
@@ -110,8 +119,9 @@
 
 * Replaced rule: `no-spaced-func` with `func-call-spacing`, the new value upstream (Ed Sanders)
 
+0.3.0 / 2016-11-15
+==================
 
-## 0.3.0 / 2016-11-15
 * We now extend `eslint:recommended` except for `no-constant-condition` (Ed Sanders)
 
 * New rule: `computed-property-spacing` set to `always` (Ed Sanders)
@@ -126,8 +136,9 @@
 
 * test: Update sample.js to cover recently added rules (Timo Tijhof)
 
+0.2.0 / 2016-10-27
+==================
 
-## 0.2.0 / 2016-10-27
 * New rule: `block-spacing` (Timo Tijhof)
 * New rule: `new-cap` (Timo Tijhof)
 * New rule: `new-parens` (James D. Forrester)
@@ -152,6 +163,7 @@
 * README: Update Travis badge to @wikimedia (Timo Tijhof)
 * Repo transferred from @markelog to @wikimedia.
 
+0.1.0 / 2016-07-21
+==================
 
-## 0.1.0 / 2016-07-21
 * Initial release (markelog)
