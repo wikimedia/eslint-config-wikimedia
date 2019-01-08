@@ -1,4 +1,18 @@
 
+0.10.0 / 2019-01-07
+==================
+
+* jquery: New rule `jquery/no-animate`, `no-animate-toggle` (Ed Sanders)
+* jquery: New rule `jquery/no-fade`, `jquery/no-slide` (Ed Sanders)
+* jquery: New rule `jquery/no-global-selector` (Ed Sanders)
+* jquery: New rule `jquery/no-is-array`, `jquery/no-size` (Ed Sanders)
+* jquery: New rule `jquery/no-parse-html-literal` (Ed Sanders)
+* jquery: New rule `no-event-shorthand`, `no-noop` and `no-type` (Ed Sanders)
+
+* Changed rule `quote-props` - Reverse ES3-keyword restriction (Timo Tijhof)
+
+* build: Update wikimedia/eslint-plugin-jquery to wmf.5 (James D. Forrester)
+
 0.9.0 / 2018-11-19
 ==================
 
