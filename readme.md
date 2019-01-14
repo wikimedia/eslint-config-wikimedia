@@ -58,6 +58,18 @@ This profile allows ES6 code and node native functions (_i.e._, Node 6.x). It wi
 }
 ```
 
+The `wikimedia/server` profile consists of `wikimedia`, `wikimedia/node` and `wikimedia/language/es6`. To use later versions of ES, for example ES2016, you can use the following profile:
+`.eslintrc.json`:
+```json
+{
+	"extends": [
+		"wikimedia",
+		"wikimedia/node",
+		"wikimedia/language/es2106"
+	]
+}
+```
+
 ### A basic project
 Please note that the basic project configuration does not specify any language or environmental defaults, and is unlikely to be suitable. However, if you wish to target clients with ES3 language support, or earlier versions of Node, this is a good place from which to start.
 
