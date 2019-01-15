@@ -10,8 +10,11 @@
 	// Rule: vars-on-top
 	let b = 2;
 
+	// Rule: template-curly-spacing
+	let c = `a${ b }c`;
+
 	// Rule: arrow-parens
-	if ( a >= b ) {
+	if ( a >= b && c !== '' ) {
 		b++;
 	} else {
 		b--;
