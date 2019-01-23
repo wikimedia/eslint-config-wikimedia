@@ -37,6 +37,9 @@
 	// eslint-disable-next-line jquery/no-fade
 	$( [] ).fadeIn();
 
+	// eslint-disable-next-line jquery/no-global-eval
+	$.globalEval( 'x=3' );
+
 	// eslint-disable-next-line jquery/no-global-selector
 	$( '.my-class' );
 
