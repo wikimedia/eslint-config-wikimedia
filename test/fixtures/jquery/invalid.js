@@ -46,11 +46,17 @@
 	// eslint-disable-next-line jquery/no-grep
 	$.grep( [ 1, 2, 3 ], function () {} );
 
+	// eslint-disable-next-line jquery/no-hold-ready
+	$.holdReady( true );
+
 	// eslint-disable-next-line jquery/no-in-array
 	$.inArray( 1, [ 1 ] );
 
 	// eslint-disable-next-line jquery/no-is-array
 	$.isArray( [ 1 ] );
+
+	// eslint-disable-next-line jquery/no-is-numeric
+	$.isNumeric( '1' );
 
 	// eslint-disable-next-line jquery/no-is-function
 	$.isFunction( function () {} );
@@ -66,6 +72,9 @@
 
 	// eslint-disable-next-line jquery/no-noop
 	f( $.noop );
+
+	// eslint-disable-next-line jquery/no-now
+	f( $.now() );
 
 	// eslint-disable-next-line jquery/no-parse-html-literal
 	$( '<tag attr="val">' );

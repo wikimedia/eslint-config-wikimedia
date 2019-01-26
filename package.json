@@ -45,7 +45,7 @@
   "license": "MIT",
   "dependencies": {
     "eslint": "^5.9.0",
-    "eslint-plugin-jquery": "wikimedia/eslint-plugin-jquery#v1.3.2-wmf.5",
+    "eslint-plugin-jquery": "wikimedia/eslint-plugin-jquery#v1.3.2-wmf.6",
     "eslint-plugin-qunit": "^4.0.0"
   },
   "devDependencies": {
