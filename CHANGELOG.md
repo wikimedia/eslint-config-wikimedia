@@ -1,3 +1,13 @@
+0.10.1 / 2019-02-01
+==================
+
+* jquery: New rule `jquery/no-global-eval` (Ed Sanders)
+* jquery: Add `no-hold-ready`, `no-is-numeric` & `no-now` rules (Ed Sanders)
+
+* Add "es6" env to presets for ES2015 and later (Ed Sanders)
+* Document how to use Node with later versions of ES (Ed Sanders)
+
+* build: Update wikimedia/eslint-plugin-jquery to wmf.6 (Ed Sanders)
 
 0.10.0 / 2019-01-07
 ==================
