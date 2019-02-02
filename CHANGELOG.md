@@ -2,7 +2,7 @@
 ==================
 
 * jquery: New rule `jquery/no-global-eval` (Ed Sanders)
-* jquery: Add `no-hold-ready`, `no-is-numeric` & `no-now` rules (Ed Sanders)
+* jquery: New rule `jquery/no-hold-ready`, `jquery/no-is-numeric` & `jquery/no-now` rules (Ed Sanders)
 
 * Add "es6" env to presets for ES2015 and later (Ed Sanders)
 * Document how to use Node with later versions of ES (Ed Sanders)
