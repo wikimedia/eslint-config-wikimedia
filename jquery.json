@@ -1,6 +1,6 @@
 {
   "globals": {
-    "$": false
+    "$": "readable"
   },
   "plugins": [ "jquery" ],
   "extends": "plugin:jquery/deprecated-3.3",
