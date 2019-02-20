@@ -5,7 +5,7 @@
   "plugins": [ "no-jquery" ],
   "extends": "plugin:no-jquery/deprecated-3.3",
   "rules": {
-    "no-jquery/no-animate": "error",
+    "no-jquery/no-animate": [ "error", { "allowScroll": true } ],
     "no-jquery/no-animate-toggle": "error",
     "no-jquery/no-each-util": "error",
     "no-jquery/no-event-shorthand": "error",
