@@ -1,5 +1,14 @@
+0.11.0 / 2019-02-20
+===================
+* build: Switch to renamed wikimedia/eslint-plugin-no-jquery (Ed Sanders)
+
+* jquery: Enable `allowScroll` option of `no-jquery/no-animate` (Ed Sanders)
+
+* Update eslint: 5.9.0 -> to 5.14.0
+* Use new globals syntax (Ed Sanders)
+
 0.10.1 / 2019-02-01
-==================
+===================
 
 * jquery: New rule `jquery/no-global-eval` (Ed Sanders)
 * jquery: New rule `jquery/no-hold-ready`, `jquery/no-is-numeric` & `jquery/no-now` rules (Ed Sanders)
@@ -10,7 +19,7 @@
 * build: Update wikimedia/eslint-plugin-jquery to wmf.6 (Ed Sanders)
 
 0.10.0 / 2019-01-07
-==================
+===================
 
 * jquery: New rule `jquery/no-animate`, `no-animate-toggle` (Ed Sanders)
 * jquery: New rule `jquery/no-fade`, `jquery/no-slide` (Ed Sanders)
