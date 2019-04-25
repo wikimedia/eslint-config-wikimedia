@@ -49,6 +49,7 @@
     "eslint-plugin-qunit": "^4.0.0"
   },
   "devDependencies": {
-    "assert-diff": "^2.0.3"
+    "assert-diff": "^2.0.3",
+    "pre-commit": "^1.2.2"
   }
 }
