@@ -18,4 +18,11 @@
 		b--;
 	}
 
+	// Rule: no-useless-concat
+	// eslint-disable-next-line no-unused-expressions
+	'ab';
+
+	// Rule: prefer-template
+	// eslint-disable-next-line no-unused-expressions
+	`a${global}`;
 }( this ) );
