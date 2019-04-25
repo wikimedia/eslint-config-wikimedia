@@ -24,4 +24,8 @@
 	// Rule: prefer-template
 	// eslint-disable-next-line no-unused-expressions
 	`a${global}`;
+
+	// Rule: template-curly-spacing
+	// eslint-disable-next-line no-unused-expressions
+	`${global.foo}`;
 }( this ) );
