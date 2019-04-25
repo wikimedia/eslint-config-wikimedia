@@ -23,4 +23,7 @@
 
 	// eslint-disable-next-line prefer-template, no-unused-expressions
 	'a' + global;
+
+	// eslint-disable-next-line template-curly-spacing, no-unused-expressions
+	`${ global.foo }`;
 }( this ) );
