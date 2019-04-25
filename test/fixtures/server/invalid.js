@@ -13,4 +13,9 @@
 	// eslint-disable-next-line no-misleading-character-class
 	/^[👍]$/.test( '👍' );
 
+	// eslint-disable-next-line no-useless-concat, no-unused-expressions
+	'a' + 'b';
+
+	// eslint-disable-next-line prefer-template, no-unused-expressions
+	'a' + global;
 }( this ) );
