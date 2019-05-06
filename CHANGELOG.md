@@ -1,3 +1,8 @@
+0.12.0 / 2019-05-06
+===================
+* Provide ability to lint JSON files (James D. Forrester)
+* Update eslint from 5.14.x to 5.16.x (James D. Forrester)
+
 0.11.0 / 2019-02-20
 ===================
 * build: Switch to renamed wikimedia/eslint-plugin-no-jquery (Ed Sanders)
