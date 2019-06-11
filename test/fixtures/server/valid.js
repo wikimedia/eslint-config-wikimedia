@@ -11,6 +11,7 @@
 	let b = 2;
 
 	// Rule: arrow-parens
+	// Rule: prefer-const
 	if ( a >= b ) {
 		b++;
 	} else {

@@ -12,6 +12,7 @@
     "no-new-require": "error",
     "no-useless-computed-key": "error",
     "one-var": "off",
-    "vars-on-top": "off"
+    "vars-on-top": "off",
+    "prefer-const": "error"
   }
 }
