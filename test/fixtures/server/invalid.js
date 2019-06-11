@@ -13,4 +13,8 @@
 	// eslint-disable-next-line no-misleading-character-class
 	/^[👍]$/.test( '👍' );
 
+	// eslint-disable-next-line prefer-const
+	let b = 1;
+	const f = ( p ) => p;
+	f( b );
 }( this ) );
