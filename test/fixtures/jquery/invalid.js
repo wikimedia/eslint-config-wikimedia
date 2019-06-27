@@ -1,4 +1,6 @@
 ( function () {
+	var $div;
+
 	function f() {}
 
 	// eslint-disable-next-line no-jquery/no-and-self
@@ -91,8 +93,8 @@
 	// eslint-disable-next-line no-jquery/no-slide
 	$( [] ).slideDown();
 
-	// eslint-disable-next-line no-jquery/no-size
-	$( [] ).size();
+	// eslint-disable-next-line no-jquery/no-sizzle
+	$div.find( 'input:checkbox' );
 
 	// eslint-disable-next-line no-jquery/no-trim
 	$.trim( ' foo ' );

@@ -22,6 +22,7 @@
     "no-jquery/no-now": "error",
     "no-jquery/no-parse-html-literal": "error",
     "no-jquery/no-proxy": "error",
+    "no-jquery/no-sizzle": "error",
     "no-jquery/no-slide": "error",
     "no-jquery/no-trim": "error",
     "no-jquery/no-type": "error"
