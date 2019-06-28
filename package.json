@@ -46,7 +46,7 @@
   "dependencies": {
     "eslint": "^5.16.0",
     "eslint-plugin-json": "^1.4.0",
-    "eslint-plugin-no-jquery": "^2.0.0",
+    "eslint-plugin-no-jquery": "^2.1.0",
     "eslint-plugin-qunit": "^4.0.0"
   },
   "devDependencies": {
