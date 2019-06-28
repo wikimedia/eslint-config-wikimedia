@@ -18,11 +18,11 @@ var fs = require( 'fs' ),
 profiles.forEach( function ( profile ) {
 	var count, config, rules;
 
-	console.log( 'Testing the "' + profile + '" profile suite.' );
+	console.log( `Testing the "${profile}" profile suite.` );
 
-	config = require( '../' + profile + '.json' );
-	validFixturesFile = __dirname + '/fixtures/' + profile + '/valid.js';
-	invalidFixturesFile = __dirname + '/fixtures/' + profile + '/invalid.js';
+	config = require( `../${profile}.json` );
+	validFixturesFile = `${__dirname}/fixtures/${profile}/valid.js`;
+	invalidFixturesFile = `${__dirname}/fixtures/${profile}/invalid.js`;
 	rules = config.rules || {};
 
 	if ( profile === 'server' ) {
@@ -41,24 +41,24 @@ profiles.forEach( function ( profile ) {
 		// Negative rules are covered below
 		if ( !rule.match( /^no-|\/no-/ ) ) {
 			count++;
-			assert( validFixtures.indexOf( 'Rule: ' + rule ) !== -1, 'Rule ' + rule + ' is covered' );
+			assert( validFixtures.indexOf( `Rule: ${rule}` ) !== -1, `Rule ${rule} is covered` );
 		}
 	} );
-	console.log( '\tPositive rules (' + count + ') are covered.' );
+	console.log( `\tPositive rules (${count}) are covered.` );
 
 	// Verify coverage
 	count = 0;
 	invalidFixtures = fs.readFileSync( invalidFixturesFile );
-	testPositivesFailures = fs.readFileSync( __dirname + '/fixtures/' + profile + '/positiveFailures.json' );
+	testPositivesFailures = fs.readFileSync( `${__dirname}/fixtures/${profile}/positiveFailures.json` );
 	Object.keys( rules ).forEach( function ( rule ) {
-		var rDisableRule = new RegExp( '(/[/*]) eslint-disable(-next-line)? ([a-z-]+, )??' + rule );
+		var rDisableRule = new RegExp( `(/[/*]) eslint-disable(-next-line)? ([a-z-]+, )??${rule}` );
 		// Positive rules are covered above
 		if ( rule.match( /^no-|\/no-/ ) || testPositivesFailures.indexOf( rule ) !== -1 ) {
 			count++;
-			assertDiff( rDisableRule.test( invalidFixtures.toString() ), 'Rule ' + rule + ' is covered' );
+			assertDiff( rDisableRule.test( invalidFixtures.toString() ), `Rule ${rule} is covered` );
 		}
 	} );
-	console.log( '\tNegative rules (' + count + ') covered.' );
+	console.log( `\tNegative rules (${count}) covered.` );
 
-	console.log( '\t✅ The "' + profile + '" profile suite is fully covered.\n' );
+	console.log( `\t✅ The "${profile}" profile suite is fully covered.\n` );
 } );
