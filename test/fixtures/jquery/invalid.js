@@ -18,6 +18,9 @@
 	// eslint-disable-next-line no-jquery/no-bind
 	$( [] ).bind( 'click', function () {} );
 
+	// eslint-disable-next-line no-jquery/no-class-state
+	$( [] ).hasClass();
+
 	// eslint-disable-next-line no-jquery/no-delegate
 	$( [] ).delegate( 'click', function () {} );
 
