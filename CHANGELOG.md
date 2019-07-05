@@ -1,3 +1,13 @@
+0.13.0 / 2019-07-05
+===================
+* es6: New rule: `prefer-const` (Holger Knust)
+* es6: New rules: `no-useless-concat`, `prefer-template`, `template-curly-spacing` (Stephen Niedzielski)
+* node: New rule: `no-buffer-constructor rule` (Petr Pchelko)
+* jquery: New rule: `no-jquery/no-sizzle` (Ed Sanders)
+* jquery: New rule: `no-jquery/no-class-state` (James D. Forrester)
+* Fix ES language rules tree (Ed Sanders)
+* Fix `no-restricted-properties`/`-syntax` inheritance (Ed Sanders)
+
 0.12.0 / 2019-05-06
 ===================
 * Provide ability to lint JSON files (James D. Forrester)
