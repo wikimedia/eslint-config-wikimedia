@@ -11,4 +11,22 @@
 	// eslint-disable-next-line no-implied-eval
 	setTimeout( name + '();' );
 
+	// not-es5
+	// eslint-disable-next-line no-restricted-properties
+	''.codePointAt();
+	// eslint-disable-next-line no-restricted-syntax
+	[].keys();
+
+	// not-es6
+	// eslint-disable-next-line no-restricted-syntax
+	[].includes();
+
+	// not-es2016
+	// eslint-disable-next-line no-restricted-properties
+	''.padStart();
+
+	// not-es2017
+	// eslint-disable-next-line no-restricted-properties
+	''.trimEnd();
+
 }() );

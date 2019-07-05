@@ -26,4 +26,17 @@
 
 	// eslint-disable-next-line template-curly-spacing, no-unused-expressions
 	`${ global.foo }`;
+
+	// not-es6
+	// eslint-disable-next-line no-restricted-syntax
+	[].includes();
+
+	// not-es2016
+	// eslint-disable-next-line no-restricted-properties
+	''.padStart();
+
+	// not-es2017
+	// eslint-disable-next-line no-restricted-properties
+	''.trimEnd();
+
 }( this ) );

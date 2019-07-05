@@ -1,5 +1,6 @@
-{
-  "extends": "./not-es6.json",
+/* eslint-disable quote-props, quotes, indent */
+const merge = require( './merge.js' );
+const rules = {
   "rules": {
     "no-restricted-properties": [
       "error",
@@ -95,4 +96,6 @@
       }
     ]
   }
-}
+};
+
+module.exports = merge( rules, require( './not-es6.js' ) );

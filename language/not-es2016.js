@@ -1,5 +1,6 @@
-{
-  "extends": "./not-es2017.json",
+/* eslint-disable quote-props, quotes, indent */
+const merge = require( './merge.js' );
+const rules = {
   "rules": {
     "no-restricted-properties": [
       "error",
@@ -28,4 +29,5 @@
       }
     ]
   }
-}
+};
+module.exports = merge( rules, require( './not-es2017.js' ) );
