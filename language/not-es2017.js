@@ -1,4 +1,6 @@
-{
+/* eslint-disable quote-props, quotes, indent */
+// Nothing to merge with yet
+module.exports = {
   "rules": {
     "no-restricted-properties": [
       "error",
@@ -28,4 +30,4 @@
       }
     ]
   }
-}
+};

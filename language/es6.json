@@ -1,7 +1,7 @@
 {
   "extends": [
     "./rules-es6.json",
-    "./not-es6.json"
+    "./not-es6.js"
   ],
   "parserOptions": {
     "ecmaVersion": 6
