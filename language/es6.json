@@ -1,21 +1,12 @@
 {
-  "extends": "./not-es2015.json",
+  "extends": [
+    "./rules-es6.json",
+    "./not-es6.json"
+  ],
   "parserOptions": {
     "ecmaVersion": 6
   },
   "env": {
     "es6": true
-  },
-  "rules": {
-    "arrow-parens": "error",
-    "no-misleading-character-class": "error",
-    "no-new-require": "error",
-    "no-useless-computed-key": "error",
-    "no-useless-concat": "error",
-    "prefer-template": "error",
-    "template-curly-spacing": "error",
-    "one-var": "off",
-    "vars-on-top": "off",
-    "prefer-const": "error"
   }
 }

@@ -26,7 +26,7 @@ profiles.forEach( function ( profile ) {
 	rules = config.rules || {};
 
 	if ( profile === 'server' ) {
-		// Load the rules for node & es6 when testing server
+		// Load the rules for Node & ES6 when testing server
 		Object.assign(
 			rules,
 			require( '../node.json' ).rules,

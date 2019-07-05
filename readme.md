@@ -49,7 +49,7 @@ You can extend the above profile by also adding a second `.eslintrc.json` file i
 ```
 
 ### A typical Node project
-This profile allows ES6 code and node native functions (_i.e._, Node 6.x). It will complain about ES2015+ code and language features.
+This profile allows ES6 code and node native functions (_i.e._, Node 6.x). It will complain about ES2016+ code and language features.
 
 `.eslintrc.json`:
 ```json
