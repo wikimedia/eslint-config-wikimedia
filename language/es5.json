@@ -1,5 +1,5 @@
 {
-  "extends": "./not-es6.json",
+  "extends": "./not-es5.json",
   "parserOptions": {
     "ecmaVersion": 5
   }
