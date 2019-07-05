@@ -1,5 +1,8 @@
 {
-  "extends": "./not-es2017.json",
+  "extends": [
+    "./rules-es2017.json",
+    "./not-es2017.json"
+  ],
   "parserOptions": {
     "ecmaVersion": 2017
   },
