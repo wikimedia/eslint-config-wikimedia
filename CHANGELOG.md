@@ -1,3 +1,7 @@
+0.13.1 / 2019-07-08
+===================
+* Fix language rule merge when key is unset in both rulesets (Ed Sanders)
+
 0.13.0 / 2019-07-05
 ===================
 * es6: New rule: `prefer-const` (Holger Knust)
