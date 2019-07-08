@@ -1,18 +1,19 @@
 module.exports = function ( childRules, parentRules ) {
-	// Start off with a standard merge
-	const mergedRules = Object.assign( {}, parentRules, childRules );
+	// Only rules are preserved
+	const mergedRules = { rules: {} };
+
+	// Merge rules
+	Object.assign( mergedRules.rules, parentRules.rules, childRules.rules );
 
 	// For the specified keys, concatenate the lists
 	[ 'no-restricted-syntax', 'no-restricted-properties' ].forEach( function ( key ) {
-		// If either is unset, return the other
-		if ( !parentRules.rules[ key ] ) {
-			mergedRules.rules[ key ] = childRules.rules[ key ];
-		} else if ( !childRules.rules[ key ] ) {
-			mergedRules.rules[ key ] = parentRules.rules[ key ];
+		if ( !mergedRules.rules[ key ] ) {
+			// If both are unset, do nothing
+			return;
 		} else {
-			// If both are set, merge. Use the 0th value from parentRules arbitrarily,
-			// but it is assumed it is "error" for both.
-			mergedRules.rules[ key ] = ( parentRules.rules[ key ] || [] )
+			// Assume mode is 'error'.
+			mergedRules.rules[ key ] = [ 'error' ]
+				.concat( ( parentRules.rules[ key ] || [] ).slice( 1 ) )
 				.concat( ( childRules.rules[ key ] || [] ).slice( 1 ) );
 		}
 	} );
