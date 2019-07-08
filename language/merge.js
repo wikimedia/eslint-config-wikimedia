@@ -4,8 +4,11 @@ module.exports = function ( childRules, parentRules ) {
 
 	// For the specified keys, concatenate the lists
 	[ 'no-restricted-syntax', 'no-restricted-properties' ].forEach( function ( key ) {
-		// If either is unset, return the other
-		if ( !parentRules.rules[ key ] ) {
+		if ( !mergedRules[ key ] ) {
+			// If both are unset, do nothing
+			return;
+		} else if ( !parentRules.rules[ key ] ) {
+			// If either is unset, return the other
 			mergedRules.rules[ key ] = childRules.rules[ key ];
 		} else if ( !childRules.rules[ key ] ) {
 			mergedRules.rules[ key ] = parentRules.rules[ key ];
