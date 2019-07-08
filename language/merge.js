@@ -10,13 +10,8 @@ module.exports = function ( childRules, parentRules ) {
 		if ( !mergedRules.rules[ key ] ) {
 			// If both are unset, do nothing
 			return;
-		} else if ( !parentRules.rules[ key ] ) {
-			// If either is unset, return the other
-			mergedRules.rules[ key ] = childRules.rules[ key ];
-		} else if ( !childRules.rules[ key ] ) {
-			mergedRules.rules[ key ] = parentRules.rules[ key ];
 		} else {
-			// If both are set, merge. Assume mode is 'error'.
+			// Assume mode is 'error'.
 			mergedRules.rules[ key ] = [ 'error' ]
 				.concat( ( parentRules.rules[ key ] || [] ).slice( 1 ) )
 				.concat( ( childRules.rules[ key ] || [] ).slice( 1 ) );
