@@ -65,7 +65,7 @@ The `wikimedia/server` profile consists of `wikimedia`, `wikimedia/node` and `wi
 	"extends": [
 		"wikimedia",
 		"wikimedia/node",
-		"wikimedia/language/es2106"
+		"wikimedia/language/es2016"
 	]
 }
 ```
