@@ -25,8 +25,14 @@
 	// eslint-disable-next-line no-restricted-properties
 	''.padStart();
 
-	// not-es2017
+	// not-es2017 introduces no rules
+
+	// not-es2018
 	// eslint-disable-next-line no-restricted-properties
 	''.trimEnd();
+
+	// not-es2019
+	// eslint-disable-next-line no-restricted-properties
+	''.matchAll( /foo/ );
 
 }() );

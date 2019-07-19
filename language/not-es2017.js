@@ -1,33 +1,9 @@
 /* eslint-disable quote-props, quotes, indent */
-// Nothing to merge with yet
-module.exports = {
+const merge = require( './merge.js' );
+const rules = {
   "rules": {
-    "no-restricted-properties": [
-      "error",
-      {
-        "property": "trimEnd",
-        "message": "Unsupported method String.prototype.trimEnd is still experimental."
-      },
-      {
-        "property": "trimLeft",
-        "message": "Unsupported method String.prototype.trimLeft is still experimental."
-      },
-      {
-        "property": "trimRight",
-        "message": "Unsupported method String.prototype.trimRight is still experimental."
-      },
-      {
-        "property": "trimStart",
-        "message": "Unsupported method String.prototype.trimStart is still experimental."
-      },
-      {
-        "property": "flat",
-        "message": "Unsupported method Array.prototype.flat is still experimental."
-      },
-      {
-        "property": "flatMap",
-        "message": "Unsupported method Array.prototype.flatMap is still experimental."
-      }
-    ]
+    // ES2018 introduces Promise.prototype.finally, but linting for this
+    // will produce false positives with existing promise libraries.
   }
 };
+module.exports = merge( rules, require( './not-es2018.js' ) );
