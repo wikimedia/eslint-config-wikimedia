@@ -274,6 +274,7 @@ var APP;
 	 * @yields
 	 */
 	APP.JSDocTags = function ( a, b ) { return a || b; };
-	/* eslint-enable max-statements-per-line valid-jsdoc */
+	/* eslint-enable max-statements-per-line */
+	/* eslint-enable valid-jsdoc */
 
 }( this ) );
