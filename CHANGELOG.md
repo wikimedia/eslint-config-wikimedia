@@ -1,3 +1,10 @@
+0.14.0 / 2019-09-27
+===================
+* Update eslint from 5.16.0 to 6.2.2 (Ed Sanders; James D. Forrester)
+* Create rulesets for ES2018/19 (Ed Sanders)
+* readme: Fix typo 2106 -> 2016 (Ed Sanders)
+* build: Bump eslint-utils from 1.4.0 to 1.4.2 (dependabot[bot])
+
 0.13.1 / 2019-07-08
 ===================
 * Fix language rule merge when key is unset in both rulesets (Ed Sanders)
