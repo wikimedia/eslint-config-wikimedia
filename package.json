@@ -39,8 +39,10 @@
     "language/es2017.json",
     "language/rules-es2017.json",
     "language/not-es2017.js",
+    "language/es2018.json",
     "language/rules-es2018.json",
     "language/not-es2018.js",
+    "language/es2019.json",
     "language/rules-es2019.json",
     "language/not-es2019.js",
     "language/merge.js"
