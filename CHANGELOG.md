@@ -1,4 +1,8 @@
-0.14.0 / 2019-09-27
+0.14.1 / 2019-08-31
+===================
+* manifest: Add missing base language files for es2018 and es2019 (James D. Forrester)
+
+0.14.0 / 2019-08-27
 ===================
 * Update eslint from 5.16.0 to 6.2.2 (Ed Sanders; James D. Forrester)
 * Create rulesets for ES2018/19 (Ed Sanders)
