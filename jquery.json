@@ -9,23 +9,17 @@
     "no-jquery/no-animate-toggle": "error",
     "no-jquery/no-class-state": "error",
     "no-jquery/no-each-util": "error",
-    "no-jquery/no-event-shorthand": "error",
+    "no-jquery/no-error": "error",
     "no-jquery/no-fade": "error",
     "no-jquery/no-global-eval": "error",
     "no-jquery/no-global-selector": "error",
     "no-jquery/no-grep": "error",
-    "no-jquery/no-hold-ready": "error",
     "no-jquery/no-in-array": "error",
-    "no-jquery/no-is-array": "error",
-    "no-jquery/no-is-numeric": "error",
     "no-jquery/no-map-util": "error",
     "no-jquery/no-noop": "error",
-    "no-jquery/no-now": "error",
     "no-jquery/no-parse-html-literal": "error",
-    "no-jquery/no-proxy": "error",
     "no-jquery/no-sizzle": "error",
     "no-jquery/no-slide": "error",
-    "no-jquery/no-trim": "error",
-    "no-jquery/no-type": "error"
+    "no-jquery/no-trim": "error"
   }
 }
