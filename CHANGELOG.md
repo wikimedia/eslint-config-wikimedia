@@ -1,3 +1,7 @@
+0.14.3 / 2019-10-02
+===================
+* jquery: New rule `no-jquery/no-constructor-attributes` (Ed Sanders)
+
 0.14.2 / 2019-10-02
 ===================
 * es6: Remove `prefer-template` rule (Ed Sanders)
