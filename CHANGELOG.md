@@ -1,3 +1,10 @@
+0.14.2 / 2019-10-02
+===================
+* es6: Remove `prefer-template` rule (Ed Sanders)
+* jquery: Update no-jquery from 2.1.0 to 2.2.1 and don't re-apply inherited rules (Ed Sanders)
+* jquery: New rule `no-jquery/no-error` (Ed Sanders)
+* manifest: Set homepage to `Manual:` rather than `Manual_talk:` (James D. Forrester)
+
 0.14.1 / 2019-08-31
 ===================
 * manifest: Add missing base language files for es2018 and es2019 (James D. Forrester)
