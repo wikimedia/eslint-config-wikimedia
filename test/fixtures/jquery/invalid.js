@@ -21,6 +21,9 @@
 	// eslint-disable-next-line no-jquery/no-class-state
 	$( [] ).hasClass();
 
+	// eslint-disable-next-line no-jquery/no-constructor-attributes
+	$( '<div>', { id: 'foo' } );
+
 	// eslint-disable-next-line no-jquery/no-delegate
 	$( [] ).delegate( 'click', function () {} );
 
