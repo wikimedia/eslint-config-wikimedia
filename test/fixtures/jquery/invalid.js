@@ -42,6 +42,9 @@
 	// eslint-disable-next-line no-jquery/no-event-shorthand
 	$( [] ).scroll( function () {} );
 
+	// eslint-disable-next-line no-jquery/no-error
+	$.error( 'err' );
+
 	// eslint-disable-next-line no-jquery/no-fade
 	$( [] ).fadeIn();
 

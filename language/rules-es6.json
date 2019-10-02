@@ -6,7 +6,6 @@
     "no-new-require": "error",
     "no-useless-computed-key": "error",
     "no-useless-concat": "error",
-    "prefer-template": "error",
     "template-curly-spacing": "error",
     "one-var": "off",
     "vars-on-top": "off",
