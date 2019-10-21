@@ -1,0 +1,9 @@
+{
+  "globals": {
+    "mw": "readonly"
+  },
+  "plugins": [ "mediawiki" ],
+  "rules": {
+    "mediawiki/msg-doc": "error"
+  }
+}

@@ -24,6 +24,7 @@
     "client.json",
     "node.json",
     "jquery.json",
+    "mediawiki.json",
     "qunit.json",
     "server.json",
     "language/es5.json",
@@ -57,6 +58,7 @@
   "dependencies": {
     "eslint": "^6.2.2",
     "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-mediawiki": "^0.1.0",
     "eslint-plugin-no-jquery": "^2.2.1",
     "eslint-plugin-qunit": "^4.0.0"
   },
