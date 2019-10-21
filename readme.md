@@ -35,6 +35,18 @@ This profile adds the jQuery `$` global, and additional rules preventing the use
 }
 ```
 
+#### MediaWiki
+Code that runs in MediaWiki can use this profile. It enforces rules that are specific to the MediaWiki codebase (core and extensions), such as correct documentation of `mw.message` usage.
+`.eslintrc.json`:
+```json
+{
+	"extends": [
+		"wikimedia/client",
+		"wikimedia/mediawiki"
+	]
+}
+```
+
 ### Adding a QUnit test suite
 You can extend the above profile by also adding a second `.eslintrc.json` file in your tests directory:
 
