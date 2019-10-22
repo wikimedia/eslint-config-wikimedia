@@ -155,6 +155,7 @@
 * New rule: `semi-style` (James D. Forrester)
 * New rule: `switch-colon-spacing` (James D. Forrester)
 
+—
 * build: Add package-lock.json, expand testing to node 8, 10 (James D. Forrester)
 
 0.5.0 / 2017-08-15
