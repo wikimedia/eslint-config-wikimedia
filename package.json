@@ -4,7 +4,7 @@
   "description": "ESLint config following Wikimedia code conventions.",
   "main": "common.json",
   "scripts": {
-    "test": "eslint --report-unused-disable-directives . --ext .js,.json && node test/test.js",
+    "test": "eslint . --ext .js,.json && node test/test.js",
     "build-invalid": "node test/test.js dump"
   },
   "repository": {
@@ -56,7 +56,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "eslint": "^6.2.2",
+    "eslint": "^6.5.1",
     "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-mediawiki": "^0.1.0",
     "eslint-plugin-no-jquery": "^2.3.0",
