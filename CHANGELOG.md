@@ -43,8 +43,10 @@
 ===================
 * build: Switch to renamed wikimedia/eslint-plugin-no-jquery (Ed Sanders)
 
+—
 * jquery: Enable `allowScroll` option of `no-jquery/no-animate` (Ed Sanders)
 
+—
 * Update eslint: 5.9.0 -> to 5.14.0
 * Use new globals syntax (Ed Sanders)
 
@@ -54,9 +56,11 @@
 * jquery: New rule `jquery/no-global-eval` (Ed Sanders)
 * jquery: New rule `jquery/no-hold-ready`, `jquery/no-is-numeric` & `jquery/no-now` rules (Ed Sanders)
 
+—
 * Add "es6" env to presets for ES2015 and later (Ed Sanders)
 * Document how to use Node with later versions of ES (Ed Sanders)
 
+—
 * build: Update wikimedia/eslint-plugin-jquery to wmf.6 (Ed Sanders)
 
 0.10.0 / 2019-01-07
@@ -69,8 +73,10 @@
 * jquery: New rule `jquery/no-parse-html-literal` (Ed Sanders)
 * jquery: New rule `no-event-shorthand`, `no-noop` and `no-type` (Ed Sanders)
 
+—
 * Changed rule `quote-props` - Reverse ES3-keyword restriction (Timo Tijhof)
 
+—
 * build: Update wikimedia/eslint-plugin-jquery to wmf.5 (James D. Forrester)
 
 0.9.0 / 2018-11-19
@@ -80,11 +86,14 @@
 * Implement `wikimedia/server` coding style (James D. Forrester)
 * Implement `wikimedia/jquery` coding style (Ed Sanders)
 
+—
 * New rule: `max-statements-per-line` (Ed Sanders)
 * New rule: `no-misleading-character-class` (Ed Sanders)
 
+—
 * Changed rule: `valid-jsdoc` – Add various preferred tags (Timo Tijhof)
 
+—
 * Update eslint: 5.6.0 -> 5.9.0
 * Update elint-plugin-qunit: 3.3.0 -> 4.0.0
 * Update assert-diff 1.2.0 -> 2.0.3
@@ -118,14 +127,18 @@
 
 * Implement `wikimedia/qunit` coding style (Timo Tijhof)
 
+—
 * New rule: `qunit/require-expect` (James D. Forrester)
 
+—
 * Changed rule: `valid-jsdoc` — Set preferred cases for types (Stephen Niedzielski)
 
+—
 * Removed rule: `no-catch-shadow` – Deprecated in eslint v5.1.0 (Stephen Niedzielski)
 * Removed rule: `no-native-reassign` – Already inherited as `no-global-assign` (Stephen Niedzielski)
 * Removed rule: `no-negated-in-lhs` – Already inherited as `no-unsafe-negation` (Stephen Niedzielski)
 
+—
 * package.json: Correct 'bugs' key (James D. Forrester)
 * build: Use relative offsets in expected "invalid-results" file (Timo Tijhof)
 
@@ -135,6 +148,7 @@
 * Update ESLint to version 4 (Timo Tijhof)
 * Update ESLint to version 5 (James D. Forrester)
 
+—
 * New rule: `arrow-steps` (James D. Forrester)
 * New rule: `max-len` (Joaquin Hernandez)
 * New rule: `no-prototype-builtins` (James D. Forrester)
@@ -148,9 +162,11 @@
 
 * Remove explicitly defined `ecmaVersion` (Ed Sanders)
 
+—
 * Changed rule: `dot-notation` - Remove redundant allowKeywords override (Ed Sanders)
 * Changed rule: `valid-jsdoc` - Validate use of `@return` (Timo Tijhof)
 
+—
 * test: Add tests for negative rules (Timo Tijhof)
 
 0.4.0 / 2017-05-03
@@ -159,6 +175,7 @@
 * We now explicitly define the `ecmaVersion` as 5 (James D. Forrester)
 * We removed a number of rules duplicated from `eslint:recommended` (Ed Sanders)
 
+—
 * New rule: `no-alert` (Ed Sanders)
 * New rule: `no-catch-shadow` (Ed Sanders)
 * New rule: `no-extend-native` (Ed Sanders)
@@ -189,8 +206,10 @@
 * New rule: `prefer-numeric-literals` (Ed Sanders)
 * New rule: `unicode-bom` (Ed Sanders)
 
+—
 * Changed rule: `space-before-function-paren` — Also require spaces before parentheses in anonymous functions (Ed Sanders)
 
+—
 * Replaced rule: `no-spaced-func` with `func-call-spacing`, the new value upstream (Ed Sanders)
 
 0.3.0 / 2016-11-15
@@ -198,6 +217,7 @@
 
 * We now extend `eslint:recommended` except for `no-constant-condition` (Ed Sanders)
 
+—
 * New rule: `computed-property-spacing` set to `always` (Ed Sanders)
 * New rule: `no-array-constructor` (Ed Sanders)
 * New rule: `no-new-object` (Ed Sanders)
@@ -206,8 +226,10 @@
 * New rule: `no-whitespace-before-property` (Ed Sanders)
 * New rule: `object-curly-spacing` set to `always` (Ed Sanders)
 
+—
 * Changed rule: `no-multiple-empty-lines` — Also reject empty lines at the start or end of a file (Ed Sanders)
 
+—
 * test: Update sample.js to cover recently added rules (Timo Tijhof)
 
 0.2.0 / 2016-10-27
@@ -227,11 +249,13 @@
 * New rule: `no-sparse-arrays` (Ed Sanders)
 * New rule: `vars-on-top` (Ed Sanders)
 
+—
 * Changed rule: `camelcase` — Make stricter by applying to properties (Ed Sanders)
 * Changed rule: `space-in-parens` — Reject `foo( )` and not `foo()` (James D. Forrester)
 * Changed rule: `spaced-comment` — Allow `/**` and `/*!` comment blocks (James D. Forrester)
 * Changed rule: `space-unary-ops` — Make stricter by applying to "words" (Timo Tijhof)
 
+—
 * cleanup: Alphabetize rules in eslintrc (Timo Tijhof)
 * test: Add comments to sample.js indicating which rules are tested (Timo Tijhof)
 * README: Update Travis badge to @wikimedia (Timo Tijhof)
