@@ -3,6 +3,7 @@
   "env": {},
   "globals": {},
   "plugins": [ "json" ],
+  "reportUnusedDisableDirectives": true,
   "rules": {
     "array-bracket-spacing": [ "error", "always" ],
     "block-spacing": "error",
