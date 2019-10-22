@@ -1,7 +1,11 @@
 ( function () {
-	var $div;
+	var $div, div;
 
 	function f() {}
+
+	// eslint-disable-next-line no-jquery/variable-pattern
+	div = $div.find( '.foo' );
+	div.hide();
 
 	// eslint-disable-next-line no-jquery/no-and-self
 	$( [] ).andSelf();
