@@ -1,3 +1,10 @@
+0.15.0 / 2019-10-22
+===================
+* Create `mediawiki` profile and enable `mediawiki/msg-doc` (Ed Sanders)
+* jquery: New rule `no-jquery/variable-pattern` (Ed Sanders)
+* Move `reportUnusedDisableDirectives` to config (Ed Sanders)
+* Update eslint from 6.2.2 to 6.5.1 (Ed Sanders)
+
 0.14.3 / 2019-10-02
 ===================
 * jquery: New rule `no-jquery/no-constructor-attributes` (Ed Sanders)
