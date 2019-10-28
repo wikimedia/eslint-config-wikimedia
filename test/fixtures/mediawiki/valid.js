@@ -9,4 +9,5 @@
 
 	// Rule: mediawiki/valid-package-file-require
 	require( './invalid.js' );
+	require( 'SomePackage' );
 }() );

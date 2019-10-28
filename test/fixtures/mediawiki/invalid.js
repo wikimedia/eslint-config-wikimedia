@@ -6,4 +6,7 @@
 
 	// eslint-disable-next-line mediawiki/valid-package-file-require
 	require( './valid' );
+
+	// eslint-disable-next-line mediawiki/valid-package-file-require
+	require( 'valid.js' );
 }() );
