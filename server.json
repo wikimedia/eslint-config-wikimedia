@@ -3,9 +3,5 @@
     "./common.json",
     "./node.json",
     "./language/es6.json"
-  ],
-  "plugins": [ "mediawiki" ],
-  "rules": {
-    "mediawiki/valid-package-file-require": "error"
-  }
+  ]
 }

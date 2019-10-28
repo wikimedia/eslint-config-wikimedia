@@ -25,7 +25,4 @@
 	// Rule: template-curly-spacing
 	// eslint-disable-next-line no-unused-expressions
 	`${global.foo}`;
-
-	// Rule: mediawiki/valid-package-file-require
-	require( './foo.js' );
 }( this ) );

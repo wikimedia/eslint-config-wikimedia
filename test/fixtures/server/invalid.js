@@ -36,7 +36,4 @@
 	// eslint-disable-next-line no-restricted-properties
 	''.trimEnd();
 
-	// eslint-disable-next-line mediawiki/valid-package-file-require
-	require( 'foo' );
-
 }( this ) );

@@ -7,4 +7,6 @@
 	// * foo-bar2
 	mw.msg( 'foo-' + bar );
 
+	// Rule: mediawiki/valid-package-file-require
+	require( './foo.js' );
 }() );
