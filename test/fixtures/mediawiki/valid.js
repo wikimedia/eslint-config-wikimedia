@@ -8,5 +8,5 @@
 	mw.msg( 'foo-' + bar );
 
 	// Rule: mediawiki/valid-package-file-require
-	require( './foo.js' );
+	require( './invalid.js' );
 }() );

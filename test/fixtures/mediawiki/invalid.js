@@ -5,5 +5,5 @@
 	mw.msg( 'foo-' + bar );
 
 	// eslint-disable-next-line mediawiki/valid-package-file-require
-	require( './foo' );
+	require( './valid' );
 }() );
