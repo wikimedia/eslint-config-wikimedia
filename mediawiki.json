@@ -1,9 +1,11 @@
 {
   "globals": {
-    "mw": "readonly"
+    "mw": "readonly",
+    "require": "readonly"
   },
   "plugins": [ "mediawiki" ],
   "rules": {
-    "mediawiki/msg-doc": "error"
+    "mediawiki/msg-doc": "error",
+    "mediawiki/valid-package-file-require": "error"
   }
 }
