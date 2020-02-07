@@ -224,67 +224,7 @@ var APP;
 
 	global.APP = APP;
 
-	// eslint-disable-next-line valid-jsdoc
-	/** @returns {undefined} */
-	APP.stop = function () {
-		return '@returns instead of @return';
-	};
-
-	// eslint-disable-next-line valid-jsdoc
-	/**
-	 * @param {number} a
-	 * @return {undefined}
-	 */
-	APP.multiply = function ( a, b ) {
-		return a * b.undocumented;
-	};
-
 	// eslint-disable-next-line no-prototype-builtins
 	APP.hasBarProperty = APP.hasOwnProperty( 'bar' );
-
-	/* eslint-disable valid-jsdoc */
-	/**
-	 * @param {Boolean} a
-	 * @param {Number} b
-	 * @param {String} c
-	 * @param {Undefined} d
-	 * @param {Null} e
-	 * @param {object} f
-	 * @param {array} g
-	 * @param {function} h
-	 * @param {date} i
-	 * @param {regexp} j
-	 * @return {error}
-	*/
-	APP.JSDocTypes = function ( a, b, c, d, e, f, g, h, i, j ) {
-		return a || b || c || d || e || f || g || h || i || j;
-	};
-
-	/* eslint-disable max-statements-per-line */
-	/**
-	 * {@linkcode APP}
-	 * {@linkplain APP}
-	 *
-	 * @virtual
-	 * @augments String
-	 * @constant
-	 * @defaultvalue
-	 * @description Description.
-	 * @host String
-	 * @fileoverview Description.
-	 * @overview Description.
-	 * @emits Event
-	 * @function
-	 * @var
-	 * @arg {number} a
-	 * @argument {number} b
-	 * @prop {number} c
-	 * @returns {number}
-	 * @exception {Error}
-	 * @yields
-	 */
-	APP.JSDocTags = function ( a, b ) { return a || b; };
-	/* eslint-enable max-statements-per-line */
-	/* eslint-enable valid-jsdoc */
 
 }( this ) );

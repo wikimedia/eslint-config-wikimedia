@@ -1,0 +1,56 @@
+{
+	"plugins": [ "jsdoc" ],
+	"settings": {
+		"jsdoc": {
+			"tagNamePreference": {
+				"arg": "param",
+				"argument": "param",
+				"class": "class",
+				"tag constructor": "constructor",
+				"augments": "extends",
+				"constant": "const",
+				"defaultvalue": "default",
+				"description": "desc",
+				"emits": "fires",
+				"exception": "throws",
+				"fileoverview": "file",
+				"func": "function",
+				"function": "method",
+				"host": "external",
+				"linkcode": "link",
+				"linkplain": "link",
+				"overview": "file",
+				"prop": "property",
+				"returns": "return",
+				"var": "member",
+				"virtual": "abstract",
+				"yields": "yield"
+			},
+			"preferredTypes": {
+				"array": "Array",
+				"Boolean": "boolean",
+				"date": "Date",
+				"error": "Error",
+				"function": "Function",
+				"Null": "null",
+				"Number": "number",
+				"object": "Object",
+				"regexp": "RegExp",
+				"String": "string",
+				"Undefined": "undefined"
+			}
+		}
+	},
+	"rules": {
+		"jsdoc/check-alignment": "error",
+		"jsdoc/check-indentation": "error",
+		"jsdoc/check-param-names": "error",
+		"jsdoc/check-property-names": "error",
+		"jsdoc/check-tag-names": "error",
+		"jsdoc/check-types": "error",
+		"jsdoc/implements-on-classes": "error",
+		"jsdoc/newline-after-description": "warn",
+		"jsdoc/no-undefined-types": "error",
+		"jsdoc/valid-types": "error"
+	}
+}

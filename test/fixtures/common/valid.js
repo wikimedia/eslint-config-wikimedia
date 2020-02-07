@@ -154,8 +154,6 @@
 		return ret;
 	};
 
-	// Rule: valid-jsdoc
-
 	/**
 	 * @param {boolean|number} code
 	 * @return {null|undefined}
@@ -243,7 +241,7 @@
 	 * @param {Date} i
 	 * @param {RegExp} j
 	 * @return {Error}
-	*/
+	 */
 	APP.JSDocTypes = function ( a, b, c, d, e, f, g, h, i, j ) {
 		return a || b || c || d || e || f || g || h || i || j;
 	};
@@ -263,7 +261,7 @@
 	 * @external String
 	 * @file Description.
 	 * @fires Event
-	 * @func
+	 * @function
 	 * @method
 	 * @member
 	 * @param {number} a
