@@ -6,8 +6,6 @@ var fs = require( 'fs' ),
 	invalidFixturesFile, invalidFixtures, testPositivesFailures,
 
 	profiles = require( '../package.json' ).files
-		// Trim ".json" from fileName end
-		.map( ( fileName ) => fileName.slice( 0, -5 ) )
 		.filter( ( fileName ) => (
 			// TODO: Test language profiles too
 			fileName.indexOf( 'language/' ) === -1 &&
@@ -16,16 +14,17 @@ var fs = require( 'fs' ),
 		) );
 
 profiles.forEach( function ( profile ) {
-	var count, config, rules;
+	var count, config, rules,
+		profileName = profile.replace( /\..*/, '' );
 
-	console.log( `Testing the "${profile}" profile suite.` );
+	console.log( `Testing the "${profileName}" profile suite.` );
 
-	config = require( `../${profile}.json` );
-	validFixturesFile = `${__dirname}/fixtures/${profile}/valid.js`;
-	invalidFixturesFile = `${__dirname}/fixtures/${profile}/invalid.js`;
+	config = require( `../${profile}` );
+	validFixturesFile = `${__dirname}/fixtures/${profileName}/valid.js`;
+	invalidFixturesFile = `${__dirname}/fixtures/${profileName}/invalid.js`;
 	rules = config.rules || {};
 
-	if ( profile === 'server' ) {
+	if ( profileName === 'server' ) {
 		// Load the rules for Node & ES6 when testing server
 		Object.assign(
 			rules,
@@ -49,7 +48,7 @@ profiles.forEach( function ( profile ) {
 	// Verify coverage
 	count = 0;
 	invalidFixtures = fs.readFileSync( invalidFixturesFile );
-	testPositivesFailures = fs.readFileSync( `${__dirname}/fixtures/${profile}/positiveFailures.json` );
+	testPositivesFailures = fs.readFileSync( `${__dirname}/fixtures/${profileName}/positiveFailures.json` );
 	Object.keys( rules ).forEach( function ( rule ) {
 		var rDisableRule = new RegExp( `(/[/*]) eslint-disable(-next-line)? ([a-z-]+, )??${rule}` );
 		// Positive rules are covered above
@@ -60,5 +59,5 @@ profiles.forEach( function ( profile ) {
 	} );
 	console.log( `\tNegative rules (${count}) covered.` );
 
-	console.log( `\t✅ The "${profile}" profile suite is fully covered.\n` );
+	console.log( `\t✅ The "${profileName}" profile suite is fully covered.\n` );
 } );

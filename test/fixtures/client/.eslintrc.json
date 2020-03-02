@@ -1,4 +1,4 @@
 {
 	"root": true,
-	"extends": "../../../client.json"
+	"extends": "../../../client.js"
 }

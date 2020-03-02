@@ -1,6 +1,7 @@
 /* eslint-env browser */
 
 ( function () {
+	var node;
 
 	// eslint-disable-next-line no-alert
 	window.alert( name );
@@ -10,6 +11,9 @@
 
 	// eslint-disable-next-line no-implied-eval
 	setTimeout( name + '();' );
+
+	// eslint-disable-next-line no-restricted-properties
+	node = node.parentElement;
 
 	// not-es5
 	// eslint-disable-next-line no-restricted-properties
