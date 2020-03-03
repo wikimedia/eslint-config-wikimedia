@@ -13,7 +13,7 @@
 	setTimeout( name + '();' );
 
 	// eslint-disable-next-line no-restricted-properties
-	node = node.parentElement;
+	document.appendChild( node.parentElement );
 
 	// not-es5
 	// eslint-disable-next-line no-restricted-properties

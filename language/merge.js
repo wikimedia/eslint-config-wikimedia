@@ -1,21 +1,25 @@
-module.exports = function ( childRules, parentRules ) {
-	// Only rules are preserved
-	const mergedRules = { rules: {} };
+module.exports = function ( childConfig, parentConfig ) {
+	const mergedConfig = {};
+
+	// Merge top level config
+	Object.assign( mergedConfig, parentConfig, childConfig );
 
 	// Merge rules
-	Object.assign( mergedRules.rules, parentRules.rules, childRules.rules );
+	mergedConfig.rules = {};
+	Object.assign( mergedConfig.rules, parentConfig.rules, childConfig.rules );
 
 	// For the specified keys, concatenate the lists
 	[ 'no-restricted-syntax', 'no-restricted-properties' ].forEach( function ( key ) {
-		if ( !mergedRules.rules[ key ] ) {
+		if ( !mergedConfig.rules[ key ] ) {
 			// If both are unset, do nothing
 			return;
 		} else {
 			// Assume mode is 'error'.
-			mergedRules.rules[ key ] = [ 'error' ]
-				.concat( ( parentRules.rules[ key ] || [] ).slice( 1 ) )
-				.concat( ( childRules.rules[ key ] || [] ).slice( 1 ) );
+			mergedConfig.rules[ key ] = [ 'error' ]
+				.concat( ( parentConfig.rules[ key ] || [] ).slice( 1 ) )
+				.concat( ( childConfig.rules[ key ] || [] ).slice( 1 ) );
 		}
 	} );
-	return mergedRules;
+
+	return mergedConfig;
 };
