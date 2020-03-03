@@ -21,7 +21,7 @@
   ],
   "files": [
     "common.json",
-    "client.json",
+    "client.js",
     "node.json",
     "jquery.json",
     "mediawiki.json",
