@@ -74,6 +74,136 @@ const rules = {
         "object": "Object",
         "property": "is",
         "message": "Unsupported method Object.is requires ES6."
+      },
+      {
+        "object": "Number",
+        "property": "isFinite",
+        "message": "Unsupported method Number.isFinite requires ES6."
+      },
+      {
+        "object": "Number",
+        "property": "isInteger",
+        "message": "Unsupported method Number.isInteger requires ES6."
+      },
+      {
+        "object": "Number",
+        "property": "isSafeInteger",
+        "message": "Unsupported method Number.isSafeInteger requires ES6."
+      },
+      {
+        "object": "Number",
+        "property": "isNaN",
+        "message": "Unsupported method Number.isNaN requires ES6."
+      },
+      {
+        "object": "Number",
+        "property": "parseFloat",
+        "message": "Unsupported method Number.parseFloat requires ES6."
+      },
+      {
+        "object": "Number",
+        "property": "parseInt",
+        "message": "Unsupported method Number.parseInt requires ES6."
+      },
+      {
+        "object": "Number",
+        "property": "EPSILON",
+        "message": "Unsupported property Number.EPSILON requires ES6."
+      },
+      {
+        "object": "Number",
+        "property": "MIN_SAFE_INTEGER",
+        "message": "Unsupported property Number.MIN_SAFE_INTEGER requires ES6."
+      },
+      {
+        "object": "Number",
+        "property": "MAX_SAFE_INTEGER",
+        "message": "Unsupported property Number.MAX_SAFE_INTEGER requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "clz32",
+        "message": "Unsupported method Math.clz32 requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "imul",
+        "message": "Unsupported method Math.imul requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "sign",
+        "message": "Unsupported method Math.sign requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "log10",
+        "message": "Unsupported method Math.log10 requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "log2",
+        "message": "Unsupported method Math.log2 requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "log1p",
+        "message": "Unsupported method Math.log1p requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "expm1",
+        "message": "Unsupported method Math.expm1 requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "cosh",
+        "message": "Unsupported method Math.cosh requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "sinh",
+        "message": "Unsupported method Math.sinh requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "tanh",
+        "message": "Unsupported method Math.tanh requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "acosh",
+        "message": "Unsupported method Math.acosh requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "asinh",
+        "message": "Unsupported method Math.asinh requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "atanh",
+        "message": "Unsupported method Math.atanh requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "trunc",
+        "message": "Unsupported method Math.trunc requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "fround",
+        "message": "Unsupported method Math.fround requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "cbrt",
+        "message": "Unsupported method Math.cbrt requires ES6."
+      },
+      {
+        "object": "Math",
+        "property": "hypot",
+        "message": "Unsupported method Math.hypot requires ES6."
       }
     ],
     "no-restricted-syntax": [
