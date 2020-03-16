@@ -5,7 +5,6 @@
 // Rule: semi
 // Rule: semi-spacing
 // Rule: semi-style
-// Rule: prefer-numeric-literals
 // Rule: unicode-bom
 ( function ( global ) {
 	var APP,
@@ -119,6 +118,7 @@
 		// Rule: one-var
 		// Rule: vars-on-top
 		var i, len, item, key,
+			// Rule: prefer-numeric-literals
 			j = 1,
 			ret = {};
 
@@ -178,6 +178,9 @@
 	APP.cast = function ( options, val ) {
 		options.enable = !!val;
 		options.disable = Boolean( val );
+
+		// Rule: prefer-regex-literals
+		options.pattern = /abc/i;
 
 		options.posX = +val;
 		options.posY = Number( val );
