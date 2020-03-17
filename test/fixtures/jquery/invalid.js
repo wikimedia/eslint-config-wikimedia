@@ -22,6 +22,9 @@
 	// eslint-disable-next-line no-jquery/no-bind
 	$( [] ).bind( 'click', function () {} );
 
+	// eslint-disable-next-line no-jquery/no-bind
+	$( [] ).unbind( 'click', function () {} );
+
 	// eslint-disable-next-line no-jquery/no-class-state
 	$( [] ).hasClass();
 
@@ -31,8 +34,8 @@
 	// eslint-disable-next-line no-jquery/no-delegate
 	$( [] ).delegate( 'click', function () {} );
 
-	// eslint-disable-next-line no-jquery/no-die
-	$( [] ).die( 'click', function () {} );
+	// eslint-disable-next-line no-jquery/no-delegate
+	$( [] ).undelegate( 'click', function () {} );
 
 	// eslint-disable-next-line no-jquery/no-each-util
 	$.each( [], function () {} );
@@ -85,6 +88,9 @@
 	// eslint-disable-next-line no-jquery/no-live
 	$( [] ).live( 'click', function () {} );
 
+	// eslint-disable-next-line no-jquery/no-live
+	$( [] ).die( 'click', function () {} );
+
 	// eslint-disable-next-line no-jquery/no-map-util
 	$.map( [ 1 ], function () {} );
 
@@ -114,12 +120,6 @@
 
 	// eslint-disable-next-line no-jquery/no-type
 	$.type( true );
-
-	// eslint-disable-next-line no-jquery/no-unbind
-	$( [] ).unbind( 'click', function () {} );
-
-	// eslint-disable-next-line no-jquery/no-undelegate
-	$( [] ).undelegate( 'click', function () {} );
 
 	// eslint-disable-next-line no-jquery/no-unique
 	$.unique();
