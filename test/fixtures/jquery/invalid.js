@@ -34,8 +34,8 @@
 	// eslint-disable-next-line no-jquery/no-delegate
 	$( [] ).delegate( 'click', function () {} );
 
-	// TODO: This should fail no-delegate as well but is broken upstream
-	// $( [] ).undelegate( 'click', function () {} );
+	// eslint-disable-next-line no-jquery/no-delegate
+	$( [] ).undelegate( 'click', function () {} );
 
 	// eslint-disable-next-line no-jquery/no-each-util
 	$.each( [], function () {} );
