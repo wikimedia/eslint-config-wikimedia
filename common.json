@@ -86,6 +86,7 @@
     "one-var": [ "error", "always" ],
     "operator-linebreak": [ "error", "after" ],
     "prefer-numeric-literals": "error",
+    "prefer-regex-literals": "error",
     "quote-props": [ "error", "as-needed" ],
     "quotes": [ "error", "single", { "avoidEscape": true } ],
     "semi": [ "error", "always" ],

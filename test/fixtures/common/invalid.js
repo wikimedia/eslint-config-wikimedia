@@ -194,6 +194,10 @@ var APP;
 		concat: '4' + '2',
 		// eslint-disable-next-line no-octal-escape
 		octal: '\251',
+		// eslint-disable-next-line prefer-numeric-literals
+		numlit: parseInt( '1F7', 16 ),
+		// eslint-disable-next-line prefer-regex-literals
+		regex: new RegExp( 'abc', 'i' ),
 		// eslint-disable-next-line no-script-url
 		script: 'javascript:foo();',
 		// eslint-disable-next-line no-unneeded-ternary
