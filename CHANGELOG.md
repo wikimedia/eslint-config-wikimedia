@@ -1,3 +1,18 @@
+0.15.1 / 2020-03-31
+===================
+
+* Add ES6 Number & Math properties to not-es5.js (Ed Sanders)
+* common: New rule: `prefer-regex-literals` (Ed Sanders)
+* client: Warn against using `parentElement` in ES5 clients (Ed Sanders)
+* json: Update plugin from 1.4.0 to 2.1.1 (Ed Sanders)
+* jquery: Update plugin from 2.3.0 to 2.3.2 (Ed Sanders)
+* mediawiki: New rule: `mediawiki/valid-package-file-require` (James D. Forrester)
+* Update eslint from 6.5.1 to 6.8.0 (Ed Sanders)
+* Fix merge function now we are merging whole configs (Ed Sanders)
+* build: Install GitHub Actions, remove Travis (James D. Forrester)
+* build: Bump acorn from 7.1.0 to 7.1.1 (dependabot[bot])
+* build: Bump package-lock.json for npm audit (James D. Forrester)
+
 0.15.0 / 2019-10-22
 ===================
 * Create `mediawiki` profile and enable `mediawiki/msg-doc` (Ed Sanders)
