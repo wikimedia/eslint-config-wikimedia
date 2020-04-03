@@ -8,5 +8,11 @@
     "mediawiki/class-doc": "error",
     "mediawiki/msg-doc": "error",
     "mediawiki/valid-package-file-require": "error"
-  }
+  },
+  "overrides": [
+    {
+      "files": "**/*.vue",
+      "extends": "./mediawiki-vue.json"
+    }
+  ]
 }

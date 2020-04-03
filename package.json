@@ -4,7 +4,7 @@
   "description": "ESLint config following Wikimedia code conventions.",
   "main": "common.json",
   "scripts": {
-    "test": "eslint . --ext .js,.json --max-warnings 0 && node test/test.js",
+    "test": "eslint . --ext .js,.json,.vue --max-warnings 0 && node test/test.js",
     "build-invalid": "node test/test.js dump"
   },
   "repository": {
@@ -25,8 +25,13 @@
     "node.json",
     "jquery.json",
     "mediawiki.json",
+    "mediawiki-vue.json",
     "qunit.json",
     "server.json",
+    "vue-common.json",
+    "vue-es5.js",
+    "vue-es6.js",
+    "vue-wrappers.js",
     "language/es5.json",
     "language/rules-es5.json",
     "language/not-es5.js",
@@ -57,10 +62,12 @@
   "license": "MIT",
   "dependencies": {
     "eslint": "^6.8.0",
+    "eslint-plugin-es": "^3.0.0",
     "eslint-plugin-json": "^2.1.1",
     "eslint-plugin-mediawiki": "^0.2.2",
     "eslint-plugin-no-jquery": "^2.3.2",
-    "eslint-plugin-qunit": "^4.0.0"
+    "eslint-plugin-qunit": "^4.0.0",
+    "eslint-plugin-vue": "^6.1.2"
   },
   "devDependencies": {
     "assert-diff": "^2.0.3"

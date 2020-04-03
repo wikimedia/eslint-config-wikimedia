@@ -1,0 +1,11 @@
+{
+	"extends": [
+		"./vue-es5.js"
+	],
+	"rules": {
+		"no-implicit-globals": "off",
+		"vue/v-bind-style": [ "error", "longform" ],
+		"vue/v-slot-style": [ "error", "longform" ],
+		"vue/v-on-style": [ "error", "longform" ]
+	}
+}
