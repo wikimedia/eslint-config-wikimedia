@@ -2,6 +2,7 @@ var fs = require( 'fs' ),
 	assert = require( 'assert' ),
 	assertDiff = require( 'assert-diff' ),
 
+	fixtureExtensions = [ 'js', 'vue' ],
 	validFixturesFile, validFixtures,
 	invalidFixturesFile, invalidFixtures, testPositivesFailures,
 
@@ -20,8 +21,12 @@ profiles.forEach( function ( profile ) {
 	console.log( `Testing the "${profileName}" profile suite.` );
 
 	config = require( `../${profile}` );
-	validFixturesFile = `${__dirname}/fixtures/${profileName}/valid.js`;
-	invalidFixturesFile = `${__dirname}/fixtures/${profileName}/invalid.js`;
+	validFixturesFile = fixtureExtensions
+		.map( ( ext ) => `${__dirname}/fixtures/${profileName}/valid.${ext}` )
+		.filter( fs.existsSync )[ 0 ];
+	invalidFixturesFile = fixtureExtensions
+		.map( ( ext ) => `${__dirname}/fixtures/${profileName}/invalid.${ext}` )
+		.filter( fs.existsSync )[ 0 ];
 	rules = config.rules || {};
 
 	if ( profileName === 'server' ) {
@@ -50,9 +55,12 @@ profiles.forEach( function ( profile ) {
 	invalidFixtures = fs.readFileSync( invalidFixturesFile );
 	testPositivesFailures = fs.readFileSync( `${__dirname}/fixtures/${profileName}/positiveFailures.json` );
 	Object.keys( rules ).forEach( function ( rule ) {
-		var rDisableRule = new RegExp( `(/[/*]) eslint-disable(-next-line)? ([a-z-]+, )??${rule}` );
+		var rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )??${rule}` );
 		// Positive rules are covered above
-		if ( rule.match( /^no-|\/no-/ ) || testPositivesFailures.indexOf( rule ) !== -1 ) {
+		if (
+			( rule.match( /^no-|\/no-/ ) && rules[ rule ] !== 'off' ) ||
+			testPositivesFailures.indexOf( rule ) !== -1
+		) {
 			count++;
 			assertDiff( rDisableRule.test( invalidFixtures.toString() ), `Rule ${rule} is covered` );
 		}
