@@ -26,7 +26,6 @@
 		"vue/no-unsupported-features": [ "error", {
 			"version": "2.6.11"
 		} ],
-		"vue/no-v-html": "off",
 		"vue/order-in-components": [ "error", {
 			"order": [
 				"el",

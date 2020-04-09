@@ -11,8 +11,6 @@
 			c="d"
 			e="f"
 		/>
-		<!-- Rule: vue/no-v-html -->
-		<span v-html="foo" />
 		<!-- Rule: vue/v-on-function-call -->
 		<a @click="foo">Click me</a>
 		<!-- Rule: vue/padding-line-between-blocks -->
