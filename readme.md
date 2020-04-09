@@ -36,7 +36,7 @@ This profile adds the jQuery `$` global, and additional rules preventing the use
 ```
 
 #### MediaWiki
-Code that runs in MediaWiki can use this profile. It enforces rules that are specific to the MediaWiki codebase (core and extensions), such as correct documentation of `mw.message` usage. It also automatically applies the Vue plugin and Vue-specific rules to `.vue` files, including MediaWiki-specific Vue rules such as prohibiting ES6 syntax and prohibiting shorthand syntax for `v-bind`, `v-on` and `v-slot`.
+Code that runs in MediaWiki can use this profile. It enforces rules that are specific to the MediaWiki codebase (core and extensions), such as correct documentation of `mw.message` usage.
 `.eslintrc.json`:
 ```json
 {
@@ -48,17 +48,19 @@ Code that runs in MediaWiki can use this profile. It enforces rules that are spe
 ```
 
 #### .vue files
-The MediaWiki profile automatically applies the Vue plugin to `.vue` files, and enforces MediaWiki-specific Vue rules. For code outside MediaWiki, or for `.vue` files that don't use ResourceLoader, you can use the `wikimedia/vue-es5` or `wikimedia/vue-es6` profile. These profiles only enforce non-MediaWiki-specific rules for Vue code.
+The `mediawiki-vue` profile enforces common conventions for Vue code, as well as MediaWiki-specific Vue rules like requiring ES5 and prohibiting shorthands for `v-bind`, `v-on` and `v-slot`. For code outside MediaWiki, you can use the `vue-es5` or `vue-es6` profiles.
+Typically, you will want to apply these profiles only to `.vue` files, as follows:
 `.eslintrc.json`:
 ```json
 {
 	"extends": [
-		"wikimedia/client"
+		"wikimedia/client",
+		"wikimedia/mediawiki"
 	],
 	"overrides": [
 		{
 			"files": "**/*.vue",
-			"extends": "wikimedia/vue-es5"
+			"extends": "wikimedia/mediawiki-vue"
 		}
 	]
 }
