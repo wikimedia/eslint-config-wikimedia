@@ -5,6 +5,7 @@
   },
   "plugins": [ "mediawiki" ],
   "rules": {
+    "mediawiki/class-doc": "error",
     "mediawiki/msg-doc": "error",
     "mediawiki/valid-package-file-require": "error"
   }
