@@ -4,7 +4,7 @@
   "description": "ESLint config following Wikimedia code conventions.",
   "main": "common.json",
   "scripts": {
-    "test": "eslint . --ext .js,.json && node test/test.js",
+    "test": "eslint . --ext .js,.json --max-warnings 0 && node test/test.js",
     "build-invalid": "node test/test.js dump"
   },
   "repository": {
