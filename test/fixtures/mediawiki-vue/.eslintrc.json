@@ -1,7 +1,0 @@
-{
-	"root": true,
-	"extends": "../../../mediawiki-vue.json",
-	"globals": {
-		"module": "readonly"
-	}
-}

@@ -25,7 +25,6 @@
     "node.json",
     "jquery.json",
     "mediawiki.json",
-    "mediawiki-vue.json",
     "qunit.json",
     "server.json",
     "vue-common.json",

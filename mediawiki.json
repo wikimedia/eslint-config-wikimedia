@@ -1,18 +1,20 @@
 {
+  "extends": [
+    "./vue-es5.js"
+  ],
   "globals": {
     "mw": "readonly",
     "require": "readonly"
   },
   "plugins": [ "mediawiki" ],
   "rules": {
+    "no-undef": "off",
+    "no-implicit-globals": "off",
     "mediawiki/class-doc": "error",
     "mediawiki/msg-doc": "error",
-    "mediawiki/valid-package-file-require": "error"
-  },
-  "overrides": [
-    {
-      "files": "**/*.vue",
-      "extends": "./mediawiki-vue.json"
-    }
-  ]
+    "mediawiki/valid-package-file-require": "error",
+    "vue/v-bind-style": [ "error", "longform" ],
+    "vue/v-slot-style": [ "error", "longform" ],
+    "vue/v-on-style": [ "error", "longform" ]
+  }
 }
