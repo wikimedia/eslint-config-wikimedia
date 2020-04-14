@@ -4,11 +4,11 @@
   ],
   "globals": {
     "mw": "readonly",
-    "require": "readonly"
+    "require": "readonly",
+    "module": "readonly"
   },
   "plugins": [ "mediawiki" ],
   "rules": {
-    "no-undef": "off",
     "no-implicit-globals": "off",
     "mediawiki/class-doc": "error",
     "mediawiki/msg-doc": "error",
