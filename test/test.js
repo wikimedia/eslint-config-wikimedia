@@ -2,8 +2,12 @@ var fs = require( 'fs' ),
 	assert = require( 'assert' ),
 	assertDiff = require( 'assert-diff' ),
 
-	validFixturesFile, validFixtures,
-	invalidFixturesFile, invalidFixtures, testPositivesFailures,
+	fixtureExtensions = [ 'js', 'vue' ],
+	validFixturesFiles = [],
+	validFixtures = '',
+	invalidFixturesFiles = [],
+	invalidFixtures = '',
+	testPositivesFailures = [],
 
 	profiles = require( '../package.json' ).files
 		.filter( ( fileName ) => (
@@ -20,8 +24,12 @@ profiles.forEach( function ( profile ) {
 	console.log( `Testing the "${profileName}" profile suite.` );
 
 	config = require( `../${profile}` );
-	validFixturesFile = `${__dirname}/fixtures/${profileName}/valid.js`;
-	invalidFixturesFile = `${__dirname}/fixtures/${profileName}/invalid.js`;
+	validFixturesFiles = fixtureExtensions
+		.map( ( ext ) => `${__dirname}/fixtures/${profileName}/valid.${ext}` )
+		.filter( fs.existsSync );
+	invalidFixturesFiles = fixtureExtensions
+		.map( ( ext ) => `${__dirname}/fixtures/${profileName}/invalid.${ext}` )
+		.filter( fs.existsSync );
 	rules = config.rules || {};
 
 	if ( profileName === 'server' ) {
@@ -35,7 +43,11 @@ profiles.forEach( function ( profile ) {
 
 	// Test for positive rules
 	count = 0;
-	validFixtures = fs.readFileSync( validFixturesFile );
+
+	validFixturesFiles.forEach( ( file ) => {
+		validFixtures += fs.readFileSync( file ).toString();
+	} );
+
 	Object.keys( rules ).forEach( function ( rule ) {
 		// Negative rules are covered below
 		if ( !rule.match( /^no-|\/no-/ ) ) {
@@ -47,12 +59,19 @@ profiles.forEach( function ( profile ) {
 
 	// Verify coverage
 	count = 0;
-	invalidFixtures = fs.readFileSync( invalidFixturesFile );
+
+	invalidFixturesFiles.forEach( ( file ) => {
+		invalidFixtures += fs.readFileSync( file ).toString();
+	} );
+
 	testPositivesFailures = fs.readFileSync( `${__dirname}/fixtures/${profileName}/positiveFailures.json` );
 	Object.keys( rules ).forEach( function ( rule ) {
-		var rDisableRule = new RegExp( `(/[/*]) eslint-disable(-next-line)? ([a-z-]+, )??${rule}` );
+		var rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )??${rule}` );
 		// Positive rules are covered above
-		if ( rule.match( /^no-|\/no-/ ) || testPositivesFailures.indexOf( rule ) !== -1 ) {
+		if (
+			( rule.match( /^no-|\/no-/ ) && rules[ rule ] !== 'off' ) ||
+			testPositivesFailures.indexOf( rule ) !== -1
+		) {
 			count++;
 			assertDiff( rDisableRule.test( invalidFixtures.toString() ), `Rule ${rule} is covered` );
 		}

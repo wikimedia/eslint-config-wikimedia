@@ -11,7 +11,7 @@ npm install --save-dev eslint-config-wikimedia
 Then, [configure ESLint](https://eslint.org/docs/user-guide/configuring) with one or more `.eslintrc.json` files as appropriate.
 
 ## Example configurations
-Bellow are some potential recommended uses:
+Below are some potential recommended uses:
 
 ### A typical front-end project
 This profile allows ES5 code and browser native functions. It will complain about ES6+ code and language features.
@@ -36,13 +36,30 @@ This profile adds the jQuery `$` global, and additional rules preventing the use
 ```
 
 #### MediaWiki
-Code that runs in MediaWiki can use this profile. It enforces rules that are specific to the MediaWiki codebase (core and extensions), such as correct documentation of `mw.message` usage.
+Code that runs in MediaWiki can use this profile. It enforces rules that are specific to the MediaWiki codebase (core and extensions), such as correct documentation of `mw.message` usage. It also automatically applies the Vue plugin and Vue-specific rules to `.vue` files, including MediaWiki-specific Vue rules such as prohibiting ES6 syntax and prohibiting shorthand syntax for `v-bind`, `v-on` and `v-slot`.
 `.eslintrc.json`:
 ```json
 {
 	"extends": [
 		"wikimedia/client",
 		"wikimedia/mediawiki"
+	]
+}
+```
+
+#### .vue files
+The MediaWiki profile automatically applies the Vue plugin to `.vue` files, and enforces MediaWiki-specific Vue rules. For code outside MediaWiki, or for `.vue` files that don't use ResourceLoader, you can use the `wikimedia/vue-es5` or `wikimedia/vue-es6` profile. These profiles only enforce non-MediaWiki-specific rules for Vue code.
+`.eslintrc.json`:
+```json
+{
+	"extends": [
+		"wikimedia/client"
+	],
+	"overrides": [
+		{
+			"files": "**/*.vue",
+			"extends": "wikimedia/vue-es5"
+		}
 	]
 }
 ```

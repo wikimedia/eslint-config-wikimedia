@@ -1,0 +1,14 @@
+[
+	"vue/array-bracket-spacing",
+	"vue/block-spacing",
+	"vue/brace-style",
+	"vue/camelcase",
+	"vue/comma-dangle",
+	"vue/dot-location",
+	"vue/eqeqeq",
+	"vue/key-spacing",
+	"vue/keyword/spacing",
+	"vue/object-curly-spacing",
+	"vue/space-infix-ops",
+	"vue/space-unary-ops"
+]
