@@ -1,3 +1,12 @@
+0.15.2 / 2020-04-15
+===================
+
+* mediawiki: Add rules for .vue files (Roan Kattouw)
+* mediawiki: New rule: `mediawiki/class-doc` (Ed Sanders)
+* mediawiki: New rule: `mediawiki/no-vue-dynamic-i18n` (Roan Kattouw)
+* build: Set `max-warnings` to 0 (Ed Sanders)
+* build: Upgrade assert-diff from 2.0.3 to 3.0.0 (James D. Forrester)
+
 0.15.1 / 2020-03-31
 ===================
 
