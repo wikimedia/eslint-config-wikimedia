@@ -14,6 +14,10 @@
 				bar
 			</template>
 		</blah-component>
+		<!-- eslint-disable-next-line mediawiki/no-vue-dynamic-i18n -->
+		<p>{{ $i18n( foo ) }}</p>
+		<!-- eslint-disable-next-line mediawiki/no-vue-dynamic-i18n -->
+		<p v-i18n-html:[foo] />
 	</div>
 </template>
 
