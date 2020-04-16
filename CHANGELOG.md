@@ -1,3 +1,8 @@
+0.15.3 / 2020-04-15
+===================
+
+* mediawiki: Make vue rules apply only to vue files (James D. Forrester)
+
 0.15.2 / 2020-04-15
 ===================
 
