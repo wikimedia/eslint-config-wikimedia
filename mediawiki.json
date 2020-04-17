@@ -1,6 +1,7 @@
 {
   "globals": {
     "mw": "readonly",
+    "OO": "readonly",
     "require": "readonly",
     "module": "readonly"
   },
