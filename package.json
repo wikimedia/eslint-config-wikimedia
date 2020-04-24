@@ -1,74 +1,75 @@
 {
-  "name": "eslint-config-wikimedia",
-  "version": "0.15.3",
-  "description": "ESLint config following Wikimedia code conventions.",
-  "main": "common.json",
-  "scripts": {
-    "test": "eslint . --ext .js,.json,.vue --max-warnings 0 && node test/test.js",
-    "build-invalid": "node test/test.js dump"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wikimedia/eslint-config-wikimedia.git"
-  },
-  "homepage": "https://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript",
-  "bugs": "https://github.com/wikimedia/eslint-config-wikimedia/issues",
-  "keywords": [
-    "style guide",
-    "eslint",
-    "eslintconfig",
-    "wikimedia"
-  ],
-  "files": [
-    "common.json",
-    "client.js",
-    "node.json",
-    "jquery.json",
-    "mediawiki.json",
-    "qunit.json",
-    "server.json",
-    "vue-common.json",
-    "vue-es5.js",
-    "vue-es6.js",
-    "vue-wrappers.js",
-    "language/es5.json",
-    "language/rules-es5.json",
-    "language/not-es5.js",
-    "language/es6.json",
-    "language/rules-es6.json",
-    "language/not-es6.js",
-    "language/es2015.json",
-    "language/es2016.json",
-    "language/rules-es2016.json",
-    "language/not-es2016.js",
-    "language/es2017.json",
-    "language/rules-es2017.json",
-    "language/not-es2017.js",
-    "language/es2018.json",
-    "language/rules-es2018.json",
-    "language/not-es2018.js",
-    "language/es2019.json",
-    "language/rules-es2019.json",
-    "language/not-es2019.js",
-    "language/merge.js"
-  ],
-  "contributors": [
-    "James D. Forrester <jforrester@wikimedia.org>",
-    "Ed Sanders <ejsanders@gmail.com>",
-    "Timo Tijhof <krinklemail@gmail.com>",
-    "Oleg Gaidarenko <markelog@gmail.com>"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "eslint": "^6.8.0",
-    "eslint-plugin-es": "^3.0.0",
-    "eslint-plugin-json": "^2.1.1",
-    "eslint-plugin-mediawiki": "^0.2.3",
-    "eslint-plugin-no-jquery": "^2.3.2",
-    "eslint-plugin-qunit": "^4.0.0",
-    "eslint-plugin-vue": "^6.1.2"
-  },
-  "devDependencies": {
-    "assert-diff": "^3.0.0"
-  }
+	"name": "eslint-config-wikimedia",
+	"version": "0.15.3",
+	"description": "ESLint config following Wikimedia code conventions.",
+	"main": "common.json",
+	"scripts": {
+		"test": "npm run lint && node test/test.js",
+		"lint": "eslint . --ext .js,.json,.vue --max-warnings 0",
+		"build-invalid": "node test/test.js dump"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wikimedia/eslint-config-wikimedia.git"
+	},
+	"homepage": "https://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript",
+	"bugs": "https://github.com/wikimedia/eslint-config-wikimedia/issues",
+	"keywords": [
+		"style guide",
+		"eslint",
+		"eslintconfig",
+		"wikimedia"
+	],
+	"files": [
+		"common.json",
+		"client.js",
+		"node.json",
+		"jquery.json",
+		"mediawiki.json",
+		"qunit.json",
+		"server.json",
+		"vue-common.json",
+		"vue-es5.js",
+		"vue-es6.js",
+		"vue-wrappers.js",
+		"language/es5.json",
+		"language/rules-es5.json",
+		"language/not-es5.js",
+		"language/es6.json",
+		"language/rules-es6.json",
+		"language/not-es6.js",
+		"language/es2015.json",
+		"language/es2016.json",
+		"language/rules-es2016.json",
+		"language/not-es2016.js",
+		"language/es2017.json",
+		"language/rules-es2017.json",
+		"language/not-es2017.js",
+		"language/es2018.json",
+		"language/rules-es2018.json",
+		"language/not-es2018.js",
+		"language/es2019.json",
+		"language/rules-es2019.json",
+		"language/not-es2019.js",
+		"language/merge.js"
+	],
+	"contributors": [
+		"James D. Forrester <jforrester@wikimedia.org>",
+		"Ed Sanders <ejsanders@gmail.com>",
+		"Timo Tijhof <krinklemail@gmail.com>",
+		"Oleg Gaidarenko <markelog@gmail.com>"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"eslint": "^6.8.0",
+		"eslint-plugin-es": "^3.0.0",
+		"eslint-plugin-json": "^2.1.1",
+		"eslint-plugin-mediawiki": "^0.2.3",
+		"eslint-plugin-no-jquery": "^2.3.2",
+		"eslint-plugin-qunit": "^4.0.0",
+		"eslint-plugin-vue": "^6.1.2"
+	},
+	"devDependencies": {
+		"assert-diff": "^3.0.0"
+	}
 }

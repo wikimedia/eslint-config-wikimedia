@@ -1,29 +1,29 @@
 {
-  "globals": {
-    "mw": "readonly",
-    "OO": "readonly",
-    "require": "readonly",
-    "module": "readonly"
-  },
-  "plugins": [ "mediawiki" ],
-  "rules": {
-    "mediawiki/class-doc": "error",
-    "mediawiki/msg-doc": "error",
-    "mediawiki/valid-package-file-require": "error"
-  },
-  "overrides": [
-    {
-      "files": [ "**/*.vue" ],
-      "extends": [
-        "./vue-es5.js"
-      ],
-      "rules": {
-        "no-implicit-globals": "off",
-        "mediawiki/no-vue-dynamic-i18n": "error",
-        "vue/v-bind-style": [ "error", "longform" ],
-        "vue/v-slot-style": [ "error", "longform" ],
-        "vue/v-on-style": [ "error", "longform" ]
-      }
-    }
-  ]
+	"globals": {
+		"mw": "readonly",
+		"OO": "readonly",
+		"require": "readonly",
+		"module": "readonly"
+	},
+	"plugins": [ "mediawiki" ],
+	"rules": {
+		"mediawiki/class-doc": "error",
+		"mediawiki/msg-doc": "error",
+		"mediawiki/valid-package-file-require": "error"
+	},
+	"overrides": [
+		{
+			"files": [ "**/*.vue" ],
+			"extends": [
+				"./vue-es5.js"
+			],
+			"rules": {
+				"no-implicit-globals": "off",
+				"mediawiki/no-vue-dynamic-i18n": "error",
+				"vue/v-bind-style": [ "error", "longform" ],
+				"vue/v-slot-style": [ "error", "longform" ],
+				"vue/v-on-style": [ "error", "longform" ]
+			}
+		}
+	]
 }

@@ -1,7 +1,7 @@
 {
-  "extends": [
-    "./common.json",
-    "./node.json",
-    "./language/es6.json"
-  ]
+	"extends": [
+		"./common.json",
+		"./node.json",
+		"./language/es6.json"
+	]
 }
