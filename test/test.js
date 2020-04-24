@@ -1,14 +1,7 @@
-var fs = require( 'fs' ),
+const fs = require( 'fs' ),
 	assert = require( 'assert' ),
 	assertDiff = require( 'assert-diff' ),
-
 	fixtureExtensions = [ 'js', 'vue' ],
-	validFixturesFiles = [],
-	validFixtures = '',
-	invalidFixturesFiles = [],
-	invalidFixtures = '',
-	testPositivesFailures = [],
-
 	profiles = require( '../package.json' ).files
 		.filter( ( fileName ) => (
 			// TODO: Test language profiles too
@@ -17,20 +10,25 @@ var fs = require( 'fs' ),
 			fileName.indexOf( 'node' ) === -1
 		) );
 
+let validFixturesFiles = [],
+	validFixtures = '',
+	invalidFixturesFiles = [],
+	invalidFixtures = '',
+	testPositivesFailures = [];
+
 profiles.forEach( function ( profile ) {
-	var count, config, rules,
-		profileName = profile.replace( /\..*/, '' );
+	const profileName = profile.replace( /\..*/, '' );
 
 	console.log( `Testing the "${profileName}" profile suite.` );
 
-	config = require( `../${profile}` );
+	const config = require( `../${profile}` );
 	validFixturesFiles = fixtureExtensions
 		.map( ( ext ) => `${__dirname}/fixtures/${profileName}/valid.${ext}` )
 		.filter( fs.existsSync );
 	invalidFixturesFiles = fixtureExtensions
 		.map( ( ext ) => `${__dirname}/fixtures/${profileName}/invalid.${ext}` )
 		.filter( fs.existsSync );
-	rules = config.rules || {};
+	const rules = config.rules || {};
 
 	if ( profileName === 'server' ) {
 		// Load the rules for Node & ES6 when testing server
@@ -41,6 +39,8 @@ profiles.forEach( function ( profile ) {
 		);
 	}
 
+	let count;
+
 	// Test for positive rules
 	count = 0;
 
@@ -48,7 +48,7 @@ profiles.forEach( function ( profile ) {
 		validFixtures += fs.readFileSync( file ).toString();
 	} );
 
-	Object.keys( rules ).forEach( function ( rule ) {
+	Object.keys( rules ).forEach( ( rule ) => {
 		// Negative rules are covered below
 		if ( !rule.match( /^no-|\/no-/ ) ) {
 			count++;
@@ -65,8 +65,8 @@ profiles.forEach( function ( profile ) {
 	} );
 
 	testPositivesFailures = fs.readFileSync( `${__dirname}/fixtures/${profileName}/positiveFailures.json` );
-	Object.keys( rules ).forEach( function ( rule ) {
-		var rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )??${rule}` );
+	Object.keys( rules ).forEach( ( rule ) => {
+		const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )??${rule}` );
 		// Positive rules are covered above
 		if (
 			( rule.match( /^no-|\/no-/ ) && rules[ rule ] !== 'off' ) ||
