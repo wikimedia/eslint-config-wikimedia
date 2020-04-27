@@ -1,12 +1,12 @@
 {
-  "extends": [
-    "./rules-es2017.json",
-    "./not-es2017.js"
-  ],
-  "parserOptions": {
-    "ecmaVersion": 2017
-  },
-  "env": {
-    "es6": true
-  }
+	"extends": [
+		"./rules-es2017.json",
+		"./not-es2017.js"
+	],
+	"parserOptions": {
+		"ecmaVersion": 2017
+	},
+	"env": {
+		"es6": true
+	}
 }

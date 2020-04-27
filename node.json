@@ -1,8 +1,8 @@
 {
-  "env": {
-    "node": true
-  },
-  "rules": {
-    "no-buffer-constructor": "error"
-  }
+	"env": {
+		"node": true
+	},
+	"rules": {
+		"no-buffer-constructor": "error"
+	}
 }

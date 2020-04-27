@@ -1,4 +1,4 @@
-/* eslint-disable quotes, quote-props  */
+/* eslint-disable quote-props, quotes */
 module.exports = {
 	"extends": [
 		"./vue-es6.js",
