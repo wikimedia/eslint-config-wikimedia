@@ -1,17 +1,17 @@
 {
-  "extends": [
-    "./common.json",
-    "plugin:qunit/recommended",
-    "plugin:qunit/two"
-  ],
-  "env": {
-    "qunit": true
-  },
-  "plugins": [ "qunit" ],
-  "rules": {
-    "qunit/no-assert-equal": "error",
-    "qunit/no-early-return": "error",
-    "qunit/no-negated-ok": "error",
-    "qunit/require-expect": [ "error", "never-except-zero" ]
-  }
+	"extends": [
+		"./common.json",
+		"plugin:qunit/recommended",
+		"plugin:qunit/two"
+	],
+	"env": {
+		"qunit": true
+	},
+	"plugins": [ "qunit" ],
+	"rules": {
+		"qunit/no-assert-equal": "error",
+		"qunit/no-early-return": "error",
+		"qunit/no-negated-ok": "error",
+		"qunit/require-expect": [ "error", "never-except-zero" ]
+	}
 }
