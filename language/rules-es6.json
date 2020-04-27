@@ -2,6 +2,7 @@
 	"extends": "./rules-es5.json",
 	"rules": {
 		"arrow-parens": "error",
+		"default-param-last": "error",
 		"no-misleading-character-class": "error",
 		"no-new-require": "error",
 		"no-useless-computed-key": "error",
