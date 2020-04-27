@@ -28,6 +28,7 @@ const rules = {
 				"property": "flatMap",
 				"message": "Unsupported method Array.prototype.flatMap requires ES2019."
 			},
+			// https://github.com/mysticatea/eslint-plugin-es/issues/25
 			{
 				"object": "Object",
 				"property": "fromEntries",

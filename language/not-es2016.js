@@ -1,7 +1,11 @@
 /* eslint-disable quote-props, quotes */
 const merge = require( './merge.js' );
 const rules = {
+	"plugins": [ "es" ],
 	"rules": {
+		"es/no-object-entries": "error",
+		"es/no-object-getownpropertydescriptors": "error",
+		"es/no-object-values": "error",
 		"no-restricted-properties": [
 			"error",
 			{
@@ -11,21 +15,6 @@ const rules = {
 			{
 				"property": "padStart",
 				"message": "Unsupported method String.prototype.padStart requires ES2017."
-			},
-			{
-				"object": "Object",
-				"property": "entries",
-				"message": "Unsupported method Object.entries requires ES2017."
-			},
-			{
-				"object": "Object",
-				"property": "getOwnPropertyDescriptors",
-				"message": "Unsupported method Object.getOwnPropertyDescriptors requires ES2017."
-			},
-			{
-				"object": "Object",
-				"property": "values",
-				"message": "Unsupported method Object.values requires ES2017."
 			}
 		]
 	}

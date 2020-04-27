@@ -1,7 +1,41 @@
 /* eslint-disable quote-props, quotes */
 const merge = require( './merge.js' );
 const rules = {
+	"plugins": [ "es" ],
 	"rules": {
+		"es/no-array-from": "error",
+		"es/no-array-of": "error",
+		"es/no-math-acosh": "error",
+		"es/no-math-asinh": "error",
+		"es/no-math-atanh": "error",
+		"es/no-math-cbrt": "error",
+		"es/no-math-clz32": "error",
+		"es/no-math-cosh": "error",
+		"es/no-math-expm1": "error",
+		"es/no-math-fround": "error",
+		"es/no-math-hypot": "error",
+		"es/no-math-imul": "error",
+		"es/no-math-log10": "error",
+		"es/no-math-log1p": "error",
+		"es/no-math-log2": "error",
+		"es/no-math-sign": "error",
+		"es/no-math-sinh": "error",
+		"es/no-math-tanh": "error",
+		"es/no-math-trunc": "error",
+		"es/no-number-epsilon": "error",
+		"es/no-number-isfinite": "error",
+		"es/no-number-isinteger": "error",
+		"es/no-number-isnan": "error",
+		"es/no-number-issafeinteger": "error",
+		"es/no-number-maxsafeinteger": "error",
+		"es/no-number-minsafeinteger": "error",
+		"es/no-number-parsefloat": "error",
+		"es/no-number-parseint": "error",
+		"es/no-object-assign": "error",
+		"es/no-object-getownpropertysymbols": "error",
+		"es/no-object-is": "error",
+		"es/no-string-fromcodepoint": "error",
+		"es/no-string-raw": "error",
 		"no-restricted-properties": [
 			"error",
 			{
@@ -29,181 +63,12 @@ const rules = {
 				"message": "Unsupported method Array.prototype.copyWithin requires ES6."
 			},
 			{
-				"property": "entries",
-				"message": "Unsupported method Array.prototype.entries requires ES6."
-			},
-			{
 				"property": "fill",
 				"message": "Unsupported method Array.prototype.fill requires ES6."
 			},
 			{
 				"property": "findIndex",
 				"message": "Unsupported method Array.prototype.findIndex requires ES6."
-			},
-			{
-				"object": "String",
-				"property": "fromCodePoint",
-				"message": "Unsupported method String.fromCodePoint requires ES6."
-			},
-			{
-				"object": "String",
-				"property": "raw",
-				"message": "Unsupported method String.raw requires ES6."
-			},
-			{
-				"object": "Array",
-				"property": "from",
-				"message": "Unsupported method Array.from requires ES6."
-			},
-			{
-				"object": "Array",
-				"property": "of",
-				"message": "Unsupported method Array.of requires ES6."
-			},
-			{
-				"object": "Object",
-				"property": "assign",
-				"message": "Unsupported method Object.assign requires ES6."
-			},
-			{
-				"object": "Object",
-				"property": "getOwnPropertySymbols",
-				"message": "Unsupported method Object.getOwnPropertySymbols requires ES6."
-			},
-			{
-				"object": "Object",
-				"property": "is",
-				"message": "Unsupported method Object.is requires ES6."
-			},
-			{
-				"object": "Number",
-				"property": "isFinite",
-				"message": "Unsupported method Number.isFinite requires ES6."
-			},
-			{
-				"object": "Number",
-				"property": "isInteger",
-				"message": "Unsupported method Number.isInteger requires ES6."
-			},
-			{
-				"object": "Number",
-				"property": "isSafeInteger",
-				"message": "Unsupported method Number.isSafeInteger requires ES6."
-			},
-			{
-				"object": "Number",
-				"property": "isNaN",
-				"message": "Unsupported method Number.isNaN requires ES6."
-			},
-			{
-				"object": "Number",
-				"property": "parseFloat",
-				"message": "Unsupported method Number.parseFloat requires ES6."
-			},
-			{
-				"object": "Number",
-				"property": "parseInt",
-				"message": "Unsupported method Number.parseInt requires ES6."
-			},
-			{
-				"object": "Number",
-				"property": "EPSILON",
-				"message": "Unsupported property Number.EPSILON requires ES6."
-			},
-			{
-				"object": "Number",
-				"property": "MIN_SAFE_INTEGER",
-				"message": "Unsupported property Number.MIN_SAFE_INTEGER requires ES6."
-			},
-			{
-				"object": "Number",
-				"property": "MAX_SAFE_INTEGER",
-				"message": "Unsupported property Number.MAX_SAFE_INTEGER requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "clz32",
-				"message": "Unsupported method Math.clz32 requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "imul",
-				"message": "Unsupported method Math.imul requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "sign",
-				"message": "Unsupported method Math.sign requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "log10",
-				"message": "Unsupported method Math.log10 requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "log2",
-				"message": "Unsupported method Math.log2 requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "log1p",
-				"message": "Unsupported method Math.log1p requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "expm1",
-				"message": "Unsupported method Math.expm1 requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "cosh",
-				"message": "Unsupported method Math.cosh requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "sinh",
-				"message": "Unsupported method Math.sinh requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "tanh",
-				"message": "Unsupported method Math.tanh requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "acosh",
-				"message": "Unsupported method Math.acosh requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "asinh",
-				"message": "Unsupported method Math.asinh requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "atanh",
-				"message": "Unsupported method Math.atanh requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "trunc",
-				"message": "Unsupported method Math.trunc requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "fround",
-				"message": "Unsupported method Math.fround requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "cbrt",
-				"message": "Unsupported method Math.cbrt requires ES6."
-			},
-			{
-				"object": "Math",
-				"property": "hypot",
-				"message": "Unsupported method Math.hypot requires ES6."
 			}
 		],
 		"no-restricted-syntax": [
@@ -211,6 +76,10 @@ const rules = {
 			{
 				"selector": "CallExpression[callee.type='MemberExpression'][callee.property.type='Identifier'][callee.property.name='includes']",
 				"message": "Unsupported method String.prototype.includes requires ES6."
+			},
+			{
+				"selector": "CallExpression[callee.type='MemberExpression'][callee.property.type='Identifier'][callee.property.name='entries'][callee.object.name!='Object']",
+				"message": "Unsupported method Array.prototype.entries requires ES6."
 			},
 			{
 				"selector": "CallExpression[callee.type='MemberExpression'][callee.property.type='Identifier'][callee.property.name='find'][arguments.length=1][arguments.0.type='FunctionExpression']",
