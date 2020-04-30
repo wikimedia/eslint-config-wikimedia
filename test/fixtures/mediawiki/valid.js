@@ -15,5 +15,6 @@
 
 	// Rule: mediawiki/valid-package-file-require
 	require( './invalid.js' );
+	require( './../test.js' );
 	require( 'SomePackage' );
 }() );
