@@ -64,7 +64,7 @@
 		"eslint": "^6.8.0",
 		"eslint-plugin-es": "^3.0.0",
 		"eslint-plugin-json": "^2.1.1",
-		"eslint-plugin-mediawiki": "^0.2.3",
+		"eslint-plugin-mediawiki": "^0.2.4",
 		"eslint-plugin-no-jquery": "^2.3.2",
 		"eslint-plugin-qunit": "^4.0.0",
 		"eslint-plugin-vue": "^6.1.2"
