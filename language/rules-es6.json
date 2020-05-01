@@ -1,6 +1,7 @@
 {
 	"extends": "./rules-es5.json",
 	"rules": {
+		"arrow-body-style": "error",
 		"arrow-parens": "error",
 		"arrow-spacing": "error",
 		"default-param-last": "error",

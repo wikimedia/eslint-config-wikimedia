@@ -2,11 +2,11 @@
 	// Rule: prefer-const
 	const a = 4;
 
+	// Rule: arrow-body-style
 	// Rule: arrow-parens
 	// Rule: arrow-spacing
-	global.then( ( data ) => {
-		return Math.pow( data, 2 );
-	} );
+	global.then( ( data ) => Math.pow( data, 2 ) );
+	global.then( ( data ) => ( { d: data } ) );
 
 	// Rule: one-var
 	// Rule: vars-on-top

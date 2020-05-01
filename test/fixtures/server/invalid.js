@@ -2,11 +2,6 @@
 	// eslint-disable-next-line no-useless-computed-key
 	const foo = { [ 'a' ]: 'b' };
 
-	// eslint-disable-next-line arrow-parens, arrow-spacing, no-constant-condition, no-unused-vars
-	if ( a=> 2 ) {
-		global.foo( foo );
-	}
-
 	// eslint-disable-next-line no-new-require, new-cap
 	global.bar = new require( 'events' );
 
@@ -17,6 +12,11 @@
 	let b = new Buffer( 1 );
 	const f = ( p ) => p;
 	f( b );
+
+	// eslint-disable-next-line arrow-body-style, arrow-parens, arrow-spacing
+	Object.keys( foo ).map( x=> {
+		return x + 1;
+	} );
 
 	// eslint-disable-next-line no-useless-concat, no-unused-expressions
 	'a' + 'b';
