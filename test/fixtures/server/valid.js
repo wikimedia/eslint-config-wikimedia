@@ -1,7 +1,9 @@
 ( function ( global ) {
+	// Rule: prefer-const
 	const a = 4;
 
 	// Rule: arrow-parens
+	// Rule: arrow-spacing
 	global.then( ( data ) => {
 		return Math.pow( data, 2 );
 	} );
@@ -10,8 +12,6 @@
 	// Rule: vars-on-top
 	let b = 2;
 
-	// Rule: arrow-parens
-	// Rule: prefer-const
 	if ( a >= b ) {
 		b++;
 	} else {

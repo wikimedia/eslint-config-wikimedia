@@ -2,6 +2,7 @@
 	"extends": "./rules-es5.json",
 	"rules": {
 		"arrow-parens": "error",
+		"arrow-spacing": "error",
 		"default-param-last": "error",
 		"no-constructor-return": "error",
 		"no-misleading-character-class": "error",
