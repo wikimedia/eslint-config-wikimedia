@@ -118,6 +118,12 @@ var APP;
 		while ( bar ) {
 			named( bar );
 		}
+
+		// eslint-disable-next-line array-callback-return
+		[].map( function ( x ) {
+			upHere( x );
+		} );
+
 	};
 
 	APP.bound = function ( obj ) {

@@ -99,6 +99,11 @@
 			inline()
 		];
 
+		// Rule: array-callback-return
+		[].map( function ( x ) {
+			return upHere( x );
+		} );
+
 		// Rule: array-bracket-spacing
 		// Rule: comma-spacing
 		this.items = [ 'foo', 'bar' ];
