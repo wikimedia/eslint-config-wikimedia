@@ -52,6 +52,9 @@
 	// eslint-disable-next-line no-jquery/no-event-shorthand
 	$( [] ).scroll( function () {} );
 
+	// eslint-disable-next-line no-jquery/no-event-shorthand
+	$( [] ).ajaxStart( function () {} );
+
 	// eslint-disable-next-line no-jquery/no-error
 	$.error( 'err' );
 
@@ -113,7 +116,10 @@
 	$( [] ).slideDown();
 
 	// eslint-disable-next-line no-jquery/no-sizzle
-	$div.find( 'input:checkbox' );
+	$div.find( 'input:first' );
+
+	// eslint-disable-next-line no-jquery/no-sizzle
+	$div.find( 'input:visible' );
 
 	// eslint-disable-next-line no-jquery/no-trim
 	$.trim( ' foo ' );
