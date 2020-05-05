@@ -3,7 +3,7 @@
 		"$": "readonly"
 	},
 	"plugins": [ "no-jquery" ],
-	"extends": "plugin:no-jquery/deprecated-3.3",
+	"extends": "plugin:no-jquery/deprecated-3.5",
 	"rules": {
 		"no-jquery/variable-pattern": "error",
 		"no-jquery/no-animate": [ "error", { "allowScroll": true } ],
@@ -20,7 +20,7 @@
 		"no-jquery/no-map-util": "error",
 		"no-jquery/no-noop": "error",
 		"no-jquery/no-parse-html-literal": "error",
-		"no-jquery/no-sizzle": "error",
+		"no-jquery/no-sizzle": [ "error", {} ],
 		"no-jquery/no-slide": "error",
 		"no-jquery/no-trim": "error"
 	}
