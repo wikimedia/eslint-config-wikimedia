@@ -5,7 +5,7 @@
 	"main": "common.json",
 	"scripts": {
 		"test": "npm run lint && node test/test.js",
-		"lint": "eslint . --ext .js,.json,.vue --max-warnings 0",
+		"lint": "eslint . --max-warnings 0",
 		"build-invalid": "node test/test.js dump"
 	},
 	"repository": {
@@ -61,7 +61,7 @@
 	],
 	"license": "MIT",
 	"dependencies": {
-		"eslint": "^6.8.0",
+		"eslint": "^7.0.0",
 		"eslint-plugin-es": "^3.0.0",
 		"eslint-plugin-json": "^2.1.1",
 		"eslint-plugin-mediawiki": "^0.2.4",
