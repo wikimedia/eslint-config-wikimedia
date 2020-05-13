@@ -1,5 +1,5 @@
 /* eslint-disable quote-props, quotes */
-const merge = require( './merge.js' );
+const merge = require( './merge' );
 const rules = {
 	"plugins": [ "es" ],
 	"rules": {
@@ -19,4 +19,4 @@ const rules = {
 		]
 	}
 };
-module.exports = merge( rules, require( './not-es2017.js' ) );
+module.exports = merge( rules, require( './not-es2017' ) );

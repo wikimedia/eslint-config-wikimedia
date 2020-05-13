@@ -1,5 +1,5 @@
 /* eslint-disable quote-props, quotes */
-const merge = require( './merge.js' );
+const merge = require( './merge' );
 const rules = {
 	"rules": {
 		"no-restricted-properties": [
@@ -37,4 +37,4 @@ const rules = {
 		]
 	}
 };
-module.exports = merge( rules, require( './not-es2019.js' ) );
+module.exports = merge( rules, require( './not-es2019' ) );

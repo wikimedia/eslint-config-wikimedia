@@ -1,7 +1,7 @@
 {
 	"root": true,
 	"extends": [
-		"../../../client.js",
-		"../../../jquery.json"
+		"../../../client",
+		"../../../jquery"
 	]
 }

@@ -1,3 +1,3 @@
 {
-	"extends": "./rules-es2016.json"
+	"extends": "./rules-es2016"
 }
