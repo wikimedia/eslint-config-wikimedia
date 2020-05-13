@@ -1,9 +1,9 @@
 /* eslint-disable quote-props, quotes */
-const merge = require( './language/merge.js' );
+const merge = require( './language/merge' );
 const rules = {
 	"extends": [
-		"./common.json",
-		"./language/es5.json"
+		"./common",
+		"./language/es5"
 	],
 	"env": {
 		"browser": true
@@ -25,4 +25,4 @@ const rules = {
 // so use merge to fix this.
 // If another language config is loaded later it will overwrite this, but the
 // local rule here would not apply in browsers which properly support ES6.
-module.exports = merge( rules, require( './language/not-es5.js' ) );
+module.exports = merge( rules, require( './language/not-es5' ) );

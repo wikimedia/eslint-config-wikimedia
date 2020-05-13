@@ -1,5 +1,5 @@
 {
-	"extends": "./rules-es5.json",
+	"extends": "./rules-es5",
 	"rules": {
 		"arrow-body-style": "error",
 		"arrow-parens": "error",

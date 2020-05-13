@@ -1,7 +1,7 @@
 {
 	"extends": [
-		"./rules-es2019.json",
-		"./not-es2019.js"
+		"./rules-es2019",
+		"./not-es2019"
 	],
 	"parserOptions": {
 		"ecmaVersion": 2019
