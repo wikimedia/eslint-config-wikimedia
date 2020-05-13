@@ -1,6 +1,6 @@
 {
 	"root": true,
-	"extends": "../../../vue-common.json",
+	"extends": "../../../vue-common",
 	"globals": {
 		"module": "readonly"
 	}

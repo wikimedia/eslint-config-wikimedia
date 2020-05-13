@@ -2,7 +2,7 @@ const fs = require( 'fs' ),
 	assert = require( 'assert' ),
 	assertDiff = require( 'assert-diff' ),
 	fixtureExtensions = [ 'js', 'vue' ],
-	profiles = require( '../package.json' ).files
+	profiles = require( '../package' ).files
 		.filter( ( fileName ) => (
 			// TODO: Test language profiles too
 			fileName !== 'language' &&
@@ -34,8 +34,8 @@ profiles.forEach( function ( profile ) {
 		// Load the rules for Node & ES6 when testing server
 		Object.assign(
 			rules,
-			require( '../node.json' ).rules,
-			require( '../language/es6.json' ).rules
+			require( '../node' ).rules,
+			require( '../language/es6' ).rules
 		);
 	}
 
