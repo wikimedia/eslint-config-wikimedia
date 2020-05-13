@@ -5,7 +5,7 @@ const fs = require( 'fs' ),
 	profiles = require( '../package' ).files
 		.filter( ( fileName ) => (
 			// TODO: Test language profiles too
-			fileName.indexOf( 'language/' ) === -1 &&
+			fileName !== 'language' &&
 			// Node rules are tested through server profile
 			fileName.indexOf( 'node' ) === -1
 		) );
