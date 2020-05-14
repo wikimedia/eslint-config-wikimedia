@@ -54,8 +54,8 @@
 	 * @param {RegExp} j
 	 * @return {Error}
 	 */
-	APP.JSDocTypes = function ( a, b, c, d, e, f, g, h, i, j ) {
-		return a || b || c || d || e || f || g || h || i || j;
+	APP.JSDocTypes = function ( a, b, c, d ) {
+		return a || b || c || d;
 	};
 
 	/**
@@ -69,19 +69,26 @@
 	 * @constructs
 	 * @const
 	 * @default
-	 * @desc Description.
+	 * @desc Multi-
+	 *       line
 	 * @external String
-	 * @file Description.
+	 * @file Multi-
+	 *       line
 	 * @fires Event
 	 * @function
 	 * @method
 	 * @member
 	 * @param {number} a
-	 * @param {number} b
-	 * @property {number} c
-	 * @return {number}
-	 * @throws {Error}
-	 * @yield
+	 * @param {number} b Multi-
+	 *                   line
+	 * @property {number} c Multi-
+	 *                      line
+	 * @return {number} Multi-
+	 *                  line
+	 * @throws {Error} Multi-
+	 *                 line
+	 * @yield {number} Multi-
+	 *                 line
 	 */
 	APP.JSDocTags = function ( a, b ) {
 		return a || b;
