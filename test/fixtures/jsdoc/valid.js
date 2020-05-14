@@ -52,6 +52,9 @@
 	 * @param {Function} h
 	 * @param {Date} i
 	 * @param {RegExp} j
+	 * @param {HTMLElement} el HTMLElement is a global provided by ./client
+	 * @param {HTMLIFrameElement} iFrame
+	 * @param {Node} domNode
 	 * @return {Error}
 	 */
 	APP.JSDocTypes = function ( a, b, c, d ) {
