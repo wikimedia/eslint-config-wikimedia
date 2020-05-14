@@ -10,9 +10,7 @@
 				"cfg": "cfg",
 				"chainable": "chainable",
 				"context": "this",
-				"class": "class",
 				"constant": "const",
-				"tag constructor": "constructor",
 				"defaultvalue": "default",
 				"description": "desc",
 				"emits": "fires",
@@ -21,7 +19,6 @@
 				"func": "method",
 				"function": "method",
 				"host": "external",
-				"inheritable": "inheritable",
 				"linkcode": "link",
 				"linkplain": "link",
 				"localdoc": "localdoc",
@@ -33,7 +30,11 @@
 				"uses": "uses",
 				"var": "member",
 				"virtual": "abstract",
-				"yields": "yield"
+				"yields": "yield",
+
+				"inheritable": "inheritable",
+				"class": "class",
+				"tag constructor": "constructor"
 			},
 			"preferredTypes": {
 				"$": "jQuery",
