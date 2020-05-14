@@ -18,7 +18,7 @@
 				"emits": "fires",
 				"exception": "throws",
 				"fileoverview": "file",
-				"func": "function",
+				"func": "method",
 				"function": "method",
 				"host": "external",
 				"inheritable": "inheritable",
