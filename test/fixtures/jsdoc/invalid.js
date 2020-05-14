@@ -1,69 +1,173 @@
-var APP;
-( function ( global ) {
+( function () {
 	var APP;
 
-	/* eslint-disable jsdoc/no-undefined-types */
-	/** @return {undefined} */
-	APP.start = function () {
-		return '@returns instead of @return';
-	};
-
-	/* eslint-disable jsdoc/check-tag-names, jsdoc/check-types */
-	/** @returns {Undefined} */
-	APP.stop = function () {
-		return '@returns instead of @return';
+	// eslint-disable-next-line jsdoc/check-param-names
+	/**
+	 * @param {number} foo
+	 */
+	APP.method = function ( bar ) {
+		return bar;
 	};
 
 	// eslint-disable-next-line jsdoc/check-alignment
 	/**
 	* @param {number} a
-	  * @return {Undefined}
 	 */
-	APP.multiply = function ( a, b ) {
-		return a * b.undocumented;
-	};
 
-	/* eslint-disable jsdoc/check-types, jsdoc/check-alignment */
+	// eslint-disable-next-line jsdoc/check-alignment
+	/**
+	  * @param {number} a
+	 */
+
+	/* eslint-disable jsdoc/check-alignment */
+	/**
+	 * @param {number} a
+	*/
+	/* eslint-enable jsdoc/check-alignment */
+
+	// eslint-disable-next-line jsdoc/no-undefined-types, jsdoc/check-types
+	/**
+	 * @param {Undefined} d
+	 */
+
+	// eslint-disable-next-line jsdoc/no-undefined-types, jsdoc/check-types
+	/**
+	 * @param {Null} e
+	 */
+
+	// eslint-disable-next-line jsdoc/no-undefined-types, jsdoc/check-types
+	/**
+	 * @param {array} g
+	 */
+
+	// eslint-disable-next-line jsdoc/no-undefined-types, jsdoc/check-types
+	/**
+	 * @param {date} i
+	 */
+
+	// eslint-disable-next-line jsdoc/no-undefined-types, jsdoc/check-types
+	/**
+	 * @param {regexp} j
+	 */
+
+	// eslint-disable-next-line jsdoc/no-undefined-types, jsdoc/check-types
+	/**
+	 * @param {error}
+	 */
+
+	// eslint-disable-next-line jsdoc/check-types
 	/**
 	 * @param {Boolean} a
-	 * @param {Number} b
-	 * @param {String} c
-	 * @param {Undefined} d
-	 * @param {Null} e
-	 * @param {object} f
-	 * @param {array} g
-	 * @param {function} h
-	 * @param {date} i
-	 * @param {regexp} j
-	 * @return {error}
-	*/
-	APP.JSDocTypes = function ( a, b, c, d, e, f, g, h, i, j ) {
-		return a || b || c || d || e || f || g || h || i || j;
-	};
+	 */
 
+	// eslint-disable-next-line jsdoc/check-types
 	/**
-	 * {@linkcode APP}
-	 * {@linkplain APP}
-	 *
+	 * @param {Number} b
+	 */
+
+	// eslint-disable-next-line jsdoc/check-types
+	/**
+	 * @param {String} c
+	 */
+
+	// eslint-disable-next-line jsdoc/check-types
+	/**
+	 * @param {object} f
+	 */
+
+	// eslint-disable-next-line jsdoc/check-types
+	/**
+	 * @param {function} h
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @virtual
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @augments String
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @constant
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @defaultvalue
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @description Description.
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @host String
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @fileoverview Description.
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @overview Description.
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @emits Event
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @function
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
+	 * @func
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @var
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @arg {number} a
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @argument {number} b
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @prop {number} c
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @returns {number}
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @exception {Error}
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @yields
 	 */
-	APP.JSDocTags = function ( a, b ) { return a || b; };
-	/* eslint-enable jsdoc/check-tag-names, jsdoc/check-types, jsdoc/check-alignment, jsdoc/no-undefined-types */
 
 }( this ) );

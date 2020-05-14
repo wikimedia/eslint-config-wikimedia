@@ -7,7 +7,7 @@
 // Rule: jsdoc/implements-on-classes
 // Rule: jsdoc/newline-after-description
 // Rule: jsdoc/valid-types
-( function ( global ) {
+( function () {
 	var APP;
 
 	/**
@@ -78,7 +78,6 @@
 	 * @file Multi-
 	 *       line
 	 * @fires Event
-	 * @function
 	 * @method
 	 * @member
 	 * @param {number} a

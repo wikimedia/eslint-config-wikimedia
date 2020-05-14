@@ -3,5 +3,9 @@
 	"extends": [
 		"../../../client",
 		"../../../jsdoc"
-	]
+	],
+	"rules": {
+		"no-usused-vars": "off",
+		"no-implicit-globals": "off"
+	}
 }
