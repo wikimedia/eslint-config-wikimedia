@@ -58,6 +58,7 @@
 		"jsdoc/check-alignment": "error",
 		"jsdoc/check-indentation": [ "error", {
 			"excludeTags": [
+				"cfg",
 				"example",
 				"desc",
 				"file",
