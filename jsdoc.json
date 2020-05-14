@@ -56,19 +56,6 @@
 	},
 	"rules": {
 		"jsdoc/check-alignment": "error",
-		"jsdoc/check-indentation": [ "error", {
-			"excludeTags": [
-				"cfg",
-				"example",
-				"desc",
-				"file",
-				"property",
-				"param",
-				"return",
-				"throws",
-				"yield"
-			]
-		} ],
 		"jsdoc/check-param-names": [ "error", { "allowExtraTrailingParamDocs": true } ],
 		"jsdoc/check-property-names": "error",
 		"jsdoc/check-tag-names": "error",
