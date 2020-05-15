@@ -11,6 +11,12 @@ var APP;
 	// eslint-disable-next-line spaced-comment
 	//Example
 
+	// eslint-disable-next-line spaced-comment
+	/*Example*/
+
+	// eslint-disable-next-line spaced-comment
+	/* Example*/
+
 	APP.Example = function ( id, options ) {
 		var i, name, bar;
 
