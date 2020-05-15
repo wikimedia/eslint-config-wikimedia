@@ -1,0 +1,68 @@
+{
+	"plugins": [ "jsdoc" ],
+	"settings": {
+		"jsdoc": {
+			"tagNamePreference": {
+				"alternateClassName": "alias",
+				"arg": "param",
+				"argument": "param",
+				"augments": "extends",
+				"cfg": "cfg",
+				"chainable": "chainable",
+				"context": "this",
+				"constant": "const",
+				"defaultvalue": "default",
+				"description": "desc",
+				"emits": "fires",
+				"exception": "throws",
+				"fileoverview": "file",
+				"func": "method",
+				"function": "method",
+				"host": "external",
+				"linkcode": "link",
+				"linkplain": "link",
+				"localdoc": "localdoc",
+				"mixes": "mixins",
+				"overview": "file",
+				"prop": "property",
+				"returns": "return",
+				"singleton": "singleton",
+				"uses": "uses",
+				"var": "member",
+				"virtual": "abstract",
+				"yields": "yield",
+
+				"inheritable": "inheritable",
+				"class": "class",
+				"tag constructor": "constructor"
+			},
+			"preferredTypes": {
+				"$": "jQuery",
+				"array": "Array",
+				"Boolean": "boolean",
+				"date": "Date",
+				"error": "Error",
+				"function": "Function",
+				"mixed": "Mixed",
+				"Null": "null",
+				"Number": "number",
+				"object": "Object",
+				"regexp": "RegExp",
+				"set": "Set",
+				"String": "string",
+				"Undefined": "undefined"
+			}
+		}
+	},
+	"rules": {
+		"jsdoc/check-alignment": "error",
+		"jsdoc/check-param-names": [ "error", { "allowExtraTrailingParamDocs": true } ],
+		"jsdoc/check-property-names": "error",
+		"jsdoc/check-tag-names": "error",
+		"jsdoc/check-types": "error",
+		"jsdoc/implements-on-classes": "error",
+		"jsdoc/newline-after-description": "warn",
+		"jsdoc/no-undefined-types": "error",
+		"jsdoc/valid-types": "error"
+	}
+}
