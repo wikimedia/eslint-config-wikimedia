@@ -98,7 +98,10 @@
 		"space-in-parens": [ "error", "always", { "exceptions": [ "empty" ] } ],
 		"space-infix-ops": "error",
 		"space-unary-ops": [ "error", { "words": true, "nonwords": false } ],
-		"spaced-comment": [ "error", "always", { "exceptions": [ "*", "!" ] } ],
+		"spaced-comment": [ "error", "always", {
+			"exceptions": [ "*", "!" ],
+			"block": { "balanced": true }
+		} ],
 		"switch-colon-spacing": [ "error", { "after": true, "before": false } ],
 		"unicode-bom": [ "error" ],
 		"vars-on-top": "error",

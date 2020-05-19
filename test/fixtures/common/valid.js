@@ -13,6 +13,7 @@
 
 	// Rule: spaced-comment
 	// Example
+	/* Example */
 
 	// Empty function declaration
 	function upHere() {}
