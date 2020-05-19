@@ -1,7 +1,8 @@
 {
 	"extends": [
 		"eslint:recommended",
-		"plugin:json/recommended"
+		"plugin:json/recommended",
+		"./jsdoc"
 	],
 	"env": {},
 	"globals": {},
@@ -103,45 +104,6 @@
 		} ],
 		"switch-colon-spacing": [ "error", { "after": true, "before": false } ],
 		"unicode-bom": [ "error" ],
-		"valid-jsdoc": [ "error", {
-			"requireParamDescription": false,
-			"requireReturnDescription": false,
-			"requireReturn": false,
-			"prefer": {
-				"virtual": "abstract",
-				"augments": "extends",
-				"constant": "const",
-				"defaultvalue": "default",
-				"description": "desc",
-				"host": "external",
-				"fileoverview": "file",
-				"overview": "file",
-				"emits": "fires",
-				"function": "func",
-				"var": "member",
-				"arg": "param",
-				"argument": "param",
-				"prop": "property",
-				"returns": "return",
-				"exception": "throws",
-				"yields": "yield",
-				"linkcode": "link",
-				"linkplain": "link"
-			},
-			"preferType": {
-				"Boolean": "boolean",
-				"Number": "number",
-				"String": "string",
-				"Undefined": "undefined",
-				"Null": "null",
-				"object": "Object",
-				"array": "Array",
-				"function": "Function",
-				"date": "Date",
-				"regexp": "RegExp",
-				"error": "Error"
-			}
-		} ],
 		"vars-on-top": "error",
 		"wrap-iife": "error",
 		"yoda": [ "error", "never" ]

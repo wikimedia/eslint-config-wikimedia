@@ -155,8 +155,6 @@
 		return ret;
 	};
 
-	// Rule: valid-jsdoc
-
 	/**
 	 * @param {boolean|number} code
 	 * @return {null|undefined}
@@ -231,52 +229,6 @@
 
 	APP.$head
 		.appendTo( APP.$element );
-
-	/**
-	 * @param {boolean} a
-	 * @param {number} b
-	 * @param {string} c
-	 * @param {undefined} d
-	 * @param {null} e
-	 * @param {Object} f
-	 * @param {Array} g
-	 * @param {Function} h
-	 * @param {Date} i
-	 * @param {RegExp} j
-	 * @return {Error}
-	*/
-	APP.JSDocTypes = function ( a, b, c, d, e, f, g, h, i, j ) {
-		return a || b || c || d || e || f || g || h || i || j;
-	};
-
-	/**
-	 * {@link APP}
-	 * {@link APP}
-	 *
-	 * @abstract
-	 * @extends String
-	 * @class
-	 * @constructor
-	 * @constructs
-	 * @const
-	 * @default
-	 * @desc Description.
-	 * @external String
-	 * @file Description.
-	 * @fires Event
-	 * @func
-	 * @method
-	 * @member
-	 * @param {number} a
-	 * @param {number} b
-	 * @property {number} c
-	 * @return {number}
-	 * @throws {Error}
-	 * @yield
-	 */
-	APP.JSDocTags = function ( a, b ) {
-		return a || b;
-	};
 
 	global.APP = APP;
 
