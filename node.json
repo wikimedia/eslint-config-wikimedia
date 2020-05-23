@@ -1,8 +1,8 @@
 {
-	"env": {
-		"node": true
-	},
+	"extends": [ "plugin:node/recommended" ],
 	"rules": {
-		"no-buffer-constructor": "error"
+		"node/no-unsupported-features/es-builtins": "off",
+		"node/no-unsupported-features/es-syntax": "off",
+		"node/shebang": "off"
 	}
 }

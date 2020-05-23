@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+// Rule: node/shebang
 ( function ( global ) {
 	// Rule: prefer-const
 	const a = 4;
@@ -25,4 +27,9 @@
 	// Rule: template-curly-spacing
 	// eslint-disable-next-line no-unused-expressions
 	`${global.foo}`;
+
+	// These rules are disabled because they are already covered by our
+	// language rules, or the parser version.
+	// Rule: node/no-unsupported-features/es-builtins
+	// Rule: node/no-unsupported-features/es-syntax
 }( this ) );
