@@ -1,3 +1,5 @@
+'use strict';
+
 ( function ( global ) {
 	// eslint-disable-next-line no-useless-computed-key
 	const foo = { [ 'a' ]: 'b' };
@@ -38,7 +40,6 @@
 
 	// TODO: eslint-disable-next-line node/no-extraneous-require
 	// TODO: eslint-disable-next-line node/no-unpublished-bin
-	// TODO: eslint-disable-next-line node/no-unpublished-require
 	// TODO: eslint-disable-next-line node/process-exit-as-throw
 
 	// not-es6

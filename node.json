@@ -1,6 +1,9 @@
 {
 	"extends": [ "plugin:node/recommended" ],
 	"rules": {
+		"strict": [ "error", "safe" ],
+		"node/no-unpublished-import": "off",
+		"node/no-unpublished-require": "off",
 		"node/no-unsupported-features/es-builtins": "off",
 		"node/no-unsupported-features/es-syntax": "off",
 		"node/shebang": "off"

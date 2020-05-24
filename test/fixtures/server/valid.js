@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 // Rule: node/shebang
+
+// Rule: strict
+'use strict';
+
 ( function ( global ) {
 	// Rule: prefer-const
 	const a = 4;
@@ -32,4 +36,8 @@
 	// language rules, or the parser version.
 	// Rule: node/no-unsupported-features/es-builtins
 	// Rule: node/no-unsupported-features/es-syntax
+
+	// Disabled due to https://github.com/mysticatea/eslint-plugin-node/issues/77
+	// Rule: node/no-unpublished-require
+
 }( this ) );
