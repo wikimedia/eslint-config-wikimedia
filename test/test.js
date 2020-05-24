@@ -20,7 +20,17 @@ let validFixturesFiles = [],
 	invalidFixtures = '',
 	testPositivesFailures = [];
 
-profiles.forEach( function ( profile ) {
+function getRules( config ) {
+	const rules = Object.assign( {}, config.rules );
+	if ( config.overrides ) {
+		config.overrides.forEach( ( override ) => {
+			Object.assign( rules, override.rules );
+		} );
+	}
+	return rules;
+}
+
+profiles.forEach( ( profile ) => {
 	const profileName = profile.replace( /\..*/, '' );
 
 	console.log( `Testing the "${profileName}" profile suite.` );
@@ -32,14 +42,14 @@ profiles.forEach( function ( profile ) {
 	invalidFixturesFiles = fixtureExtensions
 		.map( ( ext ) => `${__dirname}/fixtures/${profileName}/invalid.${ext}` )
 		.filter( fs.existsSync );
-	const rules = config.rules || {};
+	const rules = getRules( config );
 
 	if ( profileName === 'server' ) {
 		// Load the rules for Node & ES6 when testing server
 		Object.assign(
 			rules,
-			require( '../node' ).rules,
-			require( '../language/es6' ).rules
+			getRules( require( '../node' ) ),
+			getRules( require( '../language/es6' ) )
 		);
 	}
 
