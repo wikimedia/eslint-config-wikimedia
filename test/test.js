@@ -58,7 +58,7 @@ configs.forEach( ( configPath ) => {
 			Object.keys( rules ).forEach( ( rule ) => {
 				// Negative rules are covered below
 				if ( !isNegativeRule( rule ) ) {
-					assert( validFixtures.indexOf( `Rule: ${rule}` ) !== -1, `Rule ${rule} is covered` );
+					assert( validFixtures.includes( `Rule: ${rule}` ), `Rule ${rule} is covered` );
 				}
 			} );
 		} );
@@ -74,7 +74,7 @@ configs.forEach( ( configPath ) => {
 				// Positive rules are covered above
 				if (
 					isNegativeRule( rule ) ||
-					testPositivesFailures.indexOf( rule ) !== -1
+					testPositivesFailures.includes( rule )
 				) {
 					assert( rDisableRule.test( invalidFixtures.toString() ), `Rule ${rule} is covered` );
 				}

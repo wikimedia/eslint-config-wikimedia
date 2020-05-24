@@ -1,3 +1,8 @@
 {
-	"extends": "../server"
+	"root": true,
+	"extends": [
+		"../common",
+		"../node",
+		"../language/es2016"
+	]
 }
