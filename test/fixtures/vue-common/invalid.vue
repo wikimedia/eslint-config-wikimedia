@@ -23,6 +23,10 @@
 	</div>
 </template>
 
+<style>
+</style>
+
+<!-- eslint-disable-next-line vue/component-tags-order -->
 <script>
 // @vue/component
 module.exports = {
