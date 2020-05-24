@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-implicit-globals, no-unused-vars
 var APP;
+// eslint-disable-next-line wrap-iife
 ( function ( global ) {
 	var APP;
 	// eslint-disable-next-line one-var
@@ -18,7 +19,31 @@ var APP;
 	/* Example*/
 
 	APP.Example = function ( id, options ) {
-		var i, name, bar;
+		var name = 'foo'
+			// eslint-disable-next-line operator-linebreak
+			+ 'bar',
+			// eslint-disable-next-line key-spacing
+			bar = { a : 1 }
+			// eslint-disable-next-line camelcase, comma-style
+			, camel_case;
+
+		// eslint-disable-next-line array-bracket-spacing, comma-dangle, comma-spacing
+		bar = [0, 1,];
+
+		// eslint-disable-next-line one-var, vars-on-top
+		var i;
+
+		// eslint-disable-next-line space-before-blocks, yoda
+		if ( 3 === bar ){
+			// eslint-disable-next-line block-spacing, brace-style, camelcase
+			return camel_case;}
+
+		// eslint-disable-next-line max-statements-per-line
+		if ( name ) { return i; }
+
+		// eslint-disable-next-line curly, dot-location
+		if ( bar ) return i.
+			prop;
 
 		// eslint-disable-next-line no-tabs
 		name = options.bar ? upHere( id ) : id; //	Wow!
@@ -26,10 +51,10 @@ var APP;
 		// eslint-disable-next-line no-constant-condition
 		if ( true || options.quux ) {
 			name += options.quux;
-		// eslint-disable-next-line dot-notation
-		} else if ( options[ 'default' ] ) {
-		// eslint-disable-next-line no-unsafe-negation
-		} else if ( !'default' in options ) {
+		// eslint-disable-next-line dot-notation, computed-property-spacing
+		} else if ( options['default' ] ) {
+		// eslint-disable-next-line no-unsafe-negation, keyword-spacing
+		}else if ( !'default' in options ) {
 			// eslint-disable-next-line no-use-before-define
 			name += named();
 		}
@@ -45,7 +70,8 @@ var APP;
 			return;
 		}
 
-		function named( items ) {
+		// eslint-disable-next-line space-before-function-paren, space-in-parens
+		function named (items ) {
 			var e = items.event;
 			try {
 				return APP.loop( items );
@@ -57,10 +83,12 @@ var APP;
 		for ( i = 0
 			// eslint-disable-next-line semi-style
 			; i < 5;
-			i++ ) {
+			// eslint-disable-next-line space-unary-ops
+			i ++ ) {
 			// eslint-disable-next-line no-loop-func, no-inner-declarations
 			function inline( a ) {
-				return a + i;
+				// eslint-disable-next-line space-infix-ops
+				return a+ i;
 			}
 			inline( i );
 			break;
@@ -68,11 +96,11 @@ var APP;
 
 		// eslint-disable-next-line no-unused-labels
 		data:
-		// eslint-disable-next-line no-unused-expressions, no-sequences
-		bar, named();
+		// eslint-disable-next-line no-unused-expressions, no-sequences, func-call-spacing
+		bar, named ();
 
-		// eslint-disable-next-line no-array-constructor
-		bar = new Array();
+		// eslint-disable-next-line no-array-constructor, new-parens
+		bar = new Array;
 		// eslint-disable-next-line no-new-func, quotes
 		bar = new Function( 'a', "return " + name + ";" );
 		// eslint-disable-next-line no-new-object
@@ -92,8 +120,8 @@ var APP;
 			bar = void 0;
 			// eslint-disable-next-line no-proto
 			bar = APP.Example.__proto__;
-			// eslint-disable-next-line no-self-compare
-			bar = name === name;
+			// eslint-disable-next-line no-self-compare, eqeqeq
+			bar = name == name;
 		}
 
 		// eslint-disable-next-line no-trailing-spaces
@@ -186,9 +214,8 @@ var APP;
 	// eslint-disable-next-line no-implicit-globals, no-global-assign
 	Date = APP.Date;
 
-	APP.example = {
-		// eslint-disable-next-line quote-props
-		'default': 'Legacy'
+	// eslint-disable-next-line quote-props, object-curly-spacing
+	APP.example = {'default': 'Legacy'
 	};
 
 	// eslint-disable-next-line no-multi-spaces
@@ -233,4 +260,5 @@ var APP;
 	// eslint-disable-next-line no-prototype-builtins
 	APP.hasBarProperty = APP.hasOwnProperty( 'bar' );
 
-}( this ) );
+} )( this );
+/* eslint-disable eol-last */

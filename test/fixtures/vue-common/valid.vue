@@ -2,10 +2,10 @@
 	<div x="y">
 		<!-- Rule: vue/component-tags-order -->
 		<!-- Rule: vue/html-indent -->
-		<!-- Rule: vue/html-closing-bracket-newline -->
 		<!-- Rule: vue/max-attributes-per-line -->
 		<!-- Rule: vue/html-self-closing -->
 		<span a="b" c="d" />
+		<!-- Rule: vue/html-closing-bracket-newline -->
 		<span
 			a="b"
 			c="d"
