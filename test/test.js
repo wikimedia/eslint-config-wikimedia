@@ -4,6 +4,7 @@
 
 const fs = require( 'fs' ),
 	assert = require( 'assert' ),
+	path = require( 'path' ),
 	fixtureExtensions = [ 'js', 'mjs', 'vue' ],
 	configs = require( '../package' ).files
 		.filter( ( fileName ) => (
@@ -31,10 +32,10 @@ configs.forEach( ( configPath ) => {
 
 		const config = require( `../${configPath}` );
 		const validFixturesFiles = fixtureExtensions
-			.map( ( ext ) => `${__dirname}/fixtures/${configName}/valid.${ext}` )
+			.map( ( ext ) => path.resolve( __dirname, `fixtures/${configName}/valid.${ext}` ) )
 			.filter( fs.existsSync );
 		const invalidFixturesFiles = fixtureExtensions
-			.map( ( ext ) => `${__dirname}/fixtures/${configName}/invalid.${ext}` )
+			.map( ( ext ) => path.resolve( __dirname, `fixtures/${configName}/invalid.${ext}` ) )
 			.filter( fs.existsSync );
 		const rules = getRules( config );
 
@@ -68,13 +69,13 @@ configs.forEach( ( configPath ) => {
 				fs.readFileSync( file ).toString()
 			).join( '' );
 
-			const testPositivesFailures = fs.readFileSync( `${__dirname}/fixtures/${configName}/positiveFailures.json` );
+			const positivesFailures = fs.readFileSync( path.resolve( __dirname, `fixtures/${configName}/positiveFailures.json` ) );
 			Object.keys( rules ).forEach( ( rule ) => {
 				const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )??${rule}` );
 				// Positive rules are covered above
 				if (
 					isNegativeRule( rule ) ||
-					testPositivesFailures.includes( rule )
+					positivesFailures.includes( rule )
 				) {
 					assert( rDisableRule.test( invalidFixtures.toString() ), `Rule ${rule} is covered` );
 				}
