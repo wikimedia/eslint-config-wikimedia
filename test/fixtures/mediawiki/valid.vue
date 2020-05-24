@@ -21,6 +21,10 @@
 module.exports = {
 
 };
+
+// Rule: no-implicit-globals
+// eslint-disable-next-line no-unused-vars
+function x() {}
 </script>
 
 <style>

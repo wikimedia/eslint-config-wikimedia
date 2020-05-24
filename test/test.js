@@ -1,86 +1,85 @@
 'use strict';
 
+/* eslint-env mocha */
+
 const fs = require( 'fs' ),
 	assert = require( 'assert' ),
-	assertDiff = require( 'assert-diff' ),
-	fixtureExtensions = [ 'js', 'vue' ],
-	profiles = require( '../package' ).files
+	path = require( 'path' ),
+	fixtureExtensions = [ 'js', 'mjs', 'vue' ],
+	configs = require( '../package' ).files
 		.filter( ( fileName ) => (
-			// TODO: Test language profiles too
+			// TODO: Test language configs too
 			fileName !== 'language' &&
-			// selenium has not local rules
+			// selenium has no local rules
 			fileName !== 'selenium.json' &&
-			// Node rules are tested through server profile
+			// Node rules are tested through server config
 			fileName.indexOf( 'node' ) === -1
 		) );
 
-let validFixturesFiles = [],
-	validFixtures = '',
-	invalidFixturesFiles = [],
-	invalidFixtures = '',
-	testPositivesFailures = [];
-
-profiles.forEach( function ( profile ) {
-	const profileName = profile.replace( /\..*/, '' );
-
-	console.log( `Testing the "${profileName}" profile suite.` );
-
-	const config = require( `../${profile}` );
-	validFixturesFiles = fixtureExtensions
-		.map( ( ext ) => `${__dirname}/fixtures/${profileName}/valid.${ext}` )
-		.filter( fs.existsSync );
-	invalidFixturesFiles = fixtureExtensions
-		.map( ( ext ) => `${__dirname}/fixtures/${profileName}/invalid.${ext}` )
-		.filter( fs.existsSync );
-	const rules = config.rules || {};
-
-	if ( profileName === 'server' ) {
-		// Load the rules for Node & ES6 when testing server
-		Object.assign(
-			rules,
-			require( '../node' ).rules,
-			require( '../language/es6' ).rules
-		);
+function getRules( config ) {
+	const rules = Object.assign( {}, config.rules );
+	if ( config.overrides ) {
+		config.overrides.forEach( ( override ) => {
+			Object.assign( rules, override.rules );
+		} );
 	}
+	return rules;
+}
 
-	let count;
+configs.forEach( ( configPath ) => {
+	const configName = configPath.replace( /\..*/, '' );
+	describe( `"${configName}" config`, () => {
 
-	// Test for positive rules
-	count = 0;
+		const config = require( `../${configPath}` );
+		const validFixturesFiles = fixtureExtensions
+			.map( ( ext ) => path.resolve( __dirname, `fixtures/${configName}/valid.${ext}` ) )
+			.filter( fs.existsSync );
+		const invalidFixturesFiles = fixtureExtensions
+			.map( ( ext ) => path.resolve( __dirname, `fixtures/${configName}/invalid.${ext}` ) )
+			.filter( fs.existsSync );
+		const rules = getRules( config );
 
-	validFixturesFiles.forEach( ( file ) => {
-		validFixtures += fs.readFileSync( file ).toString();
-	} );
-
-	Object.keys( rules ).forEach( ( rule ) => {
-		// Negative rules are covered below
-		if ( !rule.match( /^no-|\/no-/ ) ) {
-			count++;
-			assert( validFixtures.indexOf( `Rule: ${rule}` ) !== -1, `Rule ${rule} is covered` );
+		if ( configName === 'server' ) {
+			// Load the rules for Node & ES6 when testing server
+			Object.assign(
+				rules,
+				getRules( require( '../node' ) ),
+				getRules( require( '../language/es6' ) )
+			);
 		}
-	} );
-	console.log( `\tPositive rules (${count}) are covered.` );
 
-	// Verify coverage
-	count = 0;
-
-	invalidFixturesFiles.forEach( ( file ) => {
-		invalidFixtures += fs.readFileSync( file ).toString();
-	} );
-
-	testPositivesFailures = fs.readFileSync( `${__dirname}/fixtures/${profileName}/positiveFailures.json` );
-	Object.keys( rules ).forEach( ( rule ) => {
-		const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )??${rule}` );
-		// Positive rules are covered above
-		if (
-			( rule.match( /^no-|\/no-/ ) && rules[ rule ] !== 'off' ) ||
-			testPositivesFailures.indexOf( rule ) !== -1
-		) {
-			count++;
-			assertDiff( rDisableRule.test( invalidFixtures.toString() ), `Rule ${rule} is covered` );
+		function isNegativeRule( rule ) {
+			return rule.match( /^no-|\/no-/ ) && rules[ rule ] !== 'off';
 		}
-	} );
-	console.log( `\tNegative rules (${count}) covered.` );
 
-	console.log( `\t✅ The "${profileName}" profile suite is fully covered.\n` );
+		it( 'Positive rules', () => {
+			const validFixtures = validFixturesFiles.map( ( file ) =>
+				fs.readFileSync( file ).toString()
+			).join( '' );
+			Object.keys( rules ).forEach( ( rule ) => {
+				// Negative rules are covered below
+				if ( !isNegativeRule( rule ) ) {
+					assert( validFixtures.includes( `Rule: ${rule}` ), `Rule ${rule} is covered` );
+				}
+			} );
+		} );
+
+		it( 'Negative rules', () => {
+			const invalidFixtures = invalidFixturesFiles.map( ( file ) =>
+				fs.readFileSync( file ).toString()
+			).join( '' );
+
+			const positivesFailures = fs.readFileSync( path.resolve( __dirname, `fixtures/${configName}/positiveFailures.json` ) );
+			Object.keys( rules ).forEach( ( rule ) => {
+				const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )??${rule}` );
+				// Positive rules are covered above
+				if (
+					isNegativeRule( rule ) ||
+					positivesFailures.includes( rule )
+				) {
+					assert( rDisableRule.test( invalidFixtures.toString() ), `Rule ${rule} is covered` );
+				}
+			} );
+		} );
+	} );
 } );
