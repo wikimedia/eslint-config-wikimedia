@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable quote-props, quotes */
 // Nothing to merge with yet
 module.exports = {

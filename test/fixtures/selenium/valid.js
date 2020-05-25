@@ -1,3 +1,5 @@
+'use strict';
+
 const el = $( '.el' );
 const menu = $$( '#menu' );
 

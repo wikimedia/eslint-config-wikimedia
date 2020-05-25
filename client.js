@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable quote-props, quotes */
 const merge = require( './language/merge' );
 const rules = {

@@ -1,3 +1,5 @@
+'use strict';
+
 /*
  * eslint-plugin-vue doesn't automatically apply core eslint rules to JS code inside templates,
  * but it does provide wrappers for some rules (e.g. vue/eqeqeq applies the eqeqeq rule in
