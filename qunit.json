@@ -1,6 +1,5 @@
 {
 	"extends": [
-		"./common",
 		"plugin:qunit/recommended",
 		"plugin:qunit/two"
 	],
