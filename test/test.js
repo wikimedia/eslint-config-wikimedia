@@ -40,11 +40,11 @@ configs.forEach( ( configPath ) => {
 		const rules = getRules( config );
 
 		if ( configName === 'server' ) {
-			// Load the rules for Node & ES6 when testing server
+			// Load the rules for Node & ES2018 when testing server
 			Object.assign(
 				rules,
 				getRules( require( '../node' ) ),
-				getRules( require( '../language/es6' ) )
+				getRules( require( '../language/es2018' ) )
 			);
 		}
 

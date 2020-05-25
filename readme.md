@@ -91,7 +91,7 @@ The following config will enable WDIO globals, as well as the Mocha environment 
 ```
 
 ### A typical Node project
-This config allows ES6 code and node native functions (_i.e._, Node 6.x). It will complain about ES2016+ code and language features.
+This config allows ES2018 code and Node native functions (_i.e._, Node 10.x). It will complain about ES2019+ code and language features.
 
 `.eslintrc.json`:
 ```json
@@ -100,14 +100,14 @@ This config allows ES6 code and node native functions (_i.e._, Node 6.x). It wil
 }
 ```
 
-The `wikimedia/server` config consists of `wikimedia`, `wikimedia/node` and `wikimedia/language/es6`. To use later versions of ES, for example ES2016, you can use the following config:
+The `wikimedia/server` config consists of `wikimedia`, `wikimedia/node` and `wikimedia/language/es2018`. To use later versions of ES, for example ES2019, you can use the following config:
 `.eslintrc.json`:
 ```json
 {
 	"extends": [
 		"wikimedia",
 		"wikimedia/node",
-		"wikimedia/language/es2016"
+		"wikimedia/language/es2019"
 	]
 }
 ```

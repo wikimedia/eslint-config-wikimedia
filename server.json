@@ -2,6 +2,6 @@
 	"extends": [
 		"./common",
 		"./node",
-		"./language/es6"
+		"./language/es2018"
 	]
 }
