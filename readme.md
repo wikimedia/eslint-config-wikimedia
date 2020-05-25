@@ -77,6 +77,19 @@ You can extend the above profile by also adding a second `.eslintrc.json` file i
 }
 ```
 
+### Adding a Selenium WDIO test suite
+The following config will enable WDIO globals, as well as the Mocha environment and some Mocha related rules.
+
+`tests/qunit/.eslintrc.json`:
+```json
+{
+	"root": true,
+	"extends": [
+		"wikimedia/selenium"
+	]
+}
+```
+
 ### A typical Node project
 This profile allows ES6 code and node native functions (_i.e._, Node 6.x). It will complain about ES2016+ code and language features.
 

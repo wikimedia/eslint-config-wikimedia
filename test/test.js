@@ -6,6 +6,8 @@ const fs = require( 'fs' ),
 		.filter( ( fileName ) => (
 			// TODO: Test language profiles too
 			fileName !== 'language' &&
+			// selenium has not local rules
+			fileName !== 'selenium.json' &&
 			// Node rules are tested through server profile
 			fileName.indexOf( 'node' ) === -1
 		) );
