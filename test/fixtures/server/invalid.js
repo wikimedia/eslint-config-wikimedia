@@ -42,15 +42,7 @@
 	// TODO: eslint-disable-next-line node/no-unpublished-bin
 	// TODO: eslint-disable-next-line node/process-exit-as-throw
 
-	// not-es6
-	// eslint-disable-next-line no-restricted-syntax
-	[].includes();
-
-	// not-es2016
-	// eslint-disable-next-line no-restricted-properties
-	''.padStart();
-
-	// not-es2017
+	// not-es2018
 	// eslint-disable-next-line no-restricted-properties
 	''.trimEnd();
 

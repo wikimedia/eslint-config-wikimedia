@@ -4,7 +4,7 @@
 	"description": "ESLint config following Wikimedia code conventions.",
 	"main": "common.json",
 	"scripts": {
-		"test": "npm run lint && node test/test.js",
+		"test": "npm run lint && mocha test/test.js",
 		"lint": "eslint . --max-warnings 0",
 		"build-invalid": "node test/test.js dump"
 	},
@@ -60,6 +60,6 @@
 		"eslint-plugin-wdio": "^6.0.12"
 	},
 	"devDependencies": {
-		"assert-diff": "^3.0.1"
+		"mocha": "^7.2.0"
 	}
 }
