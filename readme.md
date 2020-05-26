@@ -71,8 +71,21 @@ You can extend the above profile by also adding a second `.eslintrc.json` file i
 ```json
 {
 	"extends": [
-		"wikimedia/qunit",
-		"../../.eslintrc.json"
+		"../../.eslintrc.json",
+		"wikimedia/qunit"
+	]
+}
+```
+
+### Adding a Selenium WDIO test suite
+The following config will enable WDIO globals, as well as the Mocha environment and some Mocha related rules.
+
+`tests/qunit/.eslintrc.json`:
+```json
+{
+	"root": true,
+	"extends": [
+		"wikimedia/selenium"
 	]
 }
 ```

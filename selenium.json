@@ -1,0 +1,19 @@
+{
+	"extends": [
+		"./server",
+		"plugin:wdio/recommended",
+		"plugin:mocha/recommended"
+	],
+	"plugins": [
+		"wdio",
+		"mocha"
+	],
+	"env": {
+		"mocha": true
+	},
+	"rules": {
+		"mocha/no-hooks-for-single-case": "off",
+		"mocha/no-mocha-arrows": "off",
+		"mocha/no-skipped-tests": "off"
+	}
+}
