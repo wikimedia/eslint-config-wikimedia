@@ -1,5 +1,7 @@
 <template>
-	<div>
+	<!-- eslint-disable-next-line vue/html-indent, vue/max-attributes-per-line -->
+		<div one="1" two="2" three="3"
+		foo="bar">
 		<blah-component>
 			<!-- eslint-disable-next-line vue/no-deprecated-slot-attribute -->
 			<template slot="foo">
@@ -21,8 +23,7 @@
 		<!-- eslint-disable-next-line vue/no-unsupported-features -->
 		<!-- Can't actually be covered, since it doesn't do anything (yet) when set to v2.6 -->
 	</div>
-</template>
-
+</template><!-- eslint-disable-next-line vue/padding-line-between-blocks -->
 <style>
 </style>
 
