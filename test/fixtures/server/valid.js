@@ -32,6 +32,16 @@
 	// eslint-disable-next-line no-unused-expressions
 	`${global.foo}`;
 
+	// ES6
+	// Rule: no-restricted-syntax
+	[].includes();
+
+	// ES2016
+	// Rule: no-restricted-properties
+	''.padStart();
+
+	// ES2017 (no rules in not-es2017)
+
 	// These rules are disabled because they are already covered by our
 	// language rules, or the parser version.
 	// Rule: node/no-unsupported-features/es-builtins
