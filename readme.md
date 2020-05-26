@@ -71,8 +71,8 @@ You can extend the above profile by also adding a second `.eslintrc.json` file i
 ```json
 {
 	"extends": [
-		"wikimedia/qunit",
-		"../../.eslintrc.json"
+		"../../.eslintrc.json",
+		"wikimedia/qunit"
 	]
 }
 ```
