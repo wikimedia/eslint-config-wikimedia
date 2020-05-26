@@ -71,8 +71,8 @@ You can extend the above config by also adding a second `.eslintrc.json` file in
 ```json
 {
 	"extends": [
-		"wikimedia/qunit",
-		"../../.eslintrc.json"
+		"../../.eslintrc.json",
+		"wikimedia/qunit"
 	]
 }
 ```
