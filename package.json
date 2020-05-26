@@ -48,8 +48,8 @@
 	"license": "MIT",
 	"dependencies": {
 		"eslint": "^7.0.0",
-		"eslint-plugin-es": "^3.0.0",
-		"eslint-plugin-jsdoc": "^25.4.1",
+		"eslint-plugin-es": "^3.0.1",
+		"eslint-plugin-jsdoc": "^25.4.2",
 		"eslint-plugin-json": "^2.1.1",
 		"eslint-plugin-mediawiki": "^0.2.4",
 		"eslint-plugin-mocha": "^7.0.0",
@@ -60,6 +60,6 @@
 		"eslint-plugin-wdio": "^6.0.12"
 	},
 	"devDependencies": {
-		"assert-diff": "^3.0.0"
+		"assert-diff": "^3.0.1"
 	}
 }
