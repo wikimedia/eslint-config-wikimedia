@@ -8,7 +8,6 @@
 	// Rule: prefer-const
 	const a = 4;
 
-	// Rule: arrow-body-style
 	// Rule: arrow-parens
 	// Rule: arrow-spacing
 	global.then( ( data ) => Math.pow( data, 2 ) );

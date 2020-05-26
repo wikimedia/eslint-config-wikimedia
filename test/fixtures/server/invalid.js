@@ -13,7 +13,7 @@
 	// eslint-disable-next-line prefer-const
 	let f = ( p ) => p;
 
-	// eslint-disable-next-line arrow-body-style, arrow-parens, arrow-spacing
+	// eslint-disable-next-line arrow-parens, arrow-spacing
 	Object.keys( foo ).map( x=> {
 		return x + 1;
 	} );
