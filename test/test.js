@@ -5,7 +5,6 @@
 const fs = require( 'fs' ),
 	assert = require( 'assert' ),
 	path = require( 'path' ),
-	fixtureExtensions = [ 'js', 'mjs', 'vue', 'win.js' ],
 	configs = require( '../package' ).files
 		.filter( ( fileName ) => (
 			// TODO: Test language configs too
@@ -31,12 +30,14 @@ configs.forEach( ( configPath ) => {
 	describe( `"${configName}" config`, () => {
 
 		const config = require( `../${configPath}` );
-		const validFixturesFiles = fixtureExtensions
-			.map( ( ext ) => path.resolve( __dirname, `fixtures/${configName}/valid.${ext}` ) )
-			.filter( fs.existsSync );
-		const invalidFixturesFiles = fixtureExtensions
-			.map( ( ext ) => path.resolve( __dirname, `fixtures/${configName}/invalid.${ext}` ) )
-			.filter( fs.existsSync );
+
+		const fixturesDir = path.resolve( __dirname, `fixtures/${configName}` );
+		const fixturesFiles = fs.readdirSync( fixturesDir )
+			.map( ( file ) => path.resolve( fixturesDir, file ) );
+
+		const validFixturesFiles = fixturesFiles.filter( ( file ) => file.includes( '/valid' ) );
+		const invalidFixturesFiles = fixturesFiles.filter( ( file ) => file.includes( '/invalid' ) );
+
 		const rules = getRules( config );
 
 		if ( configName === 'server' ) {
