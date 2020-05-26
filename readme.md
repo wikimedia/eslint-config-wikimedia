@@ -14,7 +14,7 @@ Then, [configure ESLint](https://eslint.org/docs/user-guide/configuring) with on
 Below are some potential recommended uses:
 
 ### A typical front-end project
-This profile allows ES5 code and browser native functions. It will complain about ES6+ code and language features.
+This config allows ES5 code and browser native functions. It will complain about ES6+ code and language features.
 
 `.eslintrc.json`:
 ```json
@@ -24,7 +24,7 @@ This profile allows ES5 code and browser native functions. It will complain abou
 ```
 
 #### jQuery
-This profile adds the jQuery `$` global, and additional rules preventing the use of jQuery features that have ES5 alternatives.
+This config adds the jQuery `$` global, and additional rules preventing the use of jQuery features that have ES5 alternatives.
 `.eslintrc.json`:
 ```json
 {
@@ -36,7 +36,7 @@ This profile adds the jQuery `$` global, and additional rules preventing the use
 ```
 
 #### MediaWiki
-Code that runs in MediaWiki can use this profile. It enforces rules that are specific to the MediaWiki codebase (core and extensions), such as correct documentation of `mw.message` usage. It also automatically applies the Vue plugin and Vue-specific rules to `.vue` files, including MediaWiki-specific Vue rules such as prohibiting ES6 syntax and prohibiting shorthand syntax for `v-bind`, `v-on` and `v-slot`.
+Code that runs in MediaWiki can use this config. It enforces rules that are specific to the MediaWiki codebase (core and extensions), such as correct documentation of `mw.message` usage. It also automatically applies the Vue plugin and Vue-specific rules to `.vue` files, including MediaWiki-specific Vue rules such as prohibiting ES6 syntax and prohibiting shorthand syntax for `v-bind`, `v-on` and `v-slot`.
 `.eslintrc.json`:
 ```json
 {
@@ -48,7 +48,7 @@ Code that runs in MediaWiki can use this profile. It enforces rules that are spe
 ```
 
 #### .vue files
-The MediaWiki profile automatically applies the Vue plugin to `.vue` files, and enforces MediaWiki-specific Vue rules. For code outside MediaWiki, or for `.vue` files that don't use ResourceLoader, you can use the `wikimedia/vue-es5` or `wikimedia/vue-es6` profile. These profiles only enforce non-MediaWiki-specific rules for Vue code.
+The MediaWiki config automatically applies the Vue plugin to `.vue` files, and enforces MediaWiki-specific Vue rules. For code outside MediaWiki, or for `.vue` files that don't use ResourceLoader, you can use the `wikimedia/vue-es5` or `wikimedia/vue-es6` config. These configs only enforce non-MediaWiki-specific rules for Vue code.
 `.eslintrc.json`:
 ```json
 {
@@ -65,14 +65,14 @@ The MediaWiki profile automatically applies the Vue plugin to `.vue` files, and 
 ```
 
 ### Adding a QUnit test suite
-You can extend the above profile by also adding a second `.eslintrc.json` file in your tests directory:
+You can extend the above config by also adding a second `.eslintrc.json` file in your tests directory:
 
 `tests/qunit/.eslintrc.json`:
 ```json
 {
 	"extends": [
-		"wikimedia/qunit",
-		"../../.eslintrc.json"
+		"../../.eslintrc.json",
+		"wikimedia/qunit"
 	]
 }
 ```
@@ -91,7 +91,7 @@ The following config will enable WDIO globals, as well as the Mocha environment 
 ```
 
 ### A typical Node project
-This profile allows ES6 code and node native functions (_i.e._, Node 6.x). It will complain about ES2016+ code and language features.
+This config allows ES2018 code and Node native functions (_i.e._, Node 10.x). It will complain about ES2019+ code and language features.
 
 `.eslintrc.json`:
 ```json
@@ -100,14 +100,14 @@ This profile allows ES6 code and node native functions (_i.e._, Node 6.x). It wi
 }
 ```
 
-The `wikimedia/server` profile consists of `wikimedia`, `wikimedia/node` and `wikimedia/language/es6`. To use later versions of ES, for example ES2016, you can use the following profile:
+The `wikimedia/server` config consists of `wikimedia`, `wikimedia/node` and `wikimedia/language/es2018`. To use later versions of ES, for example ES2019, you can use the following config:
 `.eslintrc.json`:
 ```json
 {
 	"extends": [
 		"wikimedia",
 		"wikimedia/node",
-		"wikimedia/language/es2016"
+		"wikimedia/language/es2019"
 	]
 }
 ```

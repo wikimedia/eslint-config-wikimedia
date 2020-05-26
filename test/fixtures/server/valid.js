@@ -1,3 +1,9 @@
+#!/usr/bin/env node
+// Rule: node/shebang
+
+// Rule: strict
+'use strict';
+
 ( function ( global ) {
 	// Rule: prefer-const
 	const a = 4;
@@ -25,4 +31,25 @@
 	// Rule: template-curly-spacing
 	// eslint-disable-next-line no-unused-expressions
 	`${global.foo}`;
+
+	// ES6
+	// Rule: no-restricted-syntax
+	[].includes();
+
+	// ES2016
+	// Rule: no-restricted-properties
+	''.padStart();
+
+	// ES2017 (no rules in not-es2017)
+
+	// These rules are disabled because they are already covered by our
+	// language rules, or the parser version.
+	// Rule: node/no-unsupported-features/es-builtins
+	// Rule: node/no-unsupported-features/es-syntax
+
+	// Disabled due to https://github.com/mysticatea/eslint-plugin-node/issues/77
+	// Rule: node/no-unpublished-require
+
+	// Rule: node/no-extraneous-require
+
 }( this ) );
