@@ -1,4 +1,4 @@
-'use strict';
+/* eslint-disable strict */
 
 ( function ( global ) {
 	// eslint-disable-next-line no-useless-computed-key

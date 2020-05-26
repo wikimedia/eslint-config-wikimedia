@@ -1,9 +1,32 @@
 ( function () {
-	var APP;
-
-	// eslint-disable-next-line jsdoc/check-param-names
+	/* eslint-disable jsdoc/check-property-names */
 	/**
-	 * @param {number} foo
+	 * @property {Function} APP
+	 * @property {Function} APP
+	 */
+	var APP;
+	/* eslint-enable jsdoc/check-property-names */
+
+	// eslint-disable-next-line jsdoc/check-param-names, jsdoc/valid-types
+	/**
+	 * @param {Array<string} foo
+	 */
+	APP.method = function ( bar ) {
+		return bar;
+	};
+
+	// eslint-disable-next-line jsdoc/implements-on-classes
+	/**
+	 * @implements {HTMLElement}
+	 */
+	APP.method = function ( bar ) {
+		return bar;
+	};
+
+	// eslint-disable-next-line jsdoc/newline-after-description
+	/**
+	 * Description
+	 * @param {number} bar
 	 */
 	APP.method = function ( bar ) {
 		return bar;
