@@ -66,6 +66,9 @@ var APP;
 			break;
 		}
 
+		// eslint-disable-next-line no-loss-of-precision
+		i = 5123000000000000000000000000001;
+
 		// eslint-disable-next-line no-unused-labels
 		data:
 		// eslint-disable-next-line no-unused-expressions, no-sequences

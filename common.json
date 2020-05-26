@@ -54,6 +54,7 @@
 		"no-implicit-globals": "error",
 		"no-label-var": "error",
 		"no-loop-func": "error",
+		"no-loss-of-precision": "error",
 		"no-multi-spaces": "error",
 		"no-multi-str": "error",
 		"no-multiple-empty-lines": [ "error", { "max": 1, "maxBOF": 0, "maxEOF": 0 } ],
