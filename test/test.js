@@ -1,11 +1,10 @@
-'use strict';
-
 /* eslint-env mocha */
+
+'use strict';
 
 const fs = require( 'fs' ),
 	assert = require( 'assert' ),
 	path = require( 'path' ),
-	fixtureExtensions = [ 'js', 'mjs', 'vue' ],
 	configs = require( '../package' ).files
 		.filter( ( fileName ) => (
 			// TODO: Test language configs too
@@ -31,12 +30,14 @@ configs.forEach( ( configPath ) => {
 	describe( `"${configName}" config`, () => {
 
 		const config = require( `../${configPath}` );
-		const validFixturesFiles = fixtureExtensions
-			.map( ( ext ) => path.resolve( __dirname, `fixtures/${configName}/valid.${ext}` ) )
-			.filter( fs.existsSync );
-		const invalidFixturesFiles = fixtureExtensions
-			.map( ( ext ) => path.resolve( __dirname, `fixtures/${configName}/invalid.${ext}` ) )
-			.filter( fs.existsSync );
+
+		const fixturesDir = path.resolve( __dirname, `fixtures/${configName}` );
+		const fixturesFiles = fs.readdirSync( fixturesDir )
+			.map( ( file ) => path.resolve( fixturesDir, file ) );
+
+		const validFixturesFiles = fixturesFiles.filter( ( file ) => file.includes( '/valid' ) );
+		const invalidFixturesFiles = fixturesFiles.filter( ( file ) => file.includes( '/invalid' ) );
+
 		const rules = getRules( config );
 
 		if ( configName === 'server' ) {
@@ -48,36 +49,36 @@ configs.forEach( ( configPath ) => {
 			);
 		}
 
-		function isNegativeRule( rule ) {
-			return rule.match( /^no-|\/no-/ ) && rules[ rule ] !== 'off';
+		function isEnabled( rule ) {
+			return rules[ rule ] !== 'off';
 		}
 
-		it( 'Positive rules', () => {
-			const validFixtures = validFixturesFiles.map( ( file ) =>
-				fs.readFileSync( file ).toString()
-			).join( '' );
-			Object.keys( rules ).forEach( ( rule ) => {
-				// Negative rules are covered below
-				if ( !isNegativeRule( rule ) ) {
-					assert( validFixtures.includes( `Rule: ${rule}` ), `Rule ${rule} is covered` );
-				}
-			} );
-		} );
-
-		it( 'Negative rules', () => {
+		// Invalid examples are required for every rule that is enabled,
+		// as reportUnusedDisableDirectives ensures the disable directives
+		// are actually being used.
+		it( 'Invalid examples', () => {
 			const invalidFixtures = invalidFixturesFiles.map( ( file ) =>
 				fs.readFileSync( file ).toString()
 			).join( '' );
 
-			const positivesFailures = fs.readFileSync( path.resolve( __dirname, `fixtures/${configName}/positiveFailures.json` ) );
 			Object.keys( rules ).forEach( ( rule ) => {
-				const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )??${rule}` );
-				// Positive rules are covered above
-				if (
-					isNegativeRule( rule ) ||
-					positivesFailures.includes( rule )
-				) {
+				const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )*?${rule}` );
+				// Disabled rules are covered below
+				if ( isEnabled( rule ) ) {
 					assert( rDisableRule.test( invalidFixtures.toString() ), `Rule ${rule} is covered` );
+				}
+			} );
+		} );
+
+		it( 'Valid examples', () => {
+			const validFixtures = validFixturesFiles.map( ( file ) =>
+				fs.readFileSync( file ).toString()
+			).join( '' );
+
+			Object.keys( rules ).forEach( ( rule ) => {
+				// Enabled rules are covered above
+				if ( !isEnabled( rule ) ) {
+					assert( validFixtures.includes( `Rule: ${rule}` ), `Rule ${rule} (off) is covered` );
 				}
 			} );
 		} );
