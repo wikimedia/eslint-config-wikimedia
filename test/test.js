@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require( 'fs' ),
 	assert = require( 'assert' ),
 	assertDiff = require( 'assert-diff' ),

@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable quote-props, quotes */
 module.exports = {
 	"extends": [
