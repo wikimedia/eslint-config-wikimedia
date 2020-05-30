@@ -1,3 +1,37 @@
+0.16.0 / 2020-05-30
+===================
+
+* common: New rule `array-callback-return` (Ed Sanders)
+* common: New rule `no-loss-of-precision` (Ed Sanders)
+* common: Remove plugins:['json'], already inherited (Ed Sanders)
+* common: Rule fix: Add `balanced: true` to spaced-comment (Ed Sanders)
+* es6: New rule `arrow-spacing` (Ed Sanders)
+* es6: New rule `default-param-last` (Ed Sanders)
+* es6: New rule `no-constructor-return` (Ed Sanders)
+* es6: New rule `no-var` (Ed Sanders)
+* jquery: Update eslint-plugin-no-jquery to 2.4.1 (Ed Sanders)
+* jsdoc: Replace deprecated valid-jsdoc with eslint-plugin-jsdoc (James D. Forrester, Ed Sanders)
+* jsdoc: Update eslint-plugin-jsdoc to 26.0.0 (Ed Sanders)
+* language: Use 'es' plugin in language/ where possible (Ed Sanders)
+* mediawiki: Add OO global (Ed Sanders)
+* mediawiki: Update eslint-plugin-mediawiki to 0.2.4 (James D. Forrester, Ed Sanders)
+* node: New rules: Extend from eslint-plugin-node/recommended (Ed Sanders)
+* qunit: Don't inherit from `common`, as that over-writes other profiles (Ed Sanders)
+* qunit: Update eslint-plugin-qunit to 4.2.0 (Ed Sanders)
+* selenium: Provide `selenium` profile (Ed Sanders)
+* server: Increase ES verion to 2018 (Ed Sanders)
+* vue: Add 'overrides' to individual configs (Ed Sanders)
+* vue: Update eslint-plugin-vue to 6.2.2 (Ed Sanders)
+
+—
+* build: Simplify package.files, include all of 'language' (Ed Sanders)
+* code: Consistently use tabs in JSON files (Ed Sanders)
+* code: Drop file extensions in extends/require (Ed Sanders)
+* code: Update to ESLint 7.0.0 (James D. Forrester, Ed Sanders)
+* docs: Fix QUnit example now inheritance is fixed (Ed Sanders)
+* tests: Convert tests to use Mocha (Ed Sanders)
+* tests: Require 'invalid' tests for every rule except ones set to 'off' (Ed Sanders)
+
 0.15.3 / 2020-04-15
 ===================
 
