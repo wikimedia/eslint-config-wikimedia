@@ -8,7 +8,7 @@ browser.execute( () => {
 } );
 
 // Rule: no-mocha-arrows
-describe( () => {
+describe.skip( () => {
 	// Rule: mocha/no-hooks-for-single-case
 	beforeEach( () => {
 	} );
