@@ -30,6 +30,7 @@
 		"jquery.json",
 		"jsdoc.json",
 		"mediawiki.json",
+		"mocha.json",
 		"qunit.json",
 		"selenium.json",
 		"server.json",
