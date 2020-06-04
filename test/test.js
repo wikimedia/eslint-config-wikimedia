@@ -5,15 +5,7 @@
 const fs = require( 'fs' ),
 	assert = require( 'assert' ),
 	path = require( 'path' ),
-	configs = require( '../package' ).files
-		.filter( ( fileName ) => (
-			// TODO: Test language configs too
-			fileName !== 'language' &&
-			// selenium has no local rules
-			fileName !== 'selenium.json' &&
-			// Node rules are tested through server config
-			fileName.indexOf( 'node' ) === -1
-		) );
+	configs = require( '../package' ).files;
 
 function getRules( config ) {
 	const rules = Object.assign( {}, config.rules );
@@ -27,11 +19,15 @@ function getRules( config ) {
 
 configs.forEach( ( configPath ) => {
 	const configName = configPath.replace( /\..*/, '' );
+	const fixturesDir = path.resolve( __dirname, `fixtures/${configName}` );
+	if ( !fs.existsSync( fixturesDir ) ) {
+		it.skip( `No tests for "${configName}" config` );
+		return;
+	}
 	describe( `"${configName}" config`, () => {
 
 		const config = require( `../${configPath}` );
 
-		const fixturesDir = path.resolve( __dirname, `fixtures/${configName}` );
 		const fixturesFiles = fs.readdirSync( fixturesDir )
 			.map( ( file ) => path.resolve( fixturesDir, file ) );
 
