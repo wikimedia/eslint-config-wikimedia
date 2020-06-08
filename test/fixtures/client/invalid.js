@@ -109,8 +109,9 @@
 	// eslint-disable-next-line no-restricted-properties
 	''.trimEnd();
 
-	// not-es2019
-	// eslint-disable-next-line no-restricted-properties
-	''.matchAll( /foo/ );
+	// es2020 rules don't fail in ES5, tested in server/invalid.js instead
+	// <!-- eslint-disable-next-line es/no-bigint -->
+	// <!-- eslint-disable-next-line es/no-global-this -->
+	// <!-- eslint-disable-next-line es/no-promise-all-settled -->
 
 }() );
