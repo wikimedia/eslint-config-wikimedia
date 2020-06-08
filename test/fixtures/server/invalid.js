@@ -46,6 +46,26 @@
 	// eslint-disable-next-line no-restricted-properties
 	''.trimEnd();
 
+	// not-es2019
+	// eslint-disable-next-line no-restricted-properties
+	''.matchAll( /foo/ );
+
+	// not-es2019
+	// eslint-disable-next-line es/no-bigint
+	const c = BigInt( 100 );
+
+	// not-es2019
+	// eslint-disable-next-line es/no-promise-all-settled
+	Promise.allSettled( [] );
+
+	// not-es2019
+	// eslint-disable-next-line es/no-global-this, no-unused-expressions
+	globalThis === c;
+
+	// not-es2020
+	// eslint-disable-next-line no-restricted-properties
+	'abc'.replaceAll( 'a', 'x' );
+
 	// eslint-disable-next-line no-process-exit
 	process.exit( 1 );
 
