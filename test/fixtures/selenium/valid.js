@@ -7,12 +7,12 @@ browser.execute( () => {
 	// Client code
 } );
 
-// Rule: no-mocha-arrows
+// Off: no-mocha-arrows
 describe.skip( () => {
-	// Rule: mocha/no-hooks-for-single-case
+	// Off: mocha/no-hooks-for-single-case
 	beforeEach( () => {
 	} );
-	// Rule: mocha/no-skipped-tests
+	// Off: mocha/no-skipped-tests
 	it.skip( () => {
 	} );
 } );

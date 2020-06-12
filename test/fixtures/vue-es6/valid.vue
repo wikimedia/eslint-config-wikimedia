@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<!-- Rule: vue/no-restricted-syntax -->
+		<!-- Valid: vue/no-restricted-syntax -->
 		<a @click="[].keys() ? 23 : 42" />
 		<a @click="[].values() ? 23 : 42" />
 		<a @click="[].find( function () {} )" />

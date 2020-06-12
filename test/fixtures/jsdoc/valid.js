@@ -1,12 +1,4 @@
-// Rule: jsdoc/check-alignment
-// Rule: jsdoc/check-indentation
-// Rule: jsdoc/check-param-names
-// Rule: jsdoc/check-property-names
-// Rule: jsdoc/check-tag-names
-// Rule: jsdoc/check-types
-// Rule: jsdoc/implements-on-classes
-// Rule: jsdoc/newline-after-description
-// Rule: jsdoc/valid-types
+// Off: jsdoc/check-indentation
 ( function () {
 	var APP;
 
