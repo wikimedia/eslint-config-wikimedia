@@ -85,13 +85,14 @@ The following config will the Mocha environment and some Mocha related rules:
 {
 	"root": true,
 	"extends": [
+		"wikimedia/server",
 		"wikimedia/mocha"
 	]
 }
 ```
 
 ### Adding a Selenium WDIO test suite
-The following config will enable WDIO globals, as well as the Mocha config:
+The following config will enable WDIO globals, as well as the Mocha and server configs:
 
 `tests/selenium/.eslintrc.json`:
 ```json

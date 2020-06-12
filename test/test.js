@@ -1,6 +1,6 @@
-/* eslint-env mocha */
-
 'use strict';
+
+/* eslint-disable mocha/no-setup-in-describe */
 
 const fs = require( 'fs' ),
 	assert = require( 'assert' ),
