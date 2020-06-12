@@ -6,7 +6,8 @@ var APP;
 	// eslint-disable-next-line one-var
 	var upHere = function ( yArg ) {
 		var rArg = yArg.fooBar;
-		return rArg + yArg.getQuux();
+		// eslint-disable-next-line semi
+		return rArg + yArg.getQuux()
 	};
 
 	// eslint-disable-next-line spaced-comment

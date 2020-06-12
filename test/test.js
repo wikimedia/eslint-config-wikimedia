@@ -58,7 +58,7 @@ configs.forEach( ( configPath ) => {
 			).join( '' );
 
 			Object.keys( rules ).forEach( ( rule ) => {
-				const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )*?${rule}` );
+				const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )*?${rule}($|[^a-z-])` );
 				// Disabled rules are covered below
 				if ( isEnabled( rule ) ) {
 					assert( rDisableRule.test( invalidFixtures.toString() ), `Rule ${rule} is covered` );
