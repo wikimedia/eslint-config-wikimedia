@@ -1,6 +1,6 @@
-/* eslint-env mocha */
-
 'use strict';
+
+/* eslint-disable mocha/no-setup-in-describe */
 
 const fs = require( 'fs' ),
 	assert = require( 'assert' ),
@@ -52,29 +52,29 @@ configs.forEach( ( configPath ) => {
 		// Invalid examples are required for every rule that is enabled,
 		// as reportUnusedDisableDirectives ensures the disable directives
 		// are actually being used.
-		it( 'Invalid examples', () => {
-			const invalidFixtures = invalidFixturesFiles.map( ( file ) =>
-				fs.readFileSync( file ).toString()
-			).join( '' );
+		const invalidFixtures = invalidFixturesFiles.map( ( file ) =>
+			fs.readFileSync( file ).toString()
+		).join( '' );
 
-			Object.keys( rules ).forEach( ( rule ) => {
-				const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )*?${rule}` );
+		Object.keys( rules ).forEach( ( rule ) => {
+			it( `Rule ${rule} is covered in invalid fixture`, () => {
+				const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )*?${rule}($|[^a-z-])` );
 				// Disabled rules are covered below
 				if ( isEnabled( rule ) ) {
-					assert( rDisableRule.test( invalidFixtures.toString() ), `Rule ${rule} is covered` );
+					assert( rDisableRule.test( invalidFixtures.toString() ) );
 				}
 			} );
 		} );
 
-		it( 'Valid examples', () => {
-			const validFixtures = validFixturesFiles.map( ( file ) =>
-				fs.readFileSync( file ).toString()
-			).join( '' );
+		const validFixtures = validFixturesFiles.map( ( file ) =>
+			fs.readFileSync( file ).toString()
+		).join( '' );
 
-			Object.keys( rules ).forEach( ( rule ) => {
+		Object.keys( rules ).forEach( ( rule ) => {
+			it( `Rule ${rule} (off) is covered in valid fixture`, () => {
 				// Enabled rules are covered above
 				if ( !isEnabled( rule ) ) {
-					assert( validFixtures.includes( `Rule: ${rule}` ), `Rule ${rule} (off) is covered` );
+					assert( validFixtures.includes( `Rule: ${rule}` ) );
 				}
 			} );
 		} );
