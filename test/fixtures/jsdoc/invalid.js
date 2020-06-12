@@ -7,12 +7,41 @@
 	var APP;
 	/* eslint-enable jsdoc/check-property-names */
 
-	// eslint-disable-next-line jsdoc/check-param-names, jsdoc/valid-types
+	// eslint-disable-next-line jsdoc/require-property-type
+	/**
+	 * @property Bar
+	 */
+
+	// eslint-disable-next-line jsdoc/check-param-names, jsdoc/valid-types, jsdoc/require-param
 	/**
 	 * @param {Array<string} foo
+	 * @return {string}
 	 */
 	APP.method = function ( bar ) {
 		return bar;
+	};
+
+	// eslint-disable-next-line jsdoc/require-param-name, jsdoc/require-param-type
+	/**
+	 * @param
+	 */
+	APP.method = function () {
+	};
+
+	// eslint-disable-next-line jsdoc/require-param-type, jsdoc/require-returns
+	/**
+	 * @param bar
+	 */
+	APP.method = function ( bar ) {
+		return bar;
+	};
+
+	// eslint-disable-next-line jsdoc/require-param-name, jsdoc/require-returns-check
+	/**
+	 * @param {Object}
+	 * @return {number}
+	 */
+	APP.method = function () {
 	};
 
 	// eslint-disable-next-line jsdoc/implements-on-classes
@@ -23,13 +52,30 @@
 		return bar;
 	};
 
+	// eslint-disable-next-line jsdoc/require-returns-type
+	/**
+	 * @return
+	 */
+	APP.method = function () {
+		return 7;
+	};
+
 	// eslint-disable-next-line jsdoc/newline-after-description
 	/**
 	 * Description
 	 * @param {number} bar
+	 * @return {number}
 	 */
 	APP.method = function ( bar ) {
 		return bar;
+	};
+
+	// eslint-disable-next-line jsdoc/check-access
+	/**
+	 * @public
+	 * @private
+	 */
+	APP.method = function () {
 	};
 
 	// eslint-disable-next-line jsdoc/check-alignment

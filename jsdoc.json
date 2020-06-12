@@ -1,5 +1,5 @@
 {
-	"plugins": [ "jsdoc" ],
+	"extends": [ "plugin:jsdoc/recommended" ],
 	"settings": {
 		"jsdoc": {
 			"tagNamePreference": {
@@ -55,14 +55,14 @@
 		}
 	},
 	"rules": {
-		"jsdoc/check-alignment": "error",
-		"jsdoc/check-param-names": [ "error", { "allowExtraTrailingParamDocs": true } ],
-		"jsdoc/check-property-names": "error",
-		"jsdoc/check-tag-names": "error",
-		"jsdoc/check-types": "error",
-		"jsdoc/implements-on-classes": "error",
-		"jsdoc/newline-after-description": "warn",
-		"jsdoc/no-undefined-types": "error",
-		"jsdoc/valid-types": "error"
-	}
+		"jsdoc/check-param-names": [ "warn", { "allowExtraTrailingParamDocs": true } ],
+		"jsdoc/check-values": "off",
+		"jsdoc/empty-tags": "off",
+		"jsdoc/require-jsdoc": "off",
+		"jsdoc/require-param-description": "off",
+		"jsdoc/require-property": "off",
+		"jsdoc/require-property-description": "off",
+		"jsdoc/require-property-name": "off",
+		"jsdoc/require-returns-description": "off"
+    }
 }

@@ -34,7 +34,7 @@ configs.forEach( ( configPath ) => {
 		const validFixturesFiles = fixturesFiles.filter( ( file ) => file.includes( '/valid' ) );
 		const invalidFixturesFiles = fixturesFiles.filter( ( file ) => file.includes( '/invalid' ) );
 
-		const rules = getRules( config );
+		let rules = getRules( config );
 
 		if ( configName === 'server' ) {
 			// Load the rules for Node & ES2018 when testing server
@@ -43,6 +43,16 @@ configs.forEach( ( configPath ) => {
 				getRules( require( '../node' ) ),
 				getRules( require( '../language/es2018' ) )
 			);
+		}
+
+		if ( configName === 'jsdoc' ) {
+			// Expand jsdoc/recommended and test explicitly
+			rules = Object.assign(
+				{},
+				getRules( require( 'eslint-plugin-jsdoc' ).configs.recommended ),
+				rules
+			);
+			console.log( rules );
 		}
 
 		function isEnabled( rule ) {
