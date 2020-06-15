@@ -24,7 +24,7 @@ This config allows ES5 code and browser native functions. It will complain about
 ```
 
 #### jQuery
-This config adds the jQuery `$` global, and additional rules preventing the use of jQuery features that have ES5 alternatives.
+This config adds the jQuery `$` global, and additional rules preventing the use of jQuery features which are deprecated, have performance issues, or have simple ES5 alternatives.
 `.eslintrc.json`:
 ```json
 {
