@@ -1,17 +1,32 @@
-// Rule: jsdoc/check-alignment
-// Rule: jsdoc/check-indentation
-// Rule: jsdoc/check-param-names
-// Rule: jsdoc/check-property-names
-// Rule: jsdoc/check-tag-names
-// Rule: jsdoc/check-types
-// Rule: jsdoc/implements-on-classes
-// Rule: jsdoc/newline-after-description
-// Rule: jsdoc/valid-types
+// TODO: Give examples of these rules being off:
+// Off: jsdoc/check-syntax
+// Off: jsdoc/check-values
+// Off: jsdoc/empty-tags
+// Off: jsdoc/match-description
+// Off: jsdoc/no-bad-blocks
+// Off: jsdoc/no-defaults
+// Off: jsdoc/no-types
+// Off: jsdoc/require-file-overview
+// Off: jsdoc/require-hyphen-before-param-description
+// Off: jsdoc/require-property
 ( function () {
+	// Off: jsdoc/require-property-description
+	// Off: jsdoc/require-property-name
+	/**
+	 * @property {Object}
+	 */
 	var APP;
 
+	// Off: jsdoc/require-example
+	// Off: jsdoc/require-jsdoc
+	APP.noDoc = function ( foo ) {
+		return foo;
+	};
+
+	// Off: jsdoc/require-description-complete-sentence
+	// Off: jsdoc/require-param-description
 	/**
-	 * Example description.
+	 * Description
 	 *
 	 * @class
 	 *
@@ -24,6 +39,8 @@
 		this.options = options;
 	};
 
+	// Off: jsdoc/require-returns-description
+	// Off: jsdoc/require-description
 	/**
 	 * @param {boolean|number} code
 	 * @return {null|undefined}
@@ -41,7 +58,11 @@
 		return a + b;
 	};
 
+	// Off: jsdoc/check-examples
 	/**
+	 *     @example
+	 *     invalid(style)
+	 *
 	 * @param {boolean} a
 	 * @param {number} b
 	 * @param {string} c
@@ -72,6 +93,7 @@
 	 * @constructs
 	 * @const
 	 * @default
+	// Off: jsdoc/check-indentation
 	 * @desc Multi-
 	 *       line
 	 * @external String

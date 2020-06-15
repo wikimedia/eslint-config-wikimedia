@@ -77,8 +77,22 @@ You can extend the above config by also adding a second `.eslintrc.json` file in
 }
 ```
 
+### Adding a Mocha test suite
+The following config will the Mocha environment and some Mocha related rules:
+
+`tests/mocha/.eslintrc.json`:
+```json
+{
+	"root": true,
+	"extends": [
+		"wikimedia/server",
+		"wikimedia/mocha"
+	]
+}
+```
+
 ### Adding a Selenium WDIO test suite
-The following config will enable WDIO globals, as well as the Mocha environment and some Mocha related rules.
+The following config will enable WDIO globals, as well as the Mocha and server configs:
 
 `tests/selenium/.eslintrc.json`:
 ```json

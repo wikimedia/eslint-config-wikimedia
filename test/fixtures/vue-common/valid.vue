@@ -1,26 +1,26 @@
 <template>
 	<div x="y">
-		<!-- Rule: vue/component-tags-order -->
-		<!-- Rule: vue/html-indent -->
-		<!-- Rule: vue/max-attributes-per-line -->
-		<!-- Rule: vue/html-self-closing -->
+		<!-- Valid: vue/component-tags-order -->
+		<!-- Valid: vue/html-indent -->
+		<!-- Valid: vue/max-attributes-per-line -->
+		<!-- Valid: vue/html-self-closing -->
 		<span a="b" c="d" />
-		<!-- Rule: vue/html-closing-bracket-newline -->
+		<!-- Off: vue/html-closing-bracket-newline -->
 		<span
 			a="b"
 			c="d"
 			e="f"
 		/>
-		<!-- Rule: vue/v-on-function-call -->
+		<!-- Valid: vue/v-on-function-call -->
 		<a @click="foo">Click me</a>
-		<!-- Rule: vue/padding-line-between-blocks -->
+		<!-- Valid: vue/padding-line-between-blocks -->
 	</div>
 </template>
 
 <script>
 // @vue/component
 module.exports = {
-	// Rule: vue/order-in-components
+	// Valid: vue/order-in-components
 	el: '',
 	name: '',
 	parent: null,

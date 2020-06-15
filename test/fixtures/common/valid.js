@@ -1,25 +1,25 @@
-// Rule: linebreak-style
-// Rule: max-len
-// Rule: max-statements-per-line
-// Rule: wrap-iife
-// Rule: semi
-// Rule: semi-spacing
-// Rule: semi-style
-// Rule: unicode-bom
+// Valid: linebreak-style
+// Valid: max-len
+// Valid: max-statements-per-line
+// Valid: wrap-iife
+// Valid: semi
+// Valid: semi-spacing
+// Valid: semi-style
+// Valid: unicode-bom
 ( function ( global ) {
 	var APP,
 		hasOwn = Object.prototype.hasOwnProperty,
 		APPHasOwnProperty = Object.prototype.hasOwnProperty.call( APP, 'hasOwn' );
 
-	// Rule: spaced-comment
+	// Valid: spaced-comment
 	// Example
 	/* Example */
 
 	// Empty function declaration
 	function upHere() {}
 
-	// Rule: camelcase (function, param, var, propery, method)
-	// Rule: func-call-spacing
+	// Valid: camelcase (function, param, var, propery, method)
+	// Valid: func-call-spacing
 	function upHereAlso( yArg ) {
 		var rArg = yArg.fooBar;
 		return rArg + yArg.getQuux();
@@ -37,28 +37,28 @@
 	APP.Example = function ( id, options ) {
 		var name, inline, bar;
 
-		// Rule: max-len
+		// Valid: max-len
 		bar = 'This is a long string that is indeed so long that it breaches the line length rules and thus would trigger a warning were it not for the over-ride.';
 
-		// Rule: space-infix-ops
+		// Valid: space-infix-ops
 		this.total = upHere() + id;
 		name = options.bar ? upHereAlso( id ) : id;
 
-		// Rule: brace-style
-		// Rule: dot-notation
-		// Rule: keyword-spacing
-		// Rule: space-before-blocks
+		// Valid: brace-style
+		// Valid: dot-notation
+		// Valid: keyword-spacing
+		// Valid: space-before-blocks
 		if ( options.quux ) {
 			name += options.quux;
 		} else if ( options.default ) {
 			name += options.default;
-		// Rule: computed-property-spacing
+		// Valid: computed-property-spacing
 		} else if ( options[ 'property-name' ] ) {
 			name += 'property-name';
 		}
 
-		// Rule: operator-linebreak
-		// Rule: space-infix-ops
+		// Valid: operator-linebreak
+		// Valid: space-infix-ops
 		if ( bar &&
 			bar.hasData() &&
 			bar.getName() !== name &&
@@ -67,15 +67,15 @@
 			return;
 		}
 
-		// Rule: eqeqeq
-		// Rule: yoda (never)
+		// Valid: eqeqeq
+		// Valid: yoda (never)
 		if ( bar === undefined ) {
 			return;
 		}
 
-		// Rule: block-spacing
-		// Rule: space-before-function-paren
-		// Rule: space-in-parens
+		// Valid: block-spacing
+		// Valid: space-before-function-paren
+		// Valid: space-in-parens
 		inline = function ( items ) {
 			return items.slice();
 		};
@@ -94,41 +94,41 @@
 			return null;
 		};
 
-		// Rule: comma-style
+		// Valid: comma-style
 		this.data = [
 			bar,
 			inline()
 		];
 
-		// Rule: array-callback-return
+		// Valid: array-callback-return
 		[].map( function ( x ) {
 			return upHere( x );
 		} );
 
-		// Rule: array-bracket-spacing
-		// Rule: comma-spacing
+		// Valid: array-bracket-spacing
+		// Valid: comma-spacing
 		this.items = [ 'foo', 'bar' ];
 	};
 
 	APP.unaryWords = function ( obj ) {
-		// Rule: space-unary-ops
+		// Valid: space-unary-ops
 		obj.type = typeof obj;
 		delete obj.type;
 	};
 
 	APP.loop = function ( items ) {
-		// Rule: comma-dangle
-		// Rule: comma-spacing
-		// Rule: comma-style
-		// Rule: curly
-		// Rule: one-var
-		// Rule: vars-on-top
+		// Valid: comma-dangle
+		// Valid: comma-spacing
+		// Valid: comma-style
+		// Valid: curly
+		// Valid: one-var
+		// Valid: vars-on-top
 		var i, len, item, key,
-			// Rule: prefer-numeric-literals
+			// Valid: prefer-numeric-literals
 			j = 1,
 			ret = {};
 
-		// Rule: for-direction
+		// Valid: for-direction
 		for ( i = 0, len = items.length; i < len; i++ ) {
 			if ( items[ i ] !== null ) {
 				item = items[ i ];
@@ -142,7 +142,7 @@
 
 		for ( key in item ) {
 			if ( APPHasOwnProperty || hasOwn.call( item, key ) ) {
-				// Rule: computed-property-spacing
+				// Valid: computed-property-spacing
 				ret[ key ] = new APP.Example( item[ key ] );
 			}
 		}
@@ -160,8 +160,8 @@
 	 * @return {null|undefined}
 	 */
 	APP.fall = function ( code ) {
-		// Rule: switch-colon-spacing
-		// Rule: indent (SwitchCase)
+		// Valid: switch-colon-spacing
+		// Valid: indent (SwitchCase)
 		switch ( code ) {
 			case 200:
 				break;
@@ -183,7 +183,7 @@
 		options.enable = !!val;
 		options.disable = Boolean( val );
 
-		// Rule: prefer-regex-literals
+		// Valid: prefer-regex-literals
 		options.pattern = /abc/i;
 
 		options.posX = +val;
@@ -195,34 +195,34 @@
 	};
 
 	APP.fetch = function () {
-		// Rule: new-cap
-		// Rule: new-parens
+		// Valid: new-cap
+		// Valid: new-parens
 		var eg = new APP.Example();
 		return eg.Deferred();
 	};
 
 	APP.example = new APP.Example( 'banana', {
-		// Rule: key-spacing
-		// Rule: quote-props
-		// Rule: quotes
+		// Valid: key-spacing
+		// Valid: quote-props
+		// Valid: quotes
 		first: 'Who',
 		default: 'is',
 		null: 'there?',
-		// Rule: object-curly-spacing
+		// Valid: object-curly-spacing
 		second: { value: { of: 'What' } },
 		third: {
 			value: {
 				of: 'I don\'t know'
 			}
 		},
-		// Rule: quotes
+		// Valid: quotes
 		fourth: "Who's coming to tea?"
 	} );
 
 	APP.example( 'banana' )
 		.done( function () { } );
 
-	// Rule: dot-location
+	// Valid: dot-location
 	APP.example( 'banana' )
 		.done( function () {} )
 		.fail( function () {} );
@@ -234,4 +234,4 @@
 
 }( this ) );
 
-// Rule: eol-last
+// Valid: eol-last

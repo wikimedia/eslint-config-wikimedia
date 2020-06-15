@@ -1,3 +1,11 @@
+0.16.1 / 2020-06-06
+===================
+
+* selenium: Separate out a `mocha` config from `selenium` (Ed Sanders)
+
+—
+* docs: Fix typo in README (Vidhi Mody)
+
 0.16.0 / 2020-05-30
 ===================
 

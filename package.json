@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-wikimedia",
-	"version": "0.16.0",
+	"version": "0.16.1",
 	"description": "ESLint config following Wikimedia code conventions.",
 	"main": "common.json",
 	"scripts": {
@@ -30,6 +30,7 @@
 		"jquery.json",
 		"jsdoc.json",
 		"mediawiki.json",
+		"mocha.json",
 		"qunit.json",
 		"selenium.json",
 		"server.json",
@@ -47,9 +48,9 @@
 	],
 	"license": "MIT",
 	"dependencies": {
-		"eslint": "^7.1.0",
+		"eslint": "^7.2.0",
 		"eslint-plugin-es": "^3.0.1",
-		"eslint-plugin-jsdoc": "^26.0.0",
+		"eslint-plugin-jsdoc": "^27.0.4",
 		"eslint-plugin-json": "^2.1.1",
 		"eslint-plugin-mediawiki": "^0.2.4",
 		"eslint-plugin-mocha": "^7.0.1",
