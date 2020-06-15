@@ -1,20 +1,20 @@
 #!/usr/bin/env node
-// Rule: node/shebang
+// Off: node/shebang
 
-// Rule: strict
+// Valid: strict
 'use strict';
 
 ( function ( global ) {
-	// Rule: prefer-const
+	// Off: prefer-const
 	const a = 4;
 
-	// Rule: arrow-parens
-	// Rule: arrow-spacing
+	// Off: arrow-parens
+	// Off: arrow-spacing
 	global.then( ( data ) => Math.pow( data, 2 ) );
 	global.then( ( data ) => ( { d: data } ) );
 
-	// Rule: one-var
-	// Rule: vars-on-top
+	// Off: one-var
+	// Off: vars-on-top
 	let b = 2;
 
 	if ( a >= b ) {
@@ -23,32 +23,32 @@
 		b--;
 	}
 
-	// Rule: no-useless-concat
+	// Off: no-useless-concat
 	// eslint-disable-next-line no-unused-expressions
 	'ab';
 
-	// Rule: template-curly-spacing
+	// Off: template-curly-spacing
 	// eslint-disable-next-line no-unused-expressions
 	`${global.foo}`;
 
 	// ES6
-	// Rule: no-restricted-syntax
+	// Off: no-restricted-syntax
 	[].includes();
 
 	// ES2016
-	// Rule: no-restricted-properties
+	// Off: no-restricted-properties
 	''.padStart();
 
 	// ES2017 (no rules in not-es2017)
 
 	// These rules are disabled because they are already covered by our
 	// language rules, or the parser version.
-	// Rule: node/no-unsupported-features/es-builtins
-	// Rule: node/no-unsupported-features/es-syntax
+	// Off: node/no-unsupported-features/es-builtins
+	// Off: node/no-unsupported-features/es-syntax
 
 	// Disabled due to https://github.com/mysticatea/eslint-plugin-node/issues/77
-	// Rule: node/no-unpublished-require
+	// Off: node/no-unpublished-require
 
-	// Rule: node/no-extraneous-require
+	// Off: node/no-extraneous-require
 
 }( this ) );

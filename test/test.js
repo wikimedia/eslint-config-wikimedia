@@ -61,7 +61,7 @@ configs.forEach( ( configPath ) => {
 				const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )*?${rule}($|[^a-z-])` );
 				// Disabled rules are covered below
 				if ( isEnabled( rule ) ) {
-					assert( rDisableRule.test( invalidFixtures.toString() ) );
+					assert( rDisableRule.test( invalidFixtures ) );
 				}
 			} );
 		} );
@@ -71,12 +71,16 @@ configs.forEach( ( configPath ) => {
 		).join( '' );
 
 		Object.keys( rules ).forEach( ( rule ) => {
-			it( `Rule ${rule} (off) is covered in valid fixture`, () => {
-				// Enabled rules are covered above
-				if ( !isEnabled( rule ) ) {
-					assert( validFixtures.includes( `Rule: ${rule}` ) );
-				}
-			} );
+			const rEnableRule = new RegExp( `Off: ${rule}($|[^a-z-])` );
+			if ( !isEnabled( rule ) ) {
+				it( `Rule ${rule} is covered as "off" in valid fixture`, () => {
+					assert( rEnableRule.test( validFixtures ) );
+				} );
+			} else {
+				it( `Rule ${rule} is not covered as "off" in valid fixture`, () => {
+					assert( !rEnableRule.test( validFixtures ) );
+				} );
+			}
 		} );
 	} );
 } );
