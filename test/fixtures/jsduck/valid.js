@@ -34,7 +34,6 @@
 
 	// Some different aliases are used in jsduck:
 	/**
-	 * @context {jQuery}
 	 * @alternateClassName otherName
 	 * @type {Object}
 	 */

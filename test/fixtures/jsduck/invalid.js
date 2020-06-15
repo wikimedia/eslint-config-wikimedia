@@ -2,11 +2,6 @@
 
 	// eslint-disable-next-line jsdoc/check-tag-names
 	/**
-	 * @this Foo
-	 */
-
-	// eslint-disable-next-line jsdoc/check-tag-names
-	/**
 	 * @alias Bar
 	 */
 
