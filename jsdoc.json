@@ -3,13 +3,11 @@
 	"settings": {
 		"jsdoc": {
 			"tagNamePreference": {
-				"alternateClassName": "alias",
 				"arg": "param",
 				"argument": "param",
 				"augments": "extends",
 				"cfg": "cfg",
 				"chainable": "chainable",
-				"context": "this",
 				"constant": "const",
 				"defaultvalue": "default",
 				"description": "desc",

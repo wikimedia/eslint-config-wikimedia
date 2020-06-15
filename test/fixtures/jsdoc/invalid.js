@@ -44,6 +44,16 @@
 	APP.method = function () {
 	};
 
+	/* eslint-disable jsdoc/require-returns, jsdoc/require-returns-check */
+	/**
+	 * @return {Object} foo
+	 * @return {number} foo.bar
+	 */
+	APP.method = function () {
+		return { bar: 7 };
+	};
+	/* eslint-enable jsdoc/require-returns, jsdoc/require-returns-check */
+
 	// eslint-disable-next-line jsdoc/implements-on-classes
 	/**
 	 * @implements {HTMLElement}
@@ -238,5 +248,17 @@
 	/**
 	 * @yields
 	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
+	 * @context
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
+	 * @alternateClassName
+	 */
+
+	// @type is allowed in jsdoc and jsduck
 
 }( this ) );
