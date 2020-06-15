@@ -29,6 +29,7 @@
 		"node.json",
 		"jquery.json",
 		"jsdoc.json",
+		"jsduck.json",
 		"mediawiki.json",
 		"mocha.json",
 		"qunit.json",

@@ -86,6 +86,9 @@
 	 * {@link APP}
 	 * {@link APP}
 	 *
+	 * @this Foo
+	 * @alias Bar
+	 * @typedef Baz
 	 * @abstract
 	 * @extends String
 	 * @class

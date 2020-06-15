@@ -1,0 +1,11 @@
+{
+	"root": true,
+	"extends": [
+		"../../../client",
+		"../../../jsduck"
+	],
+	"rules": {
+		"no-usused-vars": "off",
+		"no-implicit-globals": "off"
+	}
+}
