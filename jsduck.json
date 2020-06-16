@@ -3,7 +3,6 @@
 	"settings": {
 		"jsdoc": {
 			"tagNamePreference": {
-				"this": "context",
 				"alias": "alternateClassName",
 				"typedef": "type"
 			}
