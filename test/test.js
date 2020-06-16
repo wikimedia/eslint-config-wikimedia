@@ -67,13 +67,13 @@ configs.forEach( ( configPath ) => {
 		).join( '' );
 
 		Object.keys( rules ).forEach( ( rule ) => {
-			it( `Rule ${rule} is covered in invalid fixture`, () => {
-				const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )*?${rule}($|[^a-z-])` );
-				// Disabled rules are covered below
-				if ( isEnabled( rule ) ) {
-					assert( rDisableRule.test( invalidFixtures ) );
-				}
-			} );
+			// Disabled rules are covered below
+			if ( isEnabled( rule ) ) {
+				it( `Rule ${rule} is covered in invalid fixture`, () => {
+					const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )*?${rule}($|[^a-z-])` );
+					assert( rDisableRule.test( invalidFixtures ), 'eslint-disable comment found' );
+				} );
+			}
 		} );
 
 		const validFixtures = validFixturesFiles.map( ( file ) =>
@@ -84,11 +84,11 @@ configs.forEach( ( configPath ) => {
 			const rEnableRule = new RegExp( `Off: ${rule}($|[^a-z-])` );
 			if ( !isEnabled( rule ) ) {
 				it( `Rule ${rule} is covered as "off" in valid fixture`, () => {
-					assert( rEnableRule.test( validFixtures ) );
+					assert( rEnableRule.test( validFixtures ), '"off" comment found' );
 				} );
 			} else {
 				it( `Rule ${rule} is not covered as "off" in valid fixture`, () => {
-					assert( !rEnableRule.test( validFixtures ) );
+					assert( !rEnableRule.test( validFixtures ), '"off" comment not present' );
 				} );
 			}
 		} );
