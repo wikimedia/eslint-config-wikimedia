@@ -8,7 +8,6 @@
 				"function": "method",
 				"linkcode": "link",
 				"linkplain": "link",
-				"mixes": "mixins",
 				"returns": "return",
 				"yields": "yield",
 

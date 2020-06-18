@@ -4,6 +4,7 @@
 		"jsdoc": {
 			"tagNamePreference": {
 				"alias": "alternateClassName",
+				"mixes": "mixins",
 				"typedef": "type"
 			}
 		}
