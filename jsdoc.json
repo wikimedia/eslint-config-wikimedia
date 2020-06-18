@@ -3,36 +3,24 @@
 	"settings": {
 		"jsdoc": {
 			"tagNamePreference": {
-				"arg": "param",
-				"argument": "param",
 				"augments": "extends",
-				"cfg": "cfg",
-				"chainable": "chainable",
 				"constant": "const",
-				"defaultvalue": "default",
 				"description": "desc",
-				"emits": "fires",
-				"exception": "throws",
-				"fileoverview": "file",
 				"func": "method",
 				"function": "method",
-				"host": "external",
 				"linkcode": "link",
 				"linkplain": "link",
-				"localdoc": "localdoc",
 				"mixes": "mixins",
-				"overview": "file",
-				"prop": "property",
 				"returns": "return",
-				"singleton": "singleton",
-				"uses": "uses",
-				"var": "member",
-				"virtual": "abstract",
 				"yields": "yield",
 
+				"cfg": "cfg",
+				"chainable": "chainable",
+				"tag constructor": "constructor",
 				"inheritable": "inheritable",
-				"class": "class",
-				"tag constructor": "constructor"
+				"localdoc": "localdoc",
+				"singleton": "singleton",
+				"uses": "uses"
 			},
 			"preferredTypes": {
 				"$": "jQuery",

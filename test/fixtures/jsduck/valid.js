@@ -1,6 +1,12 @@
 ( function () {
 	var APP;
 
+	// Valid: settings.jsdoc.tagNamePreference
+	/**
+	 * @alternateClassName
+	 * @type {Object}
+	 */
+
 	// In jsduck environments we need to support this use case
 	// to document complex returns, however this triggers
 	// require-returns and require-returns check:

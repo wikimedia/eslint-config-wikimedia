@@ -17,6 +17,29 @@
 	 */
 	var APP;
 
+	// Valid: settings.jsdoc.tagNamePreference
+	/**
+	 * Non-default aliases:
+	 *
+	 * @extends Foo
+	 * @const
+	 * @desc
+	 * @method
+	 * @link
+	 * @mixins
+	 * @yield
+	 *
+	 * Extra tags:
+	 *
+	 * @cfg
+	 * @chainable
+	 * @constructor
+	 * @inheritable
+	 * @localdoc
+	 * @singleton
+	 * @uses
+	 */
+
 	// Off: jsdoc/require-example
 	// Off: jsdoc/require-jsdoc
 	APP.noDoc = function ( foo ) {
@@ -30,7 +53,7 @@
 	 *
 	 * @class
 	 *
-	 * @constructor
+	 * @mixins App
 	 * @param {string} id
 	 * @param {Object} options
 	 */

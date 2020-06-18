@@ -246,6 +246,16 @@
 
 	// eslint-disable-next-line jsdoc/check-tag-names
 	/**
+	 * @linkcode
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
+	 * @linkplain
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
 	 * @yields
 	 */
 
