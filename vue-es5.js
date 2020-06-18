@@ -5,15 +5,19 @@ module.exports = {
 	"overrides": [ {
 		"files": [ "**/*.vue" ],
 		"extends": [
-			"./vue-es6",
+			"./vue-common",
 			// We can't use ./language/es5 here, because ecmaVersion: 5 breaks the Vue plugin
-			// Instead, use es/no-2015 to prohibit ES6+ syntax
+			// Instead, use ES6, then es/no-2015 to prohibit ES6+ syntax
+			// But don't use ./language/es-6 directly, because we don't want rules-es6
+			"./language/rules-es5",
 			"./language/not-es5",
 			"plugin:es/no-2015"
 		],
 		"plugins": [ "es" ],
 		// The Vue plugin sets sourceType: "module" and enables JSX: undo those things
 		"parserOptions": {
+			// ecmaVersion: 5 breaks the Vue plugin, we have to use 6 (see also above)
+			"ecmaVersion": 6,
 			"sourceType": "script",
 			"ecmaFeatures": {
 				"jsx": false
