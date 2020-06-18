@@ -53,7 +53,7 @@
 		"eslint-plugin-es": "^3.0.1",
 		"eslint-plugin-jsdoc": "^27.1.2",
 		"eslint-plugin-json": "^2.1.1",
-		"eslint-plugin-mediawiki": "^0.2.4",
+		"eslint-plugin-mediawiki": "^0.2.5",
 		"eslint-plugin-mocha": "^7.0.1",
 		"eslint-plugin-no-jquery": "^2.4.1",
 		"eslint-plugin-node": "^11.1.0",
