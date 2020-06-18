@@ -171,17 +171,7 @@
 
 	// eslint-disable-next-line jsdoc/check-tag-names
 	/**
-	 * @constant
-	 */
-
-	// eslint-disable-next-line jsdoc/check-tag-names
-	/**
 	 * @defaultvalue
-	 */
-
-	// eslint-disable-next-line jsdoc/check-tag-names
-	/**
-	 * @description Description.
 	 */
 
 	// eslint-disable-next-line jsdoc/check-tag-names
@@ -242,6 +232,16 @@
 	// eslint-disable-next-line jsdoc/check-tag-names
 	/**
 	 * @exception {Error}
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
+	 * @const
+	 */
+
+	// eslint-disable-next-line jsdoc/check-tag-names
+	/**
+	 * @desc
 	 */
 
 	// eslint-disable-next-line jsdoc/check-tag-names

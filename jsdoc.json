@@ -4,8 +4,6 @@
 		"jsdoc": {
 			"tagNamePreference": {
 				"augments": "extends",
-				"constant": "const",
-				"description": "desc",
 				"func": "method",
 				"function": "method",
 				"linkcode": "link",

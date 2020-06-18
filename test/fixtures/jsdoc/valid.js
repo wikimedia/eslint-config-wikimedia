@@ -22,8 +22,6 @@
 	 * Non-default aliases:
 	 *
 	 * @extends Foo
-	 * @const
-	 * @desc
 	 * @method
 	 * @link
 	 * @mixins
@@ -117,11 +115,11 @@
 	 * @class
 	 * @constructor
 	 * @constructs
-	 * @const
+	 * @constant
 	 * @default
 	// Off: jsdoc/check-indentation
-	 * @desc Multi-
-	 *       line
+	 * @description Multi-
+	 *              line
 	 * @external String
 	 * @file Multi-
 	 *       line
