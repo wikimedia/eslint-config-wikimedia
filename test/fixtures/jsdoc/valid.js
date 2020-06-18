@@ -24,7 +24,6 @@
 	 * @extends Foo
 	 * @method
 	 * @link
-	 * @mixins
 	 * @yield
 	 *
 	 * Extra tags:
@@ -51,7 +50,7 @@
 	 *
 	 * @class
 	 *
-	 * @mixins App
+	 * @mixes App
 	 * @param {string} id
 	 * @param {Object} options
 	 */

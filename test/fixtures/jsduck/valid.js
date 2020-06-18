@@ -4,6 +4,7 @@
 	// Valid: settings.jsdoc.tagNamePreference
 	/**
 	 * @alternateClassName
+	 * @mixins
 	 * @type {Object}
 	 */
 
