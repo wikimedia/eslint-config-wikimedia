@@ -1,3 +1,21 @@
+0.16.2 / 2020-06-18
+===================
+
+* mediawiki: Update eslint-plugin-mediawiki to 0.2.5 (Ed Sanders)
+* vue-es5: Don't inherit from vue-es6 (Roan Kattouw)
+* jsdoc: Update eslint-plugin-jsdoc to 27.1.2 (Ed Sanders)
+* jsdoc: Extend from plugin:jsdoc/recommended (Ed Sanders)
+* jsduck: Remove this->context tag preference (Ed Sanders)
+* jsduck: Introduce jsduck config (Ed Sanders)
+
+—
+* code: Add ES2020 support (Ed Sanders)
+* docs: Clarify scope of jQuery config (Ed Sanders)
+* tests: Separate "// Rule:" comments into Valid & Off (Ed Sanders)
+* tests: Various fixes (Ed Sanders)
+* tests: Add assertion messages (Ed Sanders)
+* tests: Update mocha to 8.0.1 (Ed Sanders)
+
 0.16.1 / 2020-06-06
 ===================
 
