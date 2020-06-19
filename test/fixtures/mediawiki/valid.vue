@@ -1,18 +1,21 @@
 <template>
 	<div>
 		<!-- Valid: vue/v-bind-style -->
-		<a v-bind:href="foo">Foo</a>
+		<a :href="foo">Foo</a>
 		<!-- Valid: vue/v-on-style -->
-		<a v-on:click="onClick">Click me</a>
+		<a @click="onClick">Click me</a>
 		<blah-component>
 			<!-- Valid: vue/v-slot-style -->
-			<template v-slot:default>
+			<template #default>
 				foo
 			</template>
-			<template v-slot:bar>
+			<template #bar>
 				bar
 			</template>
 		</blah-component>
+		<!-- Valid: vue/html-self-closing -->
+		<p v-i18n-html:foo></p>
+		<blah-component></blah-component>
 	</div>
 </template>
 
