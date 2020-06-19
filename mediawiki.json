@@ -20,9 +20,13 @@
 			"rules": {
 				"no-implicit-globals": "off",
 				"mediawiki/no-vue-dynamic-i18n": "error",
-				"vue/v-bind-style": [ "error", "longform" ],
-				"vue/v-slot-style": [ "error", "longform" ],
-				"vue/v-on-style": [ "error", "longform" ]
+				"vue/html-self-closing": [ "error", {
+					"html": {
+						"void": "never",
+						"normal": "never",
+						"component": "never"
+					}
+				} ]
 			}
 		}
 	]

@@ -36,7 +36,7 @@ This config adds the jQuery `$` global, and additional rules preventing the use 
 ```
 
 #### MediaWiki
-Code that runs in MediaWiki can use this config. It enforces rules that are specific to the MediaWiki codebase (core and extensions), such as correct documentation of `mw.message` usage. It also automatically applies the Vue plugin and Vue-specific rules to `.vue` files, including MediaWiki-specific Vue rules such as prohibiting ES6 syntax and prohibiting shorthand syntax for `v-bind`, `v-on` and `v-slot`.
+Code that runs in MediaWiki can use this config. It enforces rules that are specific to the MediaWiki codebase (core and extensions), such as correct documentation of `mw.message` usage. It also automatically applies the Vue plugin and Vue-specific rules to `.vue` files, including MediaWiki-specific Vue rules such as prohibiting ES6 syntax and prohibiting self-closing tags.
 `.eslintrc.json`:
 ```json
 {
