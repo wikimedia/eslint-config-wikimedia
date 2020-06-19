@@ -22,11 +22,8 @@
 	 * Non-default aliases:
 	 *
 	 * @extends Foo
-	 * @const
-	 * @desc
 	 * @method
 	 * @link
-	 * @mixins
 	 * @yield
 	 *
 	 * Extra tags:
@@ -53,7 +50,7 @@
 	 *
 	 * @class
 	 *
-	 * @mixins App
+	 * @mixes App
 	 * @param {string} id
 	 * @param {Object} options
 	 */
@@ -117,11 +114,11 @@
 	 * @class
 	 * @constructor
 	 * @constructs
-	 * @const
+	 * @constant
 	 * @default
 	// Off: jsdoc/check-indentation
-	 * @desc Multi-
-	 *       line
+	 * @description Multi-
+	 *              line
 	 * @external String
 	 * @file Multi-
 	 *       line
