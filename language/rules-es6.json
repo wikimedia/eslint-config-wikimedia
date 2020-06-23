@@ -7,6 +7,7 @@
 		"no-constructor-return": "error",
 		"no-misleading-character-class": "error",
 		"no-new-require": "error",
+		"no-promise-executor-return": "error",
 		"no-useless-computed-key": "error",
 		"no-useless-concat": "error",
 		"template-curly-spacing": "error",
