@@ -2,6 +2,7 @@
 var APP;
 // eslint-disable-next-line wrap-iife
 ( function ( global ) {
+	// eslint-disable-next-line no-shadow
 	var APP;
 	// eslint-disable-next-line one-var
 	var upHere = function ( yArg ) {
@@ -76,7 +77,7 @@ var APP;
 			var e = items.event;
 			try {
 				return APP.loop( items );
-			} catch ( e ) {
+			} catch ( err ) {
 			}
 			return e;
 		}
