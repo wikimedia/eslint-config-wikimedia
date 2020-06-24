@@ -81,6 +81,7 @@ var APP;
 			return e;
 		}
 
+		// eslint-disable-next-line no-unreachable-loop
 		for ( i = 0
 			// eslint-disable-next-line semi-style
 			; i < 5;
@@ -175,7 +176,7 @@ var APP;
 			// eslint-disable-next-line no-caller
 			self = arguments.callee;
 
-		// eslint-disable-next-line no-label-var, for-direction
+		// eslint-disable-next-line no-label-var, for-direction, no-unreachable-loop
 		ret: for ( i = 0; i < items.length; i-- ) {
 			if ( items[ i ] !== null ) {
 				ret.push( self( items[ i ] ) );
