@@ -51,7 +51,7 @@
 	"dependencies": {
 		"eslint": "^7.5.0",
 		"eslint-plugin-es": "^3.0.1",
-		"eslint-plugin-jsdoc": "^29.2.0",
+		"eslint-plugin-jsdoc": "^30.0.3",
 		"eslint-plugin-json": "^2.1.1",
 		"eslint-plugin-mediawiki": "^0.2.5",
 		"eslint-plugin-mocha": "^7.0.1",
