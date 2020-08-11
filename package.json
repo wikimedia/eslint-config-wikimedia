@@ -49,19 +49,19 @@
 	],
 	"license": "MIT",
 	"dependencies": {
-		"eslint": "^7.5.0",
+		"eslint": "^7.6.0",
 		"eslint-plugin-es": "^3.0.1",
-		"eslint-plugin-jsdoc": "^30.0.3",
-		"eslint-plugin-json": "^2.1.1",
+		"eslint-plugin-jsdoc": "^30.2.1",
+		"eslint-plugin-json": "^2.1.2",
 		"eslint-plugin-mediawiki": "^0.2.5",
-		"eslint-plugin-mocha": "^7.0.1",
+		"eslint-plugin-mocha": "^8.0.0",
 		"eslint-plugin-no-jquery": "^2.5.0",
 		"eslint-plugin-node": "^11.1.0",
-		"eslint-plugin-qunit": "^4.2.0",
+		"eslint-plugin-qunit": "^4.3.0",
 		"eslint-plugin-vue": "^6.2.2",
 		"eslint-plugin-wdio": "^6.0.12"
 	},
 	"devDependencies": {
-		"mocha": "^8.0.1"
+		"mocha": "^8.1.1"
 	}
 }
