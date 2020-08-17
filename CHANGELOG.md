@@ -1,3 +1,23 @@
+0.17.0 / 2020-08-17
+===================
+
+* common: Enforce `no-shadow` (Ed Sanders)
+* common: Enforce `no-unreachable-loop` (Ed Sanders)
+* es6: Enforce `no-promise-executor-return` (Ed Sanders)
+* jquery: Update eslint-plugin-no-jquery to 2.5.9 (Ed Sanders)
+* jsdoc: Remove unnecessary tagNamePreference settings (Ed Sanders)
+* jsdoc: Drop @constant->@const, @description->@desc preferences (Ed Sanders)
+* jsdoc: Update eslint-plugin-jsdoc to 30.2.1 (Lucas Werkmeister, Ed Sanders)
+* jsdoc/jsduck: Move @mixes->@Mixins to jsduck (Ed Sanders)
+* json: Update eslint-plugin-json to 2.1.2 (Ed Sanders)
+* mocha: Update eslint-plugin-mocha to 8.0.0 (Ed Sanders)
+* qunit: Update elsint-plugin-qunit to 4.3.0 (Ed Sanders)
+* vue: Prohibit self-closing tags, but allow shorthand attributes (Roan Kattouw)
+
+—
+* code: Update to ESLint 7.5.0 (Ed Sanders)
+* tests: Update mocha to 8.1.1 (Ed Sanders)
+
 0.16.2 / 2020-06-18
 ===================
 
