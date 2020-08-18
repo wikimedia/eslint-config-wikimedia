@@ -6,9 +6,9 @@
 * es6: Enforce `no-promise-executor-return` (Ed Sanders)
 * jquery: Update eslint-plugin-no-jquery to 2.5.9 (Ed Sanders)
 * jsdoc: Remove unnecessary tagNamePreference settings (Ed Sanders)
-* jsdoc: Drop @constant->@const, @description->@desc preferences (Ed Sanders)
+* jsdoc: Drop `@constant`->`@const`, `@description`->`@desc` preferences (Ed Sanders)
 * jsdoc: Update eslint-plugin-jsdoc to 30.2.1 (Lucas Werkmeister, Ed Sanders)
-* jsdoc/jsduck: Move @mixes->@Mixins to jsduck (Ed Sanders)
+* jsdoc/jsduck: Move `@mixes`->`@Mixins` to jsduck (Ed Sanders)
 * json: Update eslint-plugin-json to 2.1.2 (Ed Sanders)
 * mocha: Update eslint-plugin-mocha to 8.0.0 (Ed Sanders)
 * qunit: Update elsint-plugin-qunit to 4.3.0 (Ed Sanders)
@@ -25,7 +25,7 @@
 * vue-es5: Don't inherit from vue-es6 (Roan Kattouw)
 * jsdoc: Update eslint-plugin-jsdoc to 27.1.2 (Ed Sanders)
 * jsdoc: Extend from plugin:jsdoc/recommended (Ed Sanders)
-* jsduck: Remove this->context tag preference (Ed Sanders)
+* jsduck: Remove `@this`->`@context` tag preference (Ed Sanders)
 * jsduck: Introduce jsduck config (Ed Sanders)
 
 —
