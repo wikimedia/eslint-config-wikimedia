@@ -114,4 +114,7 @@
 	// <!-- eslint-disable-next-line es/no-global-this -->
 	// <!-- eslint-disable-next-line es/no-promise-all-settled -->
 
+	// not-es2021
+	// Nothing yet
+
 }() );
