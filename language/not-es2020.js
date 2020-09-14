@@ -1,8 +1,8 @@
 'use strict';
 
 /* eslint-disable quote-props, quotes */
-// Nothing to merge with yet
-module.exports = {
+const merge = require( './merge' );
+const rules = {
 	"rules": {
 		"no-restricted-properties": [
 			"error",
@@ -13,3 +13,4 @@ module.exports = {
 		]
 	}
 };
+module.exports = merge( rules, require( './not-es2021' ) );

@@ -66,6 +66,9 @@
 	// eslint-disable-next-line no-restricted-properties
 	'abc'.replaceAll( 'a', 'x' );
 
+	// not-es2021
+	// Nothing yet
+
 	// eslint-disable-next-line no-process-exit
 	process.exit( 1 );
 
