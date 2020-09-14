@@ -1,12 +1,19 @@
 {
 	"extends": [
 		"eslint:recommended",
-		"plugin:json/recommended",
 		"./jsdoc"
 	],
 	"env": {},
 	"globals": {},
 	"reportUnusedDisableDirectives": true,
+	"overrides": [
+		{
+			"files": [ "**/*.json" ],
+			"extends": [
+				"plugin:json/recommended"
+			]
+		}
+	],
 	"rules": {
 		"array-bracket-spacing": [ "error", "always" ],
 		"array-callback-return": "error",
