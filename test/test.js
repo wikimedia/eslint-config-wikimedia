@@ -51,7 +51,8 @@ configs.forEach( ( configPath ) => {
 	}
 	const upstreamConfigsToTest = [
 		'jsdoc',
-		'qunit'
+		'qunit',
+		'jquery'
 	];
 
 	describe( `"${configName}" config`, () => {
