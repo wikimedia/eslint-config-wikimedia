@@ -79,6 +79,7 @@
 	};
 
 	// Off: jsdoc/check-examples
+	// Off: jsdoc/check-line-alignment
 	/**
 	 *     @example
 	 *     invalid(style)
