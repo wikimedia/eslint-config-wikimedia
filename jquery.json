@@ -3,9 +3,11 @@
 		"$": "readonly"
 	},
 	"plugins": [ "no-jquery" ],
-	"extends": "plugin:no-jquery/deprecated-3.5",
+	"extends": [
+		"plugin:no-jquery/recommended",
+		"plugin:no-jquery/deprecated-3.5"
+	],
 	"rules": {
-		"no-jquery/variable-pattern": "error",
 		"no-jquery/no-animate": [ "error", { "allowScroll": true } ],
 		"no-jquery/no-animate-toggle": "error",
 		"no-jquery/no-class-state": "error",
