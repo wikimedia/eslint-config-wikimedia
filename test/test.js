@@ -17,6 +17,31 @@ function getRules( config ) {
 	return rules;
 }
 
+function getPluginExtends( config ) {
+	let rules = {};
+	const extendsList = Array.isArray( config.extends ) ?
+		config.extends :
+		[ config.extends ];
+	// Fetch every upstream config we use via 'extends'.
+	extendsList.forEach( ( extend ) => {
+		const parts = extend.match( /plugin:([^/]+)\/(.*)/ );
+		const upstreamConfigs = require( 'eslint-plugin-' + parts[ 1 ] ).configs;
+		const childConfig = upstreamConfigs[ parts[ 2 ] ];
+		Object.assign(
+			rules,
+			getRules( childConfig )
+		);
+		if ( childConfig.extends ) {
+			rules = Object.assign(
+				{},
+				getPluginExtends( childConfig ),
+				rules
+			);
+		}
+	} );
+	return rules;
+}
+
 configs.forEach( ( configPath ) => {
 	const configName = configPath.replace( /\..*/, '' );
 	const fixturesDir = path.resolve( __dirname, `fixtures/${configName}` );
@@ -24,6 +49,11 @@ configs.forEach( ( configPath ) => {
 		it.skip( `No tests for "${configName}" config` );
 		return;
 	}
+	const upstreamConfigsToTest = [
+		'jsdoc',
+		'qunit'
+	];
+
 	describe( `"${configName}" config`, () => {
 
 		const config = require( `../${configPath}` );
@@ -45,14 +75,12 @@ configs.forEach( ( configPath ) => {
 			);
 		}
 
-		if ( configName === 'jsdoc' ) {
-			// Expand jsdoc/recommended and test explicitly
+		if ( upstreamConfigsToTest.includes( configName ) ) {
 			rules = Object.assign(
 				{},
-				getRules( require( 'eslint-plugin-jsdoc' ).configs.recommended ),
+				getPluginExtends( config ),
 				rules
 			);
-			console.log( rules );
 		}
 
 		function isEnabled( rule ) {
