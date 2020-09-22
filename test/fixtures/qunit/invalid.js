@@ -1,6 +1,6 @@
 QUnit.module( 'Example' );
 
-// Local rules:
+// Local rules
 // eslint-disable-next-line qunit/require-expect
 QUnit.test( '.foo()', function ( assert ) {
 	var x = 'bar';
@@ -19,7 +19,7 @@ QUnit.test( '.foo()', function ( assert ) {
 	assert.ok( !x );
 } );
 
-// Recommended:
+// Recommended
 // eslint-disable-next-line qunit/no-identical-names, qunit/resolve-async
 QUnit.test( '.foo()', function ( assert ) {
 	var done = assert.async();

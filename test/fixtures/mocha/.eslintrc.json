@@ -1,0 +1,23 @@
+{
+	"root": true,
+	"extends": [
+		"../../../mocha"
+	],
+	"rules": {
+		"no-unused-vars": "off"
+	},
+	"overrides": [
+		{
+			"files": [ "*-client.js" ],
+			"extends": [
+				"../../../client"
+			]
+		},
+		{
+			"files": [ "*-server.js" ],
+			"extends": [
+				"../../../server"
+			]
+		}
+	]
+}
