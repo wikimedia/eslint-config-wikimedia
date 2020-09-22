@@ -1,0 +1,10 @@
+{
+	"root": true,
+	"extends": [
+		"../../../server",
+		"../../../mocha"
+	],
+	"rules": {
+		"no-unused-vars": "off"
+	}
+}
