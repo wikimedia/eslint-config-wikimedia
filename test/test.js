@@ -55,6 +55,7 @@ configs.forEach( ( configPath ) => {
 	const upstreamConfigsToTest = [
 		'jquery',
 		'jsdoc',
+		'mocha',
 		'qunit',
 		'selenium'
 	];
