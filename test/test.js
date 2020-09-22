@@ -25,6 +25,9 @@ function getPluginExtends( config ) {
 	// Fetch every upstream config we use via 'extends'.
 	extendsList.forEach( ( extend ) => {
 		const parts = extend.match( /plugin:([^/]+)\/(.*)/ );
+		if ( !parts ) {
+			return;
+		}
 		const upstreamConfigs = require( 'eslint-plugin-' + parts[ 1 ] ).configs;
 		const childConfig = upstreamConfigs[ parts[ 2 ] ];
 		Object.assign(
@@ -50,9 +53,10 @@ configs.forEach( ( configPath ) => {
 		return;
 	}
 	const upstreamConfigsToTest = [
+		'jquery',
 		'jsdoc',
 		'qunit',
-		'jquery'
+		'selenium'
 	];
 
 	describe( `"${configName}" config`, () => {
