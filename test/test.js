@@ -1,9 +1,6 @@
 'use strict';
 
-/* eslint-disable mocha/no-setup-in-describe */
-
 const fs = require( 'fs' ),
-	assert = require( 'assert' ),
 	path = require( 'path' ),
 	configs = require( '../package' ).files;
 
@@ -48,10 +45,6 @@ function getPluginExtends( config ) {
 configs.forEach( ( configPath ) => {
 	const configName = configPath.replace( /\..*/, '' );
 	const fixturesDir = path.resolve( __dirname, `fixtures/${configName}` );
-	if ( !fs.existsSync( fixturesDir ) ) {
-		it.skip( `No tests for "${configName}" config` );
-		return;
-	}
 	const upstreamConfigsToTest = [
 		'jquery',
 		'jsdoc',
@@ -60,7 +53,11 @@ configs.forEach( ( configPath ) => {
 		'selenium'
 	];
 
-	describe( `"${configName}" config`, () => {
+	QUnit.module( `"${configName}" config`, () => {
+		if ( !fs.existsSync( fixturesDir ) ) {
+			QUnit.test.skip( `No tests for "${configName}" config` );
+			return;
+		}
 
 		const config = require( `../${configPath}` );
 
@@ -103,9 +100,9 @@ configs.forEach( ( configPath ) => {
 		Object.keys( rules ).forEach( ( rule ) => {
 			// Disabled rules are covered below
 			if ( isEnabled( rule ) ) {
-				it( `Rule ${rule} is covered in invalid fixture`, () => {
+				QUnit.test( `Rule ${rule} is covered in invalid fixture`, ( assert ) => {
 					const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )*?${rule}($|[^a-z-])` );
-					assert( rDisableRule.test( invalidFixtures ), 'eslint-disable comment found' );
+					assert.true( rDisableRule.test( invalidFixtures ), 'eslint-disable comment found' );
 				} );
 			}
 		} );
@@ -117,12 +114,12 @@ configs.forEach( ( configPath ) => {
 		Object.keys( rules ).forEach( ( rule ) => {
 			const rEnableRule = new RegExp( `Off: ${rule}($|[^a-z-])` );
 			if ( !isEnabled( rule ) ) {
-				it( `Rule ${rule} is covered as "off" in valid fixture`, () => {
-					assert( rEnableRule.test( validFixtures ), '"off" comment found' );
+				QUnit.test( `Rule ${rule} is covered as "off" in valid fixture`, ( assert ) => {
+					assert.true( rEnableRule.test( validFixtures ), '"off" comment found' );
 				} );
 			} else {
-				it( `Rule ${rule} is not covered as "off" in valid fixture`, () => {
-					assert( !rEnableRule.test( validFixtures ), '"off" comment not present' );
+				QUnit.test( `Rule ${rule} is not covered as "off" in valid fixture`, ( assert ) => {
+					assert.true( !rEnableRule.test( validFixtures ), '"off" comment not present' );
 				} );
 			}
 		} );
