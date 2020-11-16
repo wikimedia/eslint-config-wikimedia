@@ -49,7 +49,7 @@
 	],
 	"license": "MIT",
 	"dependencies": {
-		"eslint": "^7.9.0",
+		"eslint": "^7.13.0",
 		"eslint-plugin-es": "^3.0.1",
 		"eslint-plugin-jsdoc": "^30.5.1",
 		"eslint-plugin-json": "^2.1.2",
