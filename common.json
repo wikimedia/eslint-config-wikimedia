@@ -69,6 +69,7 @@
 		"no-new-func": "error",
 		"no-new-object": "error",
 		"no-new-wrappers": "error",
+		"no-nonoctal-decimal-escape": "error",
 		"no-octal-escape": "error",
 		"no-proto": "error",
 		"no-prototype-builtins": "error",
