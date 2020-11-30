@@ -4,6 +4,7 @@
 const merge = require( './merge' );
 const rules = {
 	"rules": {
+		"es/no-object-fromentries": "error",
 		"no-restricted-properties": [
 			"error",
 			{
@@ -29,12 +30,6 @@ const rules = {
 			{
 				"property": "flatMap",
 				"message": "Unsupported method Array.prototype.flatMap requires ES2019."
-			},
-			// https://github.com/mysticatea/eslint-plugin-es/issues/25
-			{
-				"object": "Object",
-				"property": "fromEntries",
-				"message": "Unsupported method Object.fromEntries requires ES2019."
 			}
 		]
 	}

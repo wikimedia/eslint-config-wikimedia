@@ -65,6 +65,8 @@
 	// not-es2020
 	// eslint-disable-next-line no-restricted-properties
 	'abc'.replaceAll( 'a', 'x' );
+	// eslint-disable-next-line es/no-promise-any
+	Promise.any( [] );
 
 	// not-es2021
 	// Nothing yet

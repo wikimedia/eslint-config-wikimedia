@@ -108,11 +108,14 @@
 	// not-es2018
 	// eslint-disable-next-line no-restricted-properties
 	''.trimEnd();
+	// eslint-disable-next-line es/no-object-fromentries
+	Object.fromEntries();
 
 	// es2020 rules don't fail in ES5, tested in server/invalid.js instead
 	// <!-- eslint-disable-next-line es/no-bigint -->
 	// <!-- eslint-disable-next-line es/no-global-this -->
 	// <!-- eslint-disable-next-line es/no-promise-all-settled -->
+	// <!-- eslint-disable-next-line es/no-promise-any -->
 
 	// not-es2021
 	// Nothing yet

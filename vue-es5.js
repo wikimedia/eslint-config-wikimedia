@@ -11,7 +11,7 @@ module.exports = {
 			// But don't use ./language/es-6 directly, because we don't want rules-es6
 			"./language/rules-es5",
 			"./language/not-es5",
-			"plugin:es/no-2015"
+			"plugin:es/restrict-to-es5"
 		],
 		"plugins": [ "es" ],
 		// The Vue plugin sets sourceType: "module" and enables JSX: undo those things
