@@ -4,11 +4,12 @@
 const merge = require( './merge' );
 const rules = {
 	"rules": {
+		"es/no-promise-any": "error",
 		"no-restricted-properties": [
 			"error",
 			{
 				"property": "replaceAll",
-				"message": "Unsupported method String.prototype.replaceAll requires ESNext."
+				"message": "Unsupported method String.prototype.replaceAll requires ES2021."
 			}
 		]
 	}
