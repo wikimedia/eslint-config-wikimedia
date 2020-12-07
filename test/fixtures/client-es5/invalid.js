@@ -7,11 +7,11 @@
 	document.appendChild( node.parentElement );
 
 	// not-es5
-	// eslint-disable-next-line no-restricted-properties
+	// eslint-disable-next-line es-x/no-string-prototype-codepointat
 	''.codePointAt();
-	// eslint-disable-next-line no-restricted-syntax
+	// eslint-disable-next-line es-x/no-array-prototype-keys
 	[].keys();
-	// eslint-disable-next-line no-restricted-syntax
+	// eslint-disable-next-line es-x/no-array-prototype-entries
 	[].entries();
 	// eslint-disable-next-line es-x/no-array-from
 	Array.from();
@@ -81,23 +81,27 @@
 	String.raw();
 
 	// not-es6
-	// eslint-disable-next-line no-restricted-syntax
+	// eslint-disable-next-line es-x/no-array-prototype-includes
 	[].includes();
-	// eslint-disable-next-line es-x/no-object-entries
+	// eslint-disable-next-line es-x/no-array-prototype-entries, es-x/no-object-entries
 	Object.entries();
+	// eslint-disable-next-line es-x/no-array-prototype-entries
+	( {} ).entries();
 	// eslint-disable-next-line es-x/no-object-getownpropertydescriptors
 	Object.getOwnPropertyDescriptors();
-	// eslint-disable-next-line es-x/no-object-values
+	// eslint-disable-next-line es-x/no-array-prototype-values, es-x/no-object-values
 	Object.values();
+	// eslint-disable-next-line es-x/no-array-prototype-values
+	( {} ).values();
 
 	// not-es2016
-	// eslint-disable-next-line no-restricted-properties
+	// eslint-disable-next-line es-x/no-string-prototype-padstart-padend
 	''.padStart();
 
 	// not-es2017 introduces no rules
 
 	// not-es2018
-	// eslint-disable-next-line no-restricted-properties
+	// eslint-disable-next-line es-x/no-string-prototype-trimstart-trimend
 	''.trimEnd();
 	// eslint-disable-next-line es-x/no-object-fromentries
 	Object.fromEntries();

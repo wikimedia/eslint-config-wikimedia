@@ -1,8 +1,7 @@
 'use strict';
 
 /* eslint-disable quote-props, quotes */
-const merge = require( './language/merge' );
-const rules = {
+module.exports = {
 	"extends": [
 		"./client-common",
 		"./language/es5",
@@ -18,8 +17,3 @@ const rules = {
 		]
 	}
 };
-// no-restricted-properties from not-es5 is overwritten by local value here,
-// so use merge to fix this.
-// If another language config is loaded later it will overwrite this, but the
-// local rule here would not apply in browsers which properly support ES6.
-module.exports = merge( rules, require( './language/not-es5' ) );
