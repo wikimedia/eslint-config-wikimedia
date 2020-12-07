@@ -1,9 +1,14 @@
 {
+	"plugins": [ "es-x" ],
 	"extends": [
 		"./rules-es5",
-		"./not-es5"
+		"plugin:es-x/restrict-to-es5",
+		"plugin:es-x/no-new-in-esnext"
 	],
 	"parserOptions": {
 		"ecmaVersion": 5
+	},
+	"rules": {
+		"es-x/no-array-prototype-find": "off"
 	}
 }

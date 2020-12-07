@@ -10,7 +10,6 @@ module.exports = {
 			// Instead, use ES6, then es-x/no-2015 to prohibit ES6+ syntax
 			// But don't use ./language/es-6 directly, because we don't want rules-es6
 			"./language/rules-es5",
-			"./language/not-es5",
 			"plugin:es-x/restrict-to-es5"
 		],
 		"plugins": [ "es-x" ],
@@ -25,10 +24,6 @@ module.exports = {
 		},
 		"env": {
 			"es6": false
-		},
-		"rules": {
-			// This is a wrapper rule, but it can't be in vue-wrappers because it's ES5-specific
-			"vue/no-restricted-syntax": require( './language/not-es5' ).rules[ 'no-restricted-syntax' ]
 		}
 	} ]
 };

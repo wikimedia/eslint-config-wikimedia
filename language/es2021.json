@@ -1,7 +1,8 @@
 {
+	"plugins": [ "es-x" ],
 	"extends": [
 		"./rules-es2021",
-		"./not-es2021"
+		"plugin:es-x/restrict-to-es2021"
 	],
 	"parserOptions": {
 		"ecmaVersion": 2021

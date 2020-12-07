@@ -7,7 +7,7 @@ class MyClass {}
 
 ( function () {
 	// not-es6
-	// eslint-disable-next-line no-restricted-syntax
+	// eslint-disable-next-line es-x/no-array-prototype-includes
 	[].includes( c );
 	// eslint-disable-next-line es-x/no-object-entries
 	Object.entries();
@@ -17,13 +17,13 @@ class MyClass {}
 	Object.values();
 
 	// not-es2016
-	// eslint-disable-next-line no-restricted-properties
+	// eslint-disable-next-line es-x/no-string-prototype-padstart-padend
 	''.padStart();
 
 	// not-es2017 introduces no rules
 
 	// not-es2018
-	// eslint-disable-next-line no-restricted-properties
+	// eslint-disable-next-line es-x/no-string-prototype-trimstart-trimend
 	''.trimEnd();
 	// eslint-disable-next-line es-x/no-object-fromentries
 	Object.fromEntries();

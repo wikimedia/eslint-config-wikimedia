@@ -5,6 +5,7 @@
 	],
 	"env": {},
 	"globals": {},
+	"settings": { "es-x": { "aggressive": true } },
 	"reportUnusedDisableDirectives": true,
 	"ignorePatterns": [ "!.*.*", ".*/*", "node_modules/*" ],
 	"overrides": [

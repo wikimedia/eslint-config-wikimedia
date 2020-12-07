@@ -1,7 +1,7 @@
 {
 	"root": true,
 	"extends": [
-		"../../../client-es6",
+		"../../../client-common",
 		"../../../language/es2017",
 		"../../../qunit"
 	]
