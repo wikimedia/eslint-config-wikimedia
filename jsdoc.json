@@ -47,5 +47,5 @@
 		"jsdoc/require-property-description": "off",
 		"jsdoc/require-property-name": "off",
 		"jsdoc/require-returns-description": "off"
-    }
+	}
 }
