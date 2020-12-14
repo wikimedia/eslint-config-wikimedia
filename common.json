@@ -6,14 +6,13 @@
 	"env": {},
 	"globals": {},
 	"reportUnusedDisableDirectives": true,
-	"overrides": [
-		{
-			"files": [ "**/*.json" ],
-			"extends": [
-				"plugin:json/recommended"
-			]
-		}
-	],
+	"overrides": [ {
+		"files": [ "**/*.json", "**/*.jsonc" ],
+		"parser": "@zeitport/eslint-plugin-json",
+		"extends": [
+			"./json"
+		]
+	} ],
 	"rules": {
 		"array-bracket-spacing": [ "error", "always" ],
 		"array-callback-return": "error",

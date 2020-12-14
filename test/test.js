@@ -21,11 +21,16 @@ function getPluginExtends( config ) {
 		[ config.extends ];
 	// Fetch every upstream config we use via 'extends'.
 	extendsList.forEach( ( extend ) => {
-		const parts = extend.match( /plugin:([^/]+)\/(.*)/ );
+		const parts = extend.match( /plugin:(.*)\/([^/]+)/ );
 		if ( !parts ) {
 			return;
 		}
-		const upstreamConfigs = require( 'eslint-plugin-' + parts[ 1 ] ).configs;
+		let upstreamConfigs;
+		if ( parts[ 1 ].indexOf( 'eslint-plugin-' ) !== -1 ) {
+			upstreamConfigs = require( parts[ 1 ] ).configs;
+		} else {
+			upstreamConfigs = require( 'eslint-plugin-' + parts[ 1 ] ).configs;
+		}
 		const childConfig = upstreamConfigs[ parts[ 2 ] ];
 		Object.assign(
 			rules,
@@ -48,6 +53,7 @@ configs.forEach( ( configPath ) => {
 	const upstreamConfigsToTest = [
 		'jquery',
 		'jsdoc',
+		'json',
 		'mocha',
 		'qunit',
 		'selenium'
@@ -101,7 +107,7 @@ configs.forEach( ( configPath ) => {
 			// Disabled rules are covered below
 			if ( isEnabled( rule ) ) {
 				QUnit.test( `Rule ${rule} is covered in invalid fixture`, ( assert ) => {
-					const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable(-next-line)? ([a-z-/]+, )*?${rule}($|[^a-z-])` );
+					const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable((-next)?-line)? ([a-z-/]+, )*?${rule}($|[^a-z-])` );
 					assert.true( rDisableRule.test( invalidFixtures ), 'eslint-disable comment found' );
 				} );
 			}

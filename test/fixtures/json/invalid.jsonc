@@ -1,0 +1,13 @@
+{
+// This is hard to test here as it makes the JSON invalid
+// <!-- eslint-disable-line @zeitport/json/use-valid-json -->
+	"foo": "bar",
+	"foo": "bar",// eslint-disable-line no-dupe-keys
+	'quotes': 'double',// eslint-disable-line quotes
+  "indent": "tab",// eslint-disable-line indent
+	quoteprops: "required",// eslint-disable-line quote-props
+	"undefined": undefined,// eslint-disable-line no-undefined
+	"irregular-whitespace": "<-- here",// eslint-disable-line no-irregular-whitespace
+	"loss-of-precision": 5123000000000000000000000000001,// eslint-disable-line no-loss-of-precision
+	"comma": "dangle",// eslint-disable-line comma-dangle
+}

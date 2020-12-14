@@ -9,5 +9,10 @@
 		"node/no-unsupported-features/es-builtins": "off",
 		"node/no-unsupported-features/es-syntax": "off",
 		"node/shebang": "off"
-	}
+	},
+	"overrides": [ {
+		"files": [ "**/*.json", "**/*.jsonc" ],
+		"parser": "@zeitport/eslint-plugin-json",
+		"extends": "./json"
+	} ]
 }

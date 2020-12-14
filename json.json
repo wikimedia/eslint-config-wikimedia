@@ -1,0 +1,13 @@
+{
+	"extends": [
+		"plugin:@zeitport/eslint-plugin-json/recommended"
+	],
+	"plugins": [
+		"@zeitport/eslint-plugin-json"
+	],
+	"rules": {
+		"@zeitport/json/use-valid-json": "error",
+		"indent": [ "error", "tab" ],
+		"strict": "off"
+	}
+}

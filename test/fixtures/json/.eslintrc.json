@@ -1,0 +1,7 @@
+{
+	"root": true,
+	"extends": "../../../common",
+	"rules": {
+		"@zeitport/json/use-valid-json": "off"
+	}
+}
