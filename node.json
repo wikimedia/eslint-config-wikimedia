@@ -12,7 +12,7 @@
 	},
 	"overrides": [ {
 		"files": [ "**/*.json", "**/*.jsonc" ],
-		"parser": "@zeitport/eslint-plugin-json",
+		"parser": "eslint-plugin-json-es",
 		"extends": "./json"
 	} ]
 }

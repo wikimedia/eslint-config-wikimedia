@@ -1,6 +1,6 @@
 {
 // This is hard to test here as it makes the JSON invalid
-// <!-- eslint-disable-line @zeitport/json/use-valid-json -->
+// <!-- eslint-disable-line json-es/use-valid-json -->
 	"foo": "bar",
 	"foo": "bar",// eslint-disable-line no-dupe-keys
 	'quotes': 'double',// eslint-disable-line quotes
