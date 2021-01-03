@@ -5,11 +5,18 @@
 		"require": "readonly",
 		"module": "readonly"
 	},
-	"plugins": [ "mediawiki" ],
+	"plugins": [
+		"mediawiki",
+		"compat"
+	],
 	"rules": {
 		"mediawiki/class-doc": "error",
 		"mediawiki/msg-doc": "error",
-		"mediawiki/valid-package-file-require": "error"
+		"mediawiki/valid-package-file-require": "error",
+		"compat/compat": [
+			"error",
+			"last 2 chrome versions, last 2 firefox versions, last 2 opera versions, last 2 edge versions, ie >= 11, safari >= 5.1, iOS >= 6.1, android >= 4.1"
+		]
 	},
 	"overrides": [
 		{

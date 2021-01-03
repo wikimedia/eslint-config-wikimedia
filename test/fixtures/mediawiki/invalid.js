@@ -12,4 +12,7 @@
 
 	// eslint-disable-next-line mediawiki/valid-package-file-require
 	require( 'valid.js' );
+
+	// eslint-disable-next-line compat/compat
+	bar = new FileReader();
 }() );
