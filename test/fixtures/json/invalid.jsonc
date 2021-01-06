@@ -9,5 +9,6 @@
 	"undefined": undefined,// eslint-disable-line no-undefined
 	"irregular-whitespace": "<-- here",// eslint-disable-line no-irregular-whitespace
 	"loss-of-precision": 5123000000000000000000000000001,// eslint-disable-line no-loss-of-precision
+	"extra": ( "parens" ),// eslint-disable-line no-extra-parens
 	"comma": "dangle",// eslint-disable-line comma-dangle
 }
