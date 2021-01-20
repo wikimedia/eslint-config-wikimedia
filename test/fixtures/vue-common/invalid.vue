@@ -8,11 +8,11 @@
 				foo
 			</template>
 			<!-- eslint-disable-next-line vue/no-deprecated-scope-attribute -->
-			<template v-slot:name="bar" scope="baz">
+			<template #whee="bar" scope="baz">
 				{{ baz }}
 			</template>
 			<!-- eslint-disable-next-line vue/no-deprecated-slot-scope-attribute -->
-			<template v-slot:name="bar" slot-scope="baz">
+			<template #quux="bar" slot-scope="baz">
 				{{ baz }}
 			</template>
 		</blah-component>
@@ -31,7 +31,8 @@
 <script>
 // @vue/component
 module.exports = {
-	// eslint-disable-next-line vue/no-reserved-component-names, vue/name-property-casing
+	// eslint-disable-next-line max-len
+	// eslint-disable-next-line vue/no-reserved-component-names, vue/component-definition-name-casing
 	name: 'div',
 	props: {
 		foo: {
