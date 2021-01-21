@@ -1,3 +1,29 @@
+0.18.0 / 2021-01-21
+===================
+
+* Update ESLint to 7.17.0 (Ed Sanders)
+
+—
+* common: Only run JSON rules on JSON files (Ed Sanders)
+* common: Update eslint-plugin-es to 4.1.0 (Ed Sanders)
+* jquery: Test all upstream configs (Ed Sanders)
+* jsdoc: Update eslint-plugin-jsdoc to 30.7.13 (Ed Sanders)
+* json: Plugin renamed from @zeitport/eslint-plugin-json to eslint-plugin-json-es (Ed Sanders)
+* json: Replace eslint-plugin-json with eslint-parser-json (Ed Sanders)
+* json: Update eslint-plugin-json-es 1.4.0 (Ed Sanders)
+* mediawiki: Add Grade A browser compatibility checks (Ed Sanders)
+* mediawiki: Update eslint-plugin-compat to 3.9.0 (Ed Sanders)
+* mediawiki: Update eslint-plugin-mediawiki to 0.2.6 (Ed Sanders)
+* qunit: Add assertions for upstream qunit configs (Ed Sanders)
+* qunit: Update eslint-plugin-qunit to 5.2.0 (Ed Sanders)
+* vue: Update eslint-plugin-vue to 7.4.1 (Ed Sanders)
+
+—
+* changelog: Fix escaping (Ed Sanders)
+* code: Add ES2021 support (Ed Sanders)
+* tests: Mocha/selenium test improvements (Ed Sanders)
+* tests: Switch tests to use QUnit (Timo Tijhof)
+
 0.17.0 / 2020-08-17
 ===================
 
