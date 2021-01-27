@@ -8,6 +8,7 @@
 	"rules": {
 		"json-es/use-valid-json": "error",
 		"indent": [ "error", "tab" ],
-		"strict": "off"
+		"strict": "off",
+		"max-len": "off"
 	}
 }
