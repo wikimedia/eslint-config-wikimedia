@@ -1,3 +1,9 @@
+0.18.1 / 2021-01-27
+===================
+
+* json: Disable max-len rule (Ed Sanders)
+* json: Update eslint-plugin-json-es to 1.5.1 (Ed Sanders)
+
 0.18.0 / 2021-01-21
 ===================
 
