@@ -43,6 +43,8 @@
 					"inheritAttrs",
 					"model",
 					[ "props", "propsData" ],
+					"emits",
+					"setup",
 					"asyncData",
 					"data",
 					"computed",
