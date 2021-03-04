@@ -1,3 +1,10 @@
+0.18.2 / 2021-03-04
+===================
+
+* mediawiki: Upgrade eslint-plugin-mediawiki to 0.2.7 (Roan Kattouw)
+* vue: Add "emits" and "setup" to order-in-components (Roan Kattouw)
+* vue: Upgrade eslint-plugin-vue to 7.7.0 (Roan Kattouw)
+
 0.18.1 / 2021-01-27
 ===================
 
