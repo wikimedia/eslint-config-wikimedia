@@ -1,3 +1,8 @@
+0.19.0 / 2021-03-10
+===================
+
+* client: Split into client-es5 and client-es6 (Roan Kattouw)
+
 0.18.2 / 2021-03-04
 ===================
 
