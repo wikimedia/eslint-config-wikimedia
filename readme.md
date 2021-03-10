@@ -15,13 +15,15 @@ Below are some potential recommended uses:
 
 ### A typical front-end project
 This config allows ES5 code and browser native functions. It will complain about ES6+ code and language features.
+It also automatically applies the Vue plugin and Vue-specific rules to `.vue` files.
 
 `.eslintrc.json`:
 ```json
 {
-	"extends": "wikimedia/client"
+	"extends": "wikimedia/client-es5"
 }
 ```
+If you want to allow ES6 code and browser native functions as well, you can use `wikimedia/client-es6` instead.
 
 #### jQuery
 This config adds the jQuery `$` global, and additional rules preventing the use of jQuery features which are deprecated, have performance issues, or have simple ES5 alternatives.
@@ -29,37 +31,20 @@ This config adds the jQuery `$` global, and additional rules preventing the use 
 ```json
 {
 	"extends": [
-		"wikimedia/client",
+		"wikimedia/client-es5",
 		"wikimedia/jquery"
 	]
 }
 ```
 
 #### MediaWiki
-Code that runs in MediaWiki can use this config. It enforces rules that are specific to the MediaWiki codebase (core and extensions), such as correct documentation of `mw.message` usage. It also automatically applies the Vue plugin and Vue-specific rules to `.vue` files, including MediaWiki-specific Vue rules such as prohibiting ES6 syntax and prohibiting self-closing tags.
+Code that runs in MediaWiki can use this config. It enforces rules that are specific to the MediaWiki codebase (core and extensions), such as correct documentation of `mw.message` usage.
 `.eslintrc.json`:
 ```json
 {
 	"extends": [
-		"wikimedia/client",
+		"wikimedia/client-es5",
 		"wikimedia/mediawiki"
-	]
-}
-```
-
-#### .vue files
-The MediaWiki config automatically applies the Vue plugin to `.vue` files, and enforces MediaWiki-specific Vue rules. For code outside MediaWiki, or for `.vue` files that don't use ResourceLoader, you can use the `wikimedia/vue-es5` or `wikimedia/vue-es6` config. These configs only enforce non-MediaWiki-specific rules for Vue code.
-`.eslintrc.json`:
-```json
-{
-	"extends": [
-		"wikimedia/client"
-	],
-	"overrides": [
-		{
-			"files": "**/*.vue",
-			"extends": "wikimedia/vue-es5"
-		}
 	]
 }
 ```

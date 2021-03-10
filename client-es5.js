@@ -4,16 +4,11 @@
 const merge = require( './language/merge' );
 const rules = {
 	"extends": [
-		"./common",
-		"./language/es5"
+		"./client-common",
+		"./language/es5",
+		"./vue-es5"
 	],
-	"env": {
-		"browser": true
-	},
 	"rules": {
-		"no-alert": "error",
-		"no-console": "error",
-		"no-implied-eval": "error",
 		"no-restricted-properties": [
 			"error",
 			{

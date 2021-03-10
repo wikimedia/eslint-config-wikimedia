@@ -21,9 +21,6 @@
 	"overrides": [
 		{
 			"files": [ "**/*.vue" ],
-			"extends": [
-				"./vue-es5"
-			],
 			"rules": {
 				"no-implicit-globals": "off",
 				"mediawiki/no-vue-dynamic-i18n": "error",
