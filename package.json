@@ -25,7 +25,10 @@
 	},
 	"files": [
 		"common.json",
-		"client.js",
+		"client.json",
+		"client-common.json",
+		"client-es5.js",
+		"client-es6.json",
 		"node.json",
 		"jquery.json",
 		"jsdoc.json",
