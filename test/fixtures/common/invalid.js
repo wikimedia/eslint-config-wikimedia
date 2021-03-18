@@ -4,7 +4,6 @@ var APP;
 ( function ( global ) {
 	// eslint-disable-next-line no-shadow
 	var APP;
-	// eslint-disable-next-line one-var
 	var upHere = function ( yArg ) {
 		var rArg = yArg.fooBar;
 		// eslint-disable-next-line semi
@@ -32,14 +31,15 @@ var APP;
 		// eslint-disable-next-line array-bracket-spacing, comma-dangle, comma-spacing
 		bar = [0, 1,];
 
-		// eslint-disable-next-line one-var, vars-on-top
-		var i;
-
 		// eslint-disable-next-line space-before-blocks, yoda
 		if ( 3 === bar ){
 			// eslint-disable-next-line block-spacing, brace-style, camelcase
 			return camel_case;}
 
+		// eslint-disable-next-line no-use-before-define
+		upHere( i );
+
+		var i;
 		// eslint-disable-next-line max-statements-per-line
 		if ( name ) { return i; }
 
@@ -156,8 +156,10 @@ var APP;
 
 		// eslint-disable-next-line no-unmodified-loop-condition
 		while ( bar ) {
-			named( bar );
+			var baz = named( bar );
 		}
+		// eslint-disable-next-line block-scoped-var
+		upHere( baz );
 
 		// eslint-disable-next-line array-callback-return
 		[].map( function ( x ) {
