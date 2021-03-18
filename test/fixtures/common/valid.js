@@ -7,9 +7,7 @@
 // Valid: semi-style
 // Valid: unicode-bom
 ( function ( global ) {
-	var APP,
-		hasOwn = Object.prototype.hasOwnProperty,
-		APPHasOwnProperty = Object.prototype.hasOwnProperty.call( APP, 'hasOwn' );
+	var APP;
 
 	// Valid: spaced-comment
 	// Example
@@ -24,6 +22,11 @@
 		var rArg = yArg.fooBar;
 		return rArg + yArg.getQuux();
 	}
+
+	// Valid: one-var
+	// Valid: vars-on-top
+	var hasOwn = Object.prototype.hasOwnProperty;
+	var APPHasOwnProperty = Object.prototype.hasOwnProperty.call( APP, 'hasOwn' );
 
 	/**
 	 * Example description.
@@ -90,6 +93,9 @@
 			try {
 				return APP.loop( items );
 			} catch ( e ) {
+				// Valid: block-scoped-var
+				var e2 = upHere( e );
+				upHereAlso( e2 );
 			}
 			return null;
 		};
