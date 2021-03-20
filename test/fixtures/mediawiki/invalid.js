@@ -14,5 +14,5 @@
 	require( 'valid.js' );
 
 	// eslint-disable-next-line compat/compat
-	bar = new FileReader();
+	bar = navigator.permissions.query();
 }() );
