@@ -67,6 +67,6 @@
 		"eslint-plugin-wdio": "^7.0.0"
 	},
 	"devDependencies": {
-		"qunit": "^2.12.0"
+		"qunit": "^2.14.1"
 	}
 }
