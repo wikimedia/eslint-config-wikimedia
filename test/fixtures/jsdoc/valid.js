@@ -94,7 +94,7 @@
 	 * @param {Function} h
 	 * @param {Date} i
 	 * @param {RegExp} j
-	 * @param {HTMLElement} el HTMLElement is a global provided by ./client
+	 * @param {HTMLElement} el HTMLElement is a global provided by the browser environment
 	 * @param {HTMLIFrameElement} iFrame
 	 * @param {Node} domNode
 	 * @return {Error}
