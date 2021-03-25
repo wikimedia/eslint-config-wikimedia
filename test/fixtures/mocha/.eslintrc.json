@@ -10,7 +10,7 @@
 		{
 			"files": [ "*-client.js" ],
 			"extends": [
-				"../../../client"
+				"../../../client-es5"
 			]
 		},
 		{
