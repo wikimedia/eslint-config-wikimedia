@@ -59,7 +59,7 @@
 		"eslint-plugin-jsdoc": "^30.7.13",
 		"eslint-plugin-json-es": "^1.5.1",
 		"eslint-plugin-mediawiki": "^0.2.7",
-		"eslint-plugin-mocha": "^8.0.0",
+		"eslint-plugin-mocha": "^8.1.0",
 		"eslint-plugin-no-jquery": "^2.5.0",
 		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-qunit": "^5.2.0",
