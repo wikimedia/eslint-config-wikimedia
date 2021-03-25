@@ -15,7 +15,7 @@
 	/**
 	 * @property {Object}
 	 */
-	var APP;
+	let APP;
 
 	// Valid: settings.jsdoc.tagNamePreference
 	/**
@@ -76,6 +76,11 @@
 	 */
 	APP.sum = function ( a, b ) {
 		return a + b;
+	};
+
+	// Off: jsdoc/require-throws
+	APP.err = function () {
+		throw new Error( 'Oops' );
 	};
 
 	// Off: jsdoc/check-examples
