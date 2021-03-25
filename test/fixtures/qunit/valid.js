@@ -1,12 +1,16 @@
 QUnit.module( 'Example' );
 
+// Off: qunit/no-arrow-tests
 // Valid: qunit/require-expect
-QUnit.test( '.foo()', function ( assert ) {
-	var x = 'bar',
+QUnit.test( '.foo()', ( assert ) => {
+	const x = 'bar',
 		y = 'baz';
 
 	// Valid: qunit/no-assert-equal
 	assert.strictEqual( x, 'bar' );
+
+	// Off: qunit/no-assert-equal-boolean
+	assert.strictEqual( x, true );
 
 	// Valid: qunit/no-negated-ok
 	assert.notOk( x );

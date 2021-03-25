@@ -62,7 +62,7 @@
 		"eslint-plugin-mocha": "^8.1.0",
 		"eslint-plugin-no-jquery": "^2.5.0",
 		"eslint-plugin-node": "^11.1.0",
-		"eslint-plugin-qunit": "^5.2.0",
+		"eslint-plugin-qunit": "^6.0.0",
 		"eslint-plugin-vue": "^7.7.0",
 		"eslint-plugin-wdio": "^6.0.12"
 	},
