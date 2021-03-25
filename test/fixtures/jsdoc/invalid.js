@@ -4,7 +4,7 @@
 	 * @property {Function} APP
 	 * @property {Function} APP
 	 */
-	var APP;
+	let APP;
 	/* eslint-enable jsdoc/check-property-names */
 
 	// eslint-disable-next-line jsdoc/require-property-type
@@ -86,6 +86,21 @@
 	 * @private
 	 */
 	APP.method = function () {
+	};
+
+	// eslint-disable-next-line jsdoc/require-yields
+	/**
+	 * @param {number} foo
+	 */
+	APP.async = function * quux( foo ) {
+		yield foo;
+	};
+
+	// eslint-disable-next-line jsdoc/require-yields-check
+	/**
+	 * @yield {number}
+	 */
+	APP.async = function * quux() {
 	};
 
 	// eslint-disable-next-line jsdoc/check-alignment
