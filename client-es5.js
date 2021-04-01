@@ -14,6 +14,10 @@ const rules = {
 			{
 				"property": "parentElement",
 				"message": "Prefer parentNode to parentElement as Node.parentElement is not supported by IE11."
+			},
+			{
+				"property": "append",
+				"message": "DOM method Element.prototype.append is not supported by some ES5 clients."
 			}
 		]
 	}

@@ -5,6 +5,8 @@
 
 	// eslint-disable-next-line no-restricted-properties
 	document.appendChild( node.parentElement );
+	// eslint-disable-next-line no-restricted-properties
+	document.append( node );
 
 	// not-es5
 	// eslint-disable-next-line no-restricted-properties
