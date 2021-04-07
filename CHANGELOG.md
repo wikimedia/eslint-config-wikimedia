@@ -1,3 +1,22 @@
+0.20.0 / 2021-04-07
+===================
+* Update ESLint to 7.23 (Ed Sanders)
+
+—
+* common: Allow var blocks to be split and moved (Ed Sanders)
+* jquery: Update eslint-plugin-no-jquery to 2.6.0 (James D. Forrester)
+* jsdoc: Update eslint-plugin-jsdoc to 32.3.0 (Ed Sanders)
+* json: Update eslint-plugin-json-es to 1.5.3 (Ed Sanders)
+* mediawiki: Bump MediaWiki browser versions (Ed Sanders)
+* mocha: Update eslint-plugin-mocha to 8.1.0 (Ed Sanders)
+* qunit: Update eslint-plugin-qunit to 6.0.0 (Ed Sanders)
+* selenium: Update eslint-plugin-wdio to 7.0.0 (Ed Sanders)
+* vue: Update eslint-plugin-vue to 7.8.0 (Ed Sanders)
+
+—
+* code: Update 'client' alias to 'client-es5' in various places (Ed Sanders)
+* tests: Update QUnit to 2.14.1 (Ed Sanders)
+
 0.19.0 / 2021-03-10
 ===================
 
