@@ -20,6 +20,8 @@ var APP;
 	/* Example*/
 
 	APP.Example = function ( id, options ) {
+		// no-shadow triggered by hoised variable:
+		// eslint-disable-next-line no-shadow
 		var name = 'foo'
 			// eslint-disable-next-line operator-linebreak
 			+ 'bar',
@@ -167,6 +169,9 @@ var APP;
 		} );
 
 	};
+
+	var name = 'foo';
+	upHere( name );
 
 	APP.bound = function ( obj ) {
 		return obj.key;
