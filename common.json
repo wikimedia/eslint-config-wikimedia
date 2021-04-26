@@ -77,7 +77,7 @@
 		"no-script-url": "error",
 		"no-self-compare": "error",
 		"no-sequences": "error",
-		"no-shadow": "error",
+		"no-shadow": [ "error", { "hoist": "all" } ],
 		"no-shadow-restricted-names": "error",
 		"no-tabs": [ "error", { "allowIndentationTabs": true } ],
 		"no-throw-literal": "error",
