@@ -1,5 +1,6 @@
 {
 	"extends": "./rules-es5",
+	"plugins": [ "unicorn" ],
 	"rules": {
 		"arrow-parens": "error",
 		"arrow-spacing": "error",
@@ -14,6 +15,7 @@
 		"no-var": "error",
 		"one-var": "off",
 		"vars-on-top": "off",
-		"prefer-const": "error"
+		"prefer-const": "error",
+		"unicorn/prefer-includes": "error"
 	}
 }
