@@ -213,6 +213,8 @@
 		// Valid: quotes
 		first: 'Who',
 		default: 'is',
+		multiStr: ' \
+',
 		null: 'there?',
 		// Valid: object-curly-spacing
 		second: { value: { of: 'What' } },

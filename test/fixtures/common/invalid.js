@@ -235,9 +235,6 @@ var APP;
 	APP.defaults =  {
 		// eslint-disable-next-line no-floating-decimal
 		decimal: .4,
-		// eslint-disable-next-line no-multi-str
-		multiStr: ' \
-',
 		/* eslint-disable no-multiple-empty-lines */
 
 
