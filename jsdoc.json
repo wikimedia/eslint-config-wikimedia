@@ -41,11 +41,13 @@
 		"jsdoc/check-param-names": [ "warn", { "allowExtraTrailingParamDocs": true } ],
 		"jsdoc/check-values": "off",
 		"jsdoc/empty-tags": "off",
+		"jsdoc/require-asterisk-prefix": "error",
 		"jsdoc/require-jsdoc": "off",
 		"jsdoc/require-param-description": "off",
 		"jsdoc/require-property": "off",
 		"jsdoc/require-property-description": "off",
 		"jsdoc/require-property-name": "off",
-		"jsdoc/require-returns-description": "off"
+		"jsdoc/require-returns-description": "off",
+		"jsdoc/tag-lines": "off"
 	}
 }
