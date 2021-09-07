@@ -1,5 +1,4 @@
 /* eslint-env browser */
-/* eslint-env browser */
 
 ( function () {
 	let node;
