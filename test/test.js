@@ -26,7 +26,7 @@ function getPluginExtends( config ) {
 			return;
 		}
 		let upstreamConfigs;
-		if ( parts[ 1 ].indexOf( 'eslint-plugin-' ) !== -1 ) {
+		if ( parts[ 1 ].includes( 'eslint-plugin-' ) ) {
 			upstreamConfigs = require( parts[ 1 ] ).configs;
 		} else {
 			upstreamConfigs = require( 'eslint-plugin-' + parts[ 1 ] ).configs;

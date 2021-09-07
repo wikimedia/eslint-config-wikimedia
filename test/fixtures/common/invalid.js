@@ -6,9 +6,19 @@ var APP;
 	var APP;
 	var upHere = function ( yArg ) {
 		var rArg = yArg.fooBar;
+		if ( rArg ) {
+			// eslint-disable-next-line unicorn/throw-new-error
+			throw Error( 'err' );
+		}
 		// eslint-disable-next-line semi
 		return rArg + yArg.getQuux()
 	};
+
+	// eslint-disable-next-line unicorn/prefer-date-now
+	upHere = new Date().getTime();
+
+	// eslint-disable-next-line unicorn/prefer-string-slice
+	upHere.substring( 0, 3 );
 
 	// eslint-disable-next-line spaced-comment
 	//Example
@@ -142,7 +152,7 @@ var APP;
 		options. space = Infinity;
 
 		function undef() {
-			// eslint-disable-next-line no-undef-init
+			// eslint-disable-next-line no-undef-init, unicorn/no-useless-undefined
 			var b = undefined;
 			return b;
 		}
@@ -150,6 +160,7 @@ var APP;
 		function restrict( a ) {
 			// eslint-disable-next-line no-shadow-restricted-names
 			var undefined = a;
+			// eslint-disable-next-line unicorn/no-useless-undefined
 			return undefined;
 		}
 

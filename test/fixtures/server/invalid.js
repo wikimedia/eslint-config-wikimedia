@@ -13,6 +13,11 @@
 	// eslint-disable-next-line prefer-const
 	let f = ( p ) => p;
 
+	// eslint-disable-next-line unicorn/prefer-includes
+	if ( 'abc'.indexOf( 'foo' ) !== -1 ) {
+		return;
+	}
+
 	// eslint-disable-next-line arrow-parens, arrow-spacing
 	Object.keys( foo ).map( x=> {
 		return x + 1;

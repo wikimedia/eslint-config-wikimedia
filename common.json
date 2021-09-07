@@ -13,6 +13,7 @@
 			"./json"
 		]
 	} ],
+	"plugins": [ "unicorn" ],
 	"rules": {
 		"array-bracket-spacing": [ "error", "always" ],
 		"array-callback-return": "error",
@@ -113,6 +114,10 @@
 		} ],
 		"switch-colon-spacing": [ "error", { "after": true, "before": false } ],
 		"unicode-bom": [ "error" ],
+		"unicorn/no-useless-undefined": "error",
+		"unicorn/prefer-date-now": "error",
+		"unicorn/prefer-string-slice": "error",
+		"unicorn/throw-new-error": "error",
 		"wrap-iife": "error",
 		"yoda": [ "error", "never" ]
 	}
