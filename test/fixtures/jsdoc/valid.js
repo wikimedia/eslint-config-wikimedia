@@ -3,8 +3,11 @@
 // Off: jsdoc/check-values
 // Off: jsdoc/empty-tags
 // Off: jsdoc/match-description
+// Off: jsdoc/match-name
 // Off: jsdoc/no-bad-blocks
 // Off: jsdoc/no-defaults
+// Off: jsdoc/no-missing-syntax
+// Off: jsdoc/no-restricted-syntax
 // Off: jsdoc/no-types
 // Off: jsdoc/require-file-overview
 // Off: jsdoc/require-hyphen-before-param-description
@@ -18,6 +21,7 @@
 	let APP;
 
 	// Valid: settings.jsdoc.tagNamePreference
+	// Off: jsdoc/tag-lines
 	/**
 	 * Non-default aliases:
 	 *
@@ -122,7 +126,7 @@
 	 * @constructs
 	 * @constant
 	 * @default
-	// Off: jsdoc/check-indentation
+	 * // Off: jsdoc/check-indentation
 	 * @description Multi-
 	 *              line
 	 * @external String

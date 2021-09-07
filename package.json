@@ -56,7 +56,7 @@
 		"eslint": "^7.32.0",
 		"eslint-plugin-compat": "^3.9.0",
 		"eslint-plugin-es": "^4.1.0",
-		"eslint-plugin-jsdoc": "^32.3.0",
+		"eslint-plugin-jsdoc": "^36.0.8",
 		"eslint-plugin-json-es": "^1.5.3",
 		"eslint-plugin-mediawiki": "^0.2.7",
 		"eslint-plugin-mocha": "^8.1.0",

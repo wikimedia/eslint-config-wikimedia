@@ -1,4 +1,17 @@
 ( function () {
+	// eslint-disable-next-line jsdoc/multiline-blocks
+	/** No text on 0th line
+	 * ...
+	 */
+
+	/* eslint-disable jsdoc/no-multi-asterisks */
+	// eslint-disable-next-line jsdoc/multiline-blocks
+	/**
+	 * ...
+	 ** No multiple asterisks
+	 No text on last line */
+	/* eslint-enable jsdoc/no-multi-asterisks */
+
 	/* eslint-disable jsdoc/check-property-names */
 	/**
 	 * @property {Function} APP
@@ -54,9 +67,9 @@
 	};
 	/* eslint-enable jsdoc/require-returns, jsdoc/require-returns-check */
 
-	// eslint-disable-next-line jsdoc/implements-on-classes
+	// eslint-disable-next-line jsdoc/implements-on-classes, jsdoc/require-asterisk-prefix
 	/**
-	 * @implements {HTMLElement}
+	 @implements {HTMLElement}
 	 */
 	APP.method = function ( bar ) {
 		return bar;
