@@ -80,7 +80,12 @@ configs.forEach( ( configPath ) => {
 			Object.assign(
 				rules,
 				getRules( require( '../node' ) ),
-				getRules( require( '../language/es2018' ) )
+				getRules( require( '../language/es2018' ) ),
+				// TODO: Traverse "extends" automatically
+				getRules( require( '../language/rules-es2018' ) ),
+				getRules( require( '../language/rules-es2017' ) ),
+				getRules( require( '../language/rules-es6' ) )
+				// ES5 rules are tested in client-es5
 			);
 		}
 

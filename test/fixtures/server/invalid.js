@@ -1,8 +1,12 @@
 /* eslint-disable strict */
 
-( function ( global ) {
+// eslint-disable-next-line default-param-last
+( function ( defaultParam = 0, global ) {
 	// eslint-disable-next-line no-useless-computed-key
 	const foo = { [ 'a' ]: 'b' };
+
+	// eslint-disable-next-line no-var
+	var bar = 'baz';
 
 	// eslint-disable-next-line no-new-require, new-cap
 	global.bar = new require( 'events' );
@@ -28,6 +32,11 @@
 
 	// eslint-disable-next-line template-curly-spacing, no-unused-expressions
 	`${ global.foo }`;
+
+	const promise = new Promise( () => {
+		// eslint-disable-next-line no-promise-executor-return
+		return 1;
+	} );
 
 	// eslint-disable-next-line node/no-deprecated-api
 	const b = new Buffer( 1 );
@@ -80,3 +89,11 @@
 	process.exit( 1 );
 
 }( this ) );
+
+class A {
+	constructor( a ) {
+		this.a = a;
+		// eslint-disable-next-line no-constructor-return
+		return a;
+	}
+}
