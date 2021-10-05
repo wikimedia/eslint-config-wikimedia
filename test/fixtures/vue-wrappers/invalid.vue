@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<!-- eslint-disable-next-line vue/array-bracket-spacing -->
-		<div :class="['foo', 'bar']" />
+		<!-- eslint-disable-next-line vue/array-bracket-spacing, vue/comma-spacing -->
+		<div :class="['foo' ,'bar']" />
 		<!-- eslint-disable-next-line vue/key-spacing, vue/object-curly-spacing -->
 		<a :class="{foo:'bar'}" />
 		<!-- eslint-disable-next-line vue/eqeqeq -->
@@ -9,15 +9,22 @@
 		<!-- eslint-disable-next-line vue/dot-location -->
 		<a :href="foo.
 			bar" />
-		<!-- eslint-disable-next-line vue/block-spacing, vue/keyword-spacing -->
-		<a @click="if(foo){bar()}" />
+		<!-- eslint-disable-next-line vue/dot-notation -->
+		<a :href="foo['bar']" />
+		<!-- eslint-disable vue/comma-style -->
+		<a :class="{ foo: 'bar'
+			, baz: 'quux' }" />
+		<!-- eslint-disable-next-line max-len -->
+		<!-- eslint-disable-next-line vue/block-spacing, vue/keyword-spacing, vue/space-in-parens, vue/func-call-spacing -->
+		<a @click="if(foo){bar ()}" />
 		<!-- eslint-disable vue/brace-style -->
-		<a @click="if ( foo )
+		<!-- eslint-disable-next-line vue/no-constant-condition -->
+		<a @click="if ( false )
 		{
 			bar()
 		}" />
-		<!-- eslint-disable-next-line vue/camelcase -->
-		<a @click="function foo_bar() { }" />
+		<!-- eslint-disable-next-line vue/camelcase, vue/no-useless-concat -->
+		<a @click="function foo_bar() { return 'foo' + 'bar'; }" />
 		<!-- eslint-disable-next-line vue/space-infix-ops -->
 		<a :href="16+23" />
 		<!-- eslint-disable-next-line vue/space-unary-ops -->
@@ -26,6 +33,9 @@
 		<div :class="[ 'foo', 'bar', ]" />
 		<!-- eslint-disable-next-line vue/no-multi-spaces -->
 		<a :href="16  + 23" />
+		<!-- eslint-disable vue/operator-linebreak -->
+		<a :href="16
+			+ 23" />
 	</div>
 </template>
 

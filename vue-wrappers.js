@@ -23,7 +23,7 @@ const rulesToMap = [
 	'func-call-spacing',
 	'key-spacing',
 	'keyword-spacing',
-	'max-len',
+	// max-len results in double warnings for lines in <script> tags
 	'no-constant-condition',
 	'no-empty-pattern',
 	'no-extra-parens',
