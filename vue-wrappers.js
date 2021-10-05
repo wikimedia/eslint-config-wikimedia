@@ -8,24 +8,40 @@
  */
 const commonRules = require( './common' ).rules;
 const rulesToMap = [
+	'array-bracket-newline',
 	'array-bracket-spacing',
 	'arrow-spacing',
 	'block-spacing',
 	'brace-style',
 	'camelcase',
 	'comma-dangle',
+	'comma-spacing',
+	'comma-style',
 	'dot-location',
+	'dot-notation',
 	'eqeqeq',
+	'func-call-spacing',
 	'key-spacing',
 	'keyword-spacing',
+	'max-len',
+	'no-constant-condition',
 	'no-empty-pattern',
+	'no-extra-parens',
 	'no-irregular-whitespace',
 	'no-multi-spaces',
 	// no-restricted-syntax differs between ES5/ES6, so it's set in vue-es5 / vue-es6
+	'no-sparse-arrays',
+	'no-useless-concat',
+	'object-curly-newline',
 	'object-curly-spacing',
+	'object-property-newline',
+	'operator-linebreak',
+	'prefer-template',
 	'sort-keys',
 	'space-infix-ops',
-	'space-unary-ops'
+	'space-in-parens',
+	'space-unary-ops',
+	'template-curly-spacing'
 ];
 
 const wrappedRules = {};
