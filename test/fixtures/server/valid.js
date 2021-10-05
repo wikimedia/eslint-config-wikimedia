@@ -5,11 +5,11 @@
 'use strict';
 
 ( function ( global ) {
-	// Off: prefer-const
+	// Valid: prefer-const
 	const a = 4;
 
-	// Off: arrow-parens
-	// Off: arrow-spacing
+	// Valid: arrow-parens
+	// Valid: arrow-spacing
 	global.then( ( data ) => Math.pow( data, 2 ) );
 	global.then( ( data ) => ( { d: data } ) );
 
@@ -23,20 +23,16 @@
 		b--;
 	}
 
-	// Off: no-useless-concat
-	// eslint-disable-next-line no-unused-expressions
-	'ab';
-
-	// Off: template-curly-spacing
+	// Valid: template-curly-spacing
 	// eslint-disable-next-line no-unused-expressions
 	`${global.foo}`;
 
 	// ES6
-	// Off: no-restricted-syntax
+	// Valid: no-restricted-syntax
 	[].includes();
 
 	// ES2016
-	// Off: no-restricted-properties
+	// Valid: no-restricted-properties
 	''.padStart();
 
 	// ES2017 (no rules in not-es2017)
