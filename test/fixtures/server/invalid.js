@@ -22,6 +22,9 @@
 		return;
 	}
 
+	// eslint-disable-next-line unicorn/no-useless-fallback-in-spread
+	const object = { ... ( foo || {} ) };
+
 	// eslint-disable-next-line arrow-parens, arrow-spacing
 	Object.keys( foo ).map( x=> {
 		return x + 1;
