@@ -28,5 +28,8 @@
 <script>
 // @vue/component
 module.exports = {
+	components: {
+		BlahComponent: {}
+	}
 };
 </script>

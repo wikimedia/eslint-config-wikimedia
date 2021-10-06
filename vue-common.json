@@ -22,11 +22,29 @@
 			"vue/no-deprecated-scope-attribute": "error",
 			"vue/no-deprecated-slot-attribute": "error",
 			"vue/no-deprecated-slot-scope-attribute": "error",
-			"vue/no-reserved-component-names": "error",
+			"vue/no-duplicate-attr-inheritance": "error",
+			"vue/no-invalid-model-keys": "error",
+			"vue/no-multiple-objects-in-class": "error",
+			"vue/no-reserved-component-names": [ "error", {
+				"disallowVueBuiltInComponents": true,
+				"disallowVue3BuiltInComponents": true
+			} ],
 			"vue/no-static-inline-styles": "error",
+			"vue/no-unregistered-components": "error",
 			"vue/no-unsupported-features": [ "error", {
 				"version": "2.6.11"
 			} ],
+			"vue/no-unused-properties": [ "error", {
+				"groups": [ "props", "data", "computed", "methods", "setup" ],
+				"deepData": false,
+				"ignorePublicMembers": true
+			} ],
+			"vue/no-unused-refs": "error",
+			"vue/no-use-computed-property-like-method": "error",
+			"vue/no-useless-mustaches": "error",
+			"vue/no-useless-template-attributes": "error",
+			"vue/no-useless-v-bind": "error",
+			"vue/no-v-text": "error",
 			"vue/order-in-components": [ "error", {
 				"order": [
 					"el",
@@ -57,7 +75,8 @@
 				]
 			} ],
 			"vue/padding-line-between-blocks": [ "error", "always" ],
-			"vue/v-on-function-call": "error"
+			"vue/v-on-function-call": "error",
+			"vue/valid-next-tick": "error"
 		}
 	} ]
 }
