@@ -5,7 +5,7 @@ module.exports = {
 	"overrides": [ {
 		"files": [ "**/*.vue" ],
 		"extends": [
-			"./vue-common",
+			"./vue2-common",
 			// We can't use ./language/es5 here, because ecmaVersion: 5 breaks the Vue plugin
 			// Instead, use ES6, then es/no-2015 to prohibit ES6+ syntax
 			// But don't use ./language/es-6 directly, because we don't want rules-es6

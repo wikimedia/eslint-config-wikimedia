@@ -2,7 +2,6 @@
 	"overrides": [ {
 		"files": [ "**/*.vue" ],
 		"extends": [
-			"plugin:vue/recommended",
 			"./common",
 			"./vue-wrappers"
 		],

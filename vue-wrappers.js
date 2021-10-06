@@ -29,7 +29,7 @@ const rulesToMap = [
 	'no-extra-parens',
 	'no-irregular-whitespace',
 	'no-multi-spaces',
-	// no-restricted-syntax differs between ES5/ES6, so it's set in vue-es5 / vue-es6
+	// no-restricted-syntax differs between ES5/ES6, so it's set in vue2-es5 / vue2-es6 / vue3-es6
 	'no-sparse-arrays',
 	'no-useless-concat',
 	'object-curly-newline',

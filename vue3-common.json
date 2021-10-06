@@ -1,0 +1,14 @@
+{
+	"overrides": [ {
+		"files": [ "**/*.vue" ],
+		"extends": [
+			"plugin:vue/vue3-recommended",
+			"./vue-common"
+		],
+		"rules": {
+			"vue/no-unsupported-features": [ "error", {
+				"version": "^3.2.0"
+			} ]
+		}
+	} ]
+}
