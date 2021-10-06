@@ -22,7 +22,9 @@
 <script>
 // @vue/component
 module.exports = {
-
+	components: {
+		BlahComponent: {}
+	}
 };
 
 // Off: no-implicit-globals
