@@ -1,0 +1,3 @@
+{
+	"classes": { "foo": "bar" } // class-doc doesn't crash on JSON input
+}

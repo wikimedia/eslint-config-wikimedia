@@ -24,6 +24,7 @@
 			"rules": {
 				"no-implicit-globals": "off",
 				"mediawiki/no-vue-dynamic-i18n": "error",
+				"mediawiki/vue-exports-component-directive": "error",
 				"vue/html-self-closing": [ "error", {
 					"html": {
 						"void": "never",
