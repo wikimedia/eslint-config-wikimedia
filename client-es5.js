@@ -6,7 +6,7 @@ const rules = {
 	"extends": [
 		"./client-common",
 		"./language/es5",
-		"./vue-es5"
+		"./vue2-es5"
 	],
 	"rules": {
 		"no-restricted-properties": [

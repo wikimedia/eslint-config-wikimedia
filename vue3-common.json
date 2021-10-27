@@ -1,0 +1,19 @@
+{
+	"overrides": [ {
+		"files": [ "**/*.vue" ],
+		"extends": [
+			"plugin:vue/vue3-recommended",
+			"./vue-common"
+		],
+		"rules": {
+			"vue/no-unsupported-features": [ "error", {
+				"version": "^3.2.0"
+			} ],
+			"vue/no-export-in-script-setup": "error",
+			"vue/valid-define-emits": "error",
+			"vue/valid-define-props": "error",
+			"vue/valid-v-memo": "error",
+			"vue/no-deprecated-v-is": "error"
+		}
+	} ]
+}

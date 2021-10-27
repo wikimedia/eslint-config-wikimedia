@@ -5,7 +5,7 @@ module.exports = {
 	"overrides": [ {
 		"files": [ "**/*.vue" ],
 		"extends": [
-			"./vue-common",
+			"./vue2-common",
 			"./language/es6"
 		],
 		"rules": {
