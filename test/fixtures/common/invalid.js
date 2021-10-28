@@ -127,7 +127,7 @@ var APP;
 		bar = new String( 'events' );
 
 		// eslint-disable-next-line max-len
-		// This is a ludicrously long comment that is so long that one can't help but wonder as to whether the writer is a fool or merely testing other developers.
+		// Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a ligula ut felis volutpat venenatis. Vivamus venenatis justo in lectus tempus placerat.
 
 		// eslint-disable-next-line no-new
 		new APP.Example();

@@ -15,6 +15,8 @@
 	// The following messages are used here:
 	// * foo-bar1
 	// * foo-bar2
+	// * extension-reallylongextensionname-dialog-subfeature-process-myoptionwidget-pending-modifier-label-3
+	//   * extension-reallylongextensionname-dialog-subfeature-process-myoptionwidget-pending-modifier-label-3b
 	mw.msg( 'foo-' + bar );
 
 	// Global: require

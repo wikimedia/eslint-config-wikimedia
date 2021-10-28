@@ -34,7 +34,7 @@
 		"jsdoc.json",
 		"jsduck.json",
 		"json.json",
-		"mediawiki.json",
+		"mediawiki.js",
 		"mocha.json",
 		"qunit.json",
 		"selenium.json",
