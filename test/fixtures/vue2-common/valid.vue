@@ -22,7 +22,7 @@
 module.exports = {
 	// Valid: vue/order-in-components
 	el: '',
-	name: '',
+	name: 'ValidTest',
 	parent: null,
 	functional: false,
 	delimiters: [],

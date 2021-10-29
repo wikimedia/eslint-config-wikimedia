@@ -13,10 +13,7 @@
 			"vue/html-closing-bracket-newline": "off",
 			"vue/max-attributes-per-line": [ "warn", {
 				"singleline": 2,
-				"multiline": {
-					"max": 1,
-					"allowFirstLine": true
-				}
+				"multiline": 1
 			} ],
 			"vue/no-boolean-default": "error",
 			"vue/no-deprecated-scope-attribute": "error",
@@ -30,6 +27,7 @@
 				"disallowVue3BuiltInComponents": true
 			} ],
 			"vue/no-static-inline-styles": "error",
+			"vue/no-undef-properties": "error",
 			"vue/no-unregistered-components": "error",
 			"vue/no-unsupported-features": [ "error", {
 				"version": "2.6.11"
@@ -42,7 +40,6 @@
 			"vue/no-unused-refs": "error",
 			"vue/no-use-computed-property-like-method": "error",
 			"vue/no-useless-mustaches": "error",
-			"vue/no-useless-template-attributes": "error",
 			"vue/no-useless-v-bind": "error",
 			"vue/no-v-text": "error",
 			"vue/order-in-components": [ "error", {
@@ -75,8 +72,7 @@
 				]
 			} ],
 			"vue/padding-line-between-blocks": [ "error", "always" ],
-			"vue/v-on-function-call": "error",
-			"vue/valid-next-tick": "error"
+			"vue/v-on-function-call": "error"
 		}
 	} ]
 }

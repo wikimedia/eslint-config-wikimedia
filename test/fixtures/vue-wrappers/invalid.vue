@@ -6,12 +6,12 @@
 		<a :class="{foo:'bar'}" />
 		<!-- eslint-disable-next-line vue/eqeqeq -->
 		<a :class="foo == 4 ? 8 : 15" />
-		<!-- eslint-disable-next-line vue/dot-location -->
+		<!-- eslint-disable-next-line vue/dot-location, vue/first-attribute-linebreak -->
 		<a :href="foo.
 			bar" />
 		<!-- eslint-disable-next-line vue/dot-notation -->
 		<a :href="foo['bar']" />
-		<!-- eslint-disable vue/comma-style -->
+		<!-- eslint-disable vue/comma-style, vue/first-attribute-linebreak -->
 		<a :class="{ foo: 'bar'
 			, baz: 'quux' }" />
 		<!-- eslint-disable-next-line max-len -->
@@ -42,6 +42,7 @@
 <script>
 // @vue/component
 module.exports = {
-
+	// eslint-disable-next-line vue/multi-word-component-names
+	name: 'Invalid'
 };
 </script>

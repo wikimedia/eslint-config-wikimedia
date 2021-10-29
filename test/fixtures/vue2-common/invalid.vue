@@ -1,11 +1,11 @@
 <template>
-	<!-- eslint-disable-next-line vue/html-indent, vue/max-attributes-per-line -->
+	<!-- eslint-disable-next-line vue/html-indent, vue/max-attributes-per-line, vue/first-attribute-linebreak -->
 	<div one="1" :two="quux2" three="3"
 		foo="bar">
 		<!-- eslint-disable-next-line vue/no-duplicate-attr-inheritance -->
 		<blah-component v-bind="$attrs">
-			<!-- eslint-disable-next-line vue/no-deprecated-slot-attribute, vue/no-useless-template-attributes -->
-			<template slot="foo" x="y">
+			<!-- eslint-disable-next-line vue/no-deprecated-slot-attribute -->
+			<template slot="foo">
 				foo
 			</template>
 			<!-- eslint-disable-next-line vue/no-deprecated-scope-attribute -->
@@ -42,7 +42,7 @@ import Vue from 'vue';
 
 // @vue/component
 module.exports = {
-	// eslint-disable-next-line vue/no-reserved-component-names, vue/component-definition-name-casing
+	// eslint-disable-next-line vue/no-reserved-component-names, vue/component-definition-name-casing, vue/multi-word-component-names
 	name: 'div',
 	model: {
 		// eslint-disable-next-line vue/no-invalid-model-keys
@@ -61,11 +61,6 @@ module.exports = {
 		}
 	},
 	computed: {
-		quux1: function () {
-			// eslint-disable-next-line vue/valid-next-tick
-			Vue.nextTick();
-			return 42;
-		},
 		quux2: function () {
 			// eslint-disable-next-line vue/no-use-computed-property-like-method
 			return this.quux1() / 2;
