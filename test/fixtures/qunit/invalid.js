@@ -15,7 +15,10 @@ QUnit.test( '.foo()', function ( assert ) {
 		return;
 	}
 
-	// eslint-disable-next-line qunit/no-negated-ok
+	// eslint-disable-next-line qunit/no-assert-ok
+	assert.ok( x );
+
+	// eslint-disable-next-line qunit/no-assert-ok, qunit/no-negated-ok
 	assert.ok( !x );
 } );
 
@@ -25,7 +28,7 @@ QUnit.test( '.foo()', function ( assert ) {
 	const done = assert.async();
 
 	// eslint-disable-next-line qunit/assert-args
-	assert.ok( 'result', 'message', 'extra' );
+	assert.true( 'result', 'message', 'extra' );
 
 	// eslint-disable-next-line qunit/literal-compare-order
 	assert.strictEqual( 'literal', done );
@@ -35,7 +38,7 @@ QUnit.test( '.foo()', function ( assert ) {
 		assert.async();
 	}
 
-	// eslint-disable-next-line qunit/no-ok-equality
+	// eslint-disable-next-line qunit/no-assert-ok, qunit/no-ok-equality
 	assert.ok( done === 'bar' );
 
 	// eslint-disable-next-line qunit/no-compare-relation-boolean
@@ -88,13 +91,13 @@ QUnit.asyncTest( 'Asynchronous test', 3, function () {
 // eslint-disable-next-line qunit/no-async-module-callbacks
 QUnit.module( 'An async module', async function () {
 	QUnit.test( 'a passing test', function ( assert ) {
-		assert.ok( true );
+		assert.true( true );
 	} );
 
 	await Promise.resolve();
 
 	QUnit.test( 'another passing test', function ( assert ) {
-		assert.ok( true );
+		assert.true( true );
 	} );
 } );
 

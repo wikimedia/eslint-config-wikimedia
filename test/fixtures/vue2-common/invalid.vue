@@ -4,7 +4,6 @@
 		foo="bar">
 		<!-- eslint-disable-next-line vue/no-duplicate-attr-inheritance -->
 		<blah-component v-bind="$attrs">
-			<!-- eslint-disable-next-line max-len -->
 			<!-- eslint-disable-next-line vue/no-deprecated-slot-attribute, vue/no-useless-template-attributes -->
 			<template slot="foo" x="y">
 				foo
@@ -43,7 +42,6 @@ import Vue from 'vue';
 
 // @vue/component
 module.exports = {
-	// eslint-disable-next-line max-len
 	// eslint-disable-next-line vue/no-reserved-component-names, vue/component-definition-name-casing
 	name: 'div',
 	model: {
