@@ -18,7 +18,7 @@
 					"allowFirstLine": true
 				}
 			} ],
-			"vue/no-boolean-default": "error",
+			"vue/no-boolean-default": [ "error", "default-false" ],
 			"vue/no-deprecated-scope-attribute": "error",
 			"vue/no-deprecated-slot-attribute": "error",
 			"vue/no-deprecated-slot-scope-attribute": "error",

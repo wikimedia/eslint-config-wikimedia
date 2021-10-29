@@ -54,7 +54,7 @@ module.exports = {
 		foo: {
 			type: Boolean,
 			// eslint-disable-next-line vue/no-boolean-default
-			default: false
+			default: true
 		},
 		// eslint-disable-next-line vue/no-unused-properties
 		foo2: {
