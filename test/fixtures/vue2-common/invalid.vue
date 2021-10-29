@@ -59,6 +59,9 @@ module.exports = {
 		}
 	},
 	computed: {
+		quux1: function () {
+			return 42;
+		},
 		quux2: function () {
 			// eslint-disable-next-line vue/no-use-computed-property-like-method
 			return this.quux1() / 2;
