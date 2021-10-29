@@ -38,8 +38,6 @@
 
 <!-- eslint-disable-next-line vue/component-tags-order -->
 <script>
-import Vue from 'vue';
-
 // @vue/component
 module.exports = {
 	// eslint-disable-next-line vue/no-reserved-component-names, vue/component-definition-name-casing, vue/multi-word-component-names
