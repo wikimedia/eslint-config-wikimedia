@@ -22,6 +22,7 @@
 <script>
 // @vue/component
 module.exports = {
+	name: 'TestValid',
 	components: {
 		BlahComponent: {}
 	}

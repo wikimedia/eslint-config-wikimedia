@@ -9,15 +9,19 @@
 		<!-- Valid: vue/eqeqeq -->
 		<a :class="foo === 4 ? 8 : 15" />
 		<!-- Valid: vue/dot-location -->
-		<a :href="foo
-			.bar" />
+		<a
+			:href="foo
+				.bar"
+		/>
 		<!-- Valid: vue/block-spacing -->
 		<!-- Valid: vue/keyword-spacing -->
 		<a @click="if ( foo ) { bar() }" />
 		<!-- Valid: vue/brace-style -->
-		<a @click="if ( foo ) {
-			bar()
-		}" />
+		<a
+			@click="if ( foo ) {
+				bar()
+			}"
+		/>
 		<!-- Valid: vue/camelcase -->
 		<a @click="function fooBar() { }" />
 		<!-- Valid: vue/space-infix-ops -->
@@ -31,6 +35,7 @@
 <script>
 // @vue/component
 module.exports = {
-
+	// Valid: vue/multi-word-component-names
+	name: 'ValidTest'
 };
 </script>
