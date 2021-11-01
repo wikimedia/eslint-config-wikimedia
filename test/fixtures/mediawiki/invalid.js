@@ -15,4 +15,7 @@
 
 	// eslint-disable-next-line compat/compat
 	bar = navigator.permissions.query();
+
+	// eslint-disable-next-line max-len
+	// Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a ligula ut felis volutpat venenatis. Vivamus venenatis justo in lectus tempus placerat.
 }() );

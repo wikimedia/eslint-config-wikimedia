@@ -1,4 +1,9 @@
-{
+'use strict';
+
+const commonRules = require( './common' );
+
+/* eslint-disable quote-props, quotes */
+const config = {
 	"globals": {
 		"mw": "readonly",
 		"OO": "readonly",
@@ -35,4 +40,15 @@
 			}
 		}
 	]
-}
+};
+
+// Extend max-len.ignorePattern
+config.rules[ 'max-len' ] = commonRules.rules[ 'max-len' ];
+config.rules[ 'max-len' ][ 1 ].ignorePattern =
+	'(' +
+		config.rules[ 'max-len' ][ 1 ].ignorePattern +
+		'|' +
+		'[\\s]*(//|<!--) *\\* ?[\\S]+$' +
+	')';
+
+module.exports = config;
