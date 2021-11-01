@@ -8,5 +8,7 @@
 <script>
 // @vue/component
 module.exports = {
+	// eslint-disable-next-line vue/multi-word-component-names
+	name: 'Invalid'
 };
 </script>
