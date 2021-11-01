@@ -44,7 +44,7 @@
 		"vue3-common.json",
 		"vue-es5.json",
 		"vue-es6.json",
-		"vue2-e5.js",
+		"vue2-es5.js",
 		"vue2-es6.js",
 		"vue3-es6.js",
 		"vue-wrappers.js",
