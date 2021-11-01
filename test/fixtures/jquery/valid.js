@@ -1,5 +1,6 @@
 ( function () {
 
+	// Global: $
 	// Valid: no-jquery/no-animate ignores scroll properties
 	$( [] ).animate( { scrollTop: 50 } );
 	$( [] ).animate( { scrollLeft: 50 } );

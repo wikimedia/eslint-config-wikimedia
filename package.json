@@ -73,6 +73,7 @@
 		"eslint-plugin-wdio": "^7.4.2"
 	},
 	"devDependencies": {
+		"escape-string-regexp": "^4.0.0",
 		"qunit": "^2.17.2"
 	}
 }

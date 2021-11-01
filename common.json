@@ -38,7 +38,7 @@
 		"max-len": [ "warn", {
 			"code": 100,
 			"tabWidth": 4,
-			"ignorePattern": "^// eslint-.+",
+			"ignorePattern": "^[\\s]*(//|<!--) eslint-.+",
 			"ignoreUrls": true,
 			"ignoreComments": false,
 			"ignoreRegExpLiterals": true,

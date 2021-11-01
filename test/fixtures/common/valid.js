@@ -43,6 +43,9 @@
 		// Valid: max-len
 		bar = 'This is a long string that is indeed so long that it breaches the line length rules and thus would trigger a warning were it not for the over-ride.';
 
+		// Valid: max-len
+		// eslint-comments-starting-with-"eslint-"-are-allowed-to-be-any-length---------------------------
+
 		// Valid: space-infix-ops
 		this.total = upHere() + id;
 		name = options.bar ? upHereAlso( id ) : id;
