@@ -61,6 +61,10 @@ configs.forEach( ( configPath ) => {
 	];
 
 	QUnit.module( `"${configName}" config`, () => {
+		QUnit.test( `"${configName}" exists`, ( assert ) => {
+			assert.true( fs.existsSync( configPath ), `"${configPath}" not found` );
+		} );
+
 		if ( !fs.existsSync( fixturesDir ) ) {
 			QUnit.test.skip( `No tests for "${configName}" config` );
 			return;
