@@ -114,7 +114,6 @@
 		} ],
 		"switch-colon-spacing": [ "error", { "after": true, "before": false } ],
 		"unicode-bom": [ "error" ],
-		"unicorn/no-useless-undefined": "error",
 		"unicorn/prefer-date-now": "error",
 		"unicorn/prefer-string-slice": "error",
 		"unicorn/throw-new-error": "error",
