@@ -1,3 +1,4 @@
 {
-	"classes": { "foo": "bar" } // class-doc doesn't crash on JSON input
+	"classes": { "foo": "bar" }, // class-doc doesn't crash on JSON input
+	"max-len-off": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a ligula ut felis volutpat venenatis. Vivamus venenatis justo in lectus tempus placerat."
 }
