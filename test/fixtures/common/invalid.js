@@ -152,7 +152,7 @@ var APP;
 		options. space = Infinity;
 
 		function undef() {
-			// eslint-disable-next-line no-undef-init, unicorn/no-useless-undefined
+			// eslint-disable-next-line no-undef-init
 			var b = undefined;
 			return b;
 		}
@@ -160,7 +160,6 @@ var APP;
 		function restrict( a ) {
 			// eslint-disable-next-line no-shadow-restricted-names
 			var undefined = a;
-			// eslint-disable-next-line unicorn/no-useless-undefined
 			return undefined;
 		}
 
