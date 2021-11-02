@@ -14,7 +14,6 @@
 		"no-var": "error",
 		"one-var": "off",
 		"vars-on-top": "off",
-		"prefer-const": "error",
-		"unicorn/prefer-includes": "error"
+		"prefer-const": "error"
 	}
 }
