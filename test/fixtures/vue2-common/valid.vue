@@ -14,6 +14,15 @@
 		<!-- Valid: vue/v-on-function-call -->
 		<a @click="foo">Click me</a>
 		<!-- Valid: vue/padding-line-between-blocks -->
+		<!-- Valid: vue/attributes-order -->
+		<div
+			is="header"
+			v-once
+			id="uniqueID"
+			v-model="headerData"
+			my-prop="prop"
+			@click="functionCall"
+		/>
 	</div>
 </template>
 

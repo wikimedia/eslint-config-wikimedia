@@ -21,19 +21,33 @@ function getPluginExtends( config ) {
 	const extendsList = Array.isArray( config.extends ) ?
 		config.extends :
 		[ config.extends ];
+
+	if ( config.overrides ) {
+		config.overrides.forEach( ( override ) => {
+			Object.assign( extendsList, override.extends );
+		} );
+	}
+
 	// Fetch every upstream config we use via 'extends'.
 	extendsList.forEach( ( extend ) => {
 		const parts = extend.match( /plugin:(.*)\/([^/]+)/ );
+		let childConfig;
 		if ( !parts ) {
-			return;
-		}
-		let upstreamConfigs;
-		if ( parts[ 1 ].includes( 'eslint-plugin-' ) ) {
-			upstreamConfigs = require( parts[ 1 ] ).configs;
+			if ( fs.existsSync( extend ) ) {
+				childConfig = require( extend );
+			} else {
+				// Couldn't resolve extend path
+				return;
+			}
 		} else {
-			upstreamConfigs = require( 'eslint-plugin-' + parts[ 1 ] ).configs;
+			let upstreamConfigs;
+			if ( parts[ 1 ].includes( 'eslint-plugin-' ) ) {
+				upstreamConfigs = require( parts[ 1 ] ).configs;
+			} else {
+				upstreamConfigs = require( 'eslint-plugin-' + parts[ 1 ] ).configs;
+			}
+			childConfig = upstreamConfigs[ parts[ 2 ] ];
 		}
-		const childConfig = upstreamConfigs[ parts[ 2 ] ];
 		Object.assign(
 			rules,
 			getRules( childConfig )
@@ -57,7 +71,9 @@ configs.forEach( ( configPath ) => {
 		'json',
 		'mocha',
 		'qunit',
-		'selenium'
+		'selenium',
+		'vue2-common',
+		'vue3-common'
 	];
 
 	QUnit.module( `"${configName}" config`, () => {

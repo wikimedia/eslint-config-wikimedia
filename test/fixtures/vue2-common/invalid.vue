@@ -17,6 +17,20 @@
 				{{ baz }}
 			</template>
 		</blah-component>
+
+		<!-- eslint-disable vue/attributes-order -->
+		<div
+			@click="functionCall"
+			my-prop="prop"
+			v-model="headerData"
+			id="uniqueID"
+			v-once
+			is="header"
+		/>
+		<!-- eslint-enable vue/attributes-order -->
+
+		<!-- eslint-disable-next-line vue/no-lone-template -->
+		<template />
 		<!-- eslint-disable-next-line vue/no-unregistered-components -->
 		<foo-component />
 		<!-- eslint-disable-next-line vue/no-static-inline-styles -->
@@ -72,6 +86,11 @@ module.exports = {
 		// eslint-disable-next-line vue/no-reserved-component-names, vue/no-unused-components
 		button: {},
 		BlahComponent: {}
+	},
+	// eslint-disable-next-line vue/require-render-return
+	render: function () {
+		// eslint-disable-next-line vue/no-multiple-slot-args, no-unused-vars
+		var children = this.$scopedSlots.default( 'foo', 'bar' );
 	}
 };
 </script>
