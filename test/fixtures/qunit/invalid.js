@@ -5,8 +5,11 @@ QUnit.module( 'Example' );
 QUnit.test( '.foo()', function ( assert ) {
 	const x = 'bar';
 
-	// eslint-disable-next-line qunit/no-assert-equal
+	// eslint-disable-next-line qunit/no-loose-assertions
 	assert.equal( x, 'bar' );
+
+	// eslint-disable-next-line qunit/no-loose-assertions
+	assert.notEqual( x, 'bar' );
 
 	assert.expect( 3 );
 
@@ -15,11 +18,11 @@ QUnit.test( '.foo()', function ( assert ) {
 		return;
 	}
 
-	// eslint-disable-next-line qunit/no-assert-ok
-	assert.ok( x );
-
-	// eslint-disable-next-line qunit/no-assert-ok, qunit/no-negated-ok
+	// eslint-disable-next-line qunit/no-loose-assertions
 	assert.ok( !x );
+
+	// eslint-disable-next-line qunit/no-loose-assertions
+	assert.notOk( x );
 } );
 
 // Recommended
@@ -37,9 +40,6 @@ QUnit.test( '.foo()', function ( assert ) {
 		// eslint-disable-next-line qunit/no-async-in-loops
 		assert.async();
 	}
-
-	// eslint-disable-next-line qunit/no-assert-ok, qunit/no-ok-equality
-	assert.ok( done === 'bar' );
 
 	// eslint-disable-next-line qunit/no-compare-relation-boolean
 	assert.strictEqual( done > 3, true );

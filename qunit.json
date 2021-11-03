@@ -7,10 +7,13 @@
 	},
 	"plugins": [ "qunit" ],
 	"rules": {
+		"qunit/no-assert-equal": "off",
 		"qunit/no-assert-equal-boolean": "off",
 		"qunit/no-assert-logical-expression": "off",
-		"qunit/no-assert-ok": "error",
 		"qunit/no-conditional-assertions": "off",
+		"qunit/no-loose-assertions": "error",
+		"qunit/no-negated-ok": "off",
+		"qunit/no-ok-equality": "off",
 		"qunit/require-expect": [ "error", "never-except-zero" ]
 	}
 }
