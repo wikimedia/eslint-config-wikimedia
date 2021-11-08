@@ -1,3 +1,43 @@
+0.21.0 / 2021-10-28
+===================
+
+* Update ESLint to 7.32 (Ed Sanders)
+* Drop Node 10 support (Ed Sanders)
+
+—
+* client-es6: De-deduplicate comment in client-es6/valid.js (Ed Sanders)
+* client: Enable `unicorn/no-invalid-remove-event-listener` (Ed Sanders)
+* common/es6: Enable 5 rules from eslint-plugin-unicorn (Ed Sanders)
+* common: Remove `unicorn/no-useless-undefined` (Ed Sanders)
+* common: Consider variable hoisting when enforcing `no-shadow` (Ed Sanders)
+* common: Remove `no-multi-str` rule (Timo Tijhof)
+* common: Fix eslint comment exception in `max-len` (Ed Sanders)
+* es2018: Enable `unicorn/no-useless-fallback-in-spread` (Ed Sanders)
+* jquery: Update eslint-plugin-no-jquery to 2.7.0 (Ed Sanders)
+* jsdoc: Update eslint-plugin-jsdoc to 37.0.3 (Ed Sanders)
+* json: Update eslint-plugin-json-es to 1.5.4
+* mediawiki: Allow long message keys in comments (Ed Sanders)
+* mediawiki: Update eslint-plugin-compat to 3.13.0 (Ed Sanders)
+* mediawiki: Update eslint-plugin-mediawiki to 0.3.0 (Ed Sanders)
+* mocha: Update eslint-plugin-mocha to 9.0.0 (Ed Sanders)
+* qunit: Update eslint-plugin-qunit to 7.0.0 (Ed Sanders)
+* qunit: Enable `qunit/no-assert-ok` (Ed Sanders)
+* qunit: Replace various rules with `no-loose-assertions` (Ed Sanders)
+* selenium: Update eslint-plugin-wdio to 7.4.2 (Ed Sanders)
+* server: Improve test coverage (Ed Sanders)
+* unicorn: Update eslint-plugin-unicorn to 36.0.0 (Ed Sanders)
+* vue: Allow boolean props to default to false (Roan Kattouw)
+* vue: Update eslint-plugin-vue to 8.0.2 (Roan Kattouw)
+* vue: Add Vue 3 support (Roan Kattouw)
+* vue-common: Add new rules from upstream (Roa Kattouw)
+
+—
+* build: Auto-fix path-parse to v1.0.7 for npm audit (James D. Forrester)
+* tests: Assert globals in fixtures (Ed Sanders)
+* tests: Update QUnit to 2.17.2 (Ed Sanders)
+* tests: mediawiki: Add test for JSON bug (Ed Sanders)
+* tests: Check config files exist (Ed Sanders)
+
 0.20.0 / 2021-04-07
 ===================
 * Update ESLint to 7.23 (Ed Sanders)
