@@ -1,0 +1,6 @@
+object:
+  plain-scalar: string
+  flow-sequence-bracket-spacing: [ string ]
+  flow-mapping-curly-spacing: { key: value }
+  block-sequence-hyphen-indicator-newline:
+    - string

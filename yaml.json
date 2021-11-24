@@ -1,0 +1,12 @@
+{
+	"extends": [
+		"plugin:yml/standard"
+	],
+	"plugins": [
+		"eslint-plugin-yml"
+	],
+	"rules": {
+		"yml/flow-sequence-bracket-spacing": [ "error", "always" ],
+		"yml/flow-mapping-curly-spacing": [ "error", "always" ]
+	}
+}

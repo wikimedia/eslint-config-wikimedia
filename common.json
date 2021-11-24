@@ -6,13 +6,18 @@
 	"env": {},
 	"globals": {},
 	"reportUnusedDisableDirectives": true,
-	"overrides": [ {
-		"files": [ "**/*.json", "**/*.jsonc" ],
-		"parser": "eslint-plugin-json-es",
-		"extends": [
-			"./json"
-		]
-	} ],
+	"overrides": [
+		{
+			"files": [ "**/*.json", "**/*.jsonc" ],
+			"parser": "eslint-plugin-json-es",
+			"extends": "./json"
+		},
+		{
+			"files": [ "**/*.yaml", "**/*.yml" ],
+			"parser": "yaml-eslint-parser",
+			"extends": "./yaml"
+		}
+	],
 	"plugins": [ "unicorn" ],
 	"rules": {
 		"array-bracket-spacing": [ "error", "always" ],
