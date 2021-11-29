@@ -10,9 +10,16 @@
 		"node/no-unsupported-features/es-syntax": "off",
 		"node/shebang": "off"
 	},
-	"overrides": [ {
-		"files": [ "**/*.json", "**/*.jsonc" ],
-		"parser": "eslint-plugin-json-es",
-		"extends": "./json"
-	} ]
+	"overrides": [
+		{
+			"files": [ "**/*.json", "**/*.jsonc" ],
+			"parser": "eslint-plugin-json-es",
+			"extends": "./json"
+		},
+		{
+			"files": [ "**/*.yaml", "**/*.yml" ],
+			"parser": "yaml-eslint-parser",
+			"extends": "./yaml"
+		}
+	]
 }
