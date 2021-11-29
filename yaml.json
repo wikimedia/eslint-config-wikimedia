@@ -6,6 +6,7 @@
 		"eslint-plugin-yml"
 	],
 	"rules": {
+		"max-len": "off",
 		"yml/flow-sequence-bracket-spacing": [ "error", "always" ],
 		"yml/flow-mapping-curly-spacing": [ "error", "always" ]
 	}

@@ -51,7 +51,7 @@ config.rules[ 'max-len' ][ 1 ].ignorePattern =
 		'[\\s]*(//|<!--) *\\* ?[\\S]+$' +
 	')';
 // Duplicate JSON override from common rules to prevent max-len rule here taking precedent
-const jsonOverride = commonRules.overrides.find( ( override ) => override.parser === 'eslint-plugin-json-es' );
-config.overrides.push( jsonOverride );
+const jsonOverride = commonRules.overrides.filter( ( override ) => override.parser === 'eslint-plugin-json-es' || override.parser === 'yaml-eslint-parser' );
+config.overrides.push.apply( config.overrides, jsonOverride );
 
 module.exports = config;

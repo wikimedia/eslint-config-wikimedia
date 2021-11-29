@@ -1,7 +1,2 @@
 object:
-  plain-scalar: string
-  flow-sequence-bracket-spacing: [ string ]
-  flow-mapping-curly-spacing: { key: value }
-  block-sequence-hyphen-indicator-newline:
-    - string
   max-len-off: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a ligula ut felis volutpat venenatis. Vivamus venenatis justo in lectus tempus placerat.
