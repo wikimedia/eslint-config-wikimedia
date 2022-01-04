@@ -27,7 +27,7 @@ QUnit.test( '.foo()', function ( assert ) {
 
 // Recommended
 // eslint-disable-next-line qunit/no-identical-names, qunit/resolve-async
-QUnit.test( '.foo()', function ( assert ) {
+QUnit.test( '.foo()', ( assert ) => {
 	const done = assert.async();
 
 	// eslint-disable-next-line qunit/assert-args
