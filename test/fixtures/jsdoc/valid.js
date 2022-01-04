@@ -52,6 +52,14 @@
 	/**
 	 * Description
 	 *
+	 * jsdoc/no-multi-asterisks with whitespace, allowWhitespace=true
+	 * This does two things
+	 * * Thing one
+	 * * Thing two
+	 *
+	 * And that is a
+	 * *bold* change
+	 *
 	 * @class
 	 *
 	 * @mixes App
