@@ -36,7 +36,8 @@ const config = {
 						"normal": "never",
 						"component": "never"
 					}
-				} ]
+				} ],
+				"vue/component-name-in-template-casing": [ "error", "kebab-case" ]
 			}
 		}
 	]

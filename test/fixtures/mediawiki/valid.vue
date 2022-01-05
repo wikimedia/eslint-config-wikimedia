@@ -15,6 +15,7 @@
 		</blah-component>
 		<!-- Valid: vue/html-self-closing -->
 		<p v-i18n-html:foo></p>
+		<!-- Valid: vue/component-name-in-template-casing -->
 		<blah-component></blah-component>
 	</div>
 </template>
