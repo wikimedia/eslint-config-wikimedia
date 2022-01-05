@@ -72,7 +72,10 @@
 				]
 			} ],
 			"vue/padding-line-between-blocks": [ "error", "always" ],
-			"vue/v-on-function-call": "error"
+			"vue/v-on-function-call": "error",
+			"vue/no-child-content": "error",
+			"vue/no-expose-after-await": "error",
+			"vue/prefer-separate-static-class": "error"
 		}
 	} ]
 }

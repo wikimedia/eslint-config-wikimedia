@@ -29,8 +29,10 @@
 		<blah-component v-model:foo="bar" />
 		<!-- eslint-disable-next-line vue/no-useless-mustaches -->
 		{{ 'hello' }}
-		<!-- eslint-disable-next-line vue/no-useless-v-bind, vue/no-v-text -->
-		<a :class="'foo'" v-text="bar" />
+		<!-- eslint-disable-next-line vue/no-useless-v-bind, vue/no-v-text-->
+		<a :href="'foo'" v-text="bar" />
+		<!-- eslint-disable-next-line vue/prefer-separate-static-class -->
+		<a :class="[ 'myClass', foo ]" />
 	</div>
 </template><!-- eslint-disable-next-line vue/padding-line-between-blocks -->
 <style>

@@ -13,6 +13,11 @@
 		/>
 		<!-- Valid: vue/v-on-function-call -->
 		<a @click="foo">Click me</a>
+		<!-- Valid: vue/no-child-content -->
+		<!-- eslint-disable-next-line vue/no-v-html -->
+		<p v-html="foo" />
+		<!-- Valid: vue/prefer-separate-static-class -->
+		<div class="myDiv" :class="foo" />
 		<!-- Valid: vue/padding-line-between-blocks -->
 	</div>
 </template>

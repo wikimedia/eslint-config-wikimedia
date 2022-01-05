@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<!-- eslint-disable-next-line vue/array-bracket-spacing, vue/comma-spacing -->
-		<div :class="['foo' ,'bar']" />
+		<div :class="[foo ,bar]" />
 		<!-- eslint-disable-next-line vue/key-spacing, vue/object-curly-spacing -->
 		<a :class="{foo:'bar'}" />
 		<!-- eslint-disable-next-line vue/eqeqeq -->
@@ -30,7 +30,7 @@
 		<!-- eslint-disable-next-line vue/space-unary-ops -->
 		<a :href="! x" />
 		<!-- eslint-disable-next-line vue/comma-dangle -->
-		<div :class="[ 'foo', 'bar', ]" />
+		<div :class="[ foo, bar, ]" />
 		<!-- eslint-disable-next-line vue/no-multi-spaces -->
 		<a :href="16  + 23" />
 		<!-- eslint-disable vue/operator-linebreak -->

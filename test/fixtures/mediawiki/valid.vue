@@ -14,8 +14,11 @@
 			</template>
 		</blah-component>
 		<!-- Valid: vue/html-self-closing -->
-		<p v-i18n-html:foo></p>
 		<blah-component></blah-component>
+		<!-- Valid: vue/no-child-content -->
+		<!-- eslint-disable-next-line vue/no-v-html -->
+		<p v-html="foo"></p>
+		<p v-i18n-html:foo></p>
 	</div>
 </template>
 

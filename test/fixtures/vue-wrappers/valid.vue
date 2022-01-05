@@ -2,7 +2,7 @@
 	<div>
 		<!-- Valid: vue/array-bracket-spacing -->
 		<!-- Valid: vue/comma-dangle -->
-		<div :class="[ 'foo', 'bar' ]" />
+		<div :class="[ foo, bar ]" />
 		<!-- Valid: vue/key-spacing -->
 		<!-- Valid: vue/object-curly-spacing -->
 		<a :class="{ foo: 'bar' }" />

@@ -36,6 +36,9 @@ const config = {
 						"normal": "never",
 						"component": "never"
 					}
+				} ],
+				"vue/no-child-content": [ "error", {
+					"additionalDirectives": [ "i18n-html" ]
 				} ]
 			}
 		}
