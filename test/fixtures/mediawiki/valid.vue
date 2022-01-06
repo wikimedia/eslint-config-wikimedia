@@ -14,9 +14,16 @@
 			</template>
 		</blah-component>
 		<!-- Valid: vue/html-self-closing -->
-		<p v-i18n-html:foo></p>
 		<!-- Valid: vue/component-name-in-template-casing -->
 		<blah-component></blah-component>
+		<!-- Valid: vue/no-child-content -->
+		<!--
+			This line asserts valid code for the no-child-content rule, but there's no way
+			to do that without running afoul of the no-v-html rule
+		-->
+		<!-- eslint-disable-next-line vue/no-v-html -->
+		<p v-html="foo"></p>
+		<p v-i18n-html:foo></p>
 	</div>
 </template>
 
