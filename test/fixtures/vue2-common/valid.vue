@@ -13,6 +13,8 @@
 		/>
 		<!-- Valid: vue/v-on-function-call -->
 		<a @click="foo">Click me</a>
+		<!-- Valid: vue/component-name-in-template-casing -->
+		<BlahComponent />
 		<!-- Valid: vue/padding-line-between-blocks -->
 	</div>
 </template>
@@ -27,7 +29,9 @@ module.exports = {
 	functional: false,
 	delimiters: [],
 	comments: [],
-	components: {},
+	components: {
+		BlahComponent: {}
+	},
 	directives: {},
 	filters: {},
 	extends: null,

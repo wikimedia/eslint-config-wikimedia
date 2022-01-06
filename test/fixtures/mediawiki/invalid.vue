@@ -19,6 +19,8 @@
 		<p v-i18n-html:foo />
 		<!-- eslint-disable-next-line vue/html-self-closing, vue/no-unregistered-components -->
 		<blah-component />
+		<!-- eslint-disable-next-line vue/component-name-in-template-casing -->
+		<BlahComponent></BlahComponent>
 		<!-- eslint-disable-next-line mediawiki/no-vue-dynamic-i18n -->
 		<p>{{ $i18n( foo ) }}</p>
 		<!-- eslint-disable-next-line mediawiki/no-vue-dynamic-i18n -->
@@ -30,7 +32,12 @@
 // eslint-disable-next-line mediawiki/valid-package-file-require
 require( './invalid' );
 // eslint-disable-next-line mediawiki/vue-exports-component-directive
+module.exports = {};
+
+// @vue/component
 module.exports = {
+	// eslint-disable-next-line vue/multi-word-component-names
+	name: 'Invalid',
 	components: {
 		BlahComponent: {}
 	}
