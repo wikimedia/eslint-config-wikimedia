@@ -14,6 +14,7 @@
 			</template>
 		</blah-component>
 		<!-- Valid: vue/html-self-closing -->
+		<!-- Valid: vue/component-name-in-template-casing -->
 		<blah-component></blah-component>
 		<!-- Valid: vue/no-child-content -->
 		<!-- eslint-disable-next-line vue/no-v-html -->

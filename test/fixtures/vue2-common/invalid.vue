@@ -3,7 +3,7 @@
 	<div one="1" :two="quux2" three="3"
 		foo="bar">
 		<!-- eslint-disable-next-line vue/no-duplicate-attr-inheritance -->
-		<blah-component v-bind="$attrs">
+		<BlahComponent v-bind="$attrs">
 			<!-- eslint-disable-next-line vue/no-deprecated-slot-attribute -->
 			<template slot="foo">
 				foo
@@ -16,7 +16,7 @@
 			<template #quux="bar" slot-scope="baz">
 				{{ baz }}
 			</template>
-		</blah-component>
+		</BlahComponent>
 		<!-- eslint-disable-next-line vue/no-unregistered-components -->
 		<foo-component />
 		<!-- eslint-disable-next-line vue/no-static-inline-styles -->
@@ -25,7 +25,7 @@
 		<a ref="link" @click="foo()">Click me</a>
 		<!-- eslint-disable-next-line vue/no-multiple-objects-in-class -->
 		<a :class="[ { foo: 'bar' }, { baz: 'quux' } ]" />
-		<!-- eslint-disable-next-line vue/no-unsupported-features, vue/no-v-model-argument -->
+		<!-- eslint-disable-next-line vue/no-unsupported-features, vue/no-v-model-argument, vue/component-name-in-template-casing -->
 		<blah-component v-model:foo="bar" />
 		<!-- eslint-disable-next-line vue/no-useless-mustaches -->
 		{{ 'hello' }}

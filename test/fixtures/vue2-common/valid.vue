@@ -13,6 +13,8 @@
 		/>
 		<!-- Valid: vue/v-on-function-call -->
 		<a @click="foo">Click me</a>
+		<!-- Valid: vue/component-name-in-template-casing -->
+		<BlahComponent />
 		<!-- Valid: vue/no-child-content -->
 		<!-- eslint-disable-next-line vue/no-v-html -->
 		<p v-html="foo" />
@@ -32,7 +34,9 @@ module.exports = {
 	functional: false,
 	delimiters: [],
 	comments: [],
-	components: {},
+	components: {
+		BlahComponent: {}
+	},
 	directives: {},
 	filters: {},
 	extends: null,

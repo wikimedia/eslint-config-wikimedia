@@ -19,6 +19,8 @@
 		<p v-i18n-html:foo />
 		<!-- eslint-disable-next-line vue/html-self-closing -->
 		<blah-component />
+		<!-- eslint-disable-next-line vue/component-name-in-template-casing -->
+		<BlahComponent></BlahComponent>
 		<!-- eslint-disable-next-line vue/no-child-content, vue/no-v-html -->
 		<p v-html="foo">
 			bar

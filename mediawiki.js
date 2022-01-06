@@ -37,6 +37,7 @@ const config = {
 						"component": "never"
 					}
 				} ],
+				"vue/component-name-in-template-casing": [ "error", "kebab-case" ],
 				"vue/no-child-content": [ "error", {
 					"additionalDirectives": [ "i18n-html" ]
 				} ]
