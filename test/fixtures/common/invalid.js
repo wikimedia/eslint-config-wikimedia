@@ -2,6 +2,9 @@
 var APP;
 // eslint-disable-next-line wrap-iife
 ( function ( global ) {
+	// eslint-disable-next-line no-use-before-define
+	APP = {};
+
 	// eslint-disable-next-line no-shadow
 	var APP;
 	var upHere = function ( yArg ) {
@@ -48,9 +51,6 @@ var APP;
 			// eslint-disable-next-line block-spacing, brace-style, camelcase
 			return camel_case;}
 
-		// eslint-disable-next-line no-use-before-define
-		upHere( i );
-
 		var i;
 		// eslint-disable-next-line max-statements-per-line
 		if ( name ) { return i; }
@@ -69,7 +69,6 @@ var APP;
 		} else if ( options['default' ] ) {
 		// eslint-disable-next-line no-unsafe-negation, keyword-spacing
 		}else if ( !'default' in options ) {
-			// eslint-disable-next-line no-use-before-define
 			name += named();
 		}
 

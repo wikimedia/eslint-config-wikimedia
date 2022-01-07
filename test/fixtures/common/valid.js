@@ -13,6 +13,9 @@
 	// Example
 	/* Example */
 
+	// Valid: no-use-before-define (nofunc)
+	upHere( 1 );
+
 	// Empty function declaration
 	function upHere() {}
 
