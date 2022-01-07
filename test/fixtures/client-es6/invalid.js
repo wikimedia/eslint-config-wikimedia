@@ -1,9 +1,14 @@
 /* eslint-env browser */
 
+// eslint-disable-next-line no-use-before-define
+const c = new MyClass();
+
+class MyClass {}
+
 ( function () {
 	// not-es6
 	// eslint-disable-next-line no-restricted-syntax
-	[].includes();
+	[].includes( c );
 	// eslint-disable-next-line es/no-object-entries
 	Object.entries();
 	// eslint-disable-next-line es/no-object-getownpropertydescriptors
