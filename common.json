@@ -93,7 +93,7 @@
 		"no-unneeded-ternary": [ "error", { "defaultAssignment": false } ],
 		"no-unreachable-loop": "error",
 		"no-unused-expressions": "error",
-		"no-use-before-define": "error",
+		"no-use-before-define": [ "error", "nofunc" ],
 		"no-useless-call": "error",
 		"no-useless-concat": "error",
 		"no-void": "error",
