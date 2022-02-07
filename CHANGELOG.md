@@ -1,3 +1,21 @@
+0.22.0 / 2022-02-07
+===================
+
+* Update ESLint to 8.6.0 (Ed Sanders)
+
+—
+* common: Add eslint-plugin-yml to lint YAML files (Petr Pchelko)
+* common: Disable no-use-before-define for functions (Ed Sanders)
+* common: Update eslint-plugin-unicorn to 40.1.0 (Ed Sanders)
+* jsdoc: Update eslint-plgin-jsdoc to 37.7.1 (Ed Sanders)
+* mediawiki: Update eslint-plugin-compat to 4.0.2 (Ed Sanders)
+* qunit: Update eslint-plugin-qunit to 7.2.0 (Ed Sanders)
+* vue: Enforce component-name-in-template-casing (Roan Kattouw)
+* vue: Update eslint-plugin-vue to 8.4.1 (Roan Kattouw)
+
+—
+* tests: Add test to show that YAML delibrately enforces max-len
+
 0.21.0 / 2021-10-28
 ===================
 
