@@ -14,6 +14,7 @@
 		<!-- Valid: vue/v-on-function-call -->
 		<a @click="foo">Click me</a>
 		<!-- Valid: vue/component-name-in-template-casing -->
+		<!-- Valid: vue/no-v-text-v-html-on-component -->
 		<BlahComponent />
 		<!-- Valid: vue/no-child-content -->
 		<!--

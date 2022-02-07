@@ -5,6 +5,7 @@
 		<div :class="[ foo, bar ]" />
 		<!-- Valid: vue/key-spacing -->
 		<!-- Valid: vue/object-curly-spacing -->
+		<!-- Valid: vue/quote-props -->
 		<a :class="{ foo: 'bar' }" />
 		<!-- Valid: vue/eqeqeq -->
 		<a :class="foo === 4 ? 8 : 15" />

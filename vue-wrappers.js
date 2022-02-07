@@ -35,8 +35,10 @@ const rulesToMap = [
 	'object-curly-newline',
 	'object-curly-spacing',
 	'object-property-newline',
+	// object-shorthand is not set by our rules (yet?), add it if/when it is
 	'operator-linebreak',
 	'prefer-template',
+	'quote-props',
 	'sort-keys',
 	'space-infix-ops',
 	'space-in-parens',
