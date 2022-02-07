@@ -11,8 +11,8 @@
 			bar" />
 		<!-- eslint-disable-next-line vue/dot-notation -->
 		<a :href="foo['bar']" />
-		<!-- eslint-disable vue/comma-style, vue/first-attribute-linebreak -->
-		<a :class="{ foo: 'bar'
+		<!-- eslint-disable vue/comma-style, vue/first-attribute-linebreak, vue/quote-props -->
+		<a :class="{ 'foo': 'bar'
 			, baz: 'quux' }" />
 		<!-- eslint-disable-next-line max-len -->
 		<!-- eslint-disable-next-line vue/block-spacing, vue/keyword-spacing, vue/space-in-parens, vue/func-call-spacing -->

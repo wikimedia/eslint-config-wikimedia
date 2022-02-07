@@ -4,7 +4,7 @@
 		<a v-bind:href="foo">Foo</a>
 		<!-- eslint-disable-next-line vue/v-on-style -->
 		<a v-on:click="onClick">Click me</a>
-		<!-- eslint-disable-next-line vue/no-unregistered-components -->
+		<!-- eslint-disable-next-line vue/no-undef-components -->
 		<foo-component>
 			<!-- eslint-disable-next-line vue/v-slot-style -->
 			<template v-slot:default>

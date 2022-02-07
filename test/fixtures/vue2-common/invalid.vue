@@ -17,8 +17,10 @@
 				{{ baz }}
 			</template>
 		</BlahComponent>
-		<!-- eslint-disable-next-line vue/no-unregistered-components -->
-		<foo-component />
+		<!-- eslint-disable-next-line vue/no-undef-components, vue/no-v-text, vue/no-v-text-v-html-on-component -->
+		<foo-component v-text="foo" />
+		<!-- eslint-disable-next-line vue/no-undef-components, vue/no-v-html, vue/no-v-text-v-html-on-component -->
+		<foo-component v-html="foo" />
 		<!-- eslint-disable-next-line vue/no-static-inline-styles -->
 		<span style="color: red">Red</span>
 		<!-- eslint-disable-next-line vue/no-unused-refs, vue/v-on-function-call -->

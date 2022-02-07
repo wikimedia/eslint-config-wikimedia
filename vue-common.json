@@ -28,7 +28,7 @@
 			} ],
 			"vue/no-static-inline-styles": "error",
 			"vue/no-undef-properties": "error",
-			"vue/no-unregistered-components": "error",
+			"vue/no-undef-components": "error",
 			"vue/no-unsupported-features": [ "error", {
 				"version": "2.6.11"
 			} ],
@@ -76,7 +76,8 @@
 			"vue/component-name-in-template-casing": [ "error", "PascalCase" ],
 			"vue/no-child-content": "error",
 			"vue/no-expose-after-await": "error",
-			"vue/prefer-separate-static-class": "error"
+			"vue/prefer-separate-static-class": "error",
+			"vue/no-v-text-v-html-on-component": "error"
 		}
 	} ]
 }
