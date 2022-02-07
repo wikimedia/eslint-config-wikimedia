@@ -87,7 +87,7 @@
 	/**
 	 * Description
 	 * @param {Object} bar
-	 * @param {string} bar.module `module` property threw and error in eslint-plugin-jsdoc<37.5.0
+	 * @param {string} bar.module `module` property threw an error in eslint-plugin-jsdoc<37.5.0
 	 * @return {number}
 	 */
 	APP.method = function ( bar ) {
