@@ -48,6 +48,25 @@ function getPluginExtends( config ) {
 	return { rules, globals };
 }
 
+QUnit.module( 'package.json', () => {
+	QUnit.test( 'All files are included', ( assert ) => {
+		const excludeList = [
+			'.eslintrc.json',
+			'package.json',
+			'package-lock.json'
+		];
+		fs.readdirSync( path.resolve( __dirname, '../' ) ).forEach( ( file ) => {
+			const ext = path.extname( file );
+			if (
+				( ext === '.js' || ext === '.json' ) &&
+				!excludeList.includes( file )
+			) {
+				assert.true( configs.includes( file ), `'${file}' found in packge.json's 'files' list` );
+			}
+		} );
+	} );
+} );
+
 configs.forEach( ( configPath ) => {
 	const configName = configPath.replace( /\..*/, '' );
 	const fixturesDir = path.resolve( __dirname, `fixtures/${configName}` );
