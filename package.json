@@ -48,6 +48,7 @@
 		"vue2-es6.js",
 		"vue3-es6.js",
 		"vue-wrappers.js",
+		"yaml.json",
 		"language"
 	],
 	"contributors": [
