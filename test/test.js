@@ -116,7 +116,7 @@ configs.forEach( ( configPath ) => {
 			// Disabled rules are covered below
 			if ( isEnabled( rule ) ) {
 				QUnit.test( `Rule '${rule}' is covered in invalid fixture`, ( assert ) => {
-					const rDisableRule = new RegExp( `(/[/*]|<!--) eslint-disable((-next)?-line)? ([a-z-/]+, )*?${rule}($|[^a-z-])` );
+					const rDisableRule = new RegExp( `(/[/*]|<!--|#) eslint-disable((-next)?-line)? ([a-z-/]+, )*?${rule}($|[^a-z-])` );
 					assert.true( rDisableRule.test( invalidFixtures ), 'eslint-disable comment found' );
 				} );
 			}
