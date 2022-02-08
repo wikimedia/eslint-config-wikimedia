@@ -1,3 +1,12 @@
+0.22.1 / 2022-02-08
+===================
+
+* vue: Update for new rules in eslint-plugin-vue 8.4.1 (Roan Kattouw)
+
+—
+* build: Add missing yaml.json to package files (Ed Sanders)
+* tests: Check that all files are included in package.json's files list (Ed Sanders)
+
 0.22.0 / 2022-02-07
 ===================
 
