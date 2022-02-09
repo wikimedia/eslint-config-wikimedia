@@ -48,6 +48,7 @@
 
 		// Valid: max-len
 		// eslint-comments-starting-with-"eslint-"-are-allowed-to-be-any-length---------------------------
+		// stylelint-comments-starting-with-"stylelint-"-are-also-allowed-to-be-any-length---------------------------
 
 		// Valid: space-infix-ops
 		this.total = upHere() + id;
