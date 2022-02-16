@@ -3,7 +3,9 @@
 const fs = require( 'fs' ),
 	path = require( 'path' ),
 	configs = require( '../package' ).files,
-	escapeStringRegexp = require( 'escape-string-regexp' );
+	escapeStringRegexp = require( 'escape-string-regexp' ),
+	{ ESLint } = require( 'eslint' ),
+	eslint = new ESLint();
 
 function getRules( config ) {
 	const rules = Object.assign( {}, config.rules );
@@ -47,6 +49,33 @@ function getPluginExtends( config ) {
 	} );
 	return { rules, globals };
 }
+
+QUnit.module( 'ignorePatterns', () => {
+	QUnit.test( 'Check dotfiles are linted', ( assert ) => {
+		const tests = [
+			// Dot files are linted
+			{ path: '.stylelintrc.json', ignored: false },
+			{ path: '.eslintrc.json', ignored: false },
+			// Dot folders and node_modules are still ignored
+			{ path: 'node_modules/foo.js', ignored: true },
+			{ path: 'node_modules/.eslintrc.json', ignored: true },
+			{ path: '.git/foo.js', ignored: true },
+			{ path: '.github/workflow/nodejs.yml', ignored: true },
+			{ path: '.github/node_modules/foo.js', ignored: true },
+			{ path: '.github/node_modules/.eslintrc.json', ignored: true },
+			{ path: '.github/.eslintrc.js', ignored: true },
+			{ path: '.dot.folder/foo.js', ignored: true },
+			{ path: '.dot.folder/.foo.js', ignored: true }
+		];
+		const done = assert.async( tests.length );
+		tests.forEach( function ( test ) {
+			eslint.isPathIgnored( test.path ).then( function ( ignored ) {
+				assert.strictEqual( ignored, test.ignored, `Is ${test.path} ignored` );
+				done();
+			} );
+		} );
+	} );
+} );
 
 QUnit.module( 'package.json', () => {
 	QUnit.test( 'All files are included', ( assert ) => {
