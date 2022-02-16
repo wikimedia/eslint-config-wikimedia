@@ -6,6 +6,7 @@
 	"env": {},
 	"globals": {},
 	"reportUnusedDisableDirectives": true,
+	"ignorePatterns": [ "!.*.*", ".*/*", "node_modules/*" ],
 	"overrides": [
 		{
 			"files": [ "**/*.json", "**/*.jsonc" ],
