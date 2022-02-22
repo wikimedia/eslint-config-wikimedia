@@ -90,7 +90,7 @@ QUnit.module( 'package.json', () => {
 				( ext === '.js' || ext === '.json' ) &&
 				!excludeList.includes( file )
 			) {
-				assert.true( configs.includes( file ), `'${file}' found in package.json 'files' list` );
+				assert.true( configs.includes( file ), `'${file}' found in package.json's 'files' list` );
 			}
 		} );
 	} );
