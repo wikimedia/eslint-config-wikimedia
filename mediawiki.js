@@ -1,6 +1,7 @@
 'use strict';
 
 const commonRules = require( './common' );
+const browsers = require( 'browserslist-config-wikimedia/modern' );
 
 /* eslint-disable quote-props, quotes */
 const config = {
@@ -20,7 +21,7 @@ const config = {
 		"mediawiki/valid-package-file-require": "error",
 		"compat/compat": [
 			"error",
-			"last 2 chrome versions, last 2 firefox versions, last 2 opera versions, last 2 edge versions, ie >= 11, safari >= 9.1, iOS >= 9, android >= 4.3"
+			browsers.join( ',' )
 		]
 	},
 	"overrides": [
