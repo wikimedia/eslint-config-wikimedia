@@ -22,6 +22,7 @@
 
 	// Valid: settings.jsdoc.tagNamePreference
 	// Off: jsdoc/tag-lines
+	// Off: jsdoc/sort-tags
 	/**
 	 * Non-default aliases:
 	 *
