@@ -70,8 +70,8 @@
 		"eslint-plugin-no-jquery": "^2.7.0",
 		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-qunit": "^7.2.0",
-		"eslint-plugin-unicorn": "^40.1.0",
-		"eslint-plugin-vue": "^8.4.1",
+		"eslint-plugin-unicorn": "^42.0.0",
+		"eslint-plugin-vue": "^8.7.1",
 		"eslint-plugin-wdio": "^7.19.4",
 		"eslint-plugin-yml": "^0.14.0"
 	},
