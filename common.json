@@ -57,6 +57,7 @@
 		"no-array-constructor": "error",
 		"no-bitwise": "error",
 		"no-caller": "error",
+		"no-constant-binary-expression": "error",
 		"no-constant-condition": [ "error", { "checkLoops": false } ],
 		"no-empty": [ "error", { "allowEmptyCatch": true } ],
 		"no-eval": "error",

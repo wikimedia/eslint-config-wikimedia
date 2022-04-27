@@ -62,8 +62,11 @@ var APP;
 		// eslint-disable-next-line no-tabs
 		name = options.bar ? upHere( id ) : id; //	Wow!
 
+		// eslint-disable-next-line no-constant-binary-expression
+		name = options.bar ? 'truthy' : 'alsoTruthy' || 3;
+
 		// eslint-disable-next-line no-constant-condition
-		if ( true || options.quux ) {
+		if ( true ) {
 			name += options.quux;
 		// eslint-disable-next-line dot-notation, computed-property-spacing
 		} else if ( options['default' ] ) {
