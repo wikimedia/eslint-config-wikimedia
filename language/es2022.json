@@ -1,0 +1,13 @@
+{
+	"plugins": [ "es-x" ],
+	"extends": [
+		"./rules-es2022",
+		"plugin:es-x/restrict-to-es2022"
+	],
+	"parserOptions": {
+		"ecmaVersion": 2022
+	},
+	"env": {
+		"es2022": true
+	}
+}
