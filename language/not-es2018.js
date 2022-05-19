@@ -4,7 +4,7 @@
 const merge = require( './merge' );
 const rules = {
 	"rules": {
-		"es/no-object-fromentries": "error",
+		"es-x/no-object-fromentries": "error",
 		"no-restricted-properties": [
 			"error",
 			{

@@ -68,21 +68,21 @@
 	''.matchAll( /foo/ );
 
 	// not-es2019
-	// eslint-disable-next-line es/no-bigint
+	// eslint-disable-next-line es-x/no-bigint
 	const c = BigInt( 100 );
 
 	// not-es2019
-	// eslint-disable-next-line es/no-promise-all-settled
+	// eslint-disable-next-line es-x/no-promise-all-settled
 	Promise.allSettled( [] );
 
 	// not-es2019
-	// eslint-disable-next-line es/no-global-this, no-unused-expressions
+	// eslint-disable-next-line es-x/no-global-this, no-unused-expressions
 	globalThis === c;
 
 	// not-es2020
 	// eslint-disable-next-line no-restricted-properties
 	'abc'.replaceAll( 'a', 'x' );
-	// eslint-disable-next-line es/no-promise-any
+	// eslint-disable-next-line es-x/no-promise-any
 	Promise.any( [] );
 
 	// not-es2021

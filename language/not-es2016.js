@@ -3,11 +3,11 @@
 /* eslint-disable quote-props, quotes */
 const merge = require( './merge' );
 const rules = {
-	"plugins": [ "es" ],
+	"plugins": [ "es-x" ],
 	"rules": {
-		"es/no-object-entries": "error",
-		"es/no-object-getownpropertydescriptors": "error",
-		"es/no-object-values": "error",
+		"es-x/no-object-entries": "error",
+		"es-x/no-object-getownpropertydescriptors": "error",
+		"es-x/no-object-values": "error",
 		"no-restricted-properties": [
 			"error",
 			{
