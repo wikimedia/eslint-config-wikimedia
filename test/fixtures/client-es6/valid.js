@@ -12,71 +12,71 @@
 	[].keys();
 	// Valid: no-restricted-syntax
 	[].entries();
-	// Valid: es/no-array-from
+	// Valid: es-x/no-array-from
 	Array.from();
-	// Valid: es/no-array-of
+	// Valid: es-x/no-array-of
 	Array.of();
-	// Valid: es/no-math-acosh
+	// Valid: es-x/no-math-acosh
 	Math.acosh();
-	// Valid: es/no-math-asinh
+	// Valid: es-x/no-math-asinh
 	Math.asinh();
-	// Valid: es/no-math-atanh
+	// Valid: es-x/no-math-atanh
 	Math.atanh();
-	// Valid: es/no-math-cbrt
+	// Valid: es-x/no-math-cbrt
 	Math.cbrt();
-	// Valid: es/no-math-clz32
+	// Valid: es-x/no-math-clz32
 	Math.clz32();
-	// Valid: es/no-math-cosh
+	// Valid: es-x/no-math-cosh
 	Math.cosh();
-	// Valid: es/no-math-expm1
+	// Valid: es-x/no-math-expm1
 	Math.expm1();
-	// Valid: es/no-math-fround
+	// Valid: es-x/no-math-fround
 	Math.fround();
-	// Valid: es/no-math-hypot
+	// Valid: es-x/no-math-hypot
 	Math.hypot();
-	// Valid: es/no-math-imul
+	// Valid: es-x/no-math-imul
 	Math.imul();
-	// Valid: es/no-math-log10
+	// Valid: es-x/no-math-log10
 	Math.log10();
-	// Valid: es/no-math-log1p
+	// Valid: es-x/no-math-log1p
 	Math.log1p();
-	// Valid: es/no-math-log2
+	// Valid: es-x/no-math-log2
 	Math.log2();
-	// Valid: es/no-math-sign
+	// Valid: es-x/no-math-sign
 	Math.sign();
-	// Valid: es/no-math-sinh
+	// Valid: es-x/no-math-sinh
 	Math.sinh();
-	// Valid: es/no-math-tanh
+	// Valid: es-x/no-math-tanh
 	Math.tanh();
-	// Valid: es/no-math-trunc
+	// Valid: es-x/no-math-trunc
 	Math.trunc();
-	// Valid: es/no-number-epsilon
+	// Valid: es-x/no-number-epsilon
 	Number.EPSILON.toString();
-	// Valid: es/no-number-isfinite
+	// Valid: es-x/no-number-isfinite
 	Number.isFinite();
-	// Valid: es/no-number-isinteger
+	// Valid: es-x/no-number-isinteger
 	Number.isInteger();
-	// Valid: es/no-number-isnan
+	// Valid: es-x/no-number-isnan
 	Number.isNaN();
-	// Valid: es/no-number-issafeinteger
+	// Valid: es-x/no-number-issafeinteger
 	Number.isSafeInteger();
-	// Valid: es/no-number-maxsafeinteger
+	// Valid: es-x/no-number-maxsafeinteger
 	Number.MAX_SAFE_INTEGER.toString();
-	// Valid: es/no-number-minsafeinteger
+	// Valid: es-x/no-number-minsafeinteger
 	Number.MIN_SAFE_INTEGER.toString();
-	// Valid: es/no-number-parsefloat
+	// Valid: es-x/no-number-parsefloat
 	Number.parseFloat();
-	// Valid: es/no-number-parseint
+	// Valid: es-x/no-number-parseint
 	Number.parseInt();
-	// Valid: es/no-object-assign
+	// Valid: es-x/no-object-assign
 	Object.assign();
-	// Valid: es/no-object-getownpropertysymbols
+	// Valid: es-x/no-object-getownpropertysymbols
 	Object.getOwnPropertySymbols();
-	// Valid: es/no-object-is
+	// Valid: es-x/no-object-is
 	Object.is();
-	// Valid: es/no-string-fromcodepoint
+	// Valid: es-x/no-string-fromcodepoint
 	String.fromCodePoint();
-	// Valid: es/no-string-raw
+	// Valid: es-x/no-string-raw
 	String.raw();
 
 }() );

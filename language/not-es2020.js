@@ -4,7 +4,7 @@
 const merge = require( './merge' );
 const rules = {
 	"rules": {
-		"es/no-promise-any": "error",
+		"es-x/no-promise-any": "error",
 		"no-restricted-properties": [
 			"error",
 			{

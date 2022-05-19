@@ -3,11 +3,11 @@
 /* eslint-disable quote-props, quotes */
 const merge = require( './merge' );
 const rules = {
-	"plugins": [ "es" ],
+	"plugins": [ "es-x" ],
 	"rules": {
-		"es/no-bigint": "error",
-		"es/no-global-this": "error",
-		"es/no-promise-all-settled": "error",
+		"es-x/no-bigint": "error",
+		"es-x/no-global-this": "error",
+		"es-x/no-promise-all-settled": "error",
 		"no-restricted-properties": [
 			"error",
 			{
