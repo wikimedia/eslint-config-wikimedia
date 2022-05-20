@@ -62,7 +62,7 @@
 		"browserslist-config-wikimedia": "^0.4.0",
 		"eslint": "^8.14.0",
 		"eslint-plugin-compat": "^4.0.2",
-		"eslint-plugin-es-x": "^5.2.0",
+		"eslint-plugin-es-x": "^5.2.1",
 		"eslint-plugin-jsdoc": "^38.1.6",
 		"eslint-plugin-json-es": "^1.5.7",
 		"eslint-plugin-mediawiki": "^0.3.0",
