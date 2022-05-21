@@ -19,6 +19,8 @@ const config = {
 	"rules": {
 		"mediawiki/class-doc": "error",
 		"mediawiki/msg-doc": "error",
+		"mediawiki/no-extended-unicode-identifiers": "error",
+		"mediawiki/no-nodelist-unsupported-methods": "error",
 		"mediawiki/valid-package-file-require": "error",
 		"compat/compat": [
 			"error",

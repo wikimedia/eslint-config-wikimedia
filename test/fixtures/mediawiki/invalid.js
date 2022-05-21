@@ -13,6 +13,12 @@
 	// eslint-disable-next-line mediawiki/valid-package-file-require
 	require( 'valid.js' );
 
+	// The following triggers a parser error in eslint
+	// <!-- eslint-disable-next-line mediawiki/no-extended-unicode-identifiers -- >
+
+	// eslint-disable-next-line mediawiki/no-nodelist-unsupported-methods
+	document.querySelectorAll( '.foo' ).forEach();
+
 	// eslint-disable-next-line compat/compat
 	bar = navigator.permissions.query();
 
