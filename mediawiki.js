@@ -9,7 +9,8 @@ const config = {
 		"mw": "readonly",
 		"OO": "readonly",
 		"require": "readonly",
-		"module": "readonly"
+		"module": "readonly",
+		"exports": "writable"
 	},
 	"plugins": [
 		"mediawiki",
