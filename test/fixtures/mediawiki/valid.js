@@ -27,4 +27,5 @@
 }() );
 
 // Global: module
-module.exports = {};
+// Global: exports
+module.exports = exports = {};
