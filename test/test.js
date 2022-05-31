@@ -4,6 +4,7 @@ const fs = require( 'fs' ),
 	path = require( 'path' ),
 	configs = require( '../package' ).files,
 	escapeStringRegexp = require( 'escape-string-regexp' ),
+	readdirRecursive = require( 'fs-readdir-recursive' ),
 	{ ESLint } = require( 'eslint' ),
 	eslint = new ESLint();
 
@@ -120,7 +121,7 @@ configs.forEach( ( configPath ) => {
 
 		const config = require( `../${configPath}` );
 
-		const fixturesFiles = fs.readdirSync( fixturesDir )
+		const fixturesFiles = readdirRecursive( fixturesDir )
 			.map( ( file ) => path.resolve( fixturesDir, file ) );
 
 		const validFixturesFiles = fixturesFiles.filter( ( file ) => file.includes( '/valid' ) );
