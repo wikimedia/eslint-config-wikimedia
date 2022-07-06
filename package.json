@@ -4,7 +4,7 @@
 	"description": "ESLint config following Wikimedia code conventions.",
 	"main": "common.json",
 	"scripts": {
-		"test": "npm run lint && qunit test/test.js",
+		"test": "qunit test/test.js && npm run lint",
 		"lint": "eslint . --max-warnings 0",
 		"build-invalid": "node test/test.js dump"
 	},
