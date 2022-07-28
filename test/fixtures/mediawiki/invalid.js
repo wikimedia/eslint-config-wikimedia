@@ -13,6 +13,9 @@
 	// eslint-disable-next-line mediawiki/valid-package-file-require
 	require( 'valid.js' );
 
+	// eslint-disable-next-line mediawiki/no-nodelist-unsupported-methods
+	document.querySelectorAll( '.foo' ).forEach();
+
 	// eslint-disable-next-line compat/compat
 	bar = navigator.permissions.query();
 
