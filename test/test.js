@@ -104,6 +104,7 @@ configs.forEach( ( configPath ) => {
 		'jquery',
 		'jsdoc',
 		'json',
+		'mediawiki',
 		'mocha',
 		'qunit',
 		'selenium'
