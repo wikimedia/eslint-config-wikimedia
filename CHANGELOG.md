@@ -1,3 +1,36 @@
+0.23.0 / 2022-07-30
+===================
+
+* Update ESLint to 8.14.0 (Ed Sanders)
+
+—
+* client-es6: Use vue-es6 instead of vue3-es6 (Roan Kattouw)
+* common: Enable `no-constant-binary-expression` (Ed Sanders)
+* common: Update eslint-plugin-unicorn to 42.0.0 (Ed Sanders)
+* common: Lint dot files by default (Ed Sanders)
+* common: Add stylelint- comments to max-len ignorePattern (Roan Kattouw)
+* jsdoc: Update eslint-plugin-jsdoc to 38.1.6 (Ed Sanders)
+* json: Update eslint-plugin-json-es from 1.5.4 to 1.5.7 (Ed Sanders)
+* language: Add es2022 config (Ed Sanders)
+* language: Replace eslint-plugin-es with eslint-plugin-es-x (Ed Sanders)
+* language: Simplify language rules (Ed Sanders)
+* mediawiki: Upgrade eslint-plugin-mediawiki to v0.4.0 (James D. Forrester)
+* mediawiki: Add "exports" global (Roan Kattouw)
+* mediawiki: Update browserslist-config-wikimedia to 0.4.0 (Ed Sanders)
+* mediawiki: Get browsers list from browserslist-config-wikimedia (Ed Sanders)
+* selenium: Update eslint-plugin-wdio to 7.19.4 (Ed Sanders)
+* vue: Use Vue 3 by default (Roan Kattouw)
+* vue: Update eslint-plugin-vue to 8.7.1 (Ed Sanders)
+* yaml: Update eslint-plugin-yml from 0.13.0 to 0.14.0 (Ed Sanders)
+
+—
+* build: Run tests before linting (Ed Sanders)
+* docs: Add back the possessive for the missing files error message (James D. Forrester)
+* tests: Fix inconsistent whitespace in ignore comments (Ed Sanders)
+* tests: Update qunit from 2.17.2 to 2.18.2 (Ed Sanders)
+* tests: Fix typo in test (Ed Sanders)
+* tests: Add tests for languages/es5 (Ed Sanders)
+
 0.22.1 / 2022-02-08
 ===================
 
