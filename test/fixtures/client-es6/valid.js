@@ -79,4 +79,9 @@
 	// Valid: es-x/no-string-raw
 	String.raw();
 
+	// Symbol.prototype.descrition is disabled, but conflicts
+	// with many plain object properties.
+	// Off: es-x/no-symbol-prototype-description
+	// eslint-disable-next-line no-unused-expressions
+	node.description;
 }() );

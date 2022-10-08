@@ -1,9 +1,9 @@
 {
 	"plugins": [ "es-x" ],
 	"extends": [
-		"./rules-es2016",
 		"plugin:es-x/restrict-to-es2016",
-		"plugin:es-x/no-new-in-esnext"
+		"plugin:es-x/no-new-in-esnext",
+		"./rules-es2016"
 	],
 	"parserOptions": {
 		"ecmaVersion": 2016

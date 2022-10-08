@@ -1,9 +1,9 @@
 {
 	"plugins": [ "es-x" ],
 	"extends": [
-		"./rules-es5",
 		"plugin:es-x/restrict-to-es5",
-		"plugin:es-x/no-new-in-esnext"
+		"plugin:es-x/no-new-in-esnext",
+		"./rules-es5"
 	],
 	"parserOptions": {
 		"ecmaVersion": 5

@@ -1,9 +1,9 @@
 {
 	"plugins": [ "es-x" ],
 	"extends": [
-		"./rules-es2020",
 		"plugin:es-x/restrict-to-es2020",
-		"plugin:es-x/no-new-in-esnext"
+		"plugin:es-x/no-new-in-esnext",
+		"./rules-es2020"
 	],
 	"parserOptions": {
 		"ecmaVersion": 2020
