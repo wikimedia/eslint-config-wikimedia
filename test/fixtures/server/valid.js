@@ -47,4 +47,11 @@
 
 	// Off: node/no-extraneous-require
 
+	// ES 019
+	// Symbol.prototype.descrition is disabled, but conflicts
+	// with many plain object properties.
+	// Off: es-x/no-symbol-prototype-description
+	// eslint-disable-next-line no-unused-expressions
+	a.description;
+
 }( this ) );
