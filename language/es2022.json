@@ -1,7 +1,6 @@
 {
 	"plugins": [ "es-x" ],
 	"extends": [
-		"plugin:es-x/restrict-to-es2022",
 		"./rules-es2022"
 	],
 	"parserOptions": {
