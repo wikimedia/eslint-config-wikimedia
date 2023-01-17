@@ -1,3 +1,18 @@
+0.24.0 / 2023-01-17
+===================
+
+* Drop support for Node 12 (Ed Sanders)
+* Update ESLint to 8.31.0 (Ed Sanders)
+
+—
+* jsdoc: Update eslint-plugin-jsdoc to 39.2.2 (Ed Sanders)
+* language: Remove reference to non-existent "restrict-to-es2022" (Ed Sanders)
+* language: Disable es-x/no-symbol-prototype-description (Ed Sanders)
+* language: Replace es-x/no-array-prototype-keys/values with no-restricted-syntax (Ed Sanders)
+
+—
+* build: Test in Node 18 (Active LTS) (Ed Saners)
+
 0.23.0 / 2022-07-30
 ===================
 
