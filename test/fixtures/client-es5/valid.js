@@ -10,4 +10,12 @@
 		$div.description
 	);
 
+	// Use custom no-restricted-syntax rule instead
+	// Off: es-x/no-array-prototype-keys
+	Object.keys();
+
+	// Off: es-x/no-array-prototype-values
+	// eslint-disable-next-line no-unused-expressions
+	$div.values;
+
 }() );
