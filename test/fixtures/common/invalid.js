@@ -83,7 +83,7 @@ var APP;
 
 		// eslint-disable-next-line no-bitwise
 		if ( ( bar | options.quux ) ) {
-			// eslint-disable-next-line no-eval
+			// eslint-disable-next-line no-eval, security/detect-eval-with-expression
 			eval( '(' + name + ')' );
 			return;
 		}

@@ -1,6 +1,7 @@
 {
 	"extends": [
 		"eslint:recommended",
+		"plugin:security/recommended",
 		"./jsdoc"
 	],
 	"env": {},
@@ -20,7 +21,7 @@
 			"extends": "./yaml"
 		}
 	],
-	"plugins": [ "unicorn" ],
+	"plugins": [ "security", "unicorn" ],
 	"rules": {
 		"array-bracket-spacing": [ "error", "always" ],
 		"array-callback-return": "error",
@@ -122,10 +123,11 @@
 		} ],
 		"switch-colon-spacing": [ "error", { "after": true, "before": false } ],
 		"unicode-bom": [ "error" ],
+		"wrap-iife": "error",
+		"yoda": [ "error", "never" ],
+		"security/detect-object-injection": "off",
 		"unicorn/prefer-date-now": "error",
 		"unicorn/prefer-string-slice": "error",
-		"unicorn/throw-new-error": "error",
-		"wrap-iife": "error",
-		"yoda": [ "error", "never" ]
+		"unicorn/throw-new-error": "error"
 	}
 }
