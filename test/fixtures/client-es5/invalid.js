@@ -52,14 +52,14 @@
 	[].fill();
 	// eslint-disable-next-line es-x/no-array-prototype-findindex
 	[].findIndex();
-	// eslint-disable-next-line es-x/no-array-prototype-keys
+	// es-x/no-array-prototype-keys triggers too often on Object.keys
+	// see https://github.com/eslint-community/eslint-plugin-es-x/issues/36
+	// eslint-disable-next-line no-restricted-syntax
 	[].keys();
-	// eslint-disable-next-line es-x/no-array-prototype-values
+	// eslint-disable-next-line no-restricted-syntax
 	[].values();
 	// eslint-disable-next-line es-x/no-string-prototype-codepointat
 	''.codePointAt();
-	// eslint-disable-next-line es-x/no-array-prototype-keys
-	[].keys();
 	// eslint-disable-next-line es-x/no-array-prototype-entries
 	[].entries();
 	// eslint-disable-next-line es-x/no-math-acosh
@@ -146,9 +146,9 @@
 	( {} ).entries();
 	// eslint-disable-next-line es-x/no-object-getownpropertydescriptors
 	Object.getOwnPropertyDescriptors();
-	// eslint-disable-next-line es-x/no-array-prototype-values, es-x/no-object-values
+	// eslint-disable-next-line es-x/no-object-values
 	Object.values();
-	// eslint-disable-next-line es-x/no-array-prototype-values
+	// eslint-disable-next-line no-restricted-syntax
 	( {} ).values();
 
 	// not-es2016

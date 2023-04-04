@@ -41,15 +41,17 @@ var APP;
 			// eslint-disable-next-line key-spacing
 			bar = { a : 1 }
 			// eslint-disable-next-line camelcase, comma-style
-			, camel_case;
+			, camel_case,
+			// eslint-disable-next-line comma-spacing
+			quux ,whee;
 
-		// eslint-disable-next-line array-bracket-spacing, comma-dangle, comma-spacing
+		// eslint-disable-next-line array-bracket-spacing, comma-dangle
 		bar = [0, 1,];
 
 		// eslint-disable-next-line space-before-blocks, yoda
 		if ( 3 === bar ){
 			// eslint-disable-next-line block-spacing, brace-style, camelcase
-			return camel_case;}
+			return camel_case + quux + whee;}
 
 		var i;
 		// eslint-disable-next-line max-statements-per-line
@@ -81,7 +83,7 @@ var APP;
 
 		// eslint-disable-next-line no-bitwise
 		if ( ( bar | options.quux ) ) {
-			// eslint-disable-next-line no-eval
+			// eslint-disable-next-line no-eval, security/detect-eval-with-expression
 			eval( '(' + name + ')' );
 			return;
 		}

@@ -1,5 +1,7 @@
 'use strict';
 
+/* eslint-disable security/detect-non-literal-fs-filename */
+
 const fs = require( 'fs' ),
 	path = require( 'path' ),
 	configs = require( '../package' ).files,
@@ -32,8 +34,10 @@ function getPluginExtends( config ) {
 		}
 		let upstreamConfigs;
 		if ( parts[ 1 ].includes( 'eslint-plugin-' ) ) {
+			// eslint-disable-next-line security/detect-non-literal-require
 			upstreamConfigs = require( parts[ 1 ] ).configs;
 		} else {
+			// eslint-disable-next-line security/detect-non-literal-require
 			upstreamConfigs = require( 'eslint-plugin-' + parts[ 1 ] ).configs;
 		}
 		const childConfig = upstreamConfigs[ parts[ 2 ] ];
@@ -120,6 +124,7 @@ configs.forEach( ( configPath ) => {
 			return;
 		}
 
+		// eslint-disable-next-line security/detect-non-literal-require
 		const config = require( `../${configPath}` );
 
 		const fixturesFiles = readdirRecursive( fixturesDir )
@@ -175,6 +180,7 @@ configs.forEach( ( configPath ) => {
 			// Disabled rules are covered below
 			if ( isEnabled( rule ) ) {
 				QUnit.test( `Rule '${rule}' is covered in invalid fixture`, ( assert ) => {
+					// eslint-disable-next-line security/detect-non-literal-regexp
 					const rDisableRule = new RegExp( `(/[/*]|<!--|#) eslint-disable((-next)?-line)? ([a-z-/]+, )*?${rule}($|[^a-z-])` );
 					assert.true( rDisableRule.test( invalidFixtures ), 'eslint-disable comment found' );
 				} );
@@ -186,6 +192,7 @@ configs.forEach( ( configPath ) => {
 		).join( '' );
 
 		Object.keys( rules ).forEach( ( rule ) => {
+			// eslint-disable-next-line security/detect-non-literal-regexp
 			const rEnableRule = new RegExp( `Off: ${rule}($|[^a-z-])` );
 			if ( !isEnabled( rule ) ) {
 				QUnit.test( `Rule '${rule}' is covered as "off" in valid fixture`, ( assert ) => {
@@ -199,6 +206,7 @@ configs.forEach( ( configPath ) => {
 		} );
 
 		Object.keys( globals ).forEach( ( global ) => {
+			// eslint-disable-next-line security/detect-non-literal-regexp
 			const rGlobal = new RegExp( `Global: ${escapeStringRegexp( global )}(\n|$)` );
 			if ( globals[ global ] !== 'off' ) {
 				QUnit.test( `Global '${global}' is documented in valid fixture`, ( assert ) => {
