@@ -120,7 +120,8 @@
 
 		// Valid: array-bracket-spacing
 		// Valid: comma-spacing
-		this.items = [ 'foo', 'bar' ];
+		// Off: security/detect-object-injection
+		this.items = [ 'foo', 'bar', inline ];
 	};
 
 	APP.unaryWords = function ( obj ) {
@@ -143,7 +144,9 @@
 
 		// Valid: for-direction
 		for ( i = 0, len = items.length; i < len; i++ ) {
+
 			if ( items[ i ] !== null ) {
+
 				item = items[ i ];
 				break;
 			}
@@ -156,6 +159,7 @@
 		for ( key in item ) {
 			if ( APPHasOwnProperty || hasOwn.call( item, key ) ) {
 				// Valid: computed-property-spacing
+
 				ret[ key ] = new APP.Example( item[ key ] );
 			}
 		}
