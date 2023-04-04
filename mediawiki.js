@@ -16,12 +16,8 @@ const config = {
 		"mediawiki",
 		"compat"
 	],
+	"extends": [ "plugin:mediawiki/common" ],
 	"rules": {
-		"mediawiki/class-doc": "error",
-		"mediawiki/msg-doc": "error",
-		"mediawiki/no-extended-unicode-identifiers": "error",
-		"mediawiki/no-nodelist-unsupported-methods": "error",
-		"mediawiki/valid-package-file-require": "error",
 		"compat/compat": [
 			"error",
 			browsers.join( ',' )
@@ -30,10 +26,9 @@ const config = {
 	"overrides": [
 		{
 			"files": [ "**/*.vue" ],
+			"extends": [ "plugin:mediawiki/vue" ],
 			"rules": {
 				"no-implicit-globals": "off",
-				"mediawiki/no-vue-dynamic-i18n": "error",
-				"mediawiki/vue-exports-component-directive": "error",
 				"vue/html-self-closing": [ "error", {
 					"html": {
 						"void": "never",
