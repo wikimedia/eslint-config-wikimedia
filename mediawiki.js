@@ -1,7 +1,7 @@
 'use strict';
 
 const commonRules = require( './common' );
-const browsers = require( 'browserslist-config-wikimedia/modern-es6-only' );
+const browsers = require( 'browserslist-config-wikimedia/modern' );
 
 /* eslint-disable quote-props, quotes */
 const config = {
