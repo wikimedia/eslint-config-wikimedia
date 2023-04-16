@@ -56,7 +56,17 @@ You can extend the above config by also adding a second `.eslintrc.json` file in
 ```json
 {
 	"extends": [
-		"../../.eslintrc.json",
+		"wikimedia/mediawiki-qunit"
+	]
+}
+```
+
+Or for standalone JavaScript libraries and Node.js projects:
+
+`tests/.eslintrc.json`:
+```json
+{
+	"extends": [
 		"wikimedia/qunit"
 	]
 }
