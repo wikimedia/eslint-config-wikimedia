@@ -1,3 +1,15 @@
+0.25.0 / 2023-04-27
+===================
+
+* client: Change default from ES5 to ES6 (James D. Forrester)
+* common: Also inherit from plugin:security/recommended (James D. Forrester)
+* mediawiki: Upgrade browserslist-config-wikimedia for `compat/compat` rule (Ed Sanders)
+* mediawiki: Upgrade eslint-plugin-mediawiki to v0.5.0 (James D. Forrester)
+* mediawiki: Use only ES6 browsers for `compat/compat` (Roan Kattouw)
+* mediawiki: Use upstream shared configs `common` and `vue` (Ed Sanders)
+* mediawiki-qunit: new preset (ES2022 async-await in unit tests) (Timo Tijhof)
+* qunit: Update eslint-plugin-qunit to 7.3.0 or later (Timo Tijhof)
+
 0.24.0 / 2023-01-17
 ===================
 
