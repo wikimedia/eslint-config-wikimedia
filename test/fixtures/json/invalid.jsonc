@@ -11,5 +11,5 @@
 	"loss-of-precision": 5123000000000000000000000000001, // eslint-disable-line no-loss-of-precision
 	"extra": ( "parens" ), // eslint-disable-line no-extra-parens
 	"comma": "dangle", // eslint-disable-line comma-dangle
-	"bidi": "‎LTR" // Off: security/detect-bidi-characters
+	"bidi": "‎LTR"// eslint-disable-line security/detect-bidi-characters
 }
