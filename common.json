@@ -13,7 +13,8 @@
 		{
 			"files": [ "**/*.json", "**/*.jsonc" ],
 			"parser": "eslint-plugin-json-es",
-			"extends": "./json"
+			"extends": "./json",
+			"rules": { "security/detect-bidi-characters": "off" }
 		},
 		{
 			"files": [ "**/*.yaml", "**/*.yml" ],
