@@ -122,6 +122,9 @@
 		// Valid: comma-spacing
 		// Off: security/detect-object-injection
 		this.items = [ 'foo', 'bar', inline ];
+
+		// Off: security/detect-bidi-characters
+		jsonData = { "bidi-key": "‎xyz" };
 	};
 
 	APP.unaryWords = function ( obj ) {
