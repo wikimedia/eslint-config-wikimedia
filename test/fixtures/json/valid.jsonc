@@ -1,6 +1,7 @@
 {
 	"max-len":
-																									[]// Off: max-len
+																									[], // Off: max-len
+	"bidi": "‎LTR"// Off: security/detect-bidi-characters
 }
 // Off: strict
 // Off: accessor-pairs (https://github.com/zeitport/eslint-plugin-json-es/issues/17)

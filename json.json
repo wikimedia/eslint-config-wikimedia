@@ -9,6 +9,7 @@
 		"json-es/use-valid-json": "error",
 		"indent": [ "error", "tab" ],
 		"strict": "off",
-		"max-len": "off"
+		"max-len": "off",
+		"security/detect-bidi-characters": "off"
 	}
 }
