@@ -1,3 +1,9 @@
+0.25.1 / 2023-05-24
+===================
+* client-common: Disable security/detect-possible-timing-attacks (Ed Sanders)
+* mediawiki: Update eslint-plugin-compat to 4.1.4 (Daimona Eaytoy)
+* json: Disable security/detect-bidi-characters  (Ed Sanders)
+
 0.25.0 / 2023-04-27
 ===================
 
