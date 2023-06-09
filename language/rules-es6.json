@@ -5,6 +5,7 @@
 		"arrow-parens": "error",
 		"arrow-spacing": "error",
 		"default-param-last": "error",
+		"lines-between-class-members": "error",
 		"no-constructor-return": "error",
 		"no-misleading-character-class": "error",
 		"no-new-require": "error",
