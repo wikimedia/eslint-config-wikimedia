@@ -99,4 +99,6 @@ class A {
 		// eslint-disable-next-line no-constructor-return
 		return a;
 	}
+	// eslint-disable-next-line lines-between-class-members
+	foo() {}
 }
