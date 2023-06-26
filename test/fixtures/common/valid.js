@@ -140,7 +140,11 @@
 		var i, len, item, key,
 			// Valid: prefer-numeric-literals
 			j = 1,
-			ret = {};
+			ret = {
+				foo: function () {
+					return 1;
+				}
+			};
 
 		// Valid: for-direction
 		for ( i = 0, len = items.length; i < len; i++ ) {

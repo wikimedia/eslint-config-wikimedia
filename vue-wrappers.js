@@ -12,7 +12,6 @@ const rulesToMap = [
 	'array-bracket-spacing',
 	'arrow-spacing',
 	'block-spacing',
-	'brace-style',
 	'camelcase',
 	'comma-dangle',
 	'comma-spacing',

@@ -54,8 +54,18 @@ var APP;
 			return camel_case + quux + whee;}
 
 		var i;
-		// eslint-disable-next-line max-statements-per-line
+		// eslint-disable-next-line brace-style, max-statements-per-line
 		if ( name ) { return i; }
+
+		if ( name ) {
+			// eslint-disable-next-line max-statements-per-line
+			bar(); return i;
+		}
+
+		if ( name ) {
+			bar();
+		// eslint-disable-next-line brace-style
+		} else { whee(); }
 
 		// eslint-disable-next-line curly, dot-location
 		if ( bar ) return i.
@@ -242,7 +252,9 @@ var APP;
 	Date = APP.Date;
 
 	// eslint-disable-next-line quote-props, object-curly-spacing
-	APP.example = {'default': 'Legacy'
+	APP.example = {'default': 'Legacy',
+		// eslint-disable-next-line brace-style
+		foo: function () { return 1; }
 	};
 
 	// eslint-disable-next-line no-multi-spaces
