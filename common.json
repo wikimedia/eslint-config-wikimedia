@@ -27,7 +27,7 @@
 		"array-callback-return": "error",
 		"block-scoped-var": "error",
 		"block-spacing": "error",
-		"brace-style": [ "error", "1tbs", { "allowSingleLine": true } ],
+		"brace-style": [ "error", "1tbs" ],
 		"camelcase": [ "error", { "properties": "always" } ],
 		"comma-dangle": [ "error", "never" ],
 		"comma-spacing": [ "error", { "before": false, "after": true } ],

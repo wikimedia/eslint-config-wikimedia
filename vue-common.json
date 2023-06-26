@@ -71,6 +71,7 @@
 					"renderError"
 				]
 			} ],
+			"vue/brace-style": [ "error", "1tbs", { "allowSingleLine": true } ],
 			"vue/padding-line-between-blocks": [ "error", "always" ],
 			"vue/v-on-function-call": "error",
 			"vue/component-name-in-template-casing": [ "error", "PascalCase" ],
