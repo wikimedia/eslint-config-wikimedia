@@ -75,7 +75,7 @@
 		"eslint-plugin-unicorn": "^47.0.0",
 		"eslint-plugin-vue": "^9.15.1",
 		"eslint-plugin-wdio": "^7.19.4",
-		"eslint-plugin-yml": "^0.14.0"
+		"eslint-plugin-yml": "^1.8.0"
 	},
 	"devDependencies": {
 		"escape-string-regexp": "^4.0.0",
