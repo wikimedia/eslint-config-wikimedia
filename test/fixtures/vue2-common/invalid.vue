@@ -47,7 +47,7 @@ module.exports = {
 	// eslint-disable-next-line vue/no-reserved-component-names, vue/component-definition-name-casing, vue/multi-word-component-names
 	name: 'div',
 	model: {
-		// eslint-disable-next-line vue/no-invalid-model-keys
+		// eslint-disable-next-line vue/no-invalid-model-keys, vue/valid-model-definition
 		foo: 'bar'
 	},
 	props: {
