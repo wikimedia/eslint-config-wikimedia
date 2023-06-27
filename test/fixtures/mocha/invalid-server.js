@@ -48,5 +48,8 @@ describe( 'foo', function () {
 	it( 'test', function () {} );
 } );
 
+// eslint-disable-next-line mocha/no-empty-description
+describe( '', function () { } );
+
 // eslint-disable-next-line mocha/no-exports
 module.exports = {};
