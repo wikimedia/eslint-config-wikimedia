@@ -140,9 +140,8 @@
 	// not-es6
 	// eslint-disable-next-line es-x/no-array-prototype-includes
 	[].includes();
-	// eslint-disable-next-line es-x/no-array-prototype-entries, es-x/no-object-entries
+	// eslint-disable-next-line es-x/no-object-entries
 	Object.entries();
-	// eslint-disable-next-line es-x/no-array-prototype-entries
 	( {} ).entries();
 	// eslint-disable-next-line es-x/no-object-getownpropertydescriptors
 	Object.getOwnPropertyDescriptors();

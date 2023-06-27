@@ -3,5 +3,8 @@
 		"./common",
 		"./node",
 		"./language/es2018"
-	]
+	],
+	"rules": {
+		"es-x/no-hashbang": "off"
+	}
 }
