@@ -11,7 +11,7 @@
 		"no-new-require": "error",
 		"no-promise-executor-return": "error",
 		"no-useless-computed-key": "error",
-		"template-curly-spacing": "error",
+		"template-curly-spacing": [ "error", "always" ],
 		"no-var": "error",
 		"one-var": "off",
 		"vars-on-top": "off",

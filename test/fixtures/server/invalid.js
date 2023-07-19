@@ -34,7 +34,7 @@
 	'a' + 'b';
 
 	// eslint-disable-next-line template-curly-spacing, no-unused-expressions
-	`${ global.foo }`;
+	`${global.foo}`;
 
 	const promise = new Promise( () => {
 		// eslint-disable-next-line no-promise-executor-return
