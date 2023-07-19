@@ -12,6 +12,7 @@
 // Off: jsdoc/require-file-overview
 // Off: jsdoc/require-hyphen-before-param-description
 // Off: jsdoc/require-property
+// Off: jsdoc/text-escaping
 ( function () {
 	// Off: jsdoc/require-property-description
 	// Off: jsdoc/require-property-name

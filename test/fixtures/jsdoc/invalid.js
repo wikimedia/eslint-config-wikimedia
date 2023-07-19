@@ -67,13 +67,15 @@
 	};
 	/* eslint-enable jsdoc/require-returns, jsdoc/require-returns-check */
 
-	// eslint-disable-next-line jsdoc/implements-on-classes, jsdoc/require-asterisk-prefix
+	/* eslint-disable jsdoc/require-asterisk-prefix */
+	// eslint-disable-next-line jsdoc/implements-on-classes
 	/**
 	 @implements {HTMLElement}
 	 */
 	APP.method = function ( bar ) {
 		return bar;
 	};
+	/* eslint-enable jsdoc/require-asterisk-prefix */
 
 	// eslint-disable-next-line jsdoc/require-returns-type
 	/**
