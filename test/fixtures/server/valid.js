@@ -26,7 +26,7 @@
 
 	// Valid: template-curly-spacing
 	// eslint-disable-next-line no-unused-expressions
-	`${global.foo}`;
+	`${ global.foo }`;
 
 	// ES6
 	// Valid: no-restricted-syntax
