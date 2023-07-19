@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/wikimedia/eslint-config-wikimedia.svg?branch=master)](https://travis-ci.org/wikimedia/eslint-config-wikimedia)
-
 # Wikimedia ESLint config
 
 ## Installation
