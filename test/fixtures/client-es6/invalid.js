@@ -1,5 +1,3 @@
-/* eslint-env browser */
-
 // eslint-disable-next-line no-use-before-define
 const c = new MyClass();
 

@@ -1,4 +1,3 @@
-/* eslint-env browser */
 ( function () {
 	function checkHash( input, cachedValue ) {
 		var hash = JSON.stringify( input );
