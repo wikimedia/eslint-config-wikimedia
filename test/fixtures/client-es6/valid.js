@@ -82,6 +82,5 @@
 	// Symbol.prototype.descrition is disabled, but conflicts
 	// with many plain object properties.
 	// Off: es-x/no-symbol-prototype-description
-	// eslint-disable-next-line no-unused-expressions
-	node.description;
+	window.desc = node.description;
 }() );

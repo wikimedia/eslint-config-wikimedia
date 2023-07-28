@@ -192,6 +192,10 @@ configs.forEach( ( configPath ) => {
 			fs.readFileSync( file ).toString()
 		).join( '' );
 
+		QUnit.test( 'Valid fixtures contain no disables', ( assert ) => {
+			assert.true( !/eslint-disable(?!.*!allowdisable)/.test( validFixtures ), 'No disables found in valid fixtures' );
+		} );
+
 		Object.keys( rules ).forEach( ( rule ) => {
 			// eslint-disable-next-line security/detect-non-literal-regexp
 			const rEnableRule = new RegExp( `Off: ${ rule }($|[^a-z-])` );
