@@ -1,5 +1,3 @@
-/* eslint-env browser */
-
 ( function () {
 	// eslint-disable-next-line no-alert
 	window.alert( name );
