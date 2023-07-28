@@ -105,6 +105,7 @@ configs.forEach( ( configPath ) => {
 	const configName = configPath.replace( /\..*/, '' );
 	const fixturesDir = path.resolve( __dirname, `fixtures/${ configName }` );
 	const upstreamConfigsToTest = [
+		'jest',
 		'jquery',
 		'jsdoc',
 		'json',

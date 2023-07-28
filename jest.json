@@ -1,0 +1,16 @@
+{
+	"extends": [
+		"plugin:jest/recommended"
+	],
+	"plugins": [ "jest" ],
+	"env": {
+		"jest/globals": true
+	},
+	"rules": {
+		"jest/no-deprecated-functions": "off",
+		"jest/no-disabled-tests": "off"
+	},
+	"globals": {
+		"global": false
+	}
+}
