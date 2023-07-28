@@ -15,7 +15,6 @@
 	Object.keys();
 
 	// Off: es-x/no-array-prototype-values
-	// eslint-disable-next-line no-unused-expressions
-	$div.values;
+	window.val = $div.values;
 
 }() );

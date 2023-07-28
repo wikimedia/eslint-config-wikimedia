@@ -25,8 +25,7 @@
 	}
 
 	// Valid: template-curly-spacing
-	// eslint-disable-next-line no-unused-expressions
-	`${ global.foo }`;
+	global.template = `${ global.foo }`;
 
 	// ES6
 	// Valid: no-restricted-syntax
@@ -52,7 +51,6 @@
 	// Symbol.prototype.descrition is disabled, but conflicts
 	// with many plain object properties.
 	// Off: es-x/no-symbol-prototype-description
-	// eslint-disable-next-line no-unused-expressions
-	a.description;
+	global.desc = a.description;
 
 }( this ) );

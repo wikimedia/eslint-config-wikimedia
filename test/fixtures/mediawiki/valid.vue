@@ -21,7 +21,7 @@
 			This line asserts valid code for the no-child-content rule, but there's no way
 			to do that without running afoul of the no-v-html rule
 		-->
-		<!-- eslint-disable-next-line vue/no-v-html -->
+		<!-- eslint-disable-next-line vue/no-v-html !allowdisable -->
 		<p v-html="foo"></p>
 		<p v-i18n-html:foo></p>
 	</div>
@@ -37,8 +37,9 @@ module.exports = {
 };
 
 // Off: no-implicit-globals
-// eslint-disable-next-line no-unused-vars
 function x() {}
+// Avoid triggering no-unused-vars
+x();
 </script>
 
 <style>

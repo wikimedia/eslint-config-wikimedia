@@ -21,7 +21,7 @@
 			This line asserts valid code for the no-child-content rule, but there's no way
 			to do that without running afoul of the no-v-html rule
 		-->
-		<!-- eslint-disable-next-line vue/no-v-html -->
+		<!-- eslint-disable-next-line vue/no-v-html !allowdisable -->
 		<p v-html="foo" />
 		<!-- Valid: vue/prefer-separate-static-class -->
 		<div class="myDiv" :class="foo" />
