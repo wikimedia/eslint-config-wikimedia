@@ -182,8 +182,8 @@ configs.forEach( ( configPath ) => {
 			if ( isEnabled( rule ) ) {
 				QUnit.test( `Rule '${ rule }' is covered in invalid fixture`, ( assert ) => {
 					// eslint-disable-next-line security/detect-non-literal-regexp
-					const rDisableRule = new RegExp( `(/[/*]|<!--|#) eslint-disable((-next)?-line)? ([a-z-/]+, )*?${ rule }($|[^a-z-])` );
-					assert.true( rDisableRule.test( invalidFixtures ), 'eslint-disable comment found' );
+					const disableRulePattern = new RegExp( `(/[/*]|<!--|#) eslint-disable((-next)?-line)? ([a-z-/]+, )*?${ rule }($|[^a-z-])` );
+					assert.true( disableRulePattern.test( invalidFixtures ), 'eslint-disable comment found' );
 				} );
 			}
 		} );
@@ -198,28 +198,28 @@ configs.forEach( ( configPath ) => {
 
 		Object.keys( rules ).forEach( ( rule ) => {
 			// eslint-disable-next-line security/detect-non-literal-regexp
-			const rEnableRule = new RegExp( `Off: ${ rule }($|[^a-z-])` );
+			const enableRulePattern = new RegExp( `Off: ${ rule }($|[^a-z-])` );
 			if ( !isEnabled( rule ) ) {
 				QUnit.test( `Rule '${ rule }' is covered as "off" in valid fixture`, ( assert ) => {
-					assert.true( rEnableRule.test( validFixtures ), '"Off" comment found' );
+					assert.true( enableRulePattern.test( validFixtures ), '"Off" comment found' );
 				} );
 			} else {
 				QUnit.test( `Rule '${ rule }' is not covered as "off" in valid fixture`, ( assert ) => {
-					assert.true( !rEnableRule.test( validFixtures ), '"Off" comment not present' );
+					assert.true( !enableRulePattern.test( validFixtures ), '"Off" comment not present' );
 				} );
 			}
 		} );
 
 		Object.keys( globals ).forEach( ( global ) => {
 			// eslint-disable-next-line security/detect-non-literal-regexp
-			const rGlobal = new RegExp( `Global: ${ escapeStringRegexp( global ) }(\n|$)` );
+			const globalPattern = new RegExp( `Global: ${ escapeStringRegexp( global ) }(\n|$)` );
 			if ( globals[ global ] !== 'off' ) {
 				QUnit.test( `Global '${ global }' is documented in valid fixture`, ( assert ) => {
-					assert.true( rGlobal.test( validFixtures ), '"Global" comment found' );
+					assert.true( globalPattern.test( validFixtures ), '"Global" comment found' );
 				} );
 			} else {
 				QUnit.test( `Disabled global '${ global }' is documented in invalid fixture`, ( assert ) => {
-					assert.true( rGlobal.test( invalidFixtures ), '"Global" comment found' );
+					assert.true( globalPattern.test( invalidFixtures ), '"Global" comment found' );
 				} );
 			}
 		} );
