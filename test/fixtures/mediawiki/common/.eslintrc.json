@@ -1,0 +1,10 @@
+{
+	"root": true,
+	"extends": [
+		"../../../../client/es5",
+		"../../../../mediawiki"
+	],
+	"rules": {
+		"json-es/use-valid-json": "off"
+	}
+}

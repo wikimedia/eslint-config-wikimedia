@@ -1,0 +1,7 @@
+{
+	"root": true,
+	"extends": "../../../../vue2/common",
+	"globals": {
+		"module": "readonly"
+	}
+}

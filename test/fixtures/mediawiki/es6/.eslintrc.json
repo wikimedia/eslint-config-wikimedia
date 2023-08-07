@@ -1,7 +1,0 @@
-{
-	"root": true,
-	"extends": [
-		"../../../../client-es6",
-		"../../../../mediawiki"
-	]
-}

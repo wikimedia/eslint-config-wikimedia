@@ -1,5 +1,3 @@
 {
-	"extends": [
-		"./client-es6"
-	]
+	"extends": "./client/es6"
 }
