@@ -1,7 +1,0 @@
-{
-	"root": true,
-	"extends": "../../../vue-es6",
-	"globals": {
-		"module": "readonly"
-	}
-}

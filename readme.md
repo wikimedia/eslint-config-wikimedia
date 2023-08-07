@@ -18,10 +18,10 @@ It also automatically applies the Vue plugin and Vue-specific rules to `.vue` fi
 `.eslintrc.json`:
 ```json
 {
-	"extends": "wikimedia/client-es6"
+	"extends": "wikimedia/client/es6"
 }
 ```
-If you want to only allow ES5 code and browser native functions, you can use `wikimedia/client-es5` instead.
+If you want to only allow ES5 code and browser native functions, you can use `wikimedia/client/es5` instead.
 
 #### jQuery
 This config adds the jQuery `$` global, and additional rules preventing the use of jQuery features which are deprecated, have performance issues, or have simple ES6 alternatives.
@@ -29,7 +29,7 @@ This config adds the jQuery `$` global, and additional rules preventing the use 
 ```json
 {
 	"extends": [
-		"wikimedia/client-es6",
+		"wikimedia/client/es6",
 		"wikimedia/jquery"
 	]
 }
@@ -41,7 +41,7 @@ Code that runs in MediaWiki can use this config. It enforces rules that are spec
 ```json
 {
 	"extends": [
-		"wikimedia/client-es6",
+		"wikimedia/client/es6",
 		"wikimedia/mediawiki"
 	]
 }
@@ -54,7 +54,7 @@ You can extend the above config by also adding a second `.eslintrc.json` file in
 ```json
 {
 	"extends": [
-		"wikimedia/mediawiki-qunit"
+		"wikimedia/mediawiki/qunit"
 	]
 }
 ```

@@ -1,7 +1,7 @@
 {
 	"root": true,
 	"extends": [
-		"../../../client-es5",
+		"../../../client/es5",
 		"../../../jsduck"
 	],
 	"rules": {
