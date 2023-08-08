@@ -4,11 +4,27 @@
 
 const fs = require( 'fs' ),
 	path = require( 'path' ),
-	configs = require( '../package' ).files,
+	packageFiles = require( '../package' ).files,
+	configs = [],
 	escapeStringRegexp = require( 'escape-string-regexp' ),
 	readdirRecursive = require( 'fs-readdir-recursive' ),
 	{ ESLint } = require( 'eslint' ),
 	eslint = new ESLint();
+
+packageFiles.forEach( function ( packageFile ) {
+	if ( !fs.existsSync( packageFile ) ) {
+		return;
+	}
+	if ( fs.lstatSync( packageFile ).isDirectory() ) {
+		configs.push.apply(
+			configs,
+			readdirRecursive( packageFile )
+				.map( ( file ) => packageFile + '/' + file )
+		);
+	} else {
+		configs.push( packageFile );
+	}
+} );
 
 function getRules( config ) {
 	const rules = Object.assign( {}, config.rules );
@@ -83,7 +99,7 @@ QUnit.module( 'ignorePatterns', () => {
 } );
 
 QUnit.module( 'package.json', () => {
-	QUnit.test( 'All files are included', ( assert ) => {
+	QUnit.test( 'All files are listed', ( assert ) => {
 		const excludeList = [
 			'.eslintrc.json',
 			'package.json',
@@ -95,8 +111,13 @@ QUnit.module( 'package.json', () => {
 				( ext === '.js' || ext === '.json' ) &&
 				!excludeList.includes( file )
 			) {
-				assert.true( configs.includes( file ), `'${ file }' found in package.json's 'files' list` );
+				assert.true( packageFiles.includes( file ), `'${ file }' found in package.json's 'files' list` );
 			}
+		} );
+	} );
+	QUnit.test( 'All listed files exist', ( assert ) => {
+		packageFiles.forEach( function ( file ) {
+			assert.true( fs.existsSync( file ), `"${ file }" found` );
 		} );
 	} );
 } );
@@ -116,10 +137,6 @@ configs.forEach( ( configPath ) => {
 	];
 
 	QUnit.module( `"${ configName }" config`, () => {
-		QUnit.test( `"${ configName }" exists`, ( assert ) => {
-			assert.true( fs.existsSync( configPath ), `"${ configPath }" not found` );
-		} );
-
 		if ( !fs.existsSync( fixturesDir ) ) {
 			QUnit.test.skip( `No tests for "${ configName }" config` );
 			return;
