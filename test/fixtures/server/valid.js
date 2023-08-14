@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Off: node/shebang
+// Off: n/shebang
 // Off: es-x/no-hashbang
 
 // Valid: strict
@@ -39,13 +39,13 @@
 
 	// These rules are disabled because they are already covered by our
 	// language rules, or the parser version.
-	// Off: node/no-unsupported-features/es-builtins
-	// Off: node/no-unsupported-features/es-syntax
+	// Off: n/no-unsupported-features/es-builtins
+	// Off: n/no-unsupported-features/es-syntax
 
-	// Disabled due to https://github.com/mysticatea/eslint-plugin-node/issues/77
-	// Off: node/no-unpublished-require
+	// Disabled due to https://github.com/mysticatea/eslint-plugin-n/issues/77
+	// Off: n/no-unpublished-require
 
-	// Off: node/no-extraneous-require
+	// Off: n/no-extraneous-require
 
 	// ES 019
 	// Symbol.prototype.descrition is disabled, but conflicts

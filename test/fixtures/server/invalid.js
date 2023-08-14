@@ -41,23 +41,23 @@
 		return 1;
 	} );
 
-	// eslint-disable-next-line node/no-deprecated-api
+	// eslint-disable-next-line n/no-deprecated-api
 	const b = new Buffer( 1 );
 
-	// eslint-disable-next-line node/no-exports-assign
+	// eslint-disable-next-line n/no-exports-assign
 	exports = {};
 
-	// eslint-disable-next-line node/no-missing-require
+	// eslint-disable-next-line n/no-missing-require
 	require( 'missing' );
 
 	const crypto = require( 'crypto' );
 	// This depends on the Node version defined in package.engine
-	// eslint-disable-next-line node/no-unsupported-features/node-builtins
+	// eslint-disable-next-line n/no-unsupported-features/node-builtins
 	crypto.verify();
 
-	// TODO: eslint-disable-next-line node/no-extraneous-require
-	// TODO: eslint-disable-next-line node/no-unpublished-bin
-	// TODO: eslint-disable-next-line node/process-exit-as-throw
+	// TODO: eslint-disable-next-line n/no-extraneous-require
+	// TODO: eslint-disable-next-line n/no-unpublished-bin
+	// TODO: eslint-disable-next-line n/process-exit-as-throw
 
 	// not-es2018
 	// eslint-disable-next-line es-x/no-string-prototype-trimstart-trimend
@@ -88,7 +88,7 @@
 	// not-es2021
 	// Nothing yet
 
-	// eslint-disable-next-line no-process-exit
+	// eslint-disable-next-line n/no-process-exit
 	process.exit( 1 );
 
 }( this ) );
