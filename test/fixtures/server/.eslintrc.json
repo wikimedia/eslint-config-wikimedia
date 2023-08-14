@@ -3,5 +3,10 @@
 	"extends": "../../../server",
 	"rules": {
 		"no-unused-vars": "off"
+	},
+	"settings": {
+		"node": {
+			"version": ">=10.0.0"
+		}
 	}
 }
