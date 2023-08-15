@@ -171,6 +171,9 @@ configs.forEach( ( configPath ) => {
 				getRules( require( '../language/rules-es6' ) )
 				// ES5 rules are tested in client-es5
 			);
+
+			// Test node's upstream rules
+			( { rules, globals } = extendRules( require( '../node' ), rules, globals ) );
 		}
 
 		if ( configName === 'client-es5' ) {

@@ -53,4 +53,113 @@
 	// Off: es-x/no-symbol-prototype-description
 	global.desc = a.description;
 
+	/* Globals */
+	console.log(
+		// Global: ArrayBuffer
+		ArrayBuffer,
+		// Global: Atomics
+		Atomics,
+		// Global: BigInt
+		// Can't assert due to es-x/no-bigint
+		// BigInt,
+		// Global: BigInt64Array
+		// Can't assert due to es-x/no-bigint
+		// BigInt64Array,
+		// Global: BigUint64Array
+		// Can't assert due to es-x/no-bigint
+		// BigUint64Array,
+		// Global: DataView
+		DataView,
+		// Global: Float32Array
+		Float32Array,
+		// Global: Float64Array
+		Float64Array,
+		// Global: Int16Array
+		Int16Array,
+		// Global: Int32Array
+		Int32Array,
+		// Global: Int8Array
+		Int8Array,
+		// Global: Map
+		Map,
+		// Global: Promise
+		Promise,
+		// Global: Proxy
+		Proxy,
+		// Global: Reflect
+		Reflect,
+		// Global: Set
+		Set,
+		// Global: SharedArrayBuffer
+		SharedArrayBuffer,
+		// Global: Symbol
+		Symbol,
+		// Global: Uint16Array
+		Uint16Array,
+		// Global: Uint32Array
+		Uint32Array,
+		// Global: Uint8Array
+		Uint8Array,
+		// Global: Uint8ClampedArray
+		Uint8ClampedArray,
+		// Global: WeakMap
+		WeakMap,
+		// Global: WeakSet
+		WeakSet,
+		// Global: globalThis
+		// Can't assert due to es-x/no-global-this
+		// globalThis,
+		// Global: Intl
+		Intl,
+		// Global: TextDecoder
+		TextDecoder,
+		// Global: TextEncoder
+		TextEncoder,
+		// Global: URL
+		URL,
+		// Global: URLSearchParams
+		URLSearchParams,
+		// Global: WebAssembly
+		WebAssembly,
+		// Global: clearInterval
+		clearInterval,
+		// Global: clearTimeout
+		clearTimeout,
+		// Global: console
+		console,
+		// Global: queueMicrotask
+		// Can't assert due to n/no-unsupported-features/node-builtins
+		// queueMicrotask,
+		// Global: setInterval
+		setInterval,
+		// Global: setTimeout
+		setTimeout,
+		// Global: Buffer
+		Buffer,
+		// Global: GLOBAL
+		// Can't assert due to n/no-deprecated-api
+		// GLOBAL,
+		// Global: clearImmediate
+		clearImmediate,
+		// Global: global
+		global,
+		// Global: process
+		process,
+		// Global: root
+		// Can't assert due to n/no-deprecated-api
+		// root,
+		// Global: setImmediate
+		setImmediate,
+		// Global: __dirname
+		__dirname,
+		// Global: __filename
+		__filename,
+		// Global: exports
+		exports,
+		// Global: module
+		module,
+		// Global: require
+		require
+	);
+
 }( this ) );
