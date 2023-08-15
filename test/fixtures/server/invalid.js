@@ -55,9 +55,9 @@
 	// eslint-disable-next-line n/no-unsupported-features/node-builtins
 	crypto.verify();
 
-	// TODO: eslint-disable-next-line n/no-extraneous-require
-	// TODO: eslint-disable-next-line n/no-unpublished-bin
-	// TODO: eslint-disable-next-line n/process-exit-as-throw
+	// TODO: <!-- eslint-disable-next-line n/no-extraneous-require -->
+	// TODO: <!-- eslint-disable-next-line n/no-unpublished-bin -->
+	// TODO: <!-- eslint-disable-next-line n/process-exit-as-throw -->
 
 	// not-es2018
 	// eslint-disable-next-line es-x/no-string-prototype-trimstart-trimend
