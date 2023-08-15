@@ -36,9 +36,9 @@ function getRules( config ) {
 	return rules;
 }
 
-function getPluginExtends( config ) {
-	let rules = {};
-	let globals = {};
+function extendRules( config, rules, globals ) {
+	let extendedRules = {};
+	let extendedGlobals = {};
 	const extendsList = Array.isArray( config.extends ) ?
 		config.extends :
 		[ config.extends ];
@@ -58,17 +58,22 @@ function getPluginExtends( config ) {
 		}
 		const childConfig = upstreamConfigs[ parts[ 2 ] ];
 		Object.assign(
-			rules,
+			extendedRules,
 			getRules( childConfig )
 		);
-		Object.assign( globals, childConfig.globals );
+		Object.assign( extendedGlobals, childConfig.globals );
 		if ( childConfig.extends ) {
-			const extendsConfig = getPluginExtends( childConfig );
-			rules = Object.assign( {}, extendsConfig.rules, rules );
-			globals = Object.assign( {}, extendsConfig.globals, globals );
+			( { rules: extendedRules, globals: extendedGlobals } = extendRules(
+				childConfig, extendedRules, extendedGlobals
+			) );
 		}
 	} );
-	return { rules, globals };
+	extendedRules = Object.assign( {}, extendedRules, rules );
+	extendedGlobals = Object.assign( {}, extendedGlobals, globals );
+	return {
+		rules: extendedRules,
+		globals: extendedGlobals
+	};
 }
 
 QUnit.module( 'ignorePatterns', () => {
@@ -178,9 +183,7 @@ configs.forEach( ( configPath ) => {
 		}
 
 		if ( upstreamConfigsToTest.includes( configName ) ) {
-			const extendsConfig = getPluginExtends( config );
-			rules = Object.assign( {}, extendsConfig.rules, rules );
-			globals = Object.assign( {}, extendsConfig.globals, globals );
+			( { rules, globals } = extendRules( config, rules, globals ) );
 		}
 
 		function isEnabled( rule ) {
