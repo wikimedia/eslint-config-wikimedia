@@ -91,7 +91,13 @@ QUnit.asyncTest( 'Asynchronous test', 3, function () {
 // eslint-disable-next-line qunit/no-async-module-callbacks
 QUnit.module( 'An async module', async function () {
 	QUnit.test( 'a passing test', function ( assert ) {
-		assert.true( true );
+		// Shadowing is only allowed for the variable name "hooks" (#532)
+		// eslint-disable-next-line no-shadow
+		function checkAssert( assert ) {
+			return !!assert;
+		}
+
+		assert.true( checkAssert( assert ) );
 	} );
 
 	await Promise.resolve();
