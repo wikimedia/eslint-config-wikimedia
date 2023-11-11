@@ -39,6 +39,16 @@
 	},
 	"rules": {
 		"jsdoc/check-param-names": [ "warn", { "allowExtraTrailingParamDocs": true } ],
+		"jsdoc/check-tag-names": [
+			"warn",
+			{
+				"definedTags": [
+					"ignore",
+					"internal",
+					"stable"
+				]
+			}
+		],
 		"jsdoc/check-values": "off",
 		"jsdoc/empty-tags": "off",
 		"jsdoc/no-multi-asterisks": [ "error", { "allowWhitespace": true } ],
