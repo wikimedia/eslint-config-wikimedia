@@ -19,7 +19,7 @@ packageFiles.forEach( function ( packageFile ) {
 		configs.push.apply(
 			configs,
 			readdirRecursive( packageFile )
-				.map( ( file ) => packageFile + '/' + file )
+				.map( ( file ) => path.join( packageFile, file ) )
 		);
 	} else {
 		configs.push( packageFile );
@@ -127,15 +127,35 @@ QUnit.module( 'package.json', () => {
 	} );
 } );
 
+const aliases = [
+	'client',
+	'client-common',
+	'client-es5',
+	'client-es6',
+	'mediawiki',
+	'mediawiki-qunit',
+	'vue-common',
+	'vue-es5',
+	'vue-es6',
+	'vue2-common',
+	'vue2-es5',
+	'vue2-es6',
+	'vue3-common',
+	'vue3-es6'
+];
+
 configs.forEach( ( configPath ) => {
 	const configName = configPath.replace( /\..*/, '' );
+	if ( aliases.includes( configName ) ) {
+		return;
+	}
 	const fixturesDir = path.resolve( __dirname, `fixtures/${ configName }` );
 	const upstreamConfigsToTest = [
 		'jest',
 		'jquery',
 		'jsdoc',
 		'json',
-		'mediawiki',
+		'mediawiki/common',
 		'mocha',
 		'qunit',
 		'selenium'
@@ -176,7 +196,7 @@ configs.forEach( ( configPath ) => {
 			( { rules, globals } = extendRules( require( '../node' ), rules, globals ) );
 		}
 
-		if ( configName === 'client-es5' ) {
+		if ( configName === 'client/es5' ) {
 			// Load the rules for ES5 when testing client
 			Object.assign(
 				rules,

@@ -1,0 +1,16 @@
+{
+	"extends": [
+		"../common"
+	],
+	"env": {
+		"browser": true
+	},
+	"plugins": [ "unicorn" ],
+	"rules": {
+		"no-alert": "error",
+		"no-console": "error",
+		"no-implied-eval": "error",
+		"unicorn/no-invalid-remove-event-listener": "error",
+		"security/detect-possible-timing-attacks": "off"
+	}
+}
