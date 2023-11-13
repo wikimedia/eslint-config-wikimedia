@@ -13,6 +13,7 @@
 // Off: jsdoc/require-file-overview
 // Off: jsdoc/require-hyphen-before-param-description
 // Off: jsdoc/require-property
+/* global Foo, APP */
 ( function () {
 	// Off: jsdoc/require-property-description
 	// Off: jsdoc/require-property-name
@@ -22,7 +23,6 @@
 	let APP;
 
 	// Valid: settings.jsdoc.tagNamePreference
-	// Off: jsdoc/tag-lines
 	// Off: jsdoc/sort-tags
 	/**
 	 * Non-default aliases:

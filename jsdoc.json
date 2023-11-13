@@ -52,6 +52,7 @@
 		],
 		"jsdoc/check-values": "off",
 		"jsdoc/empty-tags": "off",
+		"jsdoc/no-blank-blocks": "warn",
 		"jsdoc/no-blank-block-descriptions": "warn",
 		"jsdoc/no-defaults": "off",
 		"jsdoc/no-multi-asterisks": [ "error", { "allowWhitespace": true } ],
@@ -62,6 +63,6 @@
 		"jsdoc/require-property-description": "off",
 		"jsdoc/require-property-name": "off",
 		"jsdoc/require-returns-description": "off",
-		"jsdoc/tag-lines": "off"
+		"jsdoc/tag-lines": [ "warn", "any", { "startLines": 1 } ]
 	}
 }
