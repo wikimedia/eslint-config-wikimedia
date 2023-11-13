@@ -2,6 +2,7 @@
 // Off: jsdoc/check-syntax
 // Off: jsdoc/check-values
 // Off: jsdoc/empty-tags
+// Off: jsdoc/imports-as-dependencies
 // Off: jsdoc/match-description
 // Off: jsdoc/match-name
 // Off: jsdoc/no-bad-blocks
@@ -50,8 +51,12 @@
 
 	// Off: jsdoc/require-description-complete-sentence
 	// Off: jsdoc/require-param-description
+	// Off: jsdoc/text-escaping
 	/**
 	 * Description
+	 *
+	 * We do not currently enforce jsdoc/text-escaping:
+	 * - <a> &gt; &#xabc; `test`
 	 *
 	 * jsdoc/no-multi-asterisks with whitespace, allowWhitespace=true
 	 * This does two things
@@ -63,7 +68,7 @@
 	 *
 	 * @class
 	 *
-	 * @mixes App
+	 * @mixes Foo
 	 * @param {string} id
 	 * @param {Object} options
 	 */
@@ -72,10 +77,11 @@
 		this.options = options;
 	};
 
+	// Off: jsdoc/informative-docs
 	// Off: jsdoc/require-returns-description
 	// Off: jsdoc/require-description
 	/**
-	 * @param {boolean|number} code
+	 * @param {boolean|number} code The code
 	 * @return {null|undefined}
 	 */
 	APP.fall = function ( code ) {
@@ -84,10 +90,11 @@
 
 	/**
 	 * @param {number} a
-	 * @param {number} b
+	 * @param {number} [b=5]
 	 * @return {number}
 	 */
 	APP.sum = function ( a, b ) {
+		b = b || 5;
 		return a + b;
 	};
 

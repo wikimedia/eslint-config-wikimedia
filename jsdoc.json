@@ -34,7 +34,8 @@
 				"set": "Set",
 				"String": "string",
 				"Undefined": "undefined"
-			}
+			},
+			"mode": "jsdoc"
 		}
 	},
 	"rules": {
@@ -51,6 +52,8 @@
 		],
 		"jsdoc/check-values": "off",
 		"jsdoc/empty-tags": "off",
+		"jsdoc/no-blank-block-descriptions": "warn",
+		"jsdoc/no-defaults": "off",
 		"jsdoc/no-multi-asterisks": [ "error", { "allowWhitespace": true } ],
 		"jsdoc/require-asterisk-prefix": "error",
 		"jsdoc/require-jsdoc": "off",
