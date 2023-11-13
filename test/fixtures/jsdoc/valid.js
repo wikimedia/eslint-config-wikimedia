@@ -156,6 +156,9 @@
 	 *                 line
 	 * @yield {number} Multi-
 	 *                 line
+	 * @ignore
+	 * @internal
+	 * @stable
 	 */
 	APP.JSDocTags = function ( a, b ) {
 		return a || b;
