@@ -1,3 +1,3 @@
 {
-	"extends": "./vue2-es5"
+	"extends": "./vue/es5"
 }
