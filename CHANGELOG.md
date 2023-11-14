@@ -1,8 +1,71 @@
+
+0.26.0 / 2023-11-14
+===================
+
+* Update ESLint to 8.53.0 (Ed Sanders)
+
+—
+* client-es6: Require empty line between ES6 class members (Bartosz Dziewoński)
+* common: Remove `allowSingleLine` exception from `brace-style` (Ed Sanders)
+* vue: Update eslint-plugin-vue to 9.18.1 (James D. Forrester; Ed Sanders)
+  * vue3/common:
+    * Add `vue/no-child-content` rule
+    * Add `vue/no-expose-after-await` rule
+    * Add `vue/no-reserved-component-names` rule
+    * Add `vue/no-use-computed-property-like-method` rule
+    * Add `vue/no-v-text-v-html-on-component` rule
+    * Add `vue/prefer-import-from-vue` rule
+    * Add `vue/valid-attribute-name` rule
+  * vue2/common:
+    * Add `vue/no-child-content` rule
+    * Add `vue/no-reserved-component-names` rule
+    * Add `vue/no-use-computed-property-like-method` rule
+    * Add `vue/no-v-text-v-html-on-component` rule
+    * Add `vue/valid-attribute-name` rule
+    * Add `vue/valid-model-definition` rule
+    * Add `vue/no-export-in-script-setup` rule
+    * Add `vue/no-ref-as-operand` rule
+    * Add `vue/no-setup-props-destructure` rule
+    * Add `vue/return-in-emits-validator` rule
+    * Add `vue/valid-define-emits` rule
+    * Add `vue/valid-define-props` rule
+* common: Update eslint-plugin-unicorn to 47.0.0 (James D. Forrester)
+* yaml: Update eslint-plugin-yml from 0.14.0 to 1.10.0 (James D. Forrester; Ed Sanders)
+* mocha: Update eslint-plugin-mocha from 9.0.0 to 10.2.0 (James D. Forrester)
+  * Add `mocha/no-empty-description` rule
+* qunit: Update eslint-plugin-qunit from 7.3.0 to 7.3.4 (James D. Forrester)
+* language: Update eslint-plugin-es-x from 5.2.1 to 7.3.0 (James D. Forrester)
+  * Update `server` to apply `es-x/no-hashbang` alongside `node/shebang`
+* common: Require spaces in `template-curly-spacing` (Ed Sanders)
+* jest: Create a 'jest' shared config (Ed Sanders)
+* Node: Migrate from eslint-plugin-node to eslint-plugin-n (Ed Sanders)
+* qunit: Allow the variable `hooks` to be shadowed (Ed Sanders)
+* jsdoc: add `@ignore`, `@internal` and `@stable` as `definedTags` (MusikAnimal)
+* Rename shared configs by grouping in folders (Ed Sanders)
+* jsdoc: Update eslint-plugin-jsdoc to 42.0.0 (Ed Sanders)
+  * Add `jsdoc/no-blank-block-descriptions` rule
+* jest: Update eslint-plugin-jest to 27.6.0 (Ed Sanders)
+* common: Update eslint-plugin-yml to 1.10.0 (Ed Sanders)
+
+—
+* build: Fix some but not all word-wrap and semver CVE issues (James D. Forrester)
+* README: Drop old Travis-CI tag (James D. Forrester)
+* tests: Assert that valid fixtures contain no disables (Ed Sanders)
+* tests: Remove useless eslint-env browser comments (Ed Sanders)
+* tests: Avoid variables named with Hungarian notation (Ed Sanders)
+* tests: Simplify package.json tests (Ed Sanders)
+* tests: Refactor loading of extended configs/globals (Ed Sanders)
+* tests: Test upstream config for node (Ed Sanders)
+* build: Update eslint-plugin-compat dependency from 4.1.4 to 4.2.0 (James D. Forrester)
+* build: Add Node 20.x testing to CI (Ed Sanders)
+* Raise browserslist-config-wikimedia dependency from ^0.5.0 to ^0.5.1 (James D. Forrester)
+* build: Update QUnit from 2.19.4 to 2.20.0 (James D. Forrester)
+
 0.25.1 / 2023-05-24
 ===================
 * client-common: Disable security/detect-possible-timing-attacks (Ed Sanders)
 * mediawiki: Update eslint-plugin-compat to 4.1.4 (Daimona Eaytoy)
-* json: Disable security/detect-bidi-characters  (Ed Sanders)
+* json: Disable security/detect-bidi-characters (Ed Sanders)
 
 0.25.0 / 2023-04-27
 ===================
