@@ -21,6 +21,12 @@
 	let APP;
 	/* eslint-enable jsdoc/check-property-names, jsdoc/no-blank-block-descriptions */
 
+	/* eslint-disable jsdoc/no-blank-blocks */
+	/**
+	 *
+	 */
+	/* eslint-enable jsdoc/no-blank-blocks */
+
 	/* eslint-disable jsdoc/require-property-type */
 	/**
 	 * @property Bar
@@ -90,6 +96,18 @@
 		return 7;
 	};
 	/* eslint-enable jsdoc/require-returns-type */
+
+	/* eslint-disable jsdoc/tag-lines */
+	/**
+	 * Description
+	 * @param {Object} bar
+	 * @param {string} bar.module `module` property threw an error in eslint-plugin-jsdoc<37.5.0
+	 * @return {number}
+	 */
+	APP.method = function ( bar ) {
+		return bar;
+	};
+	/* eslint-enable jsdoc/tag-lines */
 
 	// eslint-disable-next-line jsdoc/check-access
 	/**
