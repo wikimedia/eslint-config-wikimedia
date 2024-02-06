@@ -11,6 +11,7 @@
 		"no-console": "error",
 		"no-implied-eval": "error",
 		"unicorn/no-invalid-remove-event-listener": "error",
-		"security/detect-possible-timing-attacks": "off"
+		"security/detect-possible-timing-attacks": "off",
+		"es-x/no-resizable-and-growable-arraybuffers": "off"
 	}
 }
