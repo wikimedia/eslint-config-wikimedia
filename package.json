@@ -66,7 +66,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"browserslist-config-wikimedia": "^0.6.1",
-		"eslint": "^8.53.0",
+		"eslint": "^8.57.0",
 		"eslint-plugin-compat": "^4.2.0",
 		"eslint-plugin-es-x": "^7.6.0",
 		"eslint-plugin-jest": "^27.9.0",
