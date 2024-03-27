@@ -55,6 +55,11 @@
 
 	/* Globals */
 	console.log(
+		// Global: AggregateError
+		// Can't assert due to es-x/no-promise-any
+		// AggregateError,
+		// Global: Array
+		Array,
 		// Global: ArrayBuffer
 		ArrayBuffer,
 		// Global: Atomics
@@ -68,32 +73,113 @@
 		// Global: BigUint64Array
 		// Can't assert due to es-x/no-bigint
 		// BigUint64Array,
+		// Global: Boolean
+		Boolean,
+		// Global: Buffer
+		Buffer,
+		// Global: constructor
+		constructor,
 		// Global: DataView
 		DataView,
+		// Global: Date
+		Date,
+		// Global: decodeURI
+		decodeURI,
+		// Global: decodeURIComponent
+		decodeURIComponent,
+		// Global: encodeURI
+		encodeURI,
+		// Global: encodeURIComponent
+		encodeURIComponent,
+		// Global: Error
+		Error,
+		// Global: escape
+		escape,
+		// Global: eval
+		// Can't assert due to no-eval
+		// eval,
+		// Global: EvalError
+		EvalError,
+		// Global: FinalizationRegistry
+		// Can't assert due to es-x/no-weakrefs
+		// FinalizationRegistry,
 		// Global: Float32Array
 		Float32Array,
 		// Global: Float64Array
 		Float64Array,
+		// Global: Function
+		Function,
+		// Global: hasOwnProperty
+		hasOwnProperty,
+		// Global: Infinity
+		Infinity,
+		// Global: globalThis
+		// Can't assert due to es-x/no-global-this
+		// globalThis,
 		// Global: Int16Array
 		Int16Array,
 		// Global: Int32Array
 		Int32Array,
 		// Global: Int8Array
 		Int8Array,
+		// Global: Intl
+		Intl,
+		// Global: isFinite
+		isFinite,
+		// Global: isNaN
+		isNaN,
+		// Global: isPrototypeOf
+		isPrototypeOf,
+		// Global: JSON
+		JSON,
 		// Global: Map
 		Map,
+		// Global: Math
+		Math,
+		// Global: NaN
+		NaN,
+		// Global: Number
+		Number,
+		// Global: Object
+		Object,
+		// Global: parseFloat
+		parseFloat,
+		// Global: parseInt
+		parseInt,
 		// Global: Promise
 		Promise,
+		// Global: propertyIsEnumerable
+		propertyIsEnumerable,
 		// Global: Proxy
 		Proxy,
+		// Global: RangeError
+		RangeError,
+		// Global: ReferenceError
+		ReferenceError,
 		// Global: Reflect
 		Reflect,
+		// Global: RegExp
+		RegExp,
 		// Global: Set
 		Set,
 		// Global: SharedArrayBuffer
 		SharedArrayBuffer,
+		// Global: String
+		String,
 		// Global: Symbol
 		Symbol,
+		// Global: SyntaxError
+		SyntaxError,
+		// Global: TextDecoder
+		TextDecoder,
+		// Global: TextEncoder
+		TextEncoder,
+		// Global: toLocaleString
+		toLocaleString,
+		// Global: toString
+		toString,
+		// Global: TypeError
+		TypeError,
 		// Global: Uint16Array
 		Uint16Array,
 		// Global: Uint32Array
@@ -102,19 +188,21 @@
 		Uint8Array,
 		// Global: Uint8ClampedArray
 		Uint8ClampedArray,
+		// Global: undefined
+		undefined,
+		// Global: unescape
+		unescape,
+		// Global: URIError
+		URIError,
+		// Global: valueOf
+		valueOf,
+		// Global: WeakRef
+		// Can't assert due to es-x/no-weakrefs
+		// WeakRef,
 		// Global: WeakMap
 		WeakMap,
 		// Global: WeakSet
 		WeakSet,
-		// Global: globalThis
-		// Can't assert due to es-x/no-global-this
-		// globalThis,
-		// Global: Intl
-		Intl,
-		// Global: TextDecoder
-		TextDecoder,
-		// Global: TextEncoder
-		TextEncoder,
 		// Global: URL
 		URL,
 		// Global: URLSearchParams
@@ -134,8 +222,6 @@
 		setInterval,
 		// Global: setTimeout
 		setTimeout,
-		// Global: Buffer
-		Buffer,
 		// Global: GLOBAL
 		// Can't assert due to n/no-deprecated-api
 		// GLOBAL,
