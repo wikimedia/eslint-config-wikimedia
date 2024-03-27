@@ -5,6 +5,7 @@ function foo() {}
 // Local rules
 // Off: mocha/no-mocha-arrows, mocha/no-skipped-tests
 describe.skip( () => {
+	// Off: mocha/consistent-spacing-between-blocks
 	// Off: mocha/no-hooks-for-single-case
 	beforeEach( () => {
 	} );
