@@ -1,3 +1,28 @@
+0.27.0 / 2024-03-29
+===================
+* [BREAKING CHANGE] Require Node 16, up from Node 14 (#554) (James D. Forrester)
+* Upgrade ESLint to 8.57.0 (James D. Forrester)
+
+—
+* client/common: Disable es-x/no-resizable-and-growable-arraybuffers, too many false positives (James D. Forrester)
+
+—
+* jsdoc: Update eslint-plugin-jsdoc to 46.9.0 (#537) (Ed S)
+* node: Update eslint-plugin-n to 16.3.1 (#543) (Ed S)
+* common: Update eslint-plugin-unicorn to 49.0.0 (#544) (Ed S)
+* Raise browserslist-config-wikimedia dependency from ^0.5.1 to ^0.6.1 (#559) (James D. Forrester)
+* mediawiki: Upgrade eslint-plugin-mediawiki to v0.6.0 (#560) (James D. Forrester)
+* mocha: Upgrade eslint-plugin-mocha to 10.4.1 (James D. Forrester)
+* vue: Upgrade eslint-plugin-vue to 9.23.0 (James D. Forrester)
+* yaml: Upgrade eslint-plugin-yml to 1.13.2 (James D. Forrester)
+* jest: Upgrade eslint-plugin-jest to 27.9.0 (James D. Forrester)
+* language: Upgrade eslint-plugin-es-x to 7.6.0 (James D. Forrester)
+* node: Upgrade eslint-plugin-n to 16.6.2 (James D. Forrester)
+* build: Upgrade qunit to 2.20.1 (James D. Forrester)
+* common: Upgrade eslint-plugin-unicorn to 51.0.1 (James D. Forrester)
+* selenium: Upgrade eslint-plugin-wdio to 8.24.12 (James D. Forrester)
+* jsdoc: Upgrade eslint-plugin-jsdoc to 48.2.1 (James D. Forrester)
+* qunit: Upgrade eslint-plugin-qunit to 8.1.1 (James D. Forrester)
 
 0.26.0 / 2023-11-14
 ===================
