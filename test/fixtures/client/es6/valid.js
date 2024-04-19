@@ -77,6 +77,11 @@
 	// Valid: es-x/no-string-raw
 	String.raw();
 
+	// ArrayBuffer.prototype.resize is disabled, but conflicts
+	// with many plain object properties.
+	// Off: es-x/no-resizable-and-growable-arraybuffers (#555)
+	node.resize();
+
 	// Symbol.prototype.descrition is disabled, but conflicts
 	// with many plain object properties.
 	// Off: es-x/no-symbol-prototype-description
