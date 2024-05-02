@@ -26,6 +26,11 @@
 	// eslint-disable-next-line no-jquery/no-error
 	$.error( 'err' );
 
+	// eslint-disable-next-line no-jquery/no-extend
+	$.extend( {}, {} );
+	// Deep copy allowed
+	$.extend( true, {}, {} );
+
 	// eslint-disable-next-line no-jquery/no-fade
 	$( [] ).fadeIn();
 

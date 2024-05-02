@@ -14,6 +14,7 @@
 		"no-jquery/no-constructor-attributes": "error",
 		"no-jquery/no-each-util": "error",
 		"no-jquery/no-error": "error",
+		"no-jquery/no-extend": [ "error", { "allowDeep": true } ],
 		"no-jquery/no-fade": "error",
 		"no-jquery/no-global-eval": "error",
 		"no-jquery/no-global-selector": "error",
