@@ -11,6 +11,9 @@
 
 	// Valid: arrow-parens
 	// Valid: arrow-spacing
+	// Valid: prefer-arrow-callback
+	// Valid: implicit-arrow-linebreak
+	// Valid: arrow-body-style
 	global.then( ( data ) => Math.pow( data, 2 ) );
 	global.then( ( data ) => ( { d: data } ) );
 

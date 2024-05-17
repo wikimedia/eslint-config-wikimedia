@@ -16,26 +16,23 @@ describe.skip( () => {
 
 // Recommended
 // Off: mocha/valid-suite-description
-describe( 'Suite', function () {
+describe( 'Suite', () => {
 	// Off: mocha/no-hooks
-	it( 'title', async function () {
-		return 1;
-	} );
+	it( 'title', async () => 1 );
 
 	// Off: mocha/valid-test-description
-	it( 'async', async function ( done ) {
+	it( 'async', async ( done ) => {
+		foo();
 		// Off: mocha/no-return-from-async
 		return done();
 	} );
 
 	// Off: mocha/no-synchronous-tests
-	it( 'test', function () {
-		return;
+	it( 'test', () => {
+		foo();
 	} );
 
 } );
 
 // Off: mocha/prefer-arrow-callback
-foo( function ( a ) {
-	return a;
-} );
+foo( ( a ) => a );

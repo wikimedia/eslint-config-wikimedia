@@ -1,6 +1,6 @@
 QUnit.module( 'example' );
 
-QUnit.test( 'test', function ( assert ) {
+QUnit.test( 'test', ( assert ) => {
 	// eslint-disable-next-line compat/compat
 	const data = navigator.getBattery();
 
