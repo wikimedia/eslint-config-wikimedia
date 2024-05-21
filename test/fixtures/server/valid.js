@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Off: n/shebang
+// Off: n/hashbang
 // Off: es-x/no-hashbang
 
 // Valid: strict
