@@ -11,9 +11,7 @@ QUnit.module( 'example', () => {
 		$( '<div>contents</div>' );
 
 		// Global: sinon
-		sinon.stub( data, 'isValid', function () {
-			return true;
-		} );
+		sinon.stub( data, 'isValid', () => true );
 
 		assert.true( data.save() );
 	} );
