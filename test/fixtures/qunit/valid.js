@@ -9,7 +9,7 @@ QUnit.module( 'Module', ( hooks ) => {
 	QUnit.test( '.foo()', () => {
 	} );
 
-	QUnit.test( '.bar()', function ( assert ) {
+	QUnit.test( '.bar()', ( assert ) => {
 		const x = 'bar',
 			y = 'baz';
 
@@ -41,6 +41,13 @@ QUnit.module( 'Module', ( hooks ) => {
 		hooks.beforeEach( ( assert ) => {
 			assert.ok( true, 'nested beforeEach' );
 		} );
+	} );
+
+	// Valid: prefer-arrow-callback
+	// Non-arrow callback allowed when `this` is used
+	QUnit.test( 'this', function ( assert ) {
+		const x = this.foo === 3;
+		assert.true( x );
 	} );
 
 } );

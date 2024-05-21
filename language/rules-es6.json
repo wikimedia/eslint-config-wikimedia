@@ -15,6 +15,9 @@
 		"no-var": "error",
 		"one-var": "off",
 		"vars-on-top": "off",
-		"prefer-const": "error"
+		"prefer-const": "error",
+		"prefer-arrow-callback": "error",
+		"implicit-arrow-linebreak": "error",
+		"arrow-body-style": "error"
 	}
 }

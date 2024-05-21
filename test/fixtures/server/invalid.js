@@ -26,9 +26,17 @@
 	const object = { ... ( foo || {} ) };
 
 	// eslint-disable-next-line arrow-parens, arrow-spacing
-	Object.keys( foo ).map( x=> {
+	Object.keys( foo ).map( x=> x + 1 );
+
+	// eslint-disable-next-line prefer-arrow-callback
+	f( function ( x ) {
 		return x + 1;
 	} );
+
+	f( ( x ) =>
+		// eslint-disable-next-line implicit-arrow-linebreak
+		x + 1
+	);
 
 	// eslint-disable-next-line no-useless-concat, no-unused-expressions
 	'a' + 'b';
@@ -36,6 +44,7 @@
 	// eslint-disable-next-line template-curly-spacing, no-unused-expressions
 	`${global.foo}`;
 
+	// eslint-disable-next-line arrow-body-style
 	const promise = new Promise( () => {
 		// eslint-disable-next-line no-promise-executor-return
 		return 1;

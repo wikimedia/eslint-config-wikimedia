@@ -2,7 +2,7 @@ QUnit.module( 'Example' );
 
 // Local rules
 // eslint-disable-next-line qunit/require-expect
-QUnit.test( '.foo()', function ( assert ) {
+QUnit.test( '.foo()', ( assert ) => {
 	const x = 'bar';
 
 	// eslint-disable-next-line qunit/no-loose-assertions
@@ -45,7 +45,7 @@ QUnit.test( '.foo()', ( assert ) => {
 	assert.strictEqual( done > 3, true );
 
 	// eslint-disable-next-line qunit/no-throws-string
-	assert.throws( function () {
+	assert.throws( () => {
 	}, 'error message', 'An error should have been thrown' );
 
 	// eslint-disable-next-line qunit/require-object-in-propequal
@@ -56,7 +56,7 @@ QUnit.test( '.foo()', ( assert ) => {
 // QUnit.test( '.bar()', function ( assert ) {} );
 
 // eslint-disable-next-line qunit/no-only
-QUnit.module.only( '.foo()', function () {} );
+QUnit.module.only( '.foo()', () => {} );
 
 // eslint-disable-next-line qunit/no-reassign-log-callbacks
 QUnit.log = function () {};
@@ -71,7 +71,7 @@ QUnit.init();
 QUnit.jsDump( {} );
 
 // eslint-disable-next-line qunit/no-async-test, qunit/no-test-expect-argument, qunit/require-expect
-QUnit.asyncTest( 'Asynchronous test', 3, function () {
+QUnit.asyncTest( 'Asynchronous test', 3, () => {
 	// eslint-disable-next-line qunit/no-qunit-start-in-tests
 	QUnit.start();
 
@@ -89,8 +89,8 @@ QUnit.asyncTest( 'Asynchronous test', 3, function () {
 } );
 
 // eslint-disable-next-line qunit/no-async-module-callbacks
-QUnit.module( 'An async module', async function () {
-	QUnit.test( 'a passing test', function ( assert ) {
+QUnit.module( 'An async module', async () => {
+	QUnit.test( 'a passing test', ( assert ) => {
 		// Shadowing is only allowed for the variable name "hooks" (#532)
 		// eslint-disable-next-line no-shadow
 		function checkAssert( assert ) {
@@ -102,21 +102,21 @@ QUnit.module( 'An async module', async function () {
 
 	await Promise.resolve();
 
-	QUnit.test( 'another passing test', function ( assert ) {
+	QUnit.test( 'another passing test', ( assert ) => {
 		assert.true( true );
 	} );
 } );
 
-QUnit.module( 'outer module', function ( hooks ) {
-	QUnit.module( 'inner module', function () {
+QUnit.module( 'outer module', ( hooks ) => {
+	QUnit.module( 'inner module', () => {
 		// eslint-disable-next-line qunit/no-hooks-from-ancestor-modules
-		hooks.beforeEach( function () {} );
+		hooks.beforeEach( () => {} );
 	} );
 } );
 
-QUnit.test( 'Parent', function () {
+QUnit.test( 'Parent', () => {
 	// eslint-disable-next-line qunit/no-nested-tests
-	QUnit.test( 'Child', function () {} );
+	QUnit.test( 'Child', () => {} );
 } );
 
 // eslint-disable-next-line qunit/no-qunit-push

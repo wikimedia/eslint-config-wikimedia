@@ -2,32 +2,33 @@
 
 // Recommended
 // eslint-disable-next-line mocha/no-async-describe
-describe( 'async', async function () {
+describe( 'async', async () => {
 } );
 
-describe( 'foo', function () {
+describe( 'foo', () => {
 	const foo = function () {};
 	// eslint-disable-next-line mocha/no-setup-in-describe
 	foo();
 
 	// eslint-disable-next-line mocha/handle-done-callback, no-unused-vars
-	it( 'async', function ( done ) {
+	it( 'async', ( done ) => {
 		// done not called
 	} );
 
-	it( 'return-and-callback', function ( done ) {
+	it( 'return-and-callback', ( done ) => {
+		foo();
 		// eslint-disable-next-line mocha/no-return-and-callback
 		return foo( done );
 	} );
 
-	before( function () {} );
+	before( () => {} );
 	// eslint-disable-next-line mocha/no-sibling-hooks
-	before( function () {} );
+	before( () => {} );
 
 	// eslint-disable-next-line mocha/no-exclusive-tests
-	it.only( 'only', function () {
+	it.only( 'only', () => {
 		// eslint-disable-next-line mocha/no-nested-tests
-		it( 'nested', function () {} );
+		it( 'nested', () => {} );
 	} );
 
 	// eslint-disable-next-line mocha/no-pending-tests
@@ -35,21 +36,21 @@ describe( 'foo', function () {
 } );
 
 // TODO: This should also trigger mocha/no-global-tests?
-it( 'global', function () {} );
+it( 'global', () => {} );
 
 // eslint-disable-next-line mocha/no-top-level-hooks
-before( function () {} );
+before( () => {} );
 
 // TODO: This should also trigger mocha/max-top-level-suites?
 // eslint-disable-next-line mocha/no-identical-title
-describe( 'foo', function () {
-	it( 'test', function () {} );
+describe( 'foo', () => {
+	it( 'test', () => {} );
 	// eslint-disable-next-line mocha/no-identical-title
-	it( 'test', function () {} );
+	it( 'test', () => {} );
 } );
 
 // eslint-disable-next-line mocha/no-empty-description
-describe( '', function () { } );
+describe( '', () => { } );
 
 // eslint-disable-next-line mocha/no-exports
 module.exports = {};

@@ -11,7 +11,7 @@ const fs = require( 'fs' ),
 	{ ESLint } = require( 'eslint' ),
 	eslint = new ESLint();
 
-packageFiles.forEach( function ( packageFile ) {
+packageFiles.forEach( ( packageFile ) => {
 	if ( !fs.existsSync( packageFile ) ) {
 		return;
 	}
@@ -94,8 +94,8 @@ QUnit.module( 'ignorePatterns', () => {
 			{ path: '.dot.folder/.foo.js', ignored: true }
 		];
 		const done = assert.async( tests.length );
-		tests.forEach( function ( test ) {
-			eslint.isPathIgnored( test.path ).then( function ( ignored ) {
+		tests.forEach( ( test ) => {
+			eslint.isPathIgnored( test.path ).then( ( ignored ) => {
 				assert.strictEqual( ignored, test.ignored, `Is ${ test.path } ignored` );
 				done();
 			} );
@@ -121,7 +121,7 @@ QUnit.module( 'package.json', () => {
 		} );
 	} );
 	QUnit.test( 'All listed files exist', ( assert ) => {
-		packageFiles.forEach( function ( file ) {
+		packageFiles.forEach( ( file ) => {
 			assert.true( fs.existsSync( file ), `"${ file }" found` );
 		} );
 	} );
@@ -216,8 +216,8 @@ configs.forEach( ( configPath ) => {
 		// Invalid examples are required for every rule that is enabled,
 		// as reportUnusedDisableDirectives ensures the disable directives
 		// are actually being used.
-		const invalidFixtures = invalidFixturesFiles.map( ( file ) =>
-			fs.readFileSync( file ).toString()
+		const invalidFixtures = invalidFixturesFiles.map(
+			( file ) => fs.readFileSync( file ).toString()
 		).join( '' );
 
 		Object.keys( rules ).forEach( ( rule ) => {
@@ -231,8 +231,7 @@ configs.forEach( ( configPath ) => {
 			}
 		} );
 
-		const validFixtures = validFixturesFiles.map( ( file ) =>
-			fs.readFileSync( file ).toString()
+		const validFixtures = validFixturesFiles.map( ( file ) => fs.readFileSync( file ).toString()
 		).join( '' );
 
 		QUnit.test( 'Valid fixtures contain no disables', ( assert ) => {
