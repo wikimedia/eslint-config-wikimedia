@@ -9,7 +9,7 @@
 —
 - common: Disable regex security checks (Ed Sanders)
 - language: Move es-x/no-resizable-and-growable-arraybuffers to rules-es5 (Ed Sanders)
-- language: Prefer arrow callbacks in ES6 (Ed S)
+- language: Prefer arrow callbacks in ES6 (Ed Sanders)
 - jquery: Enable no-extend (allowDeep: true) (Ed Sanders)
 
 —
@@ -33,9 +33,9 @@
 * client/common: Disable es-x/no-resizable-and-growable-arraybuffers, too many false positives (James D. Forrester)
 
 —
-* jsdoc: Update eslint-plugin-jsdoc to 46.9.0 (#537) (Ed S)
-* node: Update eslint-plugin-n to 16.3.1 (#543) (Ed S)
-* common: Update eslint-plugin-unicorn to 49.0.0 (#544) (Ed S)
+* jsdoc: Update eslint-plugin-jsdoc to 46.9.0 (#537) (Ed Sanders)
+* node: Update eslint-plugin-n to 16.3.1 (#543) (Ed Sanders)
+* common: Update eslint-plugin-unicorn to 49.0.0 (#544) (Ed Sanders)
 * Raise browserslist-config-wikimedia dependency from ^0.5.1 to ^0.6.1 (#559) (James D. Forrester)
 * mediawiki: Upgrade eslint-plugin-mediawiki to v0.6.0 (#560) (James D. Forrester)
 * mocha: Upgrade eslint-plugin-mocha to 10.4.1 (James D. Forrester)
