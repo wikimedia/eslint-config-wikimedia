@@ -1,3 +1,29 @@
+0.28.0 / 2024-06-03
+===================
+- [BREAKING CHANGE] Drop claimed Node 16 support (James D. Forrester)
+
+—
+* Rule fix: `vue-exports-component-directive`: Prefer `defineComponent()`
+* Rule fix: `vue-exports-component-directive`: Make fixable
+
+—
+- common: Disable regex security checks (Ed Sanders)
+- language: Move es-x/no-resizable-and-growable-arraybuffers to rules-es5 (Ed Sanders)
+- language: Prefer arrow callbacks in ES6 (Ed S)
+- jquery: Enable no-extend (allowDeep: true) (Ed Sanders)
+
+—
+- common: Update eslint-plugin-unicorn to 53.0.0 (James D. Forrester)
+- jest: Upgrade eslint-plugin-jest to 28.5.0 (James D. Forrester)
+- jsdoc: Update eslint-plugin-jsdoc to 48.2.5 (James D. Forrester)
+- json: Update eslint-plugin-json-es to 1.6.0 (James D. Forrester)
+- mediawiki: Upgrade browserslist-config-wikimedia dependency to ^0.7.0 (James D. Forrester)
+- mediawiki: Upgrade eslint-plugin-mediawiki to 0.7.0 (James D. Forrester)
+- mocha: Upgrade eslint-plugin-mocha to 10.4.3 (James D. Forrester)
+- node: Upgrade eslint-plugin-n to 17.7.0 (James D. Forrester)
+- vue: Upgrade eslint-plugin-vue to 9.26.0 (James D. Forrester)
+- yaml: Upgrade eslint-plugin-yml to 1.14.0 (James D. Forrester)
+
 0.27.0 / 2024-03-29
 ===================
 * [BREAKING CHANGE] Require Node 16, up from Node 14 (#554) (James D. Forrester)
