@@ -26,18 +26,18 @@
 
 0.27.0 / 2024-03-29
 ===================
-* [BREAKING CHANGE] Require Node 16, up from Node 14 (#554) (James D. Forrester)
+* [BREAKING CHANGE] Require Node 16, up from Node 14 (James D. Forrester)
 * Upgrade ESLint to 8.57.0 (James D. Forrester)
 
 —
 * client/common: Disable es-x/no-resizable-and-growable-arraybuffers, too many false positives (James D. Forrester)
 
 —
-* jsdoc: Update eslint-plugin-jsdoc to 46.9.0 (#537) (Ed Sanders)
-* node: Update eslint-plugin-n to 16.3.1 (#543) (Ed Sanders)
-* common: Update eslint-plugin-unicorn to 49.0.0 (#544) (Ed Sanders)
-* Raise browserslist-config-wikimedia dependency from ^0.5.1 to ^0.6.1 (#559) (James D. Forrester)
-* mediawiki: Upgrade eslint-plugin-mediawiki to v0.6.0 (#560) (James D. Forrester)
+* jsdoc: Update eslint-plugin-jsdoc to 46.9.0 (Ed Sanders)
+* node: Update eslint-plugin-n to 16.3.1 (Ed Sanders)
+* common: Update eslint-plugin-unicorn to 49.0.0 (Ed Sanders)
+* Raise browserslist-config-wikimedia dependency from ^0.5.1 to ^0.6.1 (James D. Forrester)
+* mediawiki: Upgrade eslint-plugin-mediawiki to v0.6.0 (James D. Forrester)
 * mocha: Upgrade eslint-plugin-mocha to 10.4.1 (James D. Forrester)
 * vue: Upgrade eslint-plugin-vue to 9.23.0 (James D. Forrester)
 * yaml: Upgrade eslint-plugin-yml to 1.13.2 (James D. Forrester)
