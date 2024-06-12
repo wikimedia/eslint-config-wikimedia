@@ -1,3 +1,7 @@
+0.28.2 / 2024-06-12
+===================
+* jquery: Upgrade eslint-plugin-no-jquery to 3.0.1 (James D. Forrester)
+
 0.28.1 / 2024-06-10
 ===================
 * jquery: Upgrade eslint-plugin-no-jquery to 3.0.0 (James D. Forrester)
