@@ -2,7 +2,7 @@
 	"extends": [
 		"./common",
 		"./node",
-		"./language/es2018"
+		"./language/es2022"
 	],
 	"rules": {
 		"es-x/no-hashbang": "off"

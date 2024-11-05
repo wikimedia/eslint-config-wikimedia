@@ -71,43 +71,17 @@
 	// eslint-disable-next-line n/no-missing-require
 	require( 'missing' );
 
-	const crypto = require( 'crypto' );
-	// This depends on the Node version defined in package.engine
+	// New in Node 19, invalid per our our Node 18+ requirement
 	// eslint-disable-next-line n/no-unsupported-features/node-builtins
-	crypto.verify();
+	const c = URL.canParse( 'https://example.test/' );
 
 	// TODO: <!-- eslint-disable-next-line n/no-extraneous-require -->
 	// TODO: <!-- eslint-disable-next-line n/no-unpublished-bin -->
 	// TODO: <!-- eslint-disable-next-line n/process-exit-as-throw -->
 
-	// not-es2018
-	// eslint-disable-next-line es-x/no-string-prototype-trimstart-trimend
-	''.trimEnd();
-
-	// not-es2019
-	// eslint-disable-next-line es-x/no-string-prototype-matchall
-	''.matchAll( /foo/ );
-
-	// not-es2019
-	// eslint-disable-next-line es-x/no-bigint
-	const c = BigInt( 100 );
-
-	// not-es2019
-	// eslint-disable-next-line es-x/no-promise-all-settled
-	Promise.allSettled( [] );
-
-	// not-es2019
-	// eslint-disable-next-line es-x/no-global-this, no-unused-expressions
-	globalThis === c;
-
-	// not-es2020
-	// eslint-disable-next-line es-x/no-string-prototype-replaceall
-	'abc'.replaceAll( 'a', 'x' );
-	// eslint-disable-next-line es-x/no-promise-any
-	Promise.any( [] );
-
-	// not-es2021
-	// Nothing yet
+	// not-es2023
+	// eslint-disable-next-line es-x/no-array-prototype-findlast-findlastindex
+	[].findLast();
 
 	// eslint-disable-next-line n/no-process-exit
 	process.exit( 1 );
