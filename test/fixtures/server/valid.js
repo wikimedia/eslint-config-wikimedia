@@ -56,6 +56,45 @@
 	// Off: es-x/no-symbol-prototype-description
 	global.desc = a.description;
 
+	const crypto = require( 'crypto' );
+	// This depends on the Node version defined in package.engine
+
+	crypto.verify();
+
+	// TODO: n/process-exit-as-throw
+
+	// ES2018
+	// Off: es-x/no-string-prototype-trimstart-trimend
+	''.trimEnd();
+
+	// ES2019
+	// Off: es-x/no-string-prototype-matchall
+	''.matchAll( /foo/ );
+
+	// ES2019
+	// Off: es-x/no-bigint
+	const c = BigInt( 100 );
+
+	// ES2019
+	// Off: es-x/no-promise-all-settled
+	Promise.allSettled( [] );
+
+	// ES2019
+	// Off: es-x/no-global-this
+	'foo'.replace( globalThis ?? 'foo', 'bar' );
+
+	// ES2020
+	// Off: es-x/no-string-prototype-replaceall
+	'abc'.replaceAll( 'a', 'x' );
+	// Off: es-x/no-promise-any
+	Promise.any( [] );
+
+	// ES2021
+	// Nothing yet
+
+	// ES2022
+	const e = new DOMException();
+
 	/* Globals */
 	console.log(
 		// Global: AggregateError
