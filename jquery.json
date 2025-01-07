@@ -12,6 +12,7 @@
 		"no-jquery/no-animate-toggle": "error",
 		"no-jquery/no-class-state": "error",
 		"no-jquery/no-constructor-attributes": "error",
+		"no-jquery/no-done-fail": "error",
 		"no-jquery/no-each-util": "error",
 		"no-jquery/no-error": "error",
 		"no-jquery/no-extend": [ "error", { "allowDeep": true } ],

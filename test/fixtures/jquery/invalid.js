@@ -65,6 +65,9 @@
 	// eslint-disable-next-line no-jquery/no-trim
 	$.trim( ' foo ' );
 
+	// eslint-disable-next-line no-jquery/no-done-fail
+	$.promise().done( function () {} );
+
 	// Recommended
 	// eslint-disable-next-line no-jquery/variable-pattern
 	div = $div.find( '.foo' );
