@@ -82,7 +82,7 @@
 	// Off: es-x/no-resizable-and-growable-arraybuffers (#555)
 	node.resize();
 
-	// Symbol.prototype.descrition is disabled, but conflicts
+	// Symbol.prototype.description is disabled, but conflicts
 	// with many plain object properties.
 	// Off: es-x/no-symbol-prototype-description
 	window.desc = node.description;
