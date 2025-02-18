@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-expressions */
 ( function () {
-	var $div, div, $x;
+	let $div, $x;
 
 	function f() {}
 
@@ -21,7 +21,7 @@
 	$( '<div>', { id: 'foo' } );
 
 	// eslint-disable-next-line no-jquery/no-each-util
-	$.each( [], function () {} );
+	$.each( [], () => {} );
 
 	// eslint-disable-next-line no-jquery/no-error
 	$.error( 'err' );
@@ -41,13 +41,13 @@
 	$( '.my-class' );
 
 	// eslint-disable-next-line no-jquery/no-grep
-	$.grep( [ 1, 2, 3 ], function () {} );
+	$.grep( [ 1, 2, 3 ], () => {} );
 
 	// eslint-disable-next-line no-jquery/no-in-array
 	$.inArray( 1, [ 1 ] );
 
 	// eslint-disable-next-line no-jquery/no-map-util
-	$.map( [ 1 ], function () {} );
+	$.map( [ 1 ], () => {} );
 
 	// eslint-disable-next-line no-jquery/no-noop
 	f( $.noop );
@@ -66,11 +66,11 @@
 	$.trim( ' foo ' );
 
 	// eslint-disable-next-line no-jquery/no-done-fail
-	$.promise().done( function () {} );
+	$.promise().done( () => {} );
 
 	// Recommended
 	// eslint-disable-next-line no-jquery/variable-pattern
-	div = $div.find( '.foo' );
+	const div = $div.find( '.foo' );
 	div.hide();
 
 	// Deprecated
@@ -153,10 +153,10 @@
 	$x.error( f );
 
 	// eslint-disable-next-line no-jquery/no-load-shorthand
-	$x.load( function () {} );
+	$x.load( () => {} );
 
 	// eslint-disable-next-line no-jquery/no-on-ready
-	$( document ).on( 'ready', function () {} );
+	$( document ).on( 'ready', () => {} );
 
 	// eslint-disable-next-line no-jquery/no-size
 	$x.size();

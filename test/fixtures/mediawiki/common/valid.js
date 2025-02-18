@@ -1,5 +1,5 @@
 ( function () {
-	var bar = 'bar1';
+	const bar = 'bar1';
 
 	// Global: OO
 	OO.ui.alert( 'hello' );
@@ -11,7 +11,7 @@
 	document.body.classList.add( 'foo-' + bar );
 
 	// Valid: mediawiki/no-extended-unicode-identifiers
-	var α = 13;
+	const α = 13;
 
 	// Global: mw
 	// Valid: mediawiki/msg-doc

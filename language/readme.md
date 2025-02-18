@@ -17,10 +17,6 @@ rules-es2016 ← es2016
 
  rules-es6   ←  es6 (es2015)
 
-     ↓
-
- rules-es5   ←  es5
-
           ⋮
 ```
 

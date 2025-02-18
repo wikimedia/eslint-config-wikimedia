@@ -1,5 +1,5 @@
 ( function () {
-	var APP;
+	let APP;
 
 	// Valid: settings.jsdoc.tagNamePreference
 	/**

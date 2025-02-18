@@ -1,5 +1,5 @@
 ( function () {
-	var bar = 'bar';
+	let bar = 'bar';
 
 	// eslint-disable-next-line mediawiki/class-doc
 	document.body.classList.add( 'foo-' + bar );

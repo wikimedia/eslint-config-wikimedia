@@ -15,6 +15,8 @@ class MyClass {}
 	Object.values();
 
 	// not-es2016
+	// The following features already trigger parser errors
+	// <!-- eslint-disable-next-line es-x/no-exponential-operators -->
 	// eslint-disable-next-line es-x/no-string-prototype-padstart-padend
 	''.padStart();
 

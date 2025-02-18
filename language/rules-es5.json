@@ -1,6 +1,0 @@
-{
-	"rules": {
-		"es-x/no-symbol-prototype-description": "off",
-		"es-x/no-resizable-and-growable-arraybuffers": "off"
-	}
-}
