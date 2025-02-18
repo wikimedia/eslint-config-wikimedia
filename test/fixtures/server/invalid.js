@@ -50,6 +50,18 @@
 		return 1;
 	} );
 
+	promise.then( () => {
+		if ( foo ) {
+			// eslint-disable-next-line unicorn/no-useless-promise-resolve-reject
+			return Promise.reject( new Error( 'Err' ) );
+		}
+	} );
+
+	async function * generator() {
+		// eslint-disable-next-line unicorn/no-useless-promise-resolve-reject
+		yield Promise.resolve( 3 );
+	}
+
 	// eslint-disable-next-line n/no-deprecated-api
 	const b = new Buffer( 1 );
 

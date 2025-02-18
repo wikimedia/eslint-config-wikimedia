@@ -130,15 +130,12 @@ QUnit.module( 'package.json', () => {
 const aliases = [
 	'client',
 	'client-common',
-	'client-es5',
 	'client-es6',
 	'mediawiki',
 	'mediawiki-qunit',
 	'vue-common',
-	'vue-es5',
 	'vue-es6',
 	'vue2-common',
-	'vue2-es5',
 	'vue2-es6',
 	'vue3-common',
 	'vue3-es6'
@@ -187,21 +184,20 @@ configs.forEach( ( configPath ) => {
 				getRules( require( '../language/es2018' ) ),
 				// TODO: Traverse "extends" automatically
 				getRules( require( '../language/rules-es2018' ) ),
-				getRules( require( '../language/rules-es2017' ) ),
-				getRules( require( '../language/rules-es6' ) )
-				// ES5 rules are tested in client-es5
+				getRules( require( '../language/rules-es2017' ) )
+				// ES6 rules are tested in client-es6
 			);
 
 			// Test node's upstream rules
 			( { rules, globals } = extendRules( require( '../node' ), rules, globals ) );
 		}
 
-		if ( configName === 'client/es5' ) {
-			// Load the rules for ES5 when testing client
+		if ( configName === 'client/es6' ) {
+			// Load the rules for ES6 when testing client
 			Object.assign(
 				rules,
-				getRules( require( 'eslint-plugin-es-x/lib/configs/no-new-in-es2015' ) ),
-				getRules( require( '../language/es5' ) )
+				getRules( require( 'eslint-plugin-es-x/lib/configs/no-new-in-es2016' ) ),
+				getRules( require( '../language/es6' ) )
 			);
 		}
 

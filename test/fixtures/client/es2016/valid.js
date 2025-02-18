@@ -3,7 +3,6 @@
 
 	document.appendChild( node.parentElement );
 
-	// In not-es5 but not in not-es6
 	// Valid: no-restricted-properties
 	''.codePointAt();
 	// Valid: no-restricted-syntax

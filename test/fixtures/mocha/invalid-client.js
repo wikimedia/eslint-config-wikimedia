@@ -2,9 +2,9 @@
 
 // Recommended
 // eslint-disable-next-line mocha/no-global-tests
-it( 'global', function () {} );
+it( 'global', () => {} );
 
-describe( 'foo', function () {} );
+describe( 'foo', () => {} );
 
 // eslint-disable-next-line mocha/max-top-level-suites
-describe( 'bar', function () {} );
+describe( 'bar', () => {} );
