@@ -30,6 +30,18 @@
 	// Valid: template-curly-spacing
 	global.template = `${ global.foo }`;
 
+	// New in Node 15, valid per our Node 18+ requirement
+	// Valid: n/no-unsupported-features/node-builtins
+	const crypto = require( 'crypto' );
+	crypto.verify();
+
+	// New in Node 18, valid per our Node 18+ requirement
+	// Valid: n/no-unsupported-features/node-builtins
+	const { Blob } = require( 'buffer' );
+	const myblob = new Blob();
+
+	// TODO: n/process-exit-as-throw
+
 	// ES6
 	// Valid: no-restricted-syntax
 	[].includes();
@@ -50,11 +62,43 @@
 
 	// Off: n/no-extraneous-require
 
-	// ES 019
-	// Symbol.prototype.descrition is disabled, but conflicts
+	// ES2018
+	// Off: es-x/no-string-prototype-trimstart-trimend
+	''.trimEnd();
+
+	// ES2019
+	// Symbol.prototype.description is disabled, but conflicts
 	// with many plain object properties.
 	// Off: es-x/no-symbol-prototype-description
 	global.desc = a.description;
+
+	// ES2019
+	// Off: es-x/no-string-prototype-matchall
+	''.matchAll( /foo/ );
+
+	// ES2019
+	// Off: es-x/no-bigint
+	const c = BigInt( 100 );
+
+	// ES2019
+	// Off: es-x/no-promise-all-settled
+	Promise.allSettled( [] );
+
+	// ES2019
+	// Off: es-x/no-global-this
+	'foo'.replace( globalThis ?? 'foo', 'bar' );
+
+	// ES2020
+	// Off: es-x/no-string-prototype-replaceall
+	'abc'.replaceAll( 'a', 'x' );
+	// Off: es-x/no-promise-any
+	Promise.any( [] );
+
+	// ES2021
+	// Nothing yet
+
+	// ES2022
+	const e = new DOMException();
 
 	/* Globals */
 	console.log(
