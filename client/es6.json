@@ -2,6 +2,6 @@
 	"extends": [
 		"./common",
 		"../language/es6",
-		"../vue/es6"
+		"../vue3/es6"
 	]
 }
