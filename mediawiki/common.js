@@ -23,12 +23,14 @@ const config = {
 			browsers.join( ',' )
 		]
 	},
+	"parserOptions": {
+		"sourceType": "commonjs"
+	},
 	"overrides": [
 		{
 			"files": [ "**/*.vue" ],
 			"extends": [ "plugin:mediawiki/vue" ],
 			"rules": {
-				"no-implicit-globals": "off",
 				"vue/html-self-closing": [ "error", {
 					"html": {
 						"void": "never",
