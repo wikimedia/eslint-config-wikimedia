@@ -1,3 +1,22 @@
+0.29.0 / 2025-02-24
+===================
+* [BREAKING CHANGE] Remove ES5 configs (Ed Sanders)
+
+—
+* client: Change target from ES2015 (ES6) to ES2016 (Siddharth VP)
+* server: Change target from ES2018 (Node 10) to ES2022 (Node 18) (James D. Forrester)
+
+—
+* mediawiki: set `sourceType` to `commonjs`, and enable `no-implicit-globals` (Hannah Okwelum)
+* language: Add configs for ES2023 & ES2024 (Ed Sanders)
+* jquery: Enable `no-done-fail` (James D. Forrester)
+* jquery: Upgrade eslint-plugin-no-jquery to 3.0.2 (James D. Forrester)
+* vue: Rule change: `vue/no-unsupported-features`: Target version 3.5.13, up from 2.6.11 (sportshead, James D. Forrester)
+
+—
+* build: Specify our Node supported range per CI in package.engines (James D. Forrester)
+* build: Upgrade qunit from ^2.20.1 to ^2.24.1 (James D. Forrester)
+
 0.28.2 / 2024-06-12
 ===================
 * jquery: Upgrade eslint-plugin-no-jquery to 3.0.1 (James D. Forrester)
