@@ -20,8 +20,8 @@
 		"eslintconfig",
 		"wikimedia"
 	],
-	"engine": {
-		"node": ">=18"
+	"engines": {
+		"node": ">=18 <23"
 	},
 	"files": [
 		"common.json",
