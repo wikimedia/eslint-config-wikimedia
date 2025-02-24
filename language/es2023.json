@@ -1,14 +1,14 @@
 {
 	"plugins": [ "es-x" ],
 	"extends": [
-		"plugin:es-x/restrict-to-es2022",
+		"plugin:es-x/restrict-to-es2023",
 		"plugin:es-x/no-new-in-esnext",
-		"./rules-es2022"
+		"./rules-es2023"
 	],
 	"parserOptions": {
-		"ecmaVersion": 2022
+		"ecmaVersion": 2023
 	},
 	"env": {
-		"es2022": true
+		"es2023": true
 	}
 }

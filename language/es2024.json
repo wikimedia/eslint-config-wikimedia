@@ -1,0 +1,12 @@
+{
+	"plugins": [ "es-x" ],
+	"extends": [
+		"./rules-es2024"
+	],
+	"parserOptions": {
+		"ecmaVersion": 2024
+	},
+	"env": {
+		"es2024": true
+	}
+}
