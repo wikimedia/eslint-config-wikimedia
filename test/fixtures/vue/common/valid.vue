@@ -67,8 +67,6 @@ module.exports = {
 	updated: function () {},
 	activated: function () {},
 	deactivated: function () {},
-	beforeDestroy: function () {},
-	destroyed: function () {},
 	template: '',
 	render: function ( h ) {
 		return h( 'div' );

@@ -12,10 +12,6 @@
 			<template #whee="bar" scope="baz">
 				{{ baz }}
 			</template>
-			<!-- eslint-disable-next-line vue/no-deprecated-slot-scope-attribute -->
-			<template #quux="bar" slot-scope="baz">
-				{{ baz }}
-			</template>
 		</BlahComponent>
 		<!-- eslint-disable-next-line vue/no-undef-components, vue/no-v-text, vue/no-v-text-v-html-on-component -->
 		<foo-component v-text="foo" />
@@ -35,6 +31,20 @@
 		<a :href="'foo'" v-text="bar" />
 		<!-- eslint-disable-next-line vue/prefer-separate-static-class -->
 		<a :class="[ 'myClass', foo ]" />
+		<!-- eslint-disable vue/brace-style -->
+		<!-- eslint-disable-next-line vue/first-attribute-linebreak -->
+		<a @click="if ( foo() )
+		{
+			bar()
+		}" />
+		<!-- eslint-disable-next-line vue/no-child-content, vue/no-v-html -->
+		<p v-html="foo">
+			bar
+		</p>
+		<!-- eslint-disable-next-line vue/no-child-content -->
+		<p v-i18n-html:foo>
+			bar
+		</p>
 	</div>
 </template><!-- eslint-disable-next-line vue/padding-line-between-blocks -->
 <style>
@@ -47,7 +57,7 @@ module.exports = {
 	// eslint-disable-next-line vue/no-reserved-component-names, vue/component-definition-name-casing, vue/multi-word-component-names
 	name: 'div',
 	model: {
-		// eslint-disable-next-line vue/no-invalid-model-keys, vue/valid-model-definition
+		// eslint-disable-next-line vue/no-invalid-model-keys
 		foo: 'bar'
 	},
 	props: {
@@ -67,8 +77,8 @@ module.exports = {
 			return 42;
 		},
 		quux2: function () {
-			// eslint-disable-next-line vue/no-use-computed-property-like-method
-			return this.quux1() / 2;
+			// eslint-disable-next-line vue/no-use-computed-property-like-method, vue/no-undef-properties
+			return this.quux1() / this.undef;
 		}
 	},
 	// eslint-disable-next-line vue/order-in-components
@@ -78,4 +88,5 @@ module.exports = {
 		BlahComponent: {}
 	}
 };
+// TODO: <!-- eslint-disable-next-line vue/no-expose-after-await -->
 </script>
