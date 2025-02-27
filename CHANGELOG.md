@@ -1,3 +1,7 @@
+0.29.1 / 2025-02-27
+===================
+* jquery: Rule fix: In `no-animate`, allow `stop` and `finish` when `allowScroll` (James D. Forrester)
+
 0.29.0 / 2025-02-24
 ===================
 * [BREAKING CHANGE] Remove ES5 configs (Ed Sanders)
