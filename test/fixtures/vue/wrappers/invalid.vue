@@ -17,10 +17,8 @@
 		<!-- eslint-disable-next-line max-len -->
 		<!-- eslint-disable-next-line vue/block-spacing, vue/keyword-spacing, vue/space-in-parens, vue/func-call-spacing -->
 		<a @click="if(foo){bar ()}" />
-		<!-- eslint-disable vue/brace-style -->
 		<!-- eslint-disable-next-line vue/no-constant-condition -->
-		<a @click="if ( false )
-		{
+		<a @click="if ( false ) {
 			bar()
 		}" />
 		<!-- eslint-disable-next-line vue/camelcase, vue/no-useless-concat -->

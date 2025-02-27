@@ -135,8 +135,6 @@ const aliases = [
 	'mediawiki-qunit',
 	'vue-common',
 	'vue-es6',
-	'vue2-common',
-	'vue2-es6',
 	'vue3-common',
 	'vue3-es6'
 ];

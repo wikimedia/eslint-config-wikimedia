@@ -41,17 +41,14 @@
 		"selenium.json",
 		"server.json",
 		"vue-common.json",
-		"vue2-common.json",
 		"vue3-common.json",
 		"vue-es6.json",
-		"vue2-es6.json",
 		"vue3-es6.json",
 		"yaml.json",
 		"client/",
 		"language/",
 		"mediawiki/",
 		"vue/",
-		"vue2/",
 		"vue3/"
 	],
 	"contributors": [
