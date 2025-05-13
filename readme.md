@@ -12,13 +12,13 @@ Then, [configure ESLint](https://eslint.org/docs/user-guide/configuring) with on
 Below are some potential recommended uses:
 
 ### A typical front-end project
-This config allows ES2016 code and browser native functions. It will complain about ES2017+ code and language features.
+This config allows the latest supported ES version code (currently ES2016) and browser native functions. It will complain about ES2017+ code and language features.
 It also automatically applies the Vue plugin and Vue-specific rules to `.vue` files.
 
 `.eslintrc.json`:
 ```json
 {
-	"extends": "wikimedia/client/es2016"
+	"extends": "wikimedia/client"
 }
 ```
 If you want to only allow ES6 code and browser native functions, you can use `wikimedia/client/es6` instead.
@@ -29,7 +29,7 @@ This config adds the jQuery `$` global, and additional rules preventing the use 
 ```json
 {
 	"extends": [
-		"wikimedia/client/es2016",
+		"wikimedia/client",
 		"wikimedia/jquery"
 	]
 }
@@ -41,7 +41,7 @@ Code that runs in MediaWiki can use this config. It enforces rules that are spec
 ```json
 {
 	"extends": [
-		"wikimedia/client/es2016",
+		"wikimedia/client",
 		"wikimedia/mediawiki"
 	]
 }
