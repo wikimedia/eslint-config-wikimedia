@@ -1,3 +1,24 @@
+0.30.0 / 2025-05-22
+===================
+
+* [BREAKING CHANGE] Drop deprecated compound profile aliases (James D. Forrester)
+  * client-common    -> client/common
+  * client-es6       -> client/es6
+  * mediawiki-qunit  -> mediawiki/qunit
+  * vue-common       -> vue/common
+  * vue-es6          -> vue/es6
+  * vue3-common      -> vue3/common
+  * vue3-es6         -> vue3/es6
+* [BREAKING CHANGE] vue: Delete vue2 configs (Ed Sanders)
+
+—
+* client: Create client/es2017 config (Ed Sanders)
+* client: Change target from ES2016 to ES2017 (James D. Forrester)
+
+—
+* README: Recommend /client instead of /client/es2016 (Ed Sanders)
+* build: Re-build package-lock.json as version 3 (James D. Forrester)
+
 0.29.1 / 2025-02-27
 ===================
 * jquery: Rule fix: In `no-animate`, allow `stop` and `finish` when `allowScroll` (James D. Forrester)
