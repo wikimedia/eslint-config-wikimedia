@@ -21,7 +21,7 @@
 		"wikimedia"
 	],
 	"engines": {
-		"node": ">=18 <23"
+		"node": ">=18 <25"
 	},
 	"files": [
 		"common.json",
