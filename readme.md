@@ -119,6 +119,38 @@ The `wikimedia/server` config consists of `wikimedia`, `wikimedia/node` and `wik
 }
 ```
 
+### TypeScript
+TypeScript cannot be directly handled by the browser (or ResourceLoader), so it will always target either code that runs
+on the server or tests or code that is compiled to JavaScript first in a non-MediaWiki step. Adjust the outer "extends"
+accordingly. If you have a "mixed" project or are adopting TypeScript incrementally then you can use the typescript
+config only for TypeScript files like so:
+
+`.eslintrc.json`:
+```json
+{
+	"root": true,
+	"extends": [
+		"wikimedia/server"
+	],
+	"overrides": [
+		{
+			"files": [
+				"**/*.ts"
+			],
+			"extends": [
+				"wikimedia/typescript"
+			],
+			"rules": {
+				"comma-dangle": [
+					"error",
+					"always-multiline"
+				]
+			}
+		}
+	]
+}
+```
+
 ### A basic project
 Please note that the basic project configuration does not specify any language or environmental defaults, and is unlikely to be suitable. However, if you wish to target clients with ES3 language support, or earlier versions of Node, this is a good place from which to start.
 
