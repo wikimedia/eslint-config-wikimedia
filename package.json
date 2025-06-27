@@ -37,6 +37,7 @@
 		"qunit.json",
 		"selenium.json",
 		"server.json",
+		"typescript.js",
 		"yaml.json",
 		"client/",
 		"language/",
@@ -52,6 +53,8 @@
 	],
 	"license": "MIT",
 	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^8.0.0",
+		"@typescript-eslint/parser": "^8.0.0",
 		"browserslist-config-wikimedia": "^0.7.0",
 		"eslint": "^8.57.0",
 		"eslint-plugin-compat": "^4.2.0",

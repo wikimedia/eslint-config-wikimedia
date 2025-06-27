@@ -1,3 +1,7 @@
+Next release
+===================
+* Add config for TypeScript, copied from WMDE's typescript eslint config (Michael Große)
+
 0.30.0 / 2025-05-22
 ===================
 
