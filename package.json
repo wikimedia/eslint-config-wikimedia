@@ -53,8 +53,8 @@
 	],
 	"license": "MIT",
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^8.0.0",
-		"@typescript-eslint/parser": "^8.0.0",
+		"@typescript-eslint/eslint-plugin": "8.35.1",
+		"@typescript-eslint/parser": "8.35.1",
 		"browserslist-config-wikimedia": "^0.7.0",
 		"eslint": "^8.57.0",
 		"eslint-plugin-compat": "^4.2.0",
