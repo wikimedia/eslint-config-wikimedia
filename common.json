@@ -17,6 +17,20 @@
 		{
 			"files": [ "**/*.yaml", "**/*.yml" ],
 			"extends": "./yaml"
+		},
+		{
+			"files": [
+				"**/*.ts"
+			],
+			"extends": [
+				"./typescript.js"
+			],
+			"rules": {
+				"comma-dangle": [
+					"error",
+					"always-multiline"
+				]
+			}
 		}
 	],
 	"plugins": [ "security", "unicorn" ],
