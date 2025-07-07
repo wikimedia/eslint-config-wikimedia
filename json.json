@@ -5,6 +5,7 @@
 	"plugins": [
 		"eslint-plugin-json-es"
 	],
+	"parser": "eslint-plugin-json-es",
 	"rules": {
 		"json-es/use-valid-json": "error",
 		"indent": [ "error", "tab" ],
