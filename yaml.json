@@ -5,6 +5,7 @@
 	"plugins": [
 		"eslint-plugin-yml"
 	],
+	"parser": "yaml-eslint-parser",
 	"rules": {
 		"yml/flow-sequence-bracket-spacing": [ "error", "always" ],
 		"yml/flow-mapping-curly-spacing": [ "error", "always" ]
