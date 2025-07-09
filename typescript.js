@@ -8,8 +8,8 @@ module.exports = {
 		'@typescript-eslint',
 		'@stylistic'
 	],
+	parser: '@typescript-eslint/parser',
 	parserOptions: {
-		parser: '@typescript-eslint/parser',
 		sourceType: 'module',
 		ecmaFeatures: {
 			impliedStrict: true
