@@ -19,18 +19,8 @@
 			"extends": "./yaml"
 		},
 		{
-			"files": [
-				"**/*.ts"
-			],
-			"extends": [
-				"./typescript.js"
-			],
-			"rules": {
-				"comma-dangle": [
-					"error",
-					"always-multiline"
-				]
-			}
+			"files": [ "**/*.ts" ],
+			"extends": "./typescript"
 		}
 	],
 	"plugins": [ "security", "unicorn" ],

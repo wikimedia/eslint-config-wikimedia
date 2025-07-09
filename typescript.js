@@ -16,6 +16,7 @@ module.exports = {
 		}
 	},
 	rules: {
+		'comma-dangle': [ 'error', 'always-multiline' ],
 		// general note: rules not in the TS namespace act in combination with their following line
 		// align recommended w/ wikimedia style or escalating default warnings to errors
 		'@typescript-eslint/array-type': [ 'error', { default: 'array' } ],
