@@ -5,7 +5,8 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended'
 	],
 	plugins: [
-		'@typescript-eslint'
+		'@typescript-eslint',
+		'@stylistic'
 	],
 	parserOptions: {
 		parser: '@typescript-eslint/parser',
@@ -26,8 +27,8 @@ module.exports = {
 		'@typescript-eslint/explicit-module-boundary-types': [ 'error' ],
 		'@typescript-eslint/explicit-member-accessibility': [ 'error', { accessibility: 'explicit' } ],
 		// aligned to https://github.com/wikimedia/eslint-config-wikimedia/blob/master/common.json#L21
-		'@typescript-eslint/indent': [ 'error', 'tab', { SwitchCase: 1 } ],
-		'@typescript-eslint/member-delimiter-style': 'error',
+		'@stylistic/indent': [ 'error', 'tab', { SwitchCase: 1 } ],
+		'@stylistic/member-delimiter-style': 'error',
 		'no-empty-function': 'off',
 		'@typescript-eslint/no-empty-function': 'error',
 		'@typescript-eslint/no-empty-interface': [ 'error', { allowSingleExtends: true } ],
@@ -36,7 +37,7 @@ module.exports = {
 		'@typescript-eslint/no-unused-vars': [ 'error', { argsIgnorePattern: '^_' } ],
 		'@typescript-eslint/no-useless-constructor': 'error',
 		'@typescript-eslint/prefer-function-type': 'error',
-		'@typescript-eslint/type-annotation-spacing': [ 'error', {
+		'@stylistic/type-annotation-spacing': [ 'error', {
 			before: false,
 			after: true,
 			overrides: {
@@ -52,6 +53,6 @@ module.exports = {
 		} ],
 		'@typescript-eslint/unified-signatures': 'error',
 		semi: 'off',
-		'@typescript-eslint/semi': [ 'error', 'always' ]
+		'@stylistic/semi': [ 'error', 'always' ]
 	}
 };
