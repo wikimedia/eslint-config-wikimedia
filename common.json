@@ -17,6 +17,10 @@
 		{
 			"files": [ "**/*.yaml", "**/*.yml" ],
 			"extends": "./yaml"
+		},
+		{
+			"files": [ "**/*.ts" ],
+			"extends": "./typescript"
 		}
 	],
 	"plugins": [ "security", "unicorn" ],

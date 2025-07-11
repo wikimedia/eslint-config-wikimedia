@@ -119,6 +119,11 @@ The `wikimedia/server` config consists of `wikimedia`, `wikimedia/node` and `wik
 }
 ```
 
+### TypeScript
+TypeScript cannot be directly handled by the browser (or ResourceLoader), so it will always target either code that runs
+on the server or tests or code that is compiled to JavaScript first in a non-MediaWiki step.
+TypeScript files are automatically included, similar to JSON and YAML files.
+
 ### A basic project
 Please note that the basic project configuration does not specify any language or environmental defaults, and is unlikely to be suitable. However, if you wish to target clients with ES3 language support, or earlier versions of Node, this is a good place from which to start.
 
