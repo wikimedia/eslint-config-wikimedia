@@ -1,3 +1,12 @@
+0.31.0 / 2025-07-11
+===================
+
+* Add profile for TypeScript files (Michael Große)
+
+—
+* build: Test in Node 24, expand supported engines declaration (James D. Forrester)
+* JSON/YAML: Define parser in json/yaml.json (Ed Sanders)
+
 0.30.0 / 2025-05-22
 ===================
 
