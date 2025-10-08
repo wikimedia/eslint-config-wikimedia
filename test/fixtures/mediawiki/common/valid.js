@@ -32,6 +32,7 @@
 	[].forEach();
 
 	// Valid: mediawiki/no-unlabeled-buttonwidget
+	bar = new OO.ui.ButtonWidget( { icon: 'edit', label: 'Accessible label', invisibleLabel: true } );
 	bar = new OO.ui.IconWidget( { icon: 'edit' } );
 }() );
 
