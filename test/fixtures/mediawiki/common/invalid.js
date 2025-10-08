@@ -16,6 +16,9 @@
 	// eslint-disable-next-line mediawiki/no-nodelist-unsupported-methods
 	document.querySelectorAll( '.foo' ).forEach();
 
+	// eslint-disable-next-line mediawiki/no-unlabeled-buttonwidget
+	bar = new OO.ui.ButtonWidget( { icon: 'edit' } );
+
 	// eslint-disable-next-line compat/compat
 	bar = navigator.permissions.query();
 
