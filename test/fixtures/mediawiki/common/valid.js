@@ -1,5 +1,5 @@
 ( function () {
-	const bar = 'bar1';
+	let bar = 'bar1';
 
 	// Global: OO
 	OO.ui.alert( 'hello' );
@@ -30,6 +30,9 @@
 
 	// Valid: mediawiki/no-nodelist-unsupported-methods
 	[].forEach();
+
+	// Valid: mediawiki/no-unlabeled-buttonwidget
+	bar = new OO.ui.IconWidget( { icon: 'edit' } );
 }() );
 
 // Global: module
