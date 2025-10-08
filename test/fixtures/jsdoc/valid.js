@@ -1,8 +1,12 @@
 // TODO: Give examples of these rules being off:
 // Off: jsdoc/check-syntax
+// Off: jsdoc/check-template-names
 // Off: jsdoc/check-values
+// Off: jsdoc/convert-to-jsdoc-comments
 // Off: jsdoc/empty-tags
+// Off: jsdoc/escape-inline-tags
 // Off: jsdoc/imports-as-dependencies
+// Off: jsdoc/lines-before-block
 // Off: jsdoc/match-description
 // Off: jsdoc/match-name
 // Off: jsdoc/no-bad-blocks
@@ -10,9 +14,24 @@
 // Off: jsdoc/no-missing-syntax
 // Off: jsdoc/no-restricted-syntax
 // Off: jsdoc/no-types
+// Off: jsdoc/prefer-import-tag
+// Off: jsdoc/reject-any-type
+// Off: jsdoc/reject-function-type
+// Off: jsdoc/require-tags
+// Off: jsdoc/require-template
+// Off: jsdoc/require-template-description
 // Off: jsdoc/require-file-overview
 // Off: jsdoc/require-hyphen-before-param-description
+// Off: jsdoc/require-next-description
+// Off: jsdoc/require-next-type
 // Off: jsdoc/require-property
+// Off: jsdoc/require-throws-description
+// Off: jsdoc/require-yields-description
+// This rule is doesn't work with our preference
+// to use "yield" over "yields":
+// https://github.com/gajus/eslint-plugin-jsdoc/issues/1559
+// Off: jsdoc/require-yields-type
+// Off: jsdoc/type-formatting
 /* global Foo, APP */
 ( function () {
 	// Off: jsdoc/require-property-description
