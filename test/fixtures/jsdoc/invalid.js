@@ -132,6 +132,13 @@
 	APP.async = function * quux() {
 	};
 
+	// eslint-disable-next-line jsdoc/require-throws-type
+	/**
+	 * @throws
+	 */
+	APP.method = function () {
+	};
+
 	/* eslint-disable jsdoc/check-alignment */
 	/**
 	* @param {number} a
@@ -210,11 +217,11 @@
 	 */
 	/* eslint-enable jsdoc/check-types */
 
-	/* eslint-disable jsdoc/check-types */
+	/* eslint-disable jsdoc/valid-types */
 	/**
 	 * @param {function} h
 	 */
-	/* eslint-enable jsdoc/check-types */
+	/* eslint-enable jsdoc/valid-types */
 
 	/* eslint-disable jsdoc/check-tag-names */
 	/**
@@ -332,7 +339,7 @@
 
 	/* eslint-disable jsdoc/check-tag-names */
 	/**
-	 * @yields
+	 * @yields {number}
 	 */
 	/* eslint-enable jsdoc/check-tag-names */
 

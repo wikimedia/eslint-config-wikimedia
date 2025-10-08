@@ -1,7 +1,7 @@
 {
 	"extends": [
 		"eslint:recommended",
-		"plugin:security/recommended",
+		"plugin:security/recommended-legacy",
 		"./jsdoc"
 	],
 	"env": {},

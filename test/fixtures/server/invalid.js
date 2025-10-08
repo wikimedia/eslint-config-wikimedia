@@ -73,7 +73,7 @@
 
 	// New in Node 19, invalid per our our Node 18+ requirement
 	// eslint-disable-next-line n/no-unsupported-features/node-builtins
-	const c = URL.canParse( 'https://example.test/' );
+	const c = fetch();
 
 	// TODO: <!-- eslint-disable-next-line n/no-extraneous-require -->
 	// TODO: <!-- eslint-disable-next-line n/no-unpublished-bin -->

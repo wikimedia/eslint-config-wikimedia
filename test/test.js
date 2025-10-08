@@ -78,6 +78,7 @@ function extendRules( config, rules, globals ) {
 
 QUnit.module( 'ignorePatterns', () => {
 	QUnit.test( 'Check dotfiles are linted', ( assert ) => {
+		assert.timeout( 10000 );
 		const tests = [
 			// Dot files are linted
 			{ path: '.stylelintrc.json', ignored: false },
