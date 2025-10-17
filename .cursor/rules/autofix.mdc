@@ -1,0 +1,29 @@
+---
+alwaysApply: true
+---
+# ESLint Auto-fix Rule
+
+Always use `npm run lint:fix` when possible to automatically fix linting errors before manual fixes.
+
+## Priority Order:
+1. **First**: Run `npm run lint:fix` to auto-fix as many errors as possible
+2. **Then**: Manually fix remaining errors that cannot be auto-fixed
+3. **Finally**: Run `npm run lint` to verify all issues are resolved
+
+## Common Auto-fixable Issues:
+- Indentation (tabs vs spaces)
+- Line endings (CRLF vs LF)
+- Quote styles (single vs double)
+- Semicolons
+- Spacing issues
+- Template literal spacing
+
+## Manual Fixes Required:
+- `no-shadow` errors (rename conflicting variables)
+- `no-use-before-define` errors (reorder function definitions)
+- `eqeqeq` errors (replace == with ===, != with !==)
+- `no-var` errors (replace var with const/let)
+- `max-statements-per-line` errors (split multi-statement lines)
+- `no-return-assign` errors (refactor arrow functions)
+
+Always prefer tabs over spaces for indentation as per project convention.

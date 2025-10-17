@@ -1,3 +1,20 @@
+1.0.0 / 2025-10-18
+==================
+
+* [BREAKING CHANGE] Migrate to ESLint 9 and flat config format
+  * Minimum ESLint version is now 9.0.0
+  * All configurations converted to ES modules using flat config format
+  * Configuration files moved from root to `configs/` directory
+  * Old `.json` config files replaced with `.js` ES modules
+  * Package now uses `"type": "module"` and exports ES modules
+  * Users must update their `.eslintrc.*` files to `eslint.config.js`
+  * See MIGRATION.md for detailed migration instructions
+
+—
+* Add `globals` package dependency for global variable definitions
+* Update package.json structure with proper `exports` field
+* Files list updated to new structure: `index.js`, `configs/`, documentation
+
 0.31.0 / 2025-07-11
 ===================
 

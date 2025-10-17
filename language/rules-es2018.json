@@ -1,7 +1,0 @@
-{
-	"extends": "./rules-es2017",
-	"plugins": [ "unicorn" ],
-	"rules": {
-		"unicorn/no-useless-fallback-in-spread": "error"
-	}
-}
