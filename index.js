@@ -23,7 +23,7 @@ export default [
 			reportUnusedDisableDirectives: 'error'
 		},
 		rules: {
-			...security.configs['recommended-legacy'].rules,
+			...security.configs.recommended.rules,
 			'array-bracket-spacing': [ 'error', 'always' ],
 			'array-callback-return': 'error',
 			'block-scoped-var': 'error',
