@@ -1,4 +1,4 @@
-1.0.1-beta.1 / 2025-01-XX
+1.0.0-beta.1 / 2025-01-XX
 =========================
 
 * [BETA] ESLint 9 migration with flat config format
@@ -8,7 +8,7 @@
 * chore(ci): Update GitHub Actions to v5 (checkout and setup-node)
 * chore(ci): Rename nodejs.yml to ci.yml for modern naming convention
 
-1.0.0-beta.1 / 2025-01-XX
+1.0.0-beta.0 / 2025-01-XX
 =========================
 
 * [BETA] [BREAKING CHANGE] Migrate to ESLint 9 and flat config format
