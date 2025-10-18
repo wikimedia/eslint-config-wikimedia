@@ -1,3 +1,11 @@
+1.0.1 / 2025-10-18
+==================
+
+* fix: Include JSON, YAML, and TypeScript configs in base export
+* fix: Use modern security config instead of legacy
+* chore: Add .gitattributes for consistent line endings
+* chore(ci): Update GitHub Actions to v5 (checkout and setup-node)
+
 1.0.0 / 2025-10-18
 ==================
 
