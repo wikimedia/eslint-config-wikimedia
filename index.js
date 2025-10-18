@@ -1,0 +1,150 @@
+import js from '@eslint/js';
+import security from 'eslint-plugin-security';
+import unicorn from 'eslint-plugin-unicorn';
+import jsdocConfig from './configs/jsdoc.js';
+import jsonConfig from './configs/json.js';
+import yamlConfig from './configs/yaml.js';
+import typescriptConfig from './configs/typescript.js';
+
+export default [
+	{
+		name: 'wikimedia/base',
+		...js.configs.recommended,
+		plugins: {
+			security,
+			unicorn
+		},
+		languageOptions: {
+			sourceType: 'script'
+		},
+		settings: {
+			'es-x': {
+				aggressive: true
+			}
+		},
+		linterOptions: {
+			reportUnusedDisableDirectives: 'error'
+		},
+		rules: {
+			...security.configs.recommended.rules,
+			'array-bracket-spacing': [ 'error', 'always' ],
+			'array-callback-return': 'error',
+			'block-scoped-var': 'error',
+			'block-spacing': 'error',
+			'brace-style': [ 'error', '1tbs' ],
+			'camelcase': [ 'error', { properties: 'always' } ],
+			'comma-dangle': [ 'error', 'never' ],
+			'comma-spacing': [ 'error', { before: false, after: true } ],
+			'comma-style': [ 'error', 'last' ],
+			'computed-property-spacing': [ 'error', 'always' ],
+			'curly': [ 'error', 'all' ],
+			'dot-location': [ 'error', 'property' ],
+			'dot-notation': [ 'error' ],
+			'eol-last': 'error',
+			'eqeqeq': 'error',
+			'func-call-spacing': 'error',
+			'indent': [ 'error', 'tab', { SwitchCase: 1 } ],
+			'key-spacing': [ 'error', { beforeColon: false, afterColon: true } ],
+			'keyword-spacing': 'error',
+			'linebreak-style': [ 'error', 'unix' ],
+			'max-len': [ 'warn', {
+				code: 100,
+				tabWidth: 4,
+				ignorePattern: '^[\\s]*(//|<!--) (es|style)lint-.+',
+				ignoreUrls: true,
+				ignoreComments: false,
+				ignoreRegExpLiterals: true,
+				ignoreStrings: true,
+				ignoreTemplateLiterals: true
+			} ],
+			'max-statements-per-line': [ 'error', { max: 1 } ],
+			'new-cap': [ 'error', { newIsCap: true, capIsNew: false, properties: true } ],
+			'new-parens': 'error',
+			'no-alert': 'off',
+			'no-array-constructor': 'error',
+			'no-bitwise': 'error',
+			'no-caller': 'error',
+			'no-console': 'off',
+			'no-constant-binary-expression': 'error',
+			'no-constant-condition': [ 'error', { checkLoops: false } ],
+			'no-empty': [ 'error', { allowEmptyCatch: true } ],
+			'no-eval': 'error',
+			'no-extend-native': 'error',
+			'no-extra-bind': 'error',
+			'no-extra-label': 'error',
+			'no-floating-decimal': 'error',
+			'no-implicit-coercion': [ 'error', { string: true, boolean: false, number: false } ],
+			'no-implicit-globals': 'error',
+			'no-implied-eval': 'off',
+			'no-label-var': 'error',
+			'no-loop-func': 'error',
+			'no-loss-of-precision': 'error',
+			'no-multi-spaces': 'error',
+			'no-multiple-empty-lines': [ 'error', { max: 1, maxBOF: 0, maxEOF: 0 } ],
+			'no-new': 'error',
+			'no-new-func': 'error',
+			'no-new-object': 'error',
+			'no-new-wrappers': 'error',
+			'no-nonoctal-decimal-escape': 'error',
+			'no-octal-escape': 'error',
+			'no-proto': 'error',
+			'no-prototype-builtins': 'error',
+			'no-return-assign': 'error',
+			'no-script-url': 'error',
+			'no-self-compare': 'error',
+			'no-sequences': 'error',
+			'no-shadow': [ 'error', { hoist: 'all' } ],
+			'no-shadow-restricted-names': 'error',
+			'no-tabs': [ 'error', { allowIndentationTabs: true } ],
+			'no-throw-literal': 'error',
+			'no-trailing-spaces': 'error',
+			'no-undef-init': 'error',
+			'no-underscore-dangle': 'error',
+			'no-unmodified-loop-condition': 'error',
+			'no-unneeded-ternary': [ 'error', { defaultAssignment: false } ],
+			'no-unreachable-loop': 'error',
+			'no-unused-expressions': 'error',
+			'no-use-before-define': [ 'error', 'nofunc' ],
+			'no-useless-call': 'error',
+			'no-useless-concat': 'error',
+			'no-void': 'error',
+			'no-whitespace-before-property': 'error',
+			'no-with': 'error',
+			'object-curly-spacing': [ 'error', 'always' ],
+			'operator-linebreak': [ 'error', 'after' ],
+			'prefer-numeric-literals': 'error',
+			'prefer-regex-literals': 'error',
+			'quote-props': [ 'error', 'as-needed' ],
+			'quotes': [ 'error', 'single', { avoidEscape: true } ],
+			'semi': [ 'error', 'always' ],
+			'semi-spacing': [ 'error', { before: false, after: true } ],
+			'semi-style': [ 'error', 'last' ],
+			'space-before-blocks': [ 'error', 'always' ],
+			'space-before-function-paren': [ 'error', { anonymous: 'always', named: 'never' } ],
+			'space-in-parens': [ 'error', 'always', { exceptions: [ 'empty' ] } ],
+			'space-infix-ops': 'error',
+			'space-unary-ops': [ 'error', { words: true, nonwords: false } ],
+			'spaced-comment': [ 'error', 'always', {
+				exceptions: [ '*', '!' ],
+				block: { balanced: true }
+			} ],
+			'switch-colon-spacing': [ 'error', { after: true, before: false } ],
+			'unicode-bom': [ 'error' ],
+			'wrap-iife': 'error',
+			'yoda': [ 'error', 'never' ],
+			'security/detect-object-injection': 'off',
+			'unicorn/prefer-date-now': 'error',
+			'unicorn/prefer-string-slice': 'error',
+			'unicorn/throw-new-error': 'error'
+		}
+	},
+	...jsdocConfig,
+	...jsonConfig,
+	...yamlConfig,
+	...typescriptConfig,
+	{
+		name: 'wikimedia/ignores',
+		ignores: [ '!.*.*', '.*/*', 'node_modules/*' ]
+	}
+];
+

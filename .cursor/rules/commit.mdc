@@ -1,0 +1,100 @@
+---
+alwaysApply: true
+---
+# Git Commit Rules
+
+Follow these guidelines for all commits to maintain clean and meaningful git history.
+
+## Commit Creation Policy
+
+**CRITICAL**: Commits are created ONLY upon explicit user command. Never commit automatically.
+
+### When to Commit
+- ✅ User explicitly requests: "закоммить", "commit", "сохрани изменения"
+- ✅ User provides commit message: "commit with message 'fix: bug'"
+- ✅ User asks to save work: "сохрани", "save changes"
+- ✅ User requests to push: "запушь изменения", "push changes"
+- ❌ Never commit during regular development work
+- ❌ Never commit after making changes without explicit request
+
+### Memory Reference
+Always remember: [[memory:9593695]] - Do not push changes without the user's explicit command; keep work local until asked to push.
+
+## Commit Message Format
+
+Use conventional commits format: `type(scope): description`
+
+### Types:
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting, semicolons, etc.)
+- `refactor`: Code refactoring without changing functionality
+- `perf`: Performance improvements
+- `test`: Adding or updating tests
+- `build`: Build system or external dependencies changes
+- `ci`: CI/CD pipeline changes
+- `chore`: Maintenance tasks, dependency updates
+- `revert`: Reverting previous commits
+
+### Scope (optional):
+- Component or module name: `feat(banner): add new rating system`
+- File name: `fix(api): resolve timeout issues`
+- General area: `docs(readme): update installation guide`
+
+### Description:
+- Use imperative mood: "add feature" not "added feature"
+- Start with lowercase letter
+- No period at the end
+- Keep under 72 characters for the subject line
+
+## Examples:
+
+✅ **Good commits:**
+```
+feat(banner): add new rating system
+fix(api): resolve timeout issues in ORES requests
+docs(readme): update installation instructions
+style(eslint): fix all linting errors and warnings
+refactor(template): simplify parameter parsing logic
+chore(deps): update eslint to version 9.35.0
+```
+
+❌ **Bad commits:**
+```
+fixed bug
+updated files
+changes
+WIP
+asdf
+```
+
+## Commit Guidelines:
+
+1. **Atomic commits**: Each commit should represent a single logical change
+2. **Descriptive messages**: Explain what and why, not how
+3. **Present tense**: Use "add feature" not "added feature"
+4. **Body (optional)**: For complex changes, add a body explaining the motivation
+5. **Breaking changes**: Use `BREAKING CHANGE:` in the body for breaking changes
+
+## Breaking Changes Format:
+```
+feat(api): change parameter format
+
+BREAKING CHANGE: The API now requires 'class' parameter instead of 'rating'
+```
+
+## Before Committing:
+
+1. Run `npm run lint` to check for errors
+2. Run `npm run test` if tests exist
+3. Stage only relevant files: `git add specific-file.js`
+4. Use `git status` to verify staged changes
+5. Write descriptive commit message
+
+## Branch Naming:
+- `feature/description`: New features
+- `fix/description`: Bug fixes
+- `docs/description`: Documentation updates
+- `refactor/description`: Code refactoring
+- `chore/description`: Maintenance tasks

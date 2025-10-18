@@ -1,0 +1,90 @@
+---
+description: Release management and versioning guidelines
+---
+
+# Release Management Rules
+
+## Release Creation Policy
+
+**CRITICAL**: Releases are created ONLY upon explicit user command. Never create releases automatically.
+
+### When to Create Releases
+- ✅ User explicitly requests: "создай релиз", "create release", "bump version"
+- ✅ User provides specific version: "bump to 3.2.0", "create patch release"
+- ❌ Never create releases during regular development work
+- ❌ Never create releases after commits without explicit request
+
+### Release Process
+1. **Wait for user command** - Never initiate releases automatically
+2. **Update version in package.json** - Always update [package.json](mdc:package.json) version first
+3. **Follow semver**: patch (3.1.1), minor (3.2.0), major (4.0.0)
+4. **Use npm version**: `npm version patch/minor/major` (automatically updates package.json)
+5. **Build artifacts**: `npm run build` to update dist files
+6. **Create GitHub release**: Use GitHub CLI with proper description
+7. **Push changes**: `git push && git push --tags`
+
+### Release Description Template
+```markdown
+## 🐛 Bug Fixes
+- **Fixed [issue]**: [description]
+
+## 🔧 Improvements  
+- **Updated [component]**: [description]
+
+## ⚙️ Technical Changes
+- [technical details]
+
+This [patch/minor/major] release [summary].
+```
+
+### Memory Reference
+Always remember: [[memory:9593695]] - Do not push changes without the user's explicit command; keep work local until asked to push.
+
+### GitHub CLI Detection
+Always attempt to find GitHub CLI (`gh`) before creating releases. The CLI is installed but may not be in PATH.
+
+#### Detection Methods (in order):
+1. Try `gh --version` to check if available
+2. Try `where gh` (Windows) or `which gh` (Unix) to locate executable  
+3. Try `Get-Command gh` (PowerShell) to find in module path
+4. Check common installation paths:
+   - Windows: `C:\Program Files\GitHub CLI\gh.exe`
+   - Windows: `%USERPROFILE%\AppData\Local\Microsoft\WinGet\Packages\GitHub.cli_*\gh.exe`
+   - Unix: `/usr/local/bin/gh`, `/usr/bin/gh`, `~/.local/bin/gh`
+
+#### If GitHub CLI Found:
+- Use `gh release create` for automated releases
+- Include proper release notes with markdown formatting
+- Attach build artifacts if available
+
+#### If GitHub CLI Not Found:
+- Create annotated git tag with detailed message
+- Push tag to remote repository  
+- Instruct user to create release via GitHub web interface
+- Provide release notes template for manual creation
+
+#### PowerShell/CLI Issues with Long Strings:
+If PowerShell or GitHub CLI fails with long strings or empty responses:
+- **Create release notes file**: Write description to `release-notes.md`
+- **Use file-based release**: `gh release create vX.Y.Z --notes-file release-notes.md`
+- **Fallback to manual**: Provide file content for manual GitHub web interface creation
+- **Clean up**: Remove temporary `release-notes.md` after successful release
+
+### GitHub CLI Usage
+```bash
+gh release create vX.Y.Z --title "vX.Y.Z - [Description]" --notes-file release-notes.md
+```
+
+### Version Bumping Rules
+- **patch**: Bug fixes, small improvements
+- **minor**: New features, non-breaking changes  
+- **major**: Breaking changes, major refactoring
+
+### Package.json Version Management
+- **Always update [package.json](mdc:package.json) version** before creating releases
+- **Use npm version command**: `npm version patch/minor/major` (recommended)
+- **Manual update**: Edit version field in package.json if needed
+- **Commit version bump**: `git commit -m "chore: bump version to X.Y.Z"`
+- **Verify version**: Check that package.json version matches release tag
+
+Remember: User must explicitly request releases. Never assume or auto-create.

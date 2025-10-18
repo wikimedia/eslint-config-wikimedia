@@ -1,0 +1,266 @@
+---
+globs: *.js,*.ts,*.jsx,*.tsx
+description: Code formatting and style guidelines
+---
+# Code Formatting Rules
+
+Follow these formatting guidelines to maintain consistent code style across the project. These rules are enforced by ESLint configuration in [eslint.config.js](mdc:eslint.config.js).
+
+## Indentation
+
+- **Always use tabs** for indentation (not spaces)
+- **Tab width**: 1 tab character per indentation level
+- **Switch case**: 1 additional tab for case statements
+- **No mixed indentation**: Never mix tabs and spaces
+
+```javascript
+// ✅ Correct
+function example() {
+	if (condition) {
+		switch (value) {
+			case 'option1':
+				doSomething();
+				break;
+			case 'option2':
+				doSomethingElse();
+				break;
+		}
+	}
+}
+
+// ❌ Incorrect (spaces)
+function example() {
+    if (condition) {
+        doSomething();
+    }
+}
+```
+
+## Line Endings
+
+- **Always use Unix line endings (LF)** - never CRLF
+- Files should end with a single newline
+- No trailing whitespace at end of lines
+
+## Braces and Spacing
+
+- **Brace style**: 1tbs (one true brace style) - enforced by `@stylistic/brace-style`
+- **Block spacing**: Always add space inside blocks - enforced by `@stylistic/block-spacing`
+- **Object/array spacing**: Always add space inside braces and brackets - enforced by `@stylistic/object-curly-spacing` and `@stylistic/array-bracket-spacing`
+- **Function spacing**: Space before parentheses for anonymous functions, none for named - enforced by `@stylistic/space-before-function-paren`
+
+```javascript
+// ✅ Correct
+const obj = { key: 'value' };
+const arr = [ 1, 2, 3 ];
+const func = function() { return true; };
+function namedFunc() { return true; }
+
+// ❌ Incorrect
+const obj = {key: 'value'};
+const arr = [1, 2, 3];
+```
+
+## Quotes and Strings
+
+- **Use single quotes** for strings - enforced by `@stylistic/quotes`
+- **Template literals** for string interpolation
+- **Avoid string concatenation** with + operator - enforced by `no-useless-concat`
+
+```javascript
+// ✅ Correct
+const message = 'Hello world';
+const greeting = `Hello ${name}`;
+const path = '/api/users';
+
+// ❌ Incorrect
+const message = "Hello world";
+const greeting = 'Hello ' + name;
+```
+
+## Semicolons and Commas
+
+- **Always use semicolons** at end of statements - enforced by `@stylistic/semi`
+- **No trailing commas** in objects and arrays - enforced by `@stylistic/comma-dangle`
+- **Comma spacing**: Space after comma, none before - enforced by `@stylistic/comma-spacing`
+- **Comma style**: Last - enforced by `@stylistic/comma-style`
+
+```javascript
+// ✅ Correct
+const obj = { a: 1, b: 2 };
+const arr = [ 1, 2, 3 ];
+function test() { return true; }
+
+// ❌ Incorrect
+const obj = { a: 1, b: 2, };
+const arr = [ 1, 2, 3, ];
+```
+
+## Operators and Keywords
+
+- **Operator spacing**: Space around operators - enforced by `@stylistic/space-infix-ops`
+- **Keyword spacing**: Space after keywords - enforced by `@stylistic/keyword-spacing`
+- **No spaces** around unary operators - enforced by `@stylistic/space-unary-ops`
+- **Operator linebreak**: After operators - enforced by `@stylistic/operator-linebreak`
+
+```javascript
+// ✅ Correct
+const sum = a + b;
+const result = condition ? true : false;
+const negated = !value;
+
+// ❌ Incorrect
+const sum = a+b;
+const result = condition?true:false;
+const negated = ! value;
+```
+
+## Function Declarations
+
+- **Space before parentheses** for anonymous functions
+- **No space** before parentheses for named functions
+- **Arrow functions**: Use parentheses for single parameters, omit for none
+
+```javascript
+// ✅ Correct
+function namedFunction() { }
+const anonymous = function() { };
+const arrow = (param) => { };
+const noParams = () => { };
+
+// ❌ Incorrect
+const anonymous = function () { };
+const arrow = param => { };
+```
+
+## Maximum Line Length
+
+- **Line length**: Currently disabled in ESLint (`@stylistic/max-len: "off"`)
+- **Break long lines** at logical points when readability is affected
+- **Indent continuation lines** properly with tabs
+
+```javascript
+// ✅ Correct
+const longVariableName = someVeryLongFunctionCall(
+	param1,
+	param2,
+	param3
+);
+
+// ❌ Incorrect (if line becomes too long)
+const longVariableName = someVeryLongFunctionCall(param1, param2, param3, param4, param5, param6);
+```
+
+## Comments
+
+- **Use // for single line comments**
+- **Use /* */ for multi-line comments**
+- **Space after comment markers** - enforced by `@stylistic/spaced-comment`
+- **English only** for comments
+
+```javascript
+// ✅ Correct
+// This is a single line comment
+const value = 42;
+
+/* This is a multi-line comment
+   that spans multiple lines */
+const anotherValue = 24;
+
+// ❌ Incorrect
+//This is missing space
+const value = 42;
+```
+
+## Import/Export Organization
+
+- **Group imports** in logical order:
+  1. Node modules
+  2. Internal modules
+  3. Relative imports
+- **Sort imports** alphabetically within groups
+- **Use named imports** when possible
+
+```javascript
+// ✅ Correct
+import React from 'react';
+import lodash from 'lodash';
+
+import { API } from './api';
+import config from './config';
+
+import Component from '../Component';
+import utils from './utils';
+```
+
+## Variable Declarations
+
+- **Use const** for values that don't change - enforced by `prefer-const`
+- **Use let** for values that change
+- **Never use var** - enforced by `no-var`
+- **One declaration per line**
+- **CamelCase naming** - enforced by `camelcase`
+
+```javascript
+// ✅ Correct
+const constantValue = 'never changes';
+let changingValue = 'can change';
+const { destructured } = object;
+
+// ❌ Incorrect
+var oldStyle = 'avoid this';
+const a = 1, b = 2, c = 3;
+```
+
+## ES2017 Language Features
+
+- **Arrow functions**: Use parentheses for single parameters - enforced by `@stylistic/arrow-parens`
+- **Arrow function spacing**: Space around arrow - enforced by `@stylistic/arrow-spacing`
+- **Arrow function linebreaks**: Consistent linebreaks - enforced by `@stylistic/implicit-arrow-linebreak`
+- **Template literals**: Use template literals instead of string concatenation
+- **Destructuring**: Use object/array destructuring when appropriate
+- **Default parameters**: Put default parameters last - enforced by `default-param-last`
+- **Prefer const/let**: Over var declarations
+
+```javascript
+// ✅ Correct ES2017 style
+const processData = (data, options = {}) => {
+	const { filter, sort } = options;
+	return data.filter(item => item.active);
+};
+
+// ❌ Incorrect
+var processData = function(data, options) {
+	if (!options) options = {};
+	var filter = options.filter;
+	var sort = options.sort;
+	return data.filter(function(item) { return item.active; });
+};
+```
+
+## ESLint Integration
+
+- **Always run `npm run lint:fix`** before committing
+- **Fix all auto-fixable issues** automatically
+- **Manually fix remaining issues** that require code changes
+- **Verify with `npm run lint`** that all issues are resolved
+
+## Project-Specific Rules
+
+Based on our [eslint.config.js](mdc:eslint.config.js) configuration:
+
+- **Tabs only**: `@stylistic/indent` enforces tab indentation
+- **Unix line endings**: `@stylistic/linebreak-style` enforces LF
+- **No trailing spaces**: `@stylistic/no-trailing-spaces`
+- **Max statements per line**: Only 1 statement per line - enforced by `@stylistic/max-statements-per-line`
+- **No tabs in content**: `@stylistic/no-tabs` allows tabs only for indentation
+- **No multiple empty lines**: Max 1 empty line - enforced by `@stylistic/no-multiple-empty-lines`
+- **Template curly spacing**: Space inside template literals - enforced by `@stylistic/template-curly-spacing`
+- **Switch colon spacing**: Space after colon, none before - enforced by `@stylistic/switch-colon-spacing`
+
+## File Organization
+
+- **One class/function per file** when possible
+- **Export default** for main functionality
+- **Named exports** for utilities
+- **Use meaningful file names** in kebab-case

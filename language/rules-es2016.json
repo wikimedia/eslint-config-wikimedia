@@ -1,7 +1,0 @@
-{
-	"extends": "./rules-es6",
-	"plugins": [ "unicorn" ],
-	"rules": {
-		"unicorn/prefer-includes": "error"
-	}
-}
