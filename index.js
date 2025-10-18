@@ -2,6 +2,9 @@ import js from '@eslint/js';
 import security from 'eslint-plugin-security';
 import unicorn from 'eslint-plugin-unicorn';
 import jsdocConfig from './configs/jsdoc.js';
+import jsonConfig from './configs/json.js';
+import yamlConfig from './configs/yaml.js';
+import typescriptConfig from './configs/typescript.js';
 
 export default [
 	{
@@ -136,6 +139,9 @@ export default [
 		}
 	},
 	...jsdocConfig,
+	...jsonConfig,
+	...yamlConfig,
+	...typescriptConfig,
 	{
 		name: 'wikimedia/ignores',
 		ignores: [ '!.*.*', '.*/*', 'node_modules/*' ]
