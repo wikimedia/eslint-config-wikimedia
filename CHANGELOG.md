@@ -1,15 +1,17 @@
-1.0.1 / 2025-10-18
-==================
+1.0.1-beta.1 / 2025-01-XX
+=========================
 
+* [BETA] ESLint 9 migration with flat config format
 * fix: Include JSON, YAML, and TypeScript configs in base export
 * fix: Use modern security config instead of legacy
 * chore: Add .gitattributes for consistent line endings
 * chore(ci): Update GitHub Actions to v5 (checkout and setup-node)
+* chore(ci): Rename nodejs.yml to ci.yml for modern naming convention
 
-1.0.0 / 2025-10-18
-==================
+1.0.0-beta.1 / 2025-01-XX
+=========================
 
-* [BREAKING CHANGE] Migrate to ESLint 9 and flat config format
+* [BETA] [BREAKING CHANGE] Migrate to ESLint 9 and flat config format
   * Minimum ESLint version is now 9.0.0
   * All configurations converted to ES modules using flat config format
   * Configuration files moved from root to `configs/` directory
