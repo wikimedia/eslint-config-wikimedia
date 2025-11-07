@@ -7,6 +7,15 @@
 	// eslint-disable-next-line mediawiki/msg-doc
 	mw.msg( 'foo-' + bar );
 
+	// eslint-disable-next-line mediawiki/no-cookie
+	document.cookie = 'foo=bar';
+
+	// eslint-disable-next-line mediawiki/no-storage
+	localStorage.getItem( 'foo' );
+
+	// eslint-disable-next-line mediawiki/storage-expiry
+	mw.storage( bar, 'foo' );
+
 	// eslint-disable-next-line mediawiki/valid-package-file-require
 	require( './valid' );
 
