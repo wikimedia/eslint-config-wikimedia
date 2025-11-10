@@ -1,3 +1,14 @@
+0.32.0 / 2025-11-10
+===================
+
+* [BREAKING CHANGE] Update dependencies and Node version to >=20 (Ed Sanders)
+
+—
+* mediawiki: Upgrade eslint-plugin-mediawiki from 0.7.0 to 0.8.1 (James D. Forrester, Ed Sanders)
+
+—
+* tests: Add better example for `mediawiki/no-unlabeled-buttonwidget` (Ed Sanders)
+
 0.31.0 / 2025-07-11
 ===================
 
