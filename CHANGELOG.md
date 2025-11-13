@@ -1,3 +1,8 @@
+0.32.1 / 2025-11-13
+===================
+
+* language: Disable es-x/no-iterator-prototype-* rules (Ed Sanders)
+
 0.32.0 / 2025-11-10
 ===================
 
