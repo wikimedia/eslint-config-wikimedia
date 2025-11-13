@@ -85,4 +85,25 @@
 	// with many plain object properties.
 	// Off: es-x/no-symbol-prototype-description
 	window.desc = node.description;
+
+	// Valid: es-x/no-iterator-prototype-drop
+	node.drop();
+	// Valid: es-x/no-iterator-prototype-every
+	node.every();
+	// Valid: es-x/no-iterator-prototype-filter
+	node.filter();
+	// Valid: es-x/no-iterator-prototype-find
+	node.find();
+	// Valid: es-x/no-iterator-prototype-foreach
+	node.forEach();
+	// Valid: es-x/no-iterator-prototype-map
+	node.map();
+	// Valid: es-x/no-iterator-prototype-reduce
+	node.reduce();
+	// Valid: es-x/no-iterator-prototype-some
+	node.some();
+	// Valid: es-x/no-iterator-prototype-take
+	node.take();
+	// Valid: es-x/no-iterator-prototype-toarray
+	node.toArray();
 }() );
