@@ -23,6 +23,11 @@ class MyClass {}
 	// not-es2017 introduces no rules
 
 	// not-es2018
+	// eslint-disable-next-line es-x/no-array-prototype-flat
+	[].flat();
+	// eslint-disable-next-line es-x/no-array-prototype-flat
+	[].flatMap();
+
 	// eslint-disable-next-line es-x/no-string-prototype-trimstart-trimend
 	''.trimEnd();
 	// eslint-disable-next-line es-x/no-object-fromentries

@@ -21,9 +21,16 @@
 		"unicorn/no-useless-promise-resolve-reject": "error",
 		"es-x/no-symbol-prototype-description": "off",
 		"es-x/no-resizable-and-growable-arraybuffers": "off",
+		"es-x/no-iterator-prototype-drop": "off",
+		"es-x/no-iterator-prototype-every": "off",
+		"es-x/no-iterator-prototype-filter": "off",
+		"es-x/no-iterator-prototype-find": "off",
+		"es-x/no-iterator-prototype-flatmap": "off",
 		"es-x/no-iterator-prototype-foreach": "off",
 		"es-x/no-iterator-prototype-map": "off",
-		"es-x/no-iterator-prototype-filter": "off",
-		"es-x/no-iterator-prototype-find": "off"
+		"es-x/no-iterator-prototype-reduce": "off",
+		"es-x/no-iterator-prototype-some": "off",
+		"es-x/no-iterator-prototype-take": "off",
+		"es-x/no-iterator-prototype-toarray": "off"
 	}
 }
