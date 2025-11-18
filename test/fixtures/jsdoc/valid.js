@@ -138,6 +138,8 @@
 	 * @param {Function} h
 	 * @param {Date} i
 	 * @param {RegExp} j
+	 * @param {jQuery} k
+	 * @param {jQuery.Event} l
 	 * @param {HTMLElement} el HTMLElement is a global provided by the browser environment
 	 * @param {HTMLIFrameElement} iFrame
 	 * @param {Node} domNode
