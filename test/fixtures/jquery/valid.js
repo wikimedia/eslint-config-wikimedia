@@ -1,5 +1,9 @@
 ( function () {
 
+	// jQuery global is enabled to support jsdoc types, but
+	// shouldn't be used (#639). TODO: Disallow jQuery global.
+	// Global: jQuery
+	jQuery.stop();
 	// Global: $
 	// Valid: no-jquery/no-animate ignores scroll properties
 	$( [] ).animate( { scrollTop: 50 } );

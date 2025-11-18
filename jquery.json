@@ -1,6 +1,7 @@
 {
 	"globals": {
-		"$": "readonly"
+		"$": "readonly",
+		"jQuery": "readonly"
 	},
 	"plugins": [ "no-jquery" ],
 	"extends": [
