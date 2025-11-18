@@ -1,3 +1,8 @@
+0.32.2 / 2025-11-18
+===================
+
+* jquery/jsdoc: Enable `jQuery` as a global to prevent jsdoc warnings (Ed Sanders)
+
 0.32.1 / 2025-11-13
 ===================
 
