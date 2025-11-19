@@ -2,6 +2,9 @@
 	"extends": [
 		"plugin:qunit/recommended"
 	],
+	"globals": {
+		"QUnit": "readonly"
+	},
 	"env": {
 		"qunit": true
 	},

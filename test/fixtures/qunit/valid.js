@@ -1,5 +1,9 @@
 QUnit.module( 'Module', ( hooks ) => {
 
+	// QUnit global is enabled to support jsdoc types, but
+	// is usually made available by the "env" setting (#639).
+	// Global: QUnit
+
 	hooks.beforeEach( ( assert ) => {
 		assert.ok( true, 'beforeEach' );
 	} );
@@ -49,5 +53,14 @@ QUnit.module( 'Module', ( hooks ) => {
 		const x = this.foo === 3;
 		assert.true( x );
 	} );
+
+	/**
+	 * Test runner
+	 *
+	 * @param {QUnit.Assert} assert
+	 */
+	function testRunner() {}
+
+	QUnit.test( 'runner', testRunner );
 
 } );
