@@ -27,6 +27,10 @@
 // Off: jsdoc/require-property
 // Off: jsdoc/require-throws-description
 // Off: jsdoc/require-yields-description
+// Off: jsdoc/ts-method-signature-style
+// Off: jsdoc/ts-no-empty-object-type
+// Off: jsdoc/ts-no-unnecessary-template-expression
+// Off: jsdoc/ts-prefer-function-type
 // This rule is doesn't work with our preference
 // to use "yield" over "yields":
 // https://github.com/gajus/eslint-plugin-jsdoc/issues/1559
@@ -125,7 +129,7 @@
 	// Off: jsdoc/check-examples
 	// Off: jsdoc/check-line-alignment
 	/**
-	 *     @example
+	 * @example
 	 *     invalid(style)
 	 *
 	 * @param {boolean} a
