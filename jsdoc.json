@@ -68,6 +68,7 @@
 		"jsdoc/require-property-name": "off",
 		"jsdoc/require-returns-description": "off",
 		"jsdoc/require-yields-type": "off",
-		"jsdoc/tag-lines": [ "warn", "any", { "startLines": 1 } ]
+		"jsdoc/tag-lines": [ "warn", "any", { "startLines": 1 } ],
+		"jsdoc/ts-no-empty-object-type": "off"
 	}
 }
