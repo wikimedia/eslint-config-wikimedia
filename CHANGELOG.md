@@ -1,3 +1,10 @@
+0.32.3 / 2025-11-27
+===================
+
+* mediawiki: Update eslint-plugin-mediawiki to 0.8.2 (James D. Forrester)
+* jsdoc: Update to 61.3.0 (Ed Sanders)
+* qunit/jsdoc: Enable `QUnit` as a global to prevent jsdoc warnings (Ed Sanders)
+
 0.32.2 / 2025-11-18
 ===================
 
