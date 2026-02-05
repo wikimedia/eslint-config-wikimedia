@@ -17,5 +17,8 @@ driver.wait();
 // Global: multiremotebrowser
 multiremotebrowser.execute();
 
+// Global: multiRemoteBrowser
+multiRemoteBrowser.execute();
+
 // Global: expect
 expect( true );
