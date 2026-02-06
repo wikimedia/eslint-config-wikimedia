@@ -17,6 +17,7 @@
 // Off: jsdoc/prefer-import-tag
 // Off: jsdoc/reject-any-type
 // Off: jsdoc/reject-function-type
+// Off: jsdoc/require-rejects
 // Off: jsdoc/require-tags
 // Off: jsdoc/require-template
 // Off: jsdoc/require-template-description
@@ -194,5 +195,13 @@
 	APP.JSDocTags = function ( a, b ) {
 		return a || b;
 	};
+
+	// Numeric namepaths are allowed:
+	// https://github.com/gajus/eslint-plugin-jsdoc/issues/1646
+	/**
+	 * @typedef {Array} LinearData
+	 * @property {string} 0 Character data
+	 * @property {string[]} 1 Annotation array
+	 */
 
 }( this ) );
