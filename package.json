@@ -6,6 +6,7 @@
 	"scripts": {
 		"test": "qunit test/test.js && npm run lint",
 		"lint": "eslint . --max-warnings 0",
+		"changelog": "git log HEAD --format=\"* %s (%aN)\" --no-merges --not --tags | sort",
 		"build-invalid": "node test/test.js dump"
 	},
 	"repository": {

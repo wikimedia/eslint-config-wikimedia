@@ -71,18 +71,12 @@ npm install --package-lock-only
 
 # == Generate CHANGELOG ==
 
-LAST_TAG=$(get_version_from_git_tag || echo "")
 DATE=$(date +"%Y-%m-%d")
 
-if [ -n "$LAST_TAG" ]; then
-	RAW_COMMITS=$(git log "v$LAST_TAG"..HEAD --pretty=format:'* %s (%an)')
-else
-	RAW_COMMITS=$(git log --pretty=format:'* %s (%an)')
-fi
+RAW_COMMITS=$(npm run -s changelog)
 
 COMMITS=$(printf "%s\n" "$RAW_COMMITS" |
-	sed -E 's/\s*\(#([0-9]+)\)//g' |             # remove github ticket (#123)
-	sed -E 's/\(Ed S\)/(Ed Sanders)/g'           # expand names
+	sed -E 's/\s*\(#([0-9]+)\)//g'               # remove github ticket (#123)
 )
 
 HEADLINE="$NEW_VERSION / $DATE"
