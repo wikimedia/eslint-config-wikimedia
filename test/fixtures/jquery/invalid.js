@@ -122,6 +122,9 @@
 	// eslint-disable-next-line no-jquery/no-bind
 	$x.bind();
 
+	// eslint-disable-next-line no-jquery/no-class
+	$div.toggleClass();
+
 	// eslint-disable-next-line no-jquery/no-delegate
 	$x.delegate();
 
