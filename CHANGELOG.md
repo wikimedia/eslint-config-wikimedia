@@ -1,3 +1,13 @@
+0.32.4 / 2026-05-03
+===================
+
+* Minor updates for dependencies (Ed Sanders)
+* Pin eslint-plugin-wdio to 9.23.0 (Timo Tijhof) [Fixes #653](https://github.com/wikimedia/eslint-config-wikimedia/issues/653)
+* Update eslint-plugin-security to 4.0.0 (James D. Forrester)
+* jquery: Update eslint-plugin-no-jquery to 4.0.0 (James D. Forrester)
+* jsdoc: Update eslint-plugin-jsdoc to 62.5.2  (Ed Sanders)
+* mediawiki: Update eslint-plugin-mediawiki to 0.8.3 (James D. Forrester)
+
 0.32.3 / 2025-11-27
 ===================
 
