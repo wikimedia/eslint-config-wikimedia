@@ -22,7 +22,7 @@
 		"wikimedia"
 	],
 	"engines": {
-		"node": ">=20 <25"
+		"node": ">=20 <27"
 	},
 	"files": [
 		"common.json",
