@@ -69,7 +69,7 @@
 		"eslint-plugin-mediawiki": "^0.8.3",
 		"eslint-plugin-mocha": "^10.5.0",
 		"eslint-plugin-n": "^17.24.0",
-		"eslint-plugin-no-jquery": "^5.0.0",
+		"eslint-plugin-no-jquery": "^6.0.0",
 		"eslint-plugin-qunit": "^8.2.6",
 		"eslint-plugin-security": "^4.0.0",
 		"eslint-plugin-unicorn": "^56.0.1",
