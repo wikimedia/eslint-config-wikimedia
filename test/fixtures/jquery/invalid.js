@@ -74,6 +74,21 @@
 	div.hide();
 
 	// Deprecated
+
+	/* 4.0 */
+	// eslint-disable-next-line no-jquery/no-internal-array-methods, no-jquery/no-global-selector
+	$( 'div' ).sort();
+
+	/* 3.7 */
+	// eslint-disable-next-line no-jquery/no-deferred-get-stack-hook
+	$.Deferred.getStackHook;
+
+	// eslint-disable-next-line no-jquery/no-css-number
+	$.cssNumber;
+
+	// eslint-disable-next-line no-jquery/no-css-props
+	$.cssProps;
+
 	/* 3.5 */
 	// eslint-disable-next-line no-jquery/no-event-shorthand
 	$x.ajaxStart();
