@@ -12,7 +12,7 @@ Then, [configure ESLint](https://eslint.org/docs/user-guide/configuring) with on
 Below are some potential recommended uses:
 
 ### A typical front-end project
-This config allows the latest supported ES version code (currently ES2017) and browser native functions. It will complain about ES2018+ code and language features. This target version updates over time.
+This config allows the latest supported ES version code (currently ES2019) and browser native functions. It will complain about ES2020+ code and language features. This target version updates over time following [MediaWiki's compatibility](https://www.mediawiki.org/wiki/Compatibility#Browsers).
 It also automatically applies the Vue plugin and Vue-specific rules to `.vue` files.
 
 `.eslintrc.json`:
@@ -21,7 +21,8 @@ It also automatically applies the Vue plugin and Vue-specific rules to `.vue` fi
 	"extends": "wikimedia/client"
 }
 ```
-If you want to only allow ES6 code and browser native functions, you can use `wikimedia/client/es6` instead.
+
+If you want to explicitly allow ES2019 code only, you can use `wikimedia/client/es2019` instead.
 
 #### jQuery
 This config adds the jQuery `$` global, and additional rules preventing the use of jQuery features which are deprecated, have performance issues, or have simple modern ES alternatives.

@@ -31,6 +31,11 @@
 	// eslint-disable-next-line compat/compat
 	bar = navigator.permissions.query();
 
+	// Standardised in ES2018 but not implemented by Apple until 2023 (Safari 16)
+	// https://phabricator.wikimedia.org/T395347#12037702
+	// eslint-disable-next-line compat/compat
+	bar = /(?<=a)b/;
+
 	// eslint-disable-next-line max-len
 	// Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a ligula ut felis volutpat venenatis. Vivamus venenatis justo in lectus tempus placerat.
 }() );
