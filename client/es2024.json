@@ -1,0 +1,7 @@
+{
+	"extends": [
+		"./common",
+		"../language/es2024",
+		"../vue/es2024"
+	]
+}
