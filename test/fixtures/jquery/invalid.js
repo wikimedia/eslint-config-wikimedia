@@ -46,6 +46,9 @@
 	// eslint-disable-next-line no-jquery/no-in-array
 	$.inArray( 1, [ 1 ] );
 
+	// eslint-disable-next-line no-jquery/no-jquery-ui
+	$( [] ).draggable();
+
 	// eslint-disable-next-line no-jquery/no-map-util
 	$.map( [ 1 ], () => {} );
 

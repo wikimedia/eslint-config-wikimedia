@@ -22,6 +22,7 @@
 		"no-jquery/no-global-selector": "error",
 		"no-jquery/no-grep": "error",
 		"no-jquery/no-in-array": "error",
+		"no-jquery/no-jquery-ui": "error",
 		"no-jquery/no-map-util": "error",
 		"no-jquery/no-noop": "error",
 		"no-jquery/no-parse-html-literal": "error",
