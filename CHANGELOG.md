@@ -1,3 +1,13 @@
+0.32.5 / 2026-07-27
+===================
+
+* client: Change target from ES2017 to ES2019 (Timo Tijhof) [T395347](https://phabricator.wikimedia.org/T395347)
+* client: Create client/es2018 to client/es2024 configs (Timo Tijhof)
+* jquery: Enable no-jquery-ui (James D. Forrester)
+* jquery: Raise target deprecations to jQuery 4.0 (James D. Forrester)
+* jquery: Upgrade eslint-plugin-no-jquery to 6.0.0 (James D. Forrester)
+* mediawiki: Upgrade browserslist-config-wikimedia to ^0.9.0 (James D. Forrester, Timo Tijhof)
+
 0.32.4 / 2026-05-03
 ===================
 

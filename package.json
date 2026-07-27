@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-wikimedia",
-	"version": "0.32.4",
+	"version": "0.32.5",
 	"description": "ESLint config following Wikimedia code conventions.",
 	"main": "common.json",
 	"scripts": {
