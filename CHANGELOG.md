@@ -1,3 +1,9 @@
+0.32.6 / 2026-09-08
+===================
+
+* build: Bump npm audit findings for browserslist (James D. Forrester)
+* build: Upgrade qunit from ^2.25.0 to ^2.26.0 and fix npm audit whine (James D. Forrester)
+
 0.32.5 / 2026-07-27
 ===================
 
