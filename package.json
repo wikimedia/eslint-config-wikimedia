@@ -81,5 +81,10 @@
 		"escape-string-regexp": "^4.0.0",
 		"fs-readdir-recursive": "^1.1.0",
 		"qunit": "^2.26.0"
+	},
+	"overrides": {
+		"eslint-plugin-vue": {
+			"postcss-selector-parser": "^7.1.6"
+		}
 	}
 }
