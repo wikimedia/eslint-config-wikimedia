@@ -24,3 +24,23 @@ jobs:
         npm test
       env:
         CI: true
+
+  eslint-9:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v6
+    - name: Use Node.js 24.x
+      uses: actions/setup-node@v6
+      with:
+        node-version: 24.x
+    - name: npm install, and test flat configs with ESLint 9
+      # TODO: Run all tests with ESLint 9, once this repo's tests and lint config
+      # use flat config.
+      run: |
+        npm ci
+        npm install --no-save eslint@9
+        npx qunit test/test.js --filter "flat config"
+      env:
+        CI: true
