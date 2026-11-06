@@ -27,6 +27,7 @@
 	"files": [
 		"common.json",
 		"client.json",
+		"flat.js",
 		"node.json",
 		"jest.json",
 		"jquery.json",
@@ -54,9 +55,10 @@
 	],
 	"license": "MIT",
 	"peerDependencies": {
-		"eslint": "^8.57.0"
+		"eslint": "^8.57.0 || ^9.0.0"
 	},
 	"dependencies": {
+		"@eslint/eslintrc": "^2.1.4 || ^3.0.0",
 		"@stylistic/eslint-plugin": "^3.1.0",
 		"@typescript-eslint/eslint-plugin": "8.54.0",
 		"@typescript-eslint/parser": "8.54.0",
