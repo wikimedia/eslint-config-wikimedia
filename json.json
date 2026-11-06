@@ -6,6 +6,9 @@
 		"eslint-plugin-json-es"
 	],
 	"parser": "eslint-plugin-json-es",
+	"parserOptions": {
+		"ecmaVersion": 2019
+	},
 	"rules": {
 		"json-es/use-valid-json": "error",
 		"indent": [ "error", "tab" ],
