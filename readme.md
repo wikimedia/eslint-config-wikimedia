@@ -135,6 +135,18 @@ Please note that the basic project configuration does not specify any language o
 }
 ```
 
+## Flat config (ESLint 9)
+All of the above configs are also available as [flat config](https://eslint.org/docs/latest/use/configure/configuration-files), for use with ESLint 9 or ESLint 8.57+. Pass the same names as you would use in `extends`, without the `wikimedia/` prefix.
+
+`eslint.config.js`:
+```js
+const wikimedia = require( 'eslint-config-wikimedia/flat' );
+
+module.exports = [
+	...wikimedia( 'client', 'jquery', 'mediawiki' )
+];
+```
+
 ## Proposing changes
 
 Major changes should be discussed [on mediawiki.org](https://www.mediawiki.org/wiki/Manual_talk:Coding_conventions/JavaScript) or on the [Wikitech mailing list](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) beforehand.

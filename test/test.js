@@ -8,7 +8,7 @@ const fs = require( 'fs' ),
 	configs = [],
 	escapeStringRegexp = require( 'escape-string-regexp' ),
 	readdirRecursive = require( 'fs-readdir-recursive' ),
-	{ ESLint } = require( 'eslint' ),
+	{ ESLint, loadESLint } = require( 'eslint' ),
 	eslint = new ESLint();
 
 packageFiles.forEach( ( packageFile ) => {
@@ -76,31 +76,91 @@ function extendRules( config, rules, globals ) {
 	};
 }
 
+const ignoreTests = [
+	// Dot files are linted
+	{ path: '.stylelintrc.json', ignored: false },
+	{ path: '.eslintrc.json', ignored: false },
+	// Dot folders and node_modules are still ignored
+	{ path: 'node_modules/foo.js', ignored: true },
+	{ path: 'node_modules/.eslintrc.json', ignored: true },
+	{ path: '.git/foo.js', ignored: true },
+	{ path: '.github/workflow/nodejs.yml', ignored: true },
+	{ path: '.github/node_modules/foo.js', ignored: true },
+	{ path: '.github/node_modules/.eslintrc.json', ignored: true },
+	{ path: '.github/.eslintrc.js', ignored: true },
+	{ path: '.dot.folder/foo.js', ignored: true },
+	{ path: '.dot.folder/.foo.js', ignored: true }
+];
+
 QUnit.module( 'ignorePatterns', () => {
 	QUnit.test( 'Check dotfiles are linted', ( assert ) => {
 		assert.timeout( 10000 );
-		const tests = [
-			// Dot files are linted
-			{ path: '.stylelintrc.json', ignored: false },
-			{ path: '.eslintrc.json', ignored: false },
-			// Dot folders and node_modules are still ignored
-			{ path: 'node_modules/foo.js', ignored: true },
-			{ path: 'node_modules/.eslintrc.json', ignored: true },
-			{ path: '.git/foo.js', ignored: true },
-			{ path: '.github/workflow/nodejs.yml', ignored: true },
-			{ path: '.github/node_modules/foo.js', ignored: true },
-			{ path: '.github/node_modules/.eslintrc.json', ignored: true },
-			{ path: '.github/.eslintrc.js', ignored: true },
-			{ path: '.dot.folder/foo.js', ignored: true },
-			{ path: '.dot.folder/.foo.js', ignored: true }
-		];
-		const done = assert.async( tests.length );
-		tests.forEach( ( test ) => {
+		const done = assert.async( ignoreTests.length );
+		ignoreTests.forEach( ( test ) => {
 			eslint.isPathIgnored( test.path ).then( ( ignored ) => {
 				assert.strictEqual( ignored, test.ignored, `Is ${ test.path } ignored` );
 				done();
 			} );
 		} );
+	} );
+} );
+
+QUnit.module( 'flat config', () => {
+	const wikimedia = require( '../flat' );
+	const { FlatCompat } = require( '@eslint/eslintrc' );
+	const recommendedConfig = require( '@eslint/js' ).configs.recommended;
+	const fixturesRoot = path.resolve( __dirname, 'fixtures' );
+	const root = path.resolve( __dirname, '..' );
+	const eslintrcFiles = readdirRecursive( fixturesRoot, () => true )
+		.filter( ( file ) => path.basename( file ) === '.eslintrc.json' );
+
+	function getMessages( results ) {
+		return results.map( ( result ) => ( {
+			file: path.relative( root, result.filePath ),
+			messages: result.messages.map( ( m ) => `${ m.line }:${ m.column } ${ m.ruleId }: ${ m.message }` )
+		} ) );
+	}
+
+	eslintrcFiles.forEach( ( eslintrcFile ) => {
+		const dir = path.resolve( fixturesRoot, path.dirname( eslintrcFile ) );
+		// Each invalid fixture disables every error it causes, and unused disables are errors,
+		// so all fixtures must lint with no messages.
+		QUnit.test( `Fixtures in "${ path.relative( root, dir ) }" have no errors`, async ( assert ) => {
+			assert.timeout( 30000 );
+			const { extends: extendsList, ...extra } = JSON.parse(
+				fs.readFileSync( path.join( dir, '.eslintrc.json' ) )
+			);
+			const names = [].concat( extendsList )
+				.map( ( name ) => path.relative( root, path.resolve( dir, name ) ) );
+			// Convert the fixture's own rules and overrides as well.
+			const extraConfig = new FlatCompat( {
+				baseDirectory: dir,
+				resolvePluginsRelativeTo: root,
+				recommendedConfig
+			} ).config( extra );
+			const files = fs.readdirSync( dir )
+				.filter( ( file ) => /^(in)?valid/.test( file ) )
+				.map( ( file ) => path.join( dir, file ) );
+
+			const FlatESLint = await loadESLint( { useFlatConfig: true } );
+			const results = await new FlatESLint( {
+				cwd: dir,
+				overrideConfigFile: true,
+				overrideConfig: [ ...wikimedia( ...names ), ...extraConfig ]
+			} ).lintFiles( files );
+			assert.deepEqual(
+				getMessages( results ).filter( ( result ) => result.messages.length ),
+				[]
+			);
+		} );
+	} );
+
+	QUnit.test( 'Check dotfiles are linted', async ( assert ) => {
+		const FlatESLint = await loadESLint( { useFlatConfig: true } );
+		const flatEslint = new FlatESLint( { overrideConfigFile: true, overrideConfig: wikimedia( 'common' ) } );
+		for ( const test of ignoreTests ) {
+			assert.strictEqual( await flatEslint.isPathIgnored( test.path ), test.ignored, `Is ${ test.path } ignored` );
+		}
 	} );
 } );
 
@@ -129,6 +189,7 @@ QUnit.module( 'package.json', () => {
 } );
 
 const aliases = [
+	'flat',
 	'client',
 	'client-common',
 	'client-es6',
