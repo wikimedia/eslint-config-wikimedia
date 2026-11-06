@@ -22,5 +22,8 @@ const compat = new FlatCompat( {
 module.exports = ( ...names ) => [
 	// Flat config parses .js files as modules, but eslintrc parses them as scripts.
 	{ files: [ '**/*.js' ], languageOptions: { sourceType: 'script' } },
-	...compat.extends( ...names.map( ( name ) => './' + name ) )
+	// FlatCompat matches ignorePatterns against paths relative to this package, not to the
+	// project, so it ignores all project files. Use a flat config ignore instead.
+	...compat.extends( ...names.map( ( name ) => './' + name ) ).filter( ( config ) => !config.ignores ),
+	{ ignores: [ '.*/' ] }
 ];
