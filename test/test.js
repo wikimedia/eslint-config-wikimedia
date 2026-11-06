@@ -3,6 +3,7 @@
 /* eslint-disable security/detect-non-literal-fs-filename */
 
 const fs = require( 'fs' ),
+	os = require( 'os' ),
 	path = require( 'path' ),
 	packageFiles = require( '../package' ).files,
 	configs = [],
@@ -161,6 +162,16 @@ QUnit.module( 'flat config', () => {
 		for ( const test of ignoreTests ) {
 			assert.strictEqual( await flatEslint.isPathIgnored( test.path ), test.ignored, `Is ${ test.path } ignored` );
 		}
+	} );
+
+	QUnit.test( 'Files outside this package are not ignored', async ( assert ) => {
+		const FlatESLint = await loadESLint( { useFlatConfig: true } );
+		const flatEslint = new FlatESLint( {
+			cwd: os.tmpdir(),
+			overrideConfigFile: true,
+			overrideConfig: wikimedia( 'common' )
+		} );
+		assert.false( await flatEslint.isPathIgnored( 'x.js' ) );
 	} );
 } );
 
