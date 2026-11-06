@@ -1,3 +1,15 @@
+0.33.0 / 2026-11-06
+===================
+
+* Add flat config versions of all configs for eslint 9 (James D. Forrester)
+
+—
+* common: Set `no-inner-declarations` and `no-unused-vars` explicitly (James D. Forrester)
+* json: Set `ecmaVersion` to 2019 for the JSON parser (James D. Forrester)
+* jquery: Raise eslint-plugin-no-jquery to ^6.0.2 (James D. Forrester)
+* jquery: Upgrade eslint-plugin-no-jquery to ^6.0.1 (James D. Forrester)
+* mediawiki: Raise eslint-plugin-mediawiki to ^0.8.4 (James D. Forrester)
+
 0.32.6 / 2026-09-08
 ===================
 
