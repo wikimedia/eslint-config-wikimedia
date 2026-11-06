@@ -3,6 +3,7 @@
 /* eslint-disable security/detect-non-literal-fs-filename */
 
 const fs = require( 'fs' ),
+	os = require( 'os' ),
 	path = require( 'path' ),
 	packageFiles = require( '../package' ).files,
 	configs = [],
@@ -160,6 +161,47 @@ QUnit.module( 'flat config', () => {
 		const flatEslint = new FlatESLint( { overrideConfigFile: true, overrideConfig: wikimedia( 'common' ) } );
 		for ( const test of ignoreTests ) {
 			assert.strictEqual( await flatEslint.isPathIgnored( test.path ), test.ignored, `Is ${ test.path } ignored` );
+		}
+	} );
+
+	QUnit.test( 'Files outside this package are not ignored', async ( assert ) => {
+		const FlatESLint = await loadESLint( { useFlatConfig: true } );
+		const flatEslint = new FlatESLint( {
+			cwd: os.tmpdir(),
+			overrideConfigFile: true,
+			overrideConfig: wikimedia( 'common' )
+		} );
+		assert.false( await flatEslint.isPathIgnored( 'x.js' ) );
+	} );
+
+	QUnit.test( 'Fixtures outside this package have no errors', async ( assert ) => {
+		assert.timeout( 30000 );
+		const dir = fs.mkdtempSync( path.join( os.tmpdir(), 'eslint-config-wikimedia-' ) );
+		[ 'json', 'typescript', 'yaml' ].forEach( ( type ) => {
+			const typeDir = path.join( fixturesRoot, type );
+			fs.readdirSync( typeDir )
+				.filter( ( file ) => /^(in)?valid/.test( file ) )
+				.forEach( ( file ) => fs.copyFileSync(
+					path.join( typeDir, file ), path.join( dir, file )
+				) );
+		} );
+		const FlatESLint = await loadESLint( { useFlatConfig: true } );
+		try {
+			const results = await new FlatESLint( {
+				cwd: dir,
+				overrideConfigFile: true,
+				overrideConfig: [
+					...wikimedia( 'common' ),
+					// Same as test/fixtures/json/.eslintrc.json
+					{ files: [ '**/*.jsonc' ], rules: { 'json-es/use-valid-json': 'off' } }
+				]
+			} ).lintFiles( dir );
+			assert.deepEqual(
+				getMessages( results ).filter( ( result ) => result.messages.length ),
+				[]
+			);
+		} finally {
+			fs.rmSync( dir, { recursive: true } );
 		}
 	} );
 } );
