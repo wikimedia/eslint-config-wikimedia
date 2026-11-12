@@ -1,3 +1,8 @@
+0.33.1 / 2026-11-12
+===================
+
+* flat config: Give the json-es parser a "meta" object (James D. Forrester)
+
 0.33.0 / 2026-11-11
 ===================
 
