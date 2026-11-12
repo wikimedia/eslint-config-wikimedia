@@ -164,6 +164,14 @@ QUnit.module( 'flat config', () => {
 		}
 	} );
 
+	QUnit.test( 'eslint-plugin-json-es has no meta.name', ( assert ) => {
+		const { meta } = require( 'eslint-plugin-json-es' );
+		assert.false(
+			Boolean( meta && meta.name ),
+			'eslint-plugin-json-es now has meta.name; remove jsonEsParser from flat.js'
+		);
+	} );
+
 	QUnit.test( 'Files outside this package are not ignored', async ( assert ) => {
 		const FlatESLint = await loadESLint( { useFlatConfig: true } );
 		const flatEslint = new FlatESLint( {
@@ -189,6 +197,9 @@ QUnit.module( 'flat config', () => {
 		try {
 			const results = await new FlatESLint( {
 				cwd: dir,
+				// The cache serialises the config. This makes sure that all parsers have "meta".
+				cache: true,
+				cacheLocation: path.join( dir, '.eslintcache' ),
 				overrideConfigFile: true,
 				overrideConfig: [
 					...wikimedia( 'common' ),

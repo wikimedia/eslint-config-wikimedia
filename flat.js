@@ -16,12 +16,33 @@ const compat = new FlatCompat( {
 	recommendedConfig: js.configs.recommended
 } );
 
+const jsonEs = require( 'eslint-plugin-json-es' );
+// ESLint must serialise the parser for --cache, so the parser must have a "meta" object.
+// eslint-plugin-json-es does not supply one.
+const jsonEsParser = {
+	meta: {
+		name: 'eslint-plugin-json-es',
+		version: require( 'eslint-plugin-json-es/package.json' ).version
+	},
+	parseForESLint: jsonEs.parseForESLint
+};
+
 /**
  * @param {Object} config Flat config object
  * @return {boolean} The config object is a global ignore
  */
 const isGlobalIgnore = ( config ) => Object.keys( config ).length === 1 &&
 	Array.isArray( config.ignores );
+
+/**
+ * @param {Object} config Flat config object
+ * @return {Object} The config object, with jsonEsParser in place of the json-es parser
+ */
+const fixJsonEsParser = ( config ) => !( jsonEs.meta && jsonEs.meta.name ) &&
+	config.languageOptions &&
+	config.languageOptions.parser === jsonEs ?
+	{ ...config, languageOptions: { ...config.languageOptions, parser: jsonEsParser } } :
+	config;
 
 /**
  * Get flat config objects for one or more of the eslintrc configs in this package.
@@ -36,6 +57,7 @@ module.exports = ( ...names ) => [
 	// FlatCompat matches ignorePatterns relative to baseDirectory, not to the project.
 	// Use a flat config ignore instead.
 	...compat.extends( ...names.map( ( name ) => path.join( __dirname, name ) ) )
-		.filter( ( config ) => !isGlobalIgnore( config ) ),
+		.filter( ( config ) => !isGlobalIgnore( config ) )
+		.map( fixJsonEsParser ),
 	{ ignores: [ '.*/' ] }
 ];
