@@ -164,6 +164,41 @@ QUnit.module( 'flat config', () => {
 		}
 	} );
 
+	QUnit.test( 'Default ignores', async ( assert ) => {
+		const FlatESLint = await loadESLint( { useFlatConfig: true } );
+		const tests = [
+			{ path: 'vendor/foo.js', ignored: true },
+			{ path: 'coverage/foo.js', ignored: true },
+			{ path: 'package-lock.json', ignored: true },
+			{ path: 'tests/package-lock.json', ignored: true },
+			{ path: 'i18n/fr.json', ignored: true },
+			{ path: 'i18n/api/fr.json', ignored: true },
+			{ path: 'languages/i18n/fr.json', ignored: true },
+			{ path: 'i18n/en.json', ignored: false },
+			{ path: 'i18n/qqq.json', ignored: false },
+			{ path: 'i18n/api/qqq.json', ignored: false },
+			{ path: 'package.json', ignored: false },
+			{ path: 'src/vendor/foo.js', ignored: false },
+			{ path: 'src/foo.js', ignored: false }
+		];
+		const flatEslint = new FlatESLint( { overrideConfigFile: true, overrideConfig: wikimedia( 'common' ) } );
+		for ( const test of tests ) {
+			assert.strictEqual( await flatEslint.isPathIgnored( test.path ), test.ignored, `Is ${ test.path } ignored` );
+		}
+
+		const extendedEslint = new FlatESLint( {
+			overrideConfigFile: true,
+			overrideConfig: [
+				...wikimedia( 'common' ),
+				{ ignores: [ 'lib/', '!package-lock.json', '!i18n/fr.json' ] }
+			]
+		} );
+		assert.true( await extendedEslint.isPathIgnored( 'lib/foo.js' ), 'Downstream ignores are added' );
+		assert.false( await extendedEslint.isPathIgnored( 'package-lock.json' ), 'Default ignores can be negated' );
+		assert.false( await extendedEslint.isPathIgnored( 'i18n/fr.json' ), 'Default ignores can be negated' );
+		assert.true( await extendedEslint.isPathIgnored( 'i18n/de.json' ), 'Other default ignores apply' );
+	} );
+
 	QUnit.test( 'eslint-plugin-json-es has no meta.name', ( assert ) => {
 		const { meta } = require( 'eslint-plugin-json-es' );
 		assert.false(

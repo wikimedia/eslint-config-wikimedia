@@ -44,6 +44,20 @@ const fixJsonEsParser = ( config ) => !( jsonEs.meta && jsonEs.meta.name ) &&
 	{ ...config, languageOptions: { ...config.languageOptions, parser: jsonEsParser } } :
 	config;
 
+// Global ignores, relative to the project's config file.
+const ignores = Object.freeze( [
+	// Dot folders, e.g. .git
+	'.*/',
+	// Dependencies and generated files
+	'vendor/',
+	'coverage/',
+	'**/package-lock.json',
+	// Translations from translatewiki.net
+	'**/i18n/**/*.json',
+	'!**/i18n/**/en.json',
+	'!**/i18n/**/qqq.json'
+] );
+
 /**
  * Get flat config objects for one or more of the eslintrc configs in this package.
  *
@@ -59,5 +73,8 @@ module.exports = ( ...names ) => [
 	...compat.extends( ...names.map( ( name ) => path.join( __dirname, name ) ) )
 		.filter( ( config ) => !isGlobalIgnore( config ) )
 		.map( fixJsonEsParser ),
-	{ ignores: [ '.*/' ] }
+	// ESLint 8 only treats an object as global ignores if it has no other keys, e.g. "name".
+	{ ignores: [ ...ignores ] }
 ];
+
+module.exports.ignores = ignores;
