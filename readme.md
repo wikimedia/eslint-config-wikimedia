@@ -147,6 +147,26 @@ module.exports = [
 ];
 ```
 
+### Ignored files
+The flat configs ignore these files by default ([global ignores](https://eslint.org/docs/latest/use/configure/ignore)), relative to `eslint.config.js`:
+
+* Dot folders, e.g. `.git/` (and `node_modules/`, which ESLint ignores itself)
+* `vendor/` and `coverage/`
+* `package-lock.json` files
+* Translations in `i18n/` folders, except `en.json` and `qqq.json`
+
+The list is available as `wikimedia.ignores`. To ignore more files, or to lint an ignored file, add global ignores after the Wikimedia configs. Use a `!` prefix to lint an ignored file:
+
+```js
+const { globalIgnores } = require( 'eslint/config' );
+const wikimedia = require( 'eslint-config-wikimedia/flat' );
+
+module.exports = [
+	...wikimedia( 'client', 'jquery', 'mediawiki' ),
+	globalIgnores( [ 'resources/lib/', '!coverage/' ] )
+];
+```
+
 ## Proposing changes
 
 Major changes should be discussed [on mediawiki.org](https://www.mediawiki.org/wiki/Manual_talk:Coding_conventions/JavaScript) or on the [Wikitech mailing list](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) beforehand.
