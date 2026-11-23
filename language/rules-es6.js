@@ -1,7 +1,7 @@
 'use strict';
 
 const { defineConfig } = require( 'eslint/config' );
-const unicorn = require( 'eslint-plugin-unicorn' );
+const unicorn = require( 'eslint-plugin-unicorn' ).default;
 const esx = require( 'eslint-plugin-es-x' );
 
 module.exports = defineConfig( {
