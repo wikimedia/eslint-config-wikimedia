@@ -14,6 +14,8 @@
 // Off: jsdoc/no-missing-syntax
 // Off: jsdoc/no-restricted-syntax
 // Off: jsdoc/no-types
+// Off: jsdoc/no-unnecessary-type-assertion
+// Off: jsdoc/normalize-see-links
 // Off: jsdoc/prefer-import-tag
 // Off: jsdoc/reject-any-type
 // Off: jsdoc/reject-function-type
@@ -28,6 +30,7 @@
 // Off: jsdoc/require-property
 // Off: jsdoc/require-throws-description
 // Off: jsdoc/require-yields-description
+// Off: jsdoc/ts-ban-ts-comment
 // Off: jsdoc/ts-method-signature-style
 // Off: jsdoc/ts-no-empty-object-type
 // Off: jsdoc/ts-no-unnecessary-template-expression
