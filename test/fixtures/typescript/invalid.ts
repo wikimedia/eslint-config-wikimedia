@@ -39,6 +39,9 @@ interface Example {
 	(): string;
 }
 
+// eslint-disable-next-line @stylistic/arrow-spacing, @typescript-eslint/no-unused-vars
+type Callback = ( z: number )=>void;
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface OverloadedExample {
 	y( z: number ): void;
