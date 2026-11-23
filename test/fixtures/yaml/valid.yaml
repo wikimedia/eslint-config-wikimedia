@@ -1,3 +1,4 @@
+# Off: no-trailing-spaces
 object:
   plain-scalar: string
   flow-sequence-bracket-spacing: [ string ]

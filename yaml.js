@@ -8,6 +8,8 @@ module.exports = defineConfig( {
 	name: 'wikimedia/yaml',
 	extends: [ named( 'yml/standard', yml.configs[ 'flat/standard' ] ) ],
 	rules: {
+		// Replaced by yml/no-trailing-spaces
+		'no-trailing-spaces': 'off',
 		'yml/flow-sequence-bracket-spacing': [ 'error', 'always' ],
 		'yml/flow-mapping-curly-spacing': [ 'error', 'always' ]
 	}
