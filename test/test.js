@@ -1,6 +1,6 @@
 'use strict';
 
-/* eslint-disable security/detect-non-literal-fs-filename */
+/* eslint-disable security/detect-non-literal-fs-filename, security/detect-non-literal-require */
 
 const fs = require( 'fs' ),
 	os = require( 'os' ),
@@ -9,16 +9,22 @@ const fs = require( 'fs' ),
 	configs = [],
 	escapeStringRegexp = require( 'escape-string-regexp' ),
 	readdirRecursive = require( 'fs-readdir-recursive' ),
-	{ ESLint, loadESLint } = require( 'eslint' );
+	globals = require( 'globals' ),
+	{ ESLint } = require( 'eslint' ),
+	wikimedia = require( '../flat' );
+
+const root = path.resolve( __dirname, '..' );
+const fixturesRoot = path.resolve( __dirname, 'fixtures' );
 
 packageFiles.forEach( ( packageFile ) => {
-	if ( !fs.existsSync( packageFile ) ) {
+	if ( !fs.existsSync( packageFile ) || packageFile === 'lib/' ) {
 		return;
 	}
 	if ( fs.lstatSync( packageFile ).isDirectory() ) {
 		configs.push.apply(
 			configs,
 			readdirRecursive( packageFile )
+				.filter( ( file ) => file.endsWith( '.js' ) )
 				.map( ( file ) => path.join( packageFile, file ) )
 		);
 	} else {
@@ -26,54 +32,62 @@ packageFiles.forEach( ( packageFile ) => {
 	}
 } );
 
-function getRules( config ) {
-	const rules = Object.assign( {}, config.rules );
-	if ( config.overrides ) {
-		config.overrides.forEach( ( override ) => {
-			Object.assign( rules, override.rules );
-		} );
-	}
-	return rules;
+/**
+ * Get the config objects of a config, that come from its own file or from upstream configs.
+ *
+ * Config object names show where each object comes from, e.g.
+ * 'wikimedia/client/common > wikimedia/common > eslint/recommended'.
+ *
+ * @param {string} configName Config name, e.g. 'client/common'
+ * @param {boolean} upstream Get the objects from upstream (plugin) configs
+ *  that the config extends directly, instead of the config's own objects
+ * @return {Object[]} Flat config objects
+ */
+function getConfigObjects( configName, upstream ) {
+	const name = `wikimedia/${ configName }`;
+	return require( `../${ configName }` ).filter( ( config ) => {
+		const parts = ( config.name || '' ).split( ' > ' );
+		const i = parts.lastIndexOf( name );
+		if ( !upstream ) {
+			return i !== -1 && i === parts.length - 1;
+		}
+		return i !== -1 && i < parts.length - 1 && !parts[ i + 1 ].startsWith( 'wikimedia/' );
+	} );
 }
 
-function extendRules( config, rules, globals ) {
-	let extendedRules = {};
-	let extendedGlobals = {};
-	const extendsList = Array.isArray( config.extends ) ?
-		config.extends :
-		[ config.extends ];
-	// Fetch every upstream config we use via 'extends'.
-	extendsList.forEach( ( extend ) => {
-		const parts = extend.match( /plugin:(.*)\/([^/]+)/ );
-		if ( !parts ) {
-			return;
-		}
-		let upstreamConfigs;
-		if ( parts[ 1 ].includes( 'eslint-plugin-' ) ) {
-			// eslint-disable-next-line security/detect-non-literal-require
-			upstreamConfigs = require( parts[ 1 ] ).configs;
-		} else {
-			// eslint-disable-next-line security/detect-non-literal-require
-			upstreamConfigs = require( 'eslint-plugin-' + parts[ 1 ] ).configs;
-		}
-		const childConfig = upstreamConfigs[ parts[ 2 ] ];
-		Object.assign(
-			extendedRules,
-			getRules( childConfig )
-		);
-		Object.assign( extendedGlobals, childConfig.globals );
-		if ( childConfig.extends ) {
-			( { rules: extendedRules, globals: extendedGlobals } = extendRules(
-				childConfig, extendedRules, extendedGlobals
-			) );
-		}
+// Globals of environments, e.g. "browser". The fixtures do not document these.
+const envGlobals = new Set(
+	[ 'browser', 'commonjs', 'jest', 'mocha', 'node', 'nodeBuiltin', 'qunit' ]
+		.flatMap( ( env ) => Object.keys( globals[ env ] ) )
+);
+
+function getRulesAndGlobals( configName, upstream ) {
+	const rules = {};
+	const configGlobals = {};
+	getConfigObjects( configName, upstream ).forEach( ( config ) => {
+		Object.assign( rules, config.rules );
+		const configObjectGlobals = ( config.languageOptions || {} ).globals || {};
+		Object.entries( configObjectGlobals ).forEach( ( [ name, value ] ) => {
+			if ( !upstream || !envGlobals.has( name ) ) {
+				configGlobals[ name ] = value;
+			}
+		} );
 	} );
-	extendedRules = Object.assign( {}, extendedRules, rules );
-	extendedGlobals = Object.assign( {}, extendedGlobals, globals );
+	return { rules, globals: configGlobals };
+}
+
+function merge( ...list ) {
 	return {
-		rules: extendedRules,
-		globals: extendedGlobals
+		rules: Object.assign( {}, ...list.map( ( item ) => item.rules ) ),
+		globals: Object.assign( {}, ...list.map( ( item ) => item.globals ) )
 	};
+}
+
+function getMessages( results ) {
+	return results.map( ( result ) => ( {
+		file: path.relative( root, result.filePath ),
+		messages: result.messages.map( ( m ) => `${ m.line }:${ m.column } ${ m.ruleId }: ${ m.message }` )
+	} ) );
 }
 
 const ignoreTests = [
@@ -92,126 +106,25 @@ const ignoreTests = [
 	{ path: '.dot.folder/.foo.js', ignored: true }
 ];
 
-QUnit.module( 'ignorePatterns', () => {
-	QUnit.test( 'Check dotfiles are linted', async ( assert ) => {
-		assert.timeout( 10000 );
-		const LegacyESLint = await loadESLint( { useFlatConfig: false } );
-		const eslint = new LegacyESLint( {
-			useEslintrc: false,
-			overrideConfig: { extends: './common' }
+QUnit.module( 'Fixtures', () => {
+	readdirRecursive( fixturesRoot )
+		.filter( ( file ) => path.basename( file ) === 'eslint.config.js' )
+		.forEach( ( configFile ) => {
+			const dir = path.resolve( fixturesRoot, path.dirname( configFile ) );
+			// Each invalid fixture disables every error it causes, and unused disables are errors,
+			// so all fixtures must lint with no messages.
+			QUnit.test( `Fixtures in "${ path.relative( root, dir ) }" have no errors`, async ( assert ) => {
+				assert.timeout( 30000 );
+				const files = fs.readdirSync( dir )
+					.filter( ( file ) => /^(in)?valid/.test( file ) )
+					.map( ( file ) => path.join( dir, file ) );
+				const results = await new ESLint( { cwd: dir } ).lintFiles( files );
+				assert.deepEqual(
+					getMessages( results ).filter( ( result ) => result.messages.length ),
+					[]
+				);
+			} );
 		} );
-		for ( const test of ignoreTests ) {
-			assert.strictEqual( await eslint.isPathIgnored( test.path ), test.ignored, `Is ${ test.path } ignored` );
-		}
-	} );
-} );
-
-QUnit.module( 'flat config', () => {
-	const wikimedia = require( '../flat' );
-	const { FlatCompat } = require( '@eslint/eslintrc' );
-	const recommendedConfig = require( '@eslint/js' ).configs.recommended;
-	const fixturesRoot = path.resolve( __dirname, 'fixtures' );
-	const root = path.resolve( __dirname, '..' );
-	const eslintrcFiles = readdirRecursive( fixturesRoot, () => true )
-		.filter( ( file ) => path.basename( file ) === '.eslintrc.json' );
-
-	function getMessages( results ) {
-		return results.map( ( result ) => ( {
-			file: path.relative( root, result.filePath ),
-			messages: result.messages.map( ( m ) => `${ m.line }:${ m.column } ${ m.ruleId }: ${ m.message }` )
-		} ) );
-	}
-
-	eslintrcFiles.forEach( ( eslintrcFile ) => {
-		const dir = path.resolve( fixturesRoot, path.dirname( eslintrcFile ) );
-		// Each invalid fixture disables every error it causes, and unused disables are errors,
-		// so all fixtures must lint with no messages.
-		QUnit.test( `Fixtures in "${ path.relative( root, dir ) }" have no errors`, async ( assert ) => {
-			assert.timeout( 30000 );
-			const { extends: extendsList, ...extra } = JSON.parse(
-				fs.readFileSync( path.join( dir, '.eslintrc.json' ) )
-			);
-			const names = [].concat( extendsList )
-				.map( ( name ) => path.relative( root, path.resolve( dir, name ) ) );
-			// Convert the fixture's own rules and overrides as well.
-			const extraConfig = new FlatCompat( {
-				baseDirectory: dir,
-				resolvePluginsRelativeTo: root,
-				recommendedConfig
-			} ).config( extra );
-			const files = fs.readdirSync( dir )
-				.filter( ( file ) => /^(in)?valid/.test( file ) )
-				.map( ( file ) => path.join( dir, file ) );
-
-			const results = await new ESLint( {
-				cwd: dir,
-				overrideConfigFile: true,
-				overrideConfig: [ ...wikimedia( ...names ), ...extraConfig ]
-			} ).lintFiles( files );
-			assert.deepEqual(
-				getMessages( results ).filter( ( result ) => result.messages.length ),
-				[]
-			);
-		} );
-	} );
-
-	QUnit.test( 'Check dotfiles are linted', async ( assert ) => {
-		const flatEslint = new ESLint( { overrideConfigFile: true, overrideConfig: wikimedia( 'common' ) } );
-		for ( const test of ignoreTests ) {
-			assert.strictEqual( await flatEslint.isPathIgnored( test.path ), test.ignored, `Is ${ test.path } ignored` );
-		}
-	} );
-
-	QUnit.test( 'Default ignores', async ( assert ) => {
-		const tests = [
-			{ path: 'vendor/foo.js', ignored: true },
-			{ path: 'coverage/foo.js', ignored: true },
-			{ path: 'package-lock.json', ignored: true },
-			{ path: 'tests/package-lock.json', ignored: true },
-			{ path: 'i18n/fr.json', ignored: true },
-			{ path: 'i18n/api/fr.json', ignored: true },
-			{ path: 'languages/i18n/fr.json', ignored: true },
-			{ path: 'i18n/en.json', ignored: false },
-			{ path: 'i18n/qqq.json', ignored: false },
-			{ path: 'i18n/api/qqq.json', ignored: false },
-			{ path: 'package.json', ignored: false },
-			{ path: 'src/vendor/foo.js', ignored: false },
-			{ path: 'src/foo.js', ignored: false }
-		];
-		const flatEslint = new ESLint( { overrideConfigFile: true, overrideConfig: wikimedia( 'common' ) } );
-		for ( const test of tests ) {
-			assert.strictEqual( await flatEslint.isPathIgnored( test.path ), test.ignored, `Is ${ test.path } ignored` );
-		}
-
-		const extendedEslint = new ESLint( {
-			overrideConfigFile: true,
-			overrideConfig: [
-				...wikimedia( 'common' ),
-				{ ignores: [ 'lib/', '!package-lock.json', '!i18n/fr.json' ] }
-			]
-		} );
-		assert.true( await extendedEslint.isPathIgnored( 'lib/foo.js' ), 'Downstream ignores are added' );
-		assert.false( await extendedEslint.isPathIgnored( 'package-lock.json' ), 'Default ignores can be negated' );
-		assert.false( await extendedEslint.isPathIgnored( 'i18n/fr.json' ), 'Default ignores can be negated' );
-		assert.true( await extendedEslint.isPathIgnored( 'i18n/de.json' ), 'Other default ignores apply' );
-	} );
-
-	QUnit.test( 'eslint-plugin-json-es has no meta.name', ( assert ) => {
-		const { meta } = require( 'eslint-plugin-json-es' );
-		assert.false(
-			Boolean( meta && meta.name ),
-			'eslint-plugin-json-es now has meta.name; remove jsonEsParser from flat.js'
-		);
-	} );
-
-	QUnit.test( 'Files outside this package are not ignored', async ( assert ) => {
-		const flatEslint = new ESLint( {
-			cwd: os.tmpdir(),
-			overrideConfigFile: true,
-			overrideConfig: wikimedia( 'common' )
-		} );
-		assert.false( await flatEslint.isPathIgnored( 'x.js' ) );
-	} );
 
 	QUnit.test( 'Fixtures outside this package have no errors', async ( assert ) => {
 		assert.timeout( 30000 );
@@ -233,7 +146,7 @@ QUnit.module( 'flat config', () => {
 				overrideConfigFile: true,
 				overrideConfig: [
 					...wikimedia( 'common' ),
-					// Same as test/fixtures/json/.eslintrc.json
+					// Same as test/fixtures/json/eslint.config.js
 					{ files: [ '**/*.jsonc' ], rules: { 'json-es/use-valid-json': 'off' } }
 				]
 			} ).lintFiles( dir );
@@ -247,6 +160,68 @@ QUnit.module( 'flat config', () => {
 	} );
 } );
 
+QUnit.module( 'Ignores', () => {
+	QUnit.test( 'Check dotfiles are linted', async ( assert ) => {
+		const eslint = new ESLint( { overrideConfigFile: true, overrideConfig: wikimedia( 'common' ) } );
+		for ( const test of ignoreTests ) {
+			assert.strictEqual( await eslint.isPathIgnored( test.path ), test.ignored, `Is ${ test.path } ignored` );
+		}
+	} );
+
+	QUnit.test( 'Default ignores', async ( assert ) => {
+		const tests = [
+			{ path: 'vendor/foo.js', ignored: true },
+			{ path: 'coverage/foo.js', ignored: true },
+			{ path: 'package-lock.json', ignored: true },
+			{ path: 'tests/package-lock.json', ignored: true },
+			{ path: 'i18n/fr.json', ignored: true },
+			{ path: 'i18n/api/fr.json', ignored: true },
+			{ path: 'languages/i18n/fr.json', ignored: true },
+			{ path: 'i18n/en.json', ignored: false },
+			{ path: 'i18n/qqq.json', ignored: false },
+			{ path: 'i18n/api/qqq.json', ignored: false },
+			{ path: 'package.json', ignored: false },
+			{ path: 'src/vendor/foo.js', ignored: false },
+			{ path: 'src/foo.js', ignored: false }
+		];
+		const eslint = new ESLint( { overrideConfigFile: true, overrideConfig: wikimedia( 'common' ) } );
+		for ( const test of tests ) {
+			assert.strictEqual( await eslint.isPathIgnored( test.path ), test.ignored, `Is ${ test.path } ignored` );
+		}
+
+		const extendedEslint = new ESLint( {
+			overrideConfigFile: true,
+			overrideConfig: [
+				...wikimedia( 'common' ),
+				{ ignores: [ 'lib/', '!package-lock.json', '!i18n/fr.json' ] }
+			]
+		} );
+		assert.true( await extendedEslint.isPathIgnored( 'lib/foo.js' ), 'Downstream ignores are added' );
+		assert.false( await extendedEslint.isPathIgnored( 'package-lock.json' ), 'Default ignores can be negated' );
+		assert.false( await extendedEslint.isPathIgnored( 'i18n/fr.json' ), 'Default ignores can be negated' );
+		assert.true( await extendedEslint.isPathIgnored( 'i18n/de.json' ), 'Other default ignores apply' );
+	} );
+
+	QUnit.test( 'Files outside this package are not ignored', async ( assert ) => {
+		const eslint = new ESLint( {
+			cwd: os.tmpdir(),
+			overrideConfigFile: true,
+			overrideConfig: wikimedia( 'common' )
+		} );
+		assert.false( await eslint.isPathIgnored( 'x.js' ) );
+	} );
+} );
+
+QUnit.module( 'Upstream', () => {
+	QUnit.test( 'eslint-plugin-json-es has no meta.name', ( assert ) => {
+		const { meta } = require( 'eslint-plugin-json-es' );
+		assert.false(
+			Boolean( meta && meta.name ),
+			'eslint-plugin-json-es now has meta.name; remove the parser replacement from json.js'
+		);
+	} );
+} );
+
 QUnit.module( 'package.json', () => {
 	QUnit.test( 'All files are listed', ( assert ) => {
 		const excludeList = [
@@ -254,7 +229,7 @@ QUnit.module( 'package.json', () => {
 			'package.json',
 			'package-lock.json'
 		];
-		fs.readdirSync( path.resolve( __dirname, '../' ) ).forEach( ( file ) => {
+		fs.readdirSync( root ).forEach( ( file ) => {
 			const ext = path.extname( file );
 			if (
 				( ext === '.js' || ext === '.json' ) &&
@@ -266,7 +241,7 @@ QUnit.module( 'package.json', () => {
 	} );
 	QUnit.test( 'All listed files exist', ( assert ) => {
 		packageFiles.forEach( ( file ) => {
-			assert.true( fs.existsSync( file ), `"${ file }" found` );
+			assert.true( fs.existsSync( path.join( root, file ) ), `"${ file }" found` );
 		} );
 	} );
 } );
@@ -274,14 +249,7 @@ QUnit.module( 'package.json', () => {
 const aliases = [
 	'flat',
 	'client',
-	'client-common',
-	'client-es6',
-	'mediawiki',
-	'mediawiki-qunit',
-	'vue-common',
-	'vue-es6',
-	'vue3-common',
-	'vue3-es6'
+	'mediawiki'
 ];
 
 configs.forEach( ( configPath ) => {
@@ -307,49 +275,48 @@ configs.forEach( ( configPath ) => {
 			return;
 		}
 
-		// eslint-disable-next-line security/detect-non-literal-require
-		const config = require( `../${ configPath }` );
-
 		const fixturesFiles = readdirRecursive( fixturesDir )
+			.filter( ( file ) => path.basename( file ) !== 'eslint.config.js' )
 			.map( ( file ) => path.resolve( fixturesDir, file ) );
 
 		const validFixturesFiles = fixturesFiles.filter( ( file ) => file.includes( '/valid' ) );
 		const invalidFixturesFiles = fixturesFiles.filter( ( file ) => file.includes( '/invalid' ) );
 
-		let rules = getRules( config );
-		let globals = config.globals || {};
+		let { rules, globals: configGlobals } = getRulesAndGlobals( configName );
 
 		if ( configName === 'server' ) {
 			// Load the rules for Node & ES2018 when testing server
-			Object.assign(
-				rules,
-				getRules( require( '../node' ) ),
-				getRules( require( '../language/es2018' ) ),
+			( { rules, globals: configGlobals } = merge(
+				getRulesAndGlobals( 'node', true ),
+				{ rules, globals: configGlobals },
+				getRulesAndGlobals( 'node' ),
+				getRulesAndGlobals( 'language/es2018' ),
 				// TODO: Traverse "extends" automatically
-				getRules( require( '../language/rules-es2018' ) ),
-				getRules( require( '../language/rules-es2017' ) )
+				getRulesAndGlobals( 'language/rules-es2018' ),
+				getRulesAndGlobals( 'language/rules-es2017' )
 				// ES6 rules are tested in client-es6
-			);
-
-			// Test node's upstream rules
-			( { rules, globals } = extendRules( require( '../node' ), rules, globals ) );
+			) );
 		}
 
 		if ( configName === 'client/es6' ) {
 			// Load the rules for ES6 when testing client
 			Object.assign(
 				rules,
-				getRules( require( 'eslint-plugin-es-x/lib/configs/no-new-in-es2016' ) ),
-				getRules( require( '../language/es6' ) )
+				require( 'eslint-plugin-es-x' ).configs[ 'flat/no-new-in-es2016' ].rules,
+				getRulesAndGlobals( 'language/es6' ).rules
 			);
 		}
 
 		if ( upstreamConfigsToTest.includes( configName ) ) {
-			( { rules, globals } = extendRules( config, rules, globals ) );
+			( { rules, globals: configGlobals } = merge(
+				getRulesAndGlobals( configName, true ),
+				{ rules, globals: configGlobals }
+			) );
 		}
 
 		function isEnabled( rule ) {
-			return rules[ rule ] !== 'off';
+			const value = Array.isArray( rules[ rule ] ) ? rules[ rule ][ 0 ] : rules[ rule ];
+			return value !== 'off' && value !== 0;
 		}
 
 		// Invalid examples are required for every rule that is enabled,
@@ -391,10 +358,10 @@ configs.forEach( ( configPath ) => {
 			}
 		} );
 
-		Object.keys( globals ).forEach( ( global ) => {
+		Object.keys( configGlobals ).forEach( ( global ) => {
 			// eslint-disable-next-line security/detect-non-literal-regexp
 			const globalPattern = new RegExp( `Global: ${ escapeStringRegexp( global ) }(\n|$)` );
-			if ( globals[ global ] !== 'off' ) {
+			if ( configGlobals[ global ] !== 'off' ) {
 				QUnit.test( `Global '${ global }' is documented in valid fixture`, ( assert ) => {
 					assert.true( globalPattern.test( validFixtures ), '"Global" comment found' );
 				} );
