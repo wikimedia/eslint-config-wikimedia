@@ -16,7 +16,7 @@ module.exports = [
 ];
 ```
 
-ESLint 9.22 or later is required. Configs in the old `.eslintrc.json` format are not supported.
+ESLint 9.29 or later is required. Configs in the old `.eslintrc.json` format are not supported.
 
 ## Example configurations
 Below are some potential recommended uses:
