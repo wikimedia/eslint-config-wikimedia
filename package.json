@@ -22,7 +22,7 @@
 		"wikimedia"
 	],
 	"engines": {
-		"node": ">=20 <27"
+		"node": ">=22.12 <27"
 	},
 	"files": [
 		"flat.js",

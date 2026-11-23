@@ -30,12 +30,12 @@
 	// Valid: template-curly-spacing
 	global.template = `${ global.foo }`;
 
-	// New in Node 15, valid per our Node 18+ requirement
+	// New in Node 15, valid per our Node 22.12+ requirement
 	// Valid: n/no-unsupported-features/node-builtins
 	const crypto = require( 'crypto' );
 	crypto.verify();
 
-	// New in Node 18, valid per our Node 18+ requirement
+	// New in Node 18, valid per our Node 22.12+ requirement
 	// Valid: n/no-unsupported-features/node-builtins
 	const { Blob } = require( 'buffer' );
 	const myblob = new Blob();
