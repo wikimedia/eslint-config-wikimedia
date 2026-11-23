@@ -9,8 +9,7 @@ const fs = require( 'fs' ),
 	configs = [],
 	escapeStringRegexp = require( 'escape-string-regexp' ),
 	readdirRecursive = require( 'fs-readdir-recursive' ),
-	{ ESLint, loadESLint } = require( 'eslint' ),
-	eslint = new ESLint();
+	{ ESLint, loadESLint } = require( 'eslint' );
 
 packageFiles.forEach( ( packageFile ) => {
 	if ( !fs.existsSync( packageFile ) ) {
@@ -94,15 +93,16 @@ const ignoreTests = [
 ];
 
 QUnit.module( 'ignorePatterns', () => {
-	QUnit.test( 'Check dotfiles are linted', ( assert ) => {
+	QUnit.test( 'Check dotfiles are linted', async ( assert ) => {
 		assert.timeout( 10000 );
-		const done = assert.async( ignoreTests.length );
-		ignoreTests.forEach( ( test ) => {
-			eslint.isPathIgnored( test.path ).then( ( ignored ) => {
-				assert.strictEqual( ignored, test.ignored, `Is ${ test.path } ignored` );
-				done();
-			} );
+		const LegacyESLint = await loadESLint( { useFlatConfig: false } );
+		const eslint = new LegacyESLint( {
+			useEslintrc: false,
+			overrideConfig: { extends: './common' }
 		} );
+		for ( const test of ignoreTests ) {
+			assert.strictEqual( await eslint.isPathIgnored( test.path ), test.ignored, `Is ${ test.path } ignored` );
+		}
 	} );
 } );
 
@@ -143,8 +143,7 @@ QUnit.module( 'flat config', () => {
 				.filter( ( file ) => /^(in)?valid/.test( file ) )
 				.map( ( file ) => path.join( dir, file ) );
 
-			const FlatESLint = await loadESLint( { useFlatConfig: true } );
-			const results = await new FlatESLint( {
+			const results = await new ESLint( {
 				cwd: dir,
 				overrideConfigFile: true,
 				overrideConfig: [ ...wikimedia( ...names ), ...extraConfig ]
@@ -157,15 +156,13 @@ QUnit.module( 'flat config', () => {
 	} );
 
 	QUnit.test( 'Check dotfiles are linted', async ( assert ) => {
-		const FlatESLint = await loadESLint( { useFlatConfig: true } );
-		const flatEslint = new FlatESLint( { overrideConfigFile: true, overrideConfig: wikimedia( 'common' ) } );
+		const flatEslint = new ESLint( { overrideConfigFile: true, overrideConfig: wikimedia( 'common' ) } );
 		for ( const test of ignoreTests ) {
 			assert.strictEqual( await flatEslint.isPathIgnored( test.path ), test.ignored, `Is ${ test.path } ignored` );
 		}
 	} );
 
 	QUnit.test( 'Default ignores', async ( assert ) => {
-		const FlatESLint = await loadESLint( { useFlatConfig: true } );
 		const tests = [
 			{ path: 'vendor/foo.js', ignored: true },
 			{ path: 'coverage/foo.js', ignored: true },
@@ -181,12 +178,12 @@ QUnit.module( 'flat config', () => {
 			{ path: 'src/vendor/foo.js', ignored: false },
 			{ path: 'src/foo.js', ignored: false }
 		];
-		const flatEslint = new FlatESLint( { overrideConfigFile: true, overrideConfig: wikimedia( 'common' ) } );
+		const flatEslint = new ESLint( { overrideConfigFile: true, overrideConfig: wikimedia( 'common' ) } );
 		for ( const test of tests ) {
 			assert.strictEqual( await flatEslint.isPathIgnored( test.path ), test.ignored, `Is ${ test.path } ignored` );
 		}
 
-		const extendedEslint = new FlatESLint( {
+		const extendedEslint = new ESLint( {
 			overrideConfigFile: true,
 			overrideConfig: [
 				...wikimedia( 'common' ),
@@ -208,8 +205,7 @@ QUnit.module( 'flat config', () => {
 	} );
 
 	QUnit.test( 'Files outside this package are not ignored', async ( assert ) => {
-		const FlatESLint = await loadESLint( { useFlatConfig: true } );
-		const flatEslint = new FlatESLint( {
+		const flatEslint = new ESLint( {
 			cwd: os.tmpdir(),
 			overrideConfigFile: true,
 			overrideConfig: wikimedia( 'common' )
@@ -228,9 +224,8 @@ QUnit.module( 'flat config', () => {
 					path.join( typeDir, file ), path.join( dir, file )
 				) );
 		} );
-		const FlatESLint = await loadESLint( { useFlatConfig: true } );
 		try {
-			const results = await new FlatESLint( {
+			const results = await new ESLint( {
 				cwd: dir,
 				// The cache serialises the config. This makes sure that all parsers have "meta".
 				cache: true,
@@ -255,7 +250,7 @@ QUnit.module( 'flat config', () => {
 QUnit.module( 'package.json', () => {
 	QUnit.test( 'All files are listed', ( assert ) => {
 		const excludeList = [
-			'.eslintrc.json',
+			'eslint.config.js',
 			'package.json',
 			'package-lock.json'
 		];
