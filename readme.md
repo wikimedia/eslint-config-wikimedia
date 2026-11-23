@@ -6,7 +6,9 @@
 npm install --save-dev eslint-config-wikimedia
 ```
 
-Then, [configure ESLint](https://eslint.org/docs/user-guide/configuring) with one or more `.eslintrc.json` files as appropriate.
+Then, [configure ESLint](https://eslint.org/docs/user-guide/configuring) with one or more `.eslintrc.json` files as appropriate, or use [flat config](#flat-config).
+
+ESLint 9 or later is required. To use `.eslintrc.json` files with ESLint 9, set the `ESLINT_USE_FLAT_CONFIG=false` environment variable.
 
 ## Example configurations
 Below are some potential recommended uses:
@@ -135,8 +137,8 @@ Please note that the basic project configuration does not specify any language o
 }
 ```
 
-## Flat config (ESLint 9)
-All of the above configs are also available as [flat config](https://eslint.org/docs/latest/use/configure/configuration-files), for use with ESLint 9 or ESLint 8.57+. Pass the same names as you would use in `extends`, without the `wikimedia/` prefix.
+## Flat config
+All of the above configs are also available as [flat config](https://eslint.org/docs/latest/use/configure/configuration-files). Pass the same names as you would use in `extends`, without the `wikimedia/` prefix.
 
 `eslint.config.js`:
 ```js

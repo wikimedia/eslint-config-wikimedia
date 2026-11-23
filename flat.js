@@ -73,8 +73,7 @@ module.exports = ( ...names ) => [
 	...compat.extends( ...names.map( ( name ) => path.join( __dirname, name ) ) )
 		.filter( ( config ) => !isGlobalIgnore( config ) )
 		.map( fixJsonEsParser ),
-	// ESLint 8 only treats an object as global ignores if it has no other keys, e.g. "name".
-	{ ignores: [ ...ignores ] }
+	{ name: 'wikimedia/ignores', ignores: [ ...ignores ] }
 ];
 
 module.exports.ignores = ignores;
