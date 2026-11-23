@@ -74,7 +74,7 @@
 		"eslint-plugin-no-jquery": "^6.0.2",
 		"eslint-plugin-qunit": "^8.2.6",
 		"eslint-plugin-security": "^4.0.0",
-		"eslint-plugin-unicorn": "^56.0.1",
+		"eslint-plugin-unicorn": "^65.0.1",
 		"eslint-plugin-vue": "^9.33.0",
 		"eslint-plugin-wdio": "9.33.1",
 		"eslint-plugin-yml": "^3.10.0",

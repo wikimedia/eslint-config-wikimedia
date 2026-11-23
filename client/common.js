@@ -2,7 +2,7 @@
 
 const { defineConfig } = require( 'eslint/config' );
 const globals = require( 'globals' );
-const unicorn = require( 'eslint-plugin-unicorn' );
+const unicorn = require( 'eslint-plugin-unicorn' ).default;
 
 module.exports = defineConfig( {
 	name: 'wikimedia/client/common',

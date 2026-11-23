@@ -2,7 +2,7 @@
 
 const { defineConfig } = require( 'eslint/config' );
 const security = require( 'eslint-plugin-security' );
-const unicorn = require( 'eslint-plugin-unicorn' );
+const unicorn = require( 'eslint-plugin-unicorn' ).default;
 
 // Load @eslint/js from the installed copy of ESLint, so that
 // "eslint:recommended" agrees with the ESLint version in use.
