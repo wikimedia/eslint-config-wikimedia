@@ -45,10 +45,6 @@ module.exports = defineConfig( {
 			before: false,
 			after: true,
 			overrides: {
-				arrow: {
-					before: true,
-					after: true
-				},
 				colon: {
 					before: false,
 					after: true
@@ -56,6 +52,9 @@ module.exports = defineConfig( {
 			}
 		} ],
 		'@typescript-eslint/unified-signatures': 'error',
+		// Also checks the arrows in function types
+		'arrow-spacing': 'off',
+		'@stylistic/arrow-spacing': 'error',
 		semi: 'off',
 		'@stylistic/semi': [ 'error', 'always' ]
 	}
