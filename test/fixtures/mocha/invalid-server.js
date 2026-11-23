@@ -1,7 +1,7 @@
 'use strict';
 
 // Recommended
-// eslint-disable-next-line mocha/no-async-describe
+// eslint-disable-next-line mocha/no-async-suite
 describe( 'async', async () => {
 } );
 
@@ -30,9 +30,6 @@ describe( 'foo', () => {
 		// eslint-disable-next-line mocha/no-nested-tests
 		it( 'nested', () => {} );
 	} );
-
-	// eslint-disable-next-line mocha/no-pending-tests
-	it( 'pending' );
 } );
 
 // TODO: This should also trigger mocha/no-global-tests?
@@ -49,8 +46,5 @@ describe( 'foo', () => {
 	it( 'test', () => {} );
 } );
 
-// eslint-disable-next-line mocha/no-empty-description
+// eslint-disable-next-line mocha/no-empty-title
 describe( '', () => { } );
-
-// eslint-disable-next-line mocha/no-exports
-module.exports = {};
