@@ -1,7 +1,0 @@
-{
-	"root": true,
-	"extends": "../../../server",
-	"rules": {
-		"no-unused-vars": "off"
-	}
-}

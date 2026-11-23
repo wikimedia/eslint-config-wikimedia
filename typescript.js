@@ -1,18 +1,21 @@
 'use strict';
 
-module.exports = {
-	extends: [
-		'plugin:@typescript-eslint/recommended'
-	],
-	plugins: [
-		'@typescript-eslint',
-		'@stylistic'
-	],
-	parser: '@typescript-eslint/parser',
-	parserOptions: {
-		sourceType: 'module',
-		ecmaFeatures: {
-			impliedStrict: true
+const { defineConfig } = require( 'eslint/config' );
+const typescriptEslint = require( '@typescript-eslint/eslint-plugin' );
+const stylistic = require( '@stylistic/eslint-plugin' );
+
+module.exports = defineConfig( {
+	name: 'wikimedia/typescript',
+	extends: [ typescriptEslint.configs[ 'flat/recommended' ] ],
+	plugins: {
+		'@stylistic': stylistic
+	},
+	languageOptions: {
+		parserOptions: {
+			sourceType: 'module',
+			ecmaFeatures: {
+				impliedStrict: true
+			}
 		}
 	},
 	rules: {
@@ -56,4 +59,4 @@ module.exports = {
 		semi: 'off',
 		'@stylistic/semi': [ 'error', 'always' ]
 	}
-};
+} );

@@ -1,12 +1,12 @@
 'use strict';
 
-/* eslint-disable quote-props, quotes */
-module.exports = {
-	"overrides": [ {
-		"files": [ "**/*.vue" ],
-		"extends": [
-			"../vue3/common",
-			"../language/es2018"
-		]
-	} ]
-};
+const { defineConfig } = require( 'eslint/config' );
+
+module.exports = defineConfig( {
+	name: 'wikimedia/vue3/es2018',
+	files: [ '**/*.vue' ],
+	extends: [
+		require( './common' ),
+		require( '../language/es2018' )
+	]
+} );
