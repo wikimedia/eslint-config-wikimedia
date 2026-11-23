@@ -71,9 +71,9 @@
 	// eslint-disable-next-line n/no-missing-require
 	require( 'missing' );
 
-	// New in Node 19, invalid per our our Node 18+ requirement
+	// Stable in Node 22.17, invalid per our Node 22.12+ requirement
 	// eslint-disable-next-line n/no-unsupported-features/node-builtins
-	const c = fetch();
+	const c = require( 'fs' ).glob;
 
 	// TODO: <!-- eslint-disable-next-line n/no-extraneous-require -->
 	// TODO: <!-- eslint-disable-next-line n/no-unpublished-bin -->
