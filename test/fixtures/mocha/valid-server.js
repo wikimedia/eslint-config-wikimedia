@@ -3,24 +3,24 @@
 function foo() {}
 
 // Local rules
-// Off: mocha/no-mocha-arrows, mocha/no-skipped-tests
-describe.skip( () => {
+// Off: mocha/no-mocha-arrows
+// Off: mocha/no-pending-tests
+describe.skip( 'skipped', () => {
 	// Off: mocha/consistent-spacing-between-blocks
 	// Off: mocha/no-hooks-for-single-case
 	beforeEach( () => {
 	} );
-	// Off: mocha/no-skipped-tests
-	it.skip( () => {
+	it.skip( 'skipped', () => {
 	} );
 } );
 
 // Recommended
-// Off: mocha/valid-suite-description
+// Off: mocha/valid-suite-title
 describe( 'Suite', () => {
 	// Off: mocha/no-hooks
 	it( 'title', async () => 1 );
 
-	// Off: mocha/valid-test-description
+	// Off: mocha/valid-test-title
 	it( 'async', async ( done ) => {
 		foo();
 		// Off: mocha/no-return-from-async
